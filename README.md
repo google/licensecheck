@@ -1,4 +1,4 @@
-The license package classifies license files and heuristically
+The licensecheck package classifies license files and heuristically
 determines how well they correspond to known open source licenses.
 
 The design aims never to give a false positive. It uses a soft text
