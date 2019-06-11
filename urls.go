@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 package licensecheck
+
 // This file contains the list of known URLs for valid licenses, only.
 // Do not add other code.
 
