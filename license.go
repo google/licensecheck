@@ -40,6 +40,7 @@ const (
 	Apache
 	BSD
 	CC
+	EPL
 	GPL
 	JSON
 	MIT

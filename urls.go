@@ -57,6 +57,8 @@ var urlLicenses = map[string]string{
 	"opensource.org/licenses/efl-1.0":                                          "EFL-1.0",
 	"opensource.org/licenses/efl-2.0":                                          "EFL-2.0",
 	"opensource.org/licenses/entessa":                                          "Entessa",
+	"opensource.org/licenses/epl-1.0":                                          "EPL-1.0",
+	"opensource.org/licenses/epl-2.0":                                          "EPL-2.0",
 	"opensource.org/licenses/intel":                                            "Intel",
 	"opensource.org/licenses/lpl-1.0":                                          "LPL-1.0",
 	"opensource.org/licenses/liliq-p-1.1":                                      "LiLiQ-P-1.1",
