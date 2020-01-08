@@ -5,6 +5,7 @@
 package licensecheck
 
 import (
+	"bytes"
 	"strings"
 	"unicode"
 	"unicode/utf8"
@@ -17,6 +18,7 @@ func normalize(data []byte) *document {
 	var r rune
 	var wid int
 	pos := 0
+	data = removeCopyrightLines(data)
 	str := toLower(data)
 	next := func() {
 		r, wid = utf8.DecodeRuneInString(str[pos:])
@@ -53,6 +55,51 @@ func normalize(data []byte) *document {
 		words:   words,
 		byteOff: indexes,
 	}
+}
+
+// removeCopyrightLines returns its argument text with (nearly) all lines beginning
+// with the word Copyright deleted. (The exception is for the lines in the Creative
+// Commons licenses that are a definition of Copyright.) Leading spaces are
+// significant: the line must start with a 'C'. This cleanup eliminates a common
+// difference between standard license text and the form of the license seen in
+// practice. If a copyright line is deleted, the return value is a fresh copy to
+// avoid overwriting the caller's data.
+func removeCopyrightLines(text []byte) []byte {
+	for bytes.HasPrefix(text, []byte("Copyright ")) {
+		newline := bytes.IndexByte(text, '\n')
+		if newline < 0 {
+			return text
+		}
+		text = text[newline+1:]
+	}
+	copied := false
+	for i := 0; ; {
+		start := bytes.Index(text[i:], []byte("\nCopyright "))
+		if start < 0 {
+			break
+		}
+		start += i + 1 // Skip starting newline.
+		newline := bytes.IndexByte(text[start:], '\n')
+		if newline < 0 {
+			break
+		}
+		newline = start + newline // Leave trailing newline, making it line of blanks.
+		i = newline
+		// Special case for the Creative Commons licenses, which define copyright.
+		// TODO: Better ideas?
+		if bytes.Contains(text[start:newline], []byte(" means copyright ")) {
+			continue
+		}
+		if !copied {
+			text = append([]byte(nil), text...)
+			copied = true
+		}
+		// White out the text.
+		for j := start; j < newline; j++ {
+			text[j] = ' '
+		}
+	}
+	return text
 }
 
 // toLower returns a lowercased version of the input, guaranteeing

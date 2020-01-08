@@ -133,3 +133,44 @@ func TestBadUTF8(t *testing.T) {
 		t.Fatalf("failed to handle bad UTF-8")
 	}
 }
+
+func TestRemoveCopyrightLines(t *testing.T) {
+	var tests = []struct{ in, out string }{
+		{
+			"Copyright hi",
+			"Copyright hi",
+		},
+		{
+			"Copyright hi\n",
+			"",
+		},
+		{
+			" Copyright hi",
+			" Copyright hi",
+		},
+		{
+			"hello\nCopyright hi\n",
+			"hello\n            \n",
+		},
+		{
+			"hello\nCopyright hi\n\nCopyright low down\ngood-bye\n",
+			"hello\n            \n\n                  \ngood-bye\n",
+		},
+		// CC case
+		{
+			"hello\nCopyright means copyright and no two ways about it\n\nCopyright low down\ngood-bye\n",
+			"hello\nCopyright means copyright and no two ways about it\n\n                  \ngood-bye\n",
+		},
+	}
+	for _, test := range tests {
+		input := []byte(test.in)
+		got := string(removeCopyrightLines(input))
+		if got != test.out {
+			t.Errorf("removeCopyrightLines(%q)=%q; want %q", test.in, got, test.out)
+		}
+		// Now verify that input is unchanged.
+		if string(input) != test.in {
+			t.Errorf("removeCopyrightLines(%q) modified input to %q", test.in, input)
+		}
+	}
+}
