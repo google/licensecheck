@@ -100,6 +100,7 @@ var urlLicenses = map[string]string{
 	"www.opensource.org/licenses/epl-2.0":                                      "EPL-2.0",
 	"www.opensource.org/licenses/eudatagrid":                                   "EUDatagrid",
 	"www.opensource.org/licenses/eupl-1.1":                                     "EUPL-1.1",
+	"www.opensource.org/licenses/eupl-1.2":                                     "EUPL-1.2",
 	"www.opensource.org/licenses/fair":                                         "Fair",
 	"www.opensource.org/licenses/frameworx-1.0":                                "Frameworx-1.0",
 	"www.opensource.org/licenses/gpl-2.0":                                      "GPL-2.0",
