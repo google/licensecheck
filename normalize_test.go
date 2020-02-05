@@ -142,7 +142,7 @@ func TestRemoveCopyrightLines(t *testing.T) {
 		},
 		{
 			"Copyright hi\n",
-			"",
+			"            \n",
 		},
 		{
 			" Copyright hi",

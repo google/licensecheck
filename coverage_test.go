@@ -6,6 +6,7 @@ package licensecheck
 
 import (
 	"bytes"
+	"strings"
 	"testing"
 )
 
@@ -94,10 +95,18 @@ func checkMatch(t *testing.T, m Match, name string, prevEnd int) {
 		return
 	}
 	lic := findLicense(name)
+	// Skip leading white space, almost certainly trimmed copyright lines.
+	length := len(lic.doc.text)
+	for _, c := range lic.doc.text {
+		if c != ' ' && c != '\n' {
+			break
+		}
+		length--
+	}
 	// There is some fudge factor in the match lengths because of terminal spaces, so be forgiving.
-	min, max := len(lic.doc.text)-5, len(lic.doc.text)
+	min, max := length-5, length
 	if n := m.End - m.Start; n < min || max < n {
-		t.Errorf("match for %s is %d bytes long; expected %d", name, m.End-m.Start, len(lic.doc.text))
+		t.Errorf("match for %s is %d bytes long; expected %d", name, m.End-m.Start, length)
 	}
 	if m.End <= m.Start {
 		t.Errorf("match for %s starts at %d after it ends at %d", name, m.Start, m.End)
@@ -119,5 +128,55 @@ func TestWordOffset(t *testing.T) {
 	wordOff := doc.wordOffset(len(doc.text))
 	if wordOff != len(doc.words) {
 		t.Fatalf("%d: got word %d; expected %d", len(doc.words), wordOff, len(doc.words))
+	}
+}
+
+const testText = `Copyright (c) 2010 The Walk Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. The names of the authors may not be used to endorse or promote products
+   derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHORS "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+`
+
+// Verify known offsets etc., protecting against
+// https://github.com/google/licensecheck/issues/8
+func TestMatch(t *testing.T) {
+	cover, ok := Cover([]byte(testText), Options{})
+	if !ok {
+		t.Fatal("Cover failed")
+	}
+	match := cover.Match[0]
+	if expect := "BSD-3-Clause"; match.Name != expect {
+		t.Errorf("name is %q; should be %q", match.Name, expect)
+	}
+	if expect := BSD; match.Type != expect {
+		t.Errorf("Type is %q; should be %q", match.Type, expect)
+	}
+	if match.IsURL {
+		t.Errorf("match is URL")
+	}
+	if expect := strings.Index(testText, "Redistribution"); match.Start != expect {
+		t.Errorf("start is %d; should be %d", match.Start, expect)
+	}
+	if expect := len(testText) - 2; match.End != expect { // -2 for newline and terminal period.
+		t.Errorf("end is %d; should be %d", match.End, expect)
 	}
 }

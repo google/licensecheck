@@ -57,6 +57,8 @@ func normalize(data []byte) *document {
 	}
 }
 
+var copyrightText = []byte("\nCopyright ")
+
 // removeCopyrightLines returns its argument text with (nearly) all lines beginning
 // with the word Copyright deleted. (The exception is for the lines in the Creative
 // Commons licenses that are a definition of Copyright.) Leading spaces are
@@ -65,20 +67,19 @@ func normalize(data []byte) *document {
 // practice. If a copyright line is deleted, the return value is a fresh copy to
 // avoid overwriting the caller's data.
 func removeCopyrightLines(text []byte) []byte {
-	for bytes.HasPrefix(text, []byte("Copyright ")) {
-		newline := bytes.IndexByte(text, '\n')
-		if newline < 0 {
-			return text
-		}
-		text = text[newline+1:]
-	}
 	copied := false
 	for i := 0; ; {
-		start := bytes.Index(text[i:], []byte("\nCopyright "))
+		copyright := copyrightText
+		if i == 0 {
+			copyright = copyright[1:] // Drop leading newline
+		}
+		start := bytes.Index(text[i:], copyright)
 		if start < 0 {
 			break
 		}
-		start += i + 1 // Skip starting newline.
+		if i > 0 {
+			start += i + 1 // Skip starting newline.
+		}
 		newline := bytes.IndexByte(text[start:], '\n')
 		if newline < 0 {
 			break
