@@ -133,7 +133,7 @@ such a program is covered only if its contents constitute a work based
 on the Library (independent of the use of the Library in a tool for
 writing it).  Whether that is true depends on what the Library does
 and what the program that uses the Library does.
-  
+
   1. You may copy and distribute verbatim copies of the Library's
 complete source code as you receive it, in any medium, provided that
 you conspicuously and appropriately publish on each copy an
@@ -449,8 +449,7 @@ safest to attach them to the start of each source file to most effectively
 convey the exclusion of warranty; and each file should have at least the
 "copyright" line and a pointer to where the full notice is found.
 
-    <one line to give the library's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
+    ___
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Library General Public

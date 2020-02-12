@@ -465,7 +465,7 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 	// For each word of the input, look to see if a sequence starting there
 	// matches a sequence in the license.
 	var p phrase
-	for k := 0; k+len(p) <= len(text); k++ { // k also updated in loop.
+	for k := 0; k+len(p) <= len(text); { // k updated in loop.
 		copy(p[:], text[k:])
 		// Find longest match starting with that word.
 		startIndexes := l.startIndexes[p]
@@ -485,34 +485,90 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 				matchIndex = index
 			}
 		}
-		// If we have a long match, remember it and advance the location in
+
+		if matchLength < opts.MinLength {
+			k++
+			continue
+		}
+
+		// We have a long match. Remember it and advance the location in
 		// the text. Note that we do not do anything to advance the license
 		// text, which means that certain reorderings will match, perhaps
 		// erroneously. This has not appeared in practice, while handling
 		// things this way means the algorithm can identify multiple
 		// appearances of a license within a single file.
-		if matchLength > opts.MinLength {
-			end := k + matchLength
-			// Does this fit onto the previous match, or is it close
-			// enough to consider? The slop allows text like
-			//	Copyright (c) 2009 Snarfboodle Inc. All rights reserved.
-			// to match
-			// 	Copyright (c) <YEAR> <COMPANY>. All rights reserved.
-			// and be considered a single span.
-			if len(s) > 0 && s[len(s)-1].end+opts.Slop >= k && matchIndex >= s[len(s)-1].licenseEnd {
-				s[len(s)-1].end = end
-				s[len(s)-1].matched += matchLength
-				s[len(s)-1].licenseEnd = matchIndex + matchLength
-			} else {
-				s = append(s, submatch{
-					start:      k,
-					end:        end,
-					matched:    matchLength,
-					licenseEnd: matchIndex + matchLength,
-				})
+		start := k
+		end := start + matchLength
+		k = end // The last word is not part of the match, but might be part of the next.
+
+		// The blank (wildcard) ___ maps to word ID -1.
+		// If we see a blank, we allow it to be filled in by up to 70 words.
+		// This allows recognizing quite a few specialized copyright lines
+		// (see for example testdata/MIT.t2) while not being large enough
+		// to jump over an entire other license (our shortest is Apache-2.0-User
+		// at 80 words).
+		const blank = -1
+		const blankMax = 70
+
+		// Does this fit onto the previous match, or is it close
+		// enough to consider? The slop allows text like
+		//	Copyright (c) 2009 Snarfboodle Inc. All rights reserved.
+		// to match
+		// 	Copyright (c) <YEAR> <COMPANY>. All rights reserved.
+		// and be considered a single span.
+		if len(s) > 0 {
+			prev := &s[len(s)-1]
+			textGap := opts.Slop
+			if prev.licenseEnd < len(l.doc.words) && l.doc.words[prev.licenseEnd] == blank {
+				textGap = blankMax
 			}
-			k = end - 1 // The last word is not part of the match, but might be part of the next.
+			if prev.end+textGap >= start && matchIndex >= prev.licenseEnd {
+				if textGap == blankMax {
+					prev.matched++ // matched the blank
+				}
+				prev.end = end
+				prev.matched += matchLength
+				prev.licenseEnd = matchIndex + matchLength
+				continue
+			}
 		}
+
+		// Does this match immediately follow an early blank in the license text?
+		// If so, see if we can extend it backward.
+		// The most common case needing this is licenses that start with "Copyright ___".
+		// The text before the blank is too short to be its own match but it can be
+		// part of this one.
+		if matchIndex >= 2 && l.doc.words[matchIndex-1] == blank && l.doc.words[matchIndex-2] != blank {
+			i := start - blankMax
+			if i < 0 {
+				i = 0
+			}
+			if len(s) > 0 && i < s[len(s)-1].end {
+				i = s[len(s)-1].end
+			}
+			for ; i < start; i++ {
+				if text[i] == l.doc.words[matchIndex-2] {
+					// Found a match across the gap.
+					start = i
+					matchIndex -= 2
+					matchLength += 2
+					// Extend backward if possible.
+					for start > 0 && matchIndex > 0 && text[start-1] == l.doc.words[matchIndex-1] {
+						start--
+						matchIndex--
+						matchLength++
+					}
+					break
+				}
+			}
+		}
+
+		s = append(s, submatch{
+			start:      start,
+			end:        end,
+			matched:    matchLength,
+			licenseEnd: matchIndex + matchLength,
+		})
 	}
 	return s
 }
