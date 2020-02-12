@@ -285,10 +285,21 @@ func (doc *document) wordOffset(byteOffset int) int {
 // toByteOffsets converts in-place the non-URL Matches' word offsets in the document to byte offsets.
 func (doc *document) toByteOffsets(c *Checker, matches []Match) {
 	for i := range matches {
-		start := matches[i].Start
-		matches[i].Start = int(doc.byteOff[start])
-		end := matches[i].End - 1
-		matches[i].End = int(doc.byteOff[end]) + len(c.words[doc.words[end]])
+		m := &matches[i]
+		start := m.Start
+		if start == 0 {
+			m.Start = 0
+		} else {
+			m.Start = int(doc.byteOff[start])
+		}
+		end := m.End
+		if end == 0 {
+			m.End = 0
+		} else if end == len(doc.words) {
+			m.End = len(doc.text)
+		} else {
+			m.End = int(doc.byteOff[end-1]) + len(c.words[doc.words[end-1]])
+		}
 	}
 }
 
