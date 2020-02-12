@@ -58,12 +58,16 @@ func licenseType(name string) Type {
 	return Other
 }
 
+// A phrase is a sequence of words used as a key for startIndexes.
+// Empirically, two words are best; more is slower.
+type phrase [2]int32
+
 type license struct {
 	typ          Type
 	name         string
 	text         string
 	doc          *document
-	startIndexes map[int32][]int
+	startIndexes map[phrase][]int
 }
 
 type document struct {
@@ -157,10 +161,13 @@ type submatch struct {
 
 // startIndexes is used during initialization to construct a map from
 // the occurrences of each word in the license to their byte offsets.
-func startIndexes(words []int32) map[int32][]int {
-	m := make(map[int32][]int, len(words))
-	for i, w := range words {
-		m[w] = append(m[w], i)
+func startIndexes(words []int32) map[phrase][]int {
+	m := make(map[phrase][]int, len(words))
+	var p phrase
+	const n = len(p)
+	for i := 0; i+n <= len(words); i++ {
+		copy(p[:], words[i:])
+		m[p] = append(m[p], i)
 	}
 	return m
 }
@@ -446,16 +453,17 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 	}
 	// For each word of the input, look to see if a sequence starting there
 	// matches a sequence in the license.
-	for k := 0; k < len(text); k++ { // k also updated in loop.
-		word := text[k]
+	var p phrase
+	for k := 0; k+len(p) <= len(text); k++ { // k also updated in loop.
+		copy(p[:], text[k:])
 		// Find longest match starting with that word.
-		startIndexes := l.startIndexes[word]
+		startIndexes := l.startIndexes[p]
 		matchLength := 0
 		matchIndex := 0
 		for _, index := range startIndexes {
 			start := k
-			j := k
-			for _, w := range l.doc.words[index:] {
+			j := k + len(p)
+			for _, w := range l.doc.words[index+len(p):] {
 				if j == len(text) || w != text[j] {
 					break
 				}
