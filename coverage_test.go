@@ -13,7 +13,7 @@ import (
 // TestSelfCoverage makes sure that the license texts match themselves.
 // That is a mininum requirement.
 func TestSelfCoverage(t *testing.T) {
-	for _, l := range licenses {
+	for _, l := range builtin.licenses {
 		cov, ok := Cover(l.doc.text, Options{})
 		if !ok {
 			t.Errorf("no coverage for %s", l.name)
@@ -80,7 +80,7 @@ func TestMultiCoverage(t *testing.T) {
 }
 
 func findLicense(name string) license {
-	for _, l := range licenses {
+	for _, l := range builtin.licenses {
 		if l.name == name {
 			return l
 		}
