@@ -14,7 +14,10 @@ import (
 // normalize turns the input byte slice into a slice of normalized words
 // as a document, including the indexes required to recover the original.
 // Normalized text is all lower case, stripped of punctuation and space.
-func normalize(data []byte) *document {
+// The slice of normalized words is a slice of indexes into c.words,
+// which is updated to add new words as needed.
+// Using integer indexes makes the comparison against input texts faster.
+func (c *Checker) normalize(data []byte) *document {
 	var r rune
 	var wid int
 	pos := 0
@@ -24,7 +27,7 @@ func normalize(data []byte) *document {
 		r, wid = utf8.DecodeRuneInString(str[pos:])
 		pos += wid
 	}
-	words := make([]string, 0, 100)
+	words := make([]int32, 0, 100)
 	indexes := make([]int32, 0, 100)
 	// Each iteration adds a word.
 	for pos < len(str) {
@@ -45,7 +48,14 @@ func normalize(data []byte) *document {
 		if pos > start {
 			// Is it a list marker? Longest one is maxListMarkerLength bytes: "viii".
 			if pos-start > maxListMarkerLength || !isListMarker(str[start:pos], r) { // If at EOF, r will not be valid punctuation
-				words = append(words, str[start:pos])
+				word := str[start:pos]
+				w, ok := c.dict[word]
+				if !ok {
+					w = int32(len(c.words))
+					c.words = append(c.words, word)
+					c.dict[word] = w
+				}
+				words = append(words, w)
 				indexes = append(indexes, int32(start))
 			}
 		}

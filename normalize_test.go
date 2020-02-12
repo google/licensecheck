@@ -88,13 +88,14 @@ var apacheWords = strings.Fields(strings.Join([]string{
 }, " "))
 
 func TestNormalize(t *testing.T) {
-	doc := normalize([]byte(apacheStart))
-	for i, word := range doc.words {
+	c := builtin
+	doc := c.normalize([]byte(apacheStart))
+	for i, w := range doc.words {
 		if i >= len(apacheWords) {
-			t.Fatalf("more words than expected starting at %q", doc.words[i:])
+			t.Fatalf("more words than expected starting at %d: %s", i, c.words[w])
 		}
-		if word != apacheWords[i] {
-			t.Fatalf("mismatch at word %d: got %q; want %q", i, word, apacheWords[i])
+		if c.words[w] != apacheWords[i] {
+			t.Fatalf("mismatch at word %d: got %q; want %q", i, c.words[w], apacheWords[i])
 		}
 	}
 }

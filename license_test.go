@@ -194,3 +194,30 @@ func matchMatch(have, want Match) bool {
 		have.End == want.End &&
 		have.IsURL == want.IsURL
 }
+
+var benchdata []byte
+
+func BenchmarkTestdata(b *testing.B) {
+	if benchdata == nil {
+		files, err := filepath.Glob("testdata/*")
+		if err != nil {
+			b.Fatal(err)
+		}
+		if len(files) == 0 {
+			b.Fatalf("no testdata files found")
+		}
+		for _, file := range files {
+			data, err := ioutil.ReadFile(file)
+			if err != nil {
+				b.Fatal(err)
+			}
+			benchdata = append(benchdata, data...)
+		}
+		b.ResetTimer()
+	}
+
+	b.SetBytes(int64(len(benchdata)))
+	for i := 0; i < b.N; i++ {
+		Cover(benchdata, Options{})
+	}
+}
