@@ -63,19 +63,21 @@ type license struct {
 	name         string
 	text         string
 	doc          *document
-	startIndexes map[string][]int
+	startIndexes map[int32][]int
 }
 
 type document struct {
-	text    []byte   // Original text.
-	words   []string // Normalized words.
-	byteOff []int32  // ith byteOff is byte offset of ith word in original text.
+	text    []byte  // Original text.
+	words   []int32 // Normalized words (indexes into c.words)
+	byteOff []int32 // ith byteOff is byte offset of ith word in original text.
 }
 
 // A Checker matches a set of known licenses.
 type Checker struct {
 	licenses []license
 	urls     map[string]string
+	dict     map[string]int32 // dict maps word to index in words
+	words    []string         // list of known words
 }
 
 // A License describes a single license that can be recognized.
@@ -88,9 +90,11 @@ type License struct {
 
 // New returns a new Checker that recognizes the given list of licenses.
 func New(licenses []License) *Checker {
-	c := new(Checker)
-	c.licenses = make([]license, 0, len(licenses))
-	c.urls = make(map[string]string)
+	c := &Checker{
+		licenses: make([]license, 0, len(licenses)),
+		urls:     make(map[string]string),
+		dict:     make(map[string]int32),
+	}
 	for _, l := range licenses {
 		if l.Text != "" {
 			next := len(c.licenses)
@@ -99,7 +103,7 @@ func New(licenses []License) *Checker {
 			cl.name = l.Name
 			cl.typ = licenseType(cl.name)
 			cl.text = l.Text
-			cl.doc = normalize([]byte(cl.text))
+			cl.doc = c.normalize([]byte(cl.text))
 			cl.startIndexes = startIndexes(cl.doc.words)
 		}
 		if l.URL != "" {
@@ -153,8 +157,8 @@ type submatch struct {
 
 // startIndexes is used during initialization to construct a map from
 // the occurrences of each word in the license to their byte offsets.
-func startIndexes(words []string) map[string][]int {
-	m := make(map[string][]int, len(words))
+func startIndexes(words []int32) map[int32][]int {
+	m := make(map[int32][]int, len(words))
 	for i, w := range words {
 		m[w] = append(m[w], i)
 	}
@@ -177,7 +181,7 @@ func Cover(input []byte, opts Options) (Coverage, bool) {
 // Cover is like the top-level function Cover, but it uses the
 // set of licenses in the Checker instead of the built-in license set.
 func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
-	doc := normalize(input)
+	doc := c.normalize(input)
 	// Match the input text against all licenses.
 	var matches []Match
 	for _, l := range c.licenses {
@@ -195,7 +199,7 @@ func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
 			return Coverage{}, false
 		}
 		overallPercent := doc.percent(matches)
-		doc.toByteOffsets(matches)
+		doc.toByteOffsets(c, matches)
 		return Coverage{
 			Percent: overallPercent,
 			Match:   matches,
@@ -248,7 +252,7 @@ func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
 	// Compute this before overwriting offsets.
 	overallPercent := doc.percent(matches)
 
-	doc.toByteOffsets(matches)
+	doc.toByteOffsets(c, matches)
 
 	return Coverage{
 		Percent: overallPercent,
@@ -272,12 +276,12 @@ func (doc *document) wordOffset(byteOffset int) int {
 }
 
 // toByteOffsets converts in-place the non-URL Matches' word offsets in the document to byte offsets.
-func (doc *document) toByteOffsets(matches []Match) {
+func (doc *document) toByteOffsets(c *Checker, matches []Match) {
 	for i := range matches {
 		start := matches[i].Start
 		matches[i].Start = int(doc.byteOff[start])
 		end := matches[i].End - 1
-		matches[i].End = int(doc.byteOff[end]) + len(doc.words[end])
+		matches[i].End = int(doc.byteOff[end]) + len(c.words[doc.words[end]])
 	}
 }
 
@@ -313,7 +317,7 @@ func (doc *document) findURLsBetween(c *Checker, matches []Match) []Match {
 		// that will include all the text in the gap.
 		end := len(doc.text)
 		if endWord < len(doc.words) {
-			end = int(doc.byteOff[endWord-1]) + len(doc.words[endWord-1])
+			end = int(doc.byteOff[endWord-1]) + len(c.words[doc.words[endWord-1]])
 		}
 		urlIndexes := urlRE.FindAllIndex(doc.text[start:end], -1)
 		if len(urlIndexes) == 0 {
@@ -430,7 +434,7 @@ func (m *Match) overlaps(n *Match) bool {
 // submatches returns a list describing the runs of words in text
 // that match the license. Its algorithm is a heuristic and can be
 // defeated, but seems to work well in practice.
-func (l *license) submatches(text []string, opts Options) (s []submatch) {
+func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 	if len(text) == 0 || len(l.doc.words) == 0 {
 		return s
 	}
