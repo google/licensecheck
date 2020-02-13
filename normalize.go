@@ -10,13 +10,18 @@ import (
 	"unicode/utf8"
 )
 
+const (
+	blankID       = -1
+	unknownWordID = -2
+)
+
 // normalize turns the input byte slice into a slice of normalized words
 // as a document, including the indexes required to recover the original.
 // Normalized text is all lower case, stripped of punctuation and space.
 // The slice of normalized words is a slice of indexes into c.words,
 // which is updated to add new words as needed.
 // Using integer indexes makes the comparison against input texts faster.
-func (c *Checker) normalize(data []byte) *document {
+func (c *Checker) normalize(data []byte, updateDict bool) *document {
 	var r rune
 	var wid int
 	pos := 0
@@ -32,7 +37,7 @@ func (c *Checker) normalize(data []byte) *document {
 		start := pos
 		const blank = "___" // fill in the blank wildcard
 		if strings.HasPrefix(str[pos:], blank) {
-			words = append(words, -1)
+			words = append(words, blankID)
 			indexes = append(indexes, int32(start))
 			pos += len(blank)
 			continue
@@ -56,9 +61,13 @@ func (c *Checker) normalize(data []byte) *document {
 				word := str[start:pos]
 				w, ok := c.dict[word]
 				if !ok {
-					w = int32(len(c.words))
-					c.words = append(c.words, word)
-					c.dict[word] = w
+					if updateDict {
+						w = int32(len(c.words))
+						c.words = append(c.words, word)
+						c.dict[word] = w
+					} else {
+						w = unknownWordID
+					}
 				}
 				words = append(words, w)
 				indexes = append(indexes, int32(start))

@@ -10,6 +10,7 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	"unicode/utf8"
 )
 
 // The order matters here so everything typechecks for the tools, which are fussy.
@@ -107,7 +108,7 @@ func New(licenses []License) *Checker {
 			cl.name = l.Name
 			cl.typ = licenseType(cl.name)
 			cl.text = l.Text
-			cl.doc = c.normalize([]byte(cl.text))
+			cl.doc = c.normalize([]byte(cl.text), true)
 			cl.startIndexes = startIndexes(cl.doc.words)
 		}
 		if l.URL != "" {
@@ -197,7 +198,7 @@ func Cover(input []byte, opts Options) (Coverage, bool) {
 // Cover is like the top-level function Cover, but it uses the
 // set of licenses in the Checker instead of the built-in license set.
 func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
-	doc := c.normalize(input)
+	doc := c.normalize(input, false)
 	// Match the input text against all licenses.
 	var matches []Match
 	for _, l := range c.licenses {
@@ -291,6 +292,32 @@ func (doc *document) wordOffset(byteOffset int) int {
 	return len(doc.words)
 }
 
+// endWordToEndByte returns the end byte offset corresponding
+// to the given end word offset.
+func (doc *document) endWordToEndByte(c *Checker, end int) int {
+	if end == 0 {
+		return 0
+	}
+	if end == len(doc.words) {
+		return len(doc.text)
+	}
+	if doc.words[end-1] >= 0 {
+		return int(doc.byteOff[end-1]) + len(c.words[doc.words[end-1]])
+	}
+
+	// Unknown word in document, not added to dictionary.
+	// Look in text to find out how long it is.
+	pos := int(doc.byteOff[end-1])
+	for pos < len(doc.text) {
+		r, wid := utf8.DecodeRune(doc.text[pos:])
+		if !isWordChar(r) {
+			break
+		}
+		pos += wid
+	}
+	return pos
+}
+
 // toByteOffsets converts in-place the non-URL Matches' word offsets in the document to byte offsets.
 func (doc *document) toByteOffsets(c *Checker, matches []Match) {
 	for i := range matches {
@@ -301,14 +328,7 @@ func (doc *document) toByteOffsets(c *Checker, matches []Match) {
 		} else {
 			m.Start = int(doc.byteOff[start])
 		}
-		end := m.End
-		if end == 0 {
-			m.End = 0
-		} else if end == len(doc.words) {
-			m.End = len(doc.text)
-		} else {
-			m.End = int(doc.byteOff[end-1]) + len(c.words[doc.words[end-1]])
-		}
+		m.End = doc.endWordToEndByte(c, m.End)
 	}
 }
 
@@ -342,10 +362,7 @@ func (doc *document) findURLsBetween(c *Checker, matches []Match) []Match {
 		// be the last text in the file. Make sure to run to EOF if we're at the end.
 		// Otherwise, the end will go right up to the start of the next match, and
 		// that will include all the text in the gap.
-		end := len(doc.text)
-		if endWord < len(doc.words) {
-			end = int(doc.byteOff[endWord-1]) + len(c.words[doc.words[endWord-1]])
-		}
+		end := doc.endWordToEndByte(c, endWord)
 		urlIndexes := urlRE.FindAllIndex(doc.text[start:end], -1)
 		if len(urlIndexes) == 0 {
 			continue
@@ -516,7 +533,6 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 		// (see for example testdata/MIT.t2) while not being large enough
 		// to jump over an entire other license (our shortest is Apache-2.0-User
 		// at 80 words).
-		const blank = -1
 		const blankMax = 70
 
 		// Does this fit onto the previous match, or is it close
@@ -528,7 +544,7 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 		if len(s) > 0 {
 			prev := &s[len(s)-1]
 			textGap := opts.Slop
-			if prev.licenseEnd < len(l.doc.words) && l.doc.words[prev.licenseEnd] == blank {
+			if prev.licenseEnd < len(l.doc.words) && l.doc.words[prev.licenseEnd] == blankID {
 				textGap = blankMax
 			}
 			if prev.end+textGap >= start && matchIndex >= prev.licenseEnd {
@@ -547,7 +563,7 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 		// The most common case needing this is licenses that start with "Copyright ___".
 		// The text before the blank is too short to be its own match but it can be
 		// part of this one.
-		if matchIndex >= 2 && l.doc.words[matchIndex-1] == blank && l.doc.words[matchIndex-2] != blank {
+		if matchIndex >= 2 && l.doc.words[matchIndex-1] == blankID && l.doc.words[matchIndex-2] != blankID {
 			min := start - blankMax
 			if min < 0 {
 				min = 0

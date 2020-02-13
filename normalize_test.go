@@ -89,7 +89,7 @@ var apacheWords = strings.Fields(strings.Join([]string{
 
 func TestNormalize(t *testing.T) {
 	c := builtin
-	doc := c.normalize([]byte(apacheStart))
+	doc := c.normalize([]byte(apacheStart), true)
 	for i, w := range doc.words {
 		if i >= len(apacheWords) {
 			t.Fatalf("more words than expected starting at %d: %s", i, c.words[w])
