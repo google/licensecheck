@@ -47,7 +47,8 @@ func main() {
 		fmt.Fprintf(out, "\t\t{Name: %q, Text: %v},\n", filepath.Base(file), varName(file))
 	}
 	fmt.Fprintf(out, "\t}\n")
-	fmt.Fprintf(out, "\tbuiltin = New(append(files, builtinURLs...))\n")
+	fmt.Fprintf(out, "\tbuiltinList = append(files, builtinURLs...)\n")
+	fmt.Fprintf(out, "\tbuiltin = New(BuiltinLicenses())\n")
 	fmt.Fprintf(out, "}\n")
 
 	const (

@@ -33,7 +33,8 @@ func init() {
 		{Name: "Unlicense", Text: license_Unlicense},
 		{Name: "Zlib", Text: license_Zlib},
 	}
-	builtin = New(append(files, builtinURLs...))
+	builtinList = append(files, builtinURLs...)
+	builtin = New(BuiltinLicenses())
 }
 
 const license_AGPL_3_0 = `                    GNU AFFERO GENERAL PUBLIC LICENSE
