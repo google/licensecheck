@@ -395,7 +395,21 @@ func (c *Checker) licenseURL(url string) (string, bool) {
 	url = strings.TrimSuffix(url, "/legalcode") // Common for CC licenses.
 	url = strings.ToLower(url)
 	name, ok := c.urls[url]
-	return name, ok
+	if ok {
+		return name, true
+	}
+
+	// Try trimming one more path element, so that the ported URL
+	//	https://creativecommons.org/licenses/by/3.0/us/
+	// is recognized as the known unported URL
+	//	https://creativecommons.org/licenses/by/3.0
+	if i := strings.LastIndex(url, "/"); i >= 0 {
+		if name, ok = c.urls[url[:i]]; ok {
+			return name, true
+		}
+	}
+
+	return "", false
 }
 
 // percent returns the total percentage of words in the input matched by matches.
