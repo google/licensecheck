@@ -101,10 +101,10 @@ func TestTestdata(t *testing.T) {
 			mismatch := false
 			var buf bytes.Buffer
 			if !matchPercent(cov.Percent, want.Percent) {
-				fmt.Fprintf(&buf, "- %.1f\n+ %.1f\n", want.Percent, cov.Percent)
+				fmt.Fprintf(&buf, "- %.1f%%\n+ %.1f%%\n", want.Percent, cov.Percent)
 				mismatch = true
 			} else {
-				fmt.Fprintf(&buf, "  %.1f\n", cov.Percent)
+				fmt.Fprintf(&buf, "  %.1f%%\n", cov.Percent)
 			}
 
 			covm, wantm := cov.Match, want.Match

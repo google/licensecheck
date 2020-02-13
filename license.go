@@ -548,14 +548,14 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 		// The text before the blank is too short to be its own match but it can be
 		// part of this one.
 		if matchIndex >= 2 && l.doc.words[matchIndex-1] == blank && l.doc.words[matchIndex-2] != blank {
-			i := start - blankMax
-			if i < 0 {
-				i = 0
+			min := start - blankMax
+			if min < 0 {
+				min = 0
 			}
-			if len(s) > 0 && i < s[len(s)-1].end {
-				i = s[len(s)-1].end
+			if len(s) > 0 && min < s[len(s)-1].end {
+				min = s[len(s)-1].end
 			}
-			for ; i < start; i++ {
+			for i := start - 1; i >= min; i-- {
 				if text[i] == l.doc.words[matchIndex-2] {
 					// Found a match across the gap.
 					start = i
