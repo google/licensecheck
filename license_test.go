@@ -40,7 +40,7 @@ func TestTestdata(t *testing.T) {
 			// Header ends at blank line.
 			i := bytes.Index(data, []byte("\n\n"))
 			if i < 0 {
-				t.Fatalf("invalid test data file: no blank line terminating header")
+				t.Fatalf("%s: invalid test data file: no blank line terminating header", file)
 			}
 			hdr, data := strings.Split(string(data[:i]), "\n"), data[i+2:]
 
@@ -57,7 +57,7 @@ func TestTestdata(t *testing.T) {
 				lineno++
 			}
 			if len(hdr) < 1 {
-				t.Fatalf("header too short")
+				t.Fatalf("%s: header too short", file)
 			}
 
 			linenoStart := lineno
