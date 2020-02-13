@@ -117,7 +117,16 @@ func New(licenses []License) *Checker {
 	return c
 }
 
+// Initialized in func init in data.gen.go.
 var builtin *Checker
+var builtinList []License
+
+// BuiltinLicenses returns the list of licenses built into the package.
+// That is, the built-in checker is equivalent to New(BuiltinLicenses()).
+func BuiltinLicenses() []License {
+	// Return a copy so caller cannot change list entries.
+	return append([]License{}, builtinList...)
+}
 
 // Coverage describes how the text matches various licenses.
 type Coverage struct {
