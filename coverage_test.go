@@ -97,9 +97,6 @@ func checkMatch(t *testing.T, m Match, name string, prevEnd int) {
 	length := len(lic.doc.text)
 	// There is some fudge factor in the match lengths because of terminal spaces, so be forgiving.
 	min, max := length-5, length
-	if name == "BSD-2-Clause" {
-		min = length - 40
-	}
 	if n := m.End - m.Start; n < min || max < n {
 		t.Errorf("match for %s is %d bytes long; expected %d", name, m.End-m.Start, length)
 	}
