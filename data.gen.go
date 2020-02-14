@@ -30,6 +30,7 @@ func init() {
 		{Name: "LGPL-3.0", Text: license_LGPL_3_0},
 		{Name: "MIT", Text: license_MIT},
 		{Name: "MPL-2.0", Text: license_MPL_2_0},
+		{Name: "NCSA", Text: license_NCSA},
 		{Name: "Unlicense", Text: license_Unlicense},
 		{Name: "Zlib", Text: license_Zlib},
 	}
@@ -3494,6 +3495,20 @@ You may add additional accurate notices of copyright ownership.
 Exhibit B - “Incompatible With Secondary Licenses” Notice
 
 This Source Code Form is “Incompatible With Secondary Licenses”, as defined by the Mozilla Public License, v. 2.0.`
+const license_NCSA = `University of Illinois/NCSA Open Source License
+
+Copyright ___
+
+Developed by:
+___
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal with the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimers.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimers in the documentation and/or other materials provided with the distribution.
+* Neither ___ may be used to endorse or promote products derived from this Software without specific prior written permission.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE SOFTWARE.
+`
 const license_Unlicense = `This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
