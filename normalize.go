@@ -15,6 +15,16 @@ const (
 	unknownWordID = -2
 )
 
+// htmlesc unescapes HTML escapes that we've observed,
+// especially in Markdown-formatted licenses.
+// The replacements must have the same length as the original strings
+// to preserve byte offsets.
+var htmlesc = strings.NewReplacer(
+	"&ldquo;", "   \"   ",
+	"&rdquo;", "   \"   ",
+	"&amp;", "  &  ",
+)
+
 // normalize turns the input byte slice into a slice of normalized words
 // as a document, including the indexes required to recover the original.
 // Normalized text is all lower case, stripped of punctuation and space.
@@ -26,6 +36,7 @@ func (c *Checker) normalize(data []byte, updateDict bool) *document {
 	var wid int
 	pos := 0
 	str := toLower(data)
+	str = htmlesc.Replace(str)
 	next := func() {
 		r, wid = utf8.DecodeRuneInString(str[pos:])
 		pos += wid
