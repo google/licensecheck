@@ -27,7 +27,7 @@ type Options struct {
 }
 
 var defaults = Options{
-	MinLength: 20,
+	MinLength: 15,
 	Threshold: 40,
 	Slop:      8,
 }
@@ -577,7 +577,10 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 		// The most common case needing this is licenses that start with "Copyright ___".
 		// The text before the blank is too short to be its own match but it can be
 		// part of this one.
-		if matchIndex >= 2 && l.doc.words[matchIndex-1] == blankID && l.doc.words[matchIndex-2] != blankID {
+		// This is a for loop instead of an if statement to allow backing up
+		// over multiple nearby blanks, such as in licenses/ISC.
+	BlankLoop:
+		for matchIndex >= 2 && l.doc.words[matchIndex-1] == blankID && l.doc.words[matchIndex-2] != blankID {
 			min := start - blankMax
 			if min < 0 {
 				min = 0
@@ -597,9 +600,11 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 						matchIndex--
 						matchLength++
 					}
-					break
+					// See if we're up against another blank.
+					continue BlankLoop
 				}
 			}
+			break
 		}
 
 		s = append(s, submatch{
