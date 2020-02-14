@@ -20,6 +20,7 @@ func init() {
 		{Name: "CC-BY-SA-3.0", Text: license_CC_BY_SA_3_0},
 		{Name: "CC-BY-SA-4.0", Text: license_CC_BY_SA_4_0},
 		{Name: "CC0-1.0", Text: license_CC0_1_0},
+		{Name: "CommonsClause", Text: license_CommonsClause},
 		{Name: "ECL-2.0", Text: license_ECL_2_0},
 		{Name: "GPL2", Text: license_GPL2},
 		{Name: "GPL3", Text: license_GPL3},
@@ -1510,6 +1511,16 @@ express Statement of Purpose.
  d. Affirmer understands and acknowledges that Creative Commons is not a
     party to this document and has no duty or obligation with respect to
     this CC0 or use of the Work.
+`
+const license_CommonsClause = `The Software is provided to you by the Licensor under the License, as defined
+below, subject to the following condition. Without limiting other conditions in
+the License, the grant of rights under the License will not include, and the
+License does not grant to you, the right to Sell the Software. For purposes of
+the foregoing, “Sell” means practicing any or all of the rights granted to you
+under the License to provide to third parties, for a fee or other consideration,
+a product or service that consists, entirely or substantially, of the Software
+or the functionality of the Software. Any license notice or attribution required
+by the License must also include this Commons Cause License Condition notice.
 `
 const license_ECL_2_0 = `Educational Community License
 Version 2.0, April 2007
