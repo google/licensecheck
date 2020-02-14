@@ -210,19 +210,6 @@ func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
 		}
 	}
 
-	if len(matches) == 0 {
-		matches := doc.findURLsBetween(c, nil)
-		if len(matches) == 0 {
-			return Coverage{}, false
-		}
-		overallPercent := doc.percent(matches)
-		doc.toByteOffsets(c, matches)
-		return Coverage{
-			Percent: overallPercent,
-			Match:   matches,
-		}, true
-	}
-
 	// Sort into lexical order so Coverage is sequential across the input.
 	doc.sort(matches)
 
@@ -355,13 +342,15 @@ var urlRE = regexp.MustCompile(`(?i)https?://(` + domainRE + `)+(\.org|com)(/` +
 // inserted into the total list of Matches.
 func (doc *document) findURLsBetween(c *Checker, matches []Match) []Match {
 	var out []Match
-	for i, startWord, nextStartWord := 0, 0, 0; startWord < len(doc.words); i, startWord = i+1, nextStartWord {
+	nextStartWord := 0
+	for i := 0; i <= len(matches); i++ {
+		startWord := nextStartWord
 		endWord := len(doc.words)
-		nextStartWord = endWord
-		if i+1 < len(matches) {
-			endWord = matches[i+1].Start
-			nextStartWord = matches[i+1].End
+		if i < len(matches) {
+			endWord = matches[i].Start
+			nextStartWord = matches[i].End
 		}
+
 		// If there's not enough words here for a URL, like http://b.co, then don't try.
 		if endWord < startWord+3 {
 			continue
