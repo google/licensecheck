@@ -44,6 +44,7 @@ func init() {
 		{Name: "MIT-0", Text: license_MIT_0},
 		{Name: "MIT-Header", Text: license_MIT_Header},
 		{Name: "MPL-2.0", Text: license_MPL_2_0},
+		{Name: "MPL-2.0-Header", Text: license_MPL_2_0_Header},
 		{Name: "NCSA", Text: license_NCSA},
 		{Name: "OpenSSL", Text: license_OpenSSL},
 		{Name: "Unlicense", Text: license_Unlicense},
@@ -5663,6 +5664,10 @@ You may add additional accurate notices of copyright ownership.
 Exhibit B - “Incompatible With Secondary Licenses” Notice
 
 This Source Code Form is “Incompatible With Secondary Licenses”, as defined by the Mozilla Public License, v. 2.0.`
+const license_MPL_2_0_Header = `  // This Source Code Form is subject to the terms of the Mozilla Public
+  // License, v. 2.0. If a copy of the MPL was not distributed with this
+  // file, You can obtain one at http://mozilla.org/MPL/2.0/.
+`
 const license_NCSA = `University of Illinois/NCSA Open Source License
 
 Copyright ___
