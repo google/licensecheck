@@ -24,27 +24,6 @@ func TestSelfCoverage(t *testing.T) {
 	}
 }
 
-// TestApache_2_0_User tests that the "user" form of Apache 2.0 reports the license correctly.
-func TestApache_2_0_User(t *testing.T) {
-	text := findLicense("Apache-2.0-User").doc.text
-	cov, ok := Cover(text, Options{})
-	if !ok {
-		t.Error("no coverage")
-	}
-	// Coverage should be 100%
-	if cov.Percent != 100 {
-		t.Errorf("coverage is %.2f%%, should be 100%%", cov.Percent)
-	}
-	if len(cov.Match) == 0 {
-		t.Fatalf("expected a match; got none")
-	}
-	for _, m := range cov.Match {
-		if m.Name != "Apache-2.0" || m.Percent != 100 {
-			t.Errorf("expected license name %q at 100%%; got %q %.2f%%", "Apache-2.0", m.Name, m.Percent)
-		}
-	}
-}
-
 // TestMultiCoverage makes sure that concatenated license texts match themselves in sequence.
 func TestMultiCoverage(t *testing.T) {
 	mit := findLicense("MIT")

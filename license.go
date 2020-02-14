@@ -475,22 +475,12 @@ func (doc *document) endPos(matches []Match, i int) int {
 
 func makeMatch(l license, s submatch) Match {
 	var match Match
-	match.Name = licenseName(l.name)
+	match.Name = l.name
 	match.Type = l.typ
 	match.Percent = 100 * float64(s.matched) / float64(len(l.doc.words))
 	match.Start = s.start
 	match.End = match.Start + (s.end - s.start)
 	return match
-}
-
-// licenseName does any renaming required for licenses with multiple texts.
-func licenseName(name string) string {
-	switch name {
-	case "Apache-2.0-User":
-		// Apache-2.0 has two forms.
-		return "Apache-2.0"
-	}
-	return name
 }
 
 // overlaps reports whether the two matches represent at least part of the same text.
