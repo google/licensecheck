@@ -119,7 +119,7 @@ const badUTF8 = "\xa1\xb0This License\xa1\xb1 refers to version 3.\n" +
 	"\xa1\xb0The Program\xa1\xb1 \xa1\xb0you\xa1\xb1. \xa1\xb0Licensees\xa1\xb1 and \xa1\xb0recipients\xa1\xb1 may be.\n" +
 	"To \xa1\xb0modify\xa1\xb1 a work is called a \xa1\xb0modified version\xa1\xb1 of the earlier work or a work \xa1\xb0based on\xa1\xb1 the earlier work.\n" +
 	"A \xa1\xb0covered work\xa1\xb1 means the Program.\n" +
-	"To \xa1\xb0propagate\xa1\xb1 a \n" +
+	"To \xa1\xb0propagate\xa1\xb1 work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy.  Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well. \n" +
 	"To \xa1\xb0convey\xa1\xb1 a work \n" +
 	"The \xa1\xb0source code\xa1\xb1 for  \xa1\xb0Object code\xa1\xb1 means work.\n" +
 	"A \xa1\xb0Standard Interface\xa1\xb1 means \n" +
@@ -129,7 +129,7 @@ const badUTF8 = "\xa1\xb0This License\xa1\xb1 refers to version 3.\n" +
 	""
 
 func TestBadUTF8(t *testing.T) {
-	_, ok := Cover([]byte(badUTF8), Options{})
+	_, ok := Cover([]byte(badUTF8), Options{Threshold: 1})
 	if !ok {
 		t.Fatalf("failed to handle bad UTF-8")
 	}

@@ -231,6 +231,15 @@ func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
 	// overlap, and killing off the one that matches fewer words in the
 	// text, including the slop.
 	killed := make([]bool, len(matches))
+	threshold := float64(opts.Threshold)
+	if threshold <= 0 {
+		threshold = float64(defaults.Threshold)
+	}
+	for i := range matches {
+		if matches[i].Percent < threshold {
+			killed[i] = true
+		}
+	}
 	for i := range matches {
 		if killed[i] {
 			continue
@@ -274,7 +283,7 @@ func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
 	return Coverage{
 		Percent: overallPercent,
 		Match:   matches,
-	}, true
+	}, len(matches) > 0
 }
 
 func (doc *document) sort(matches []Match) {
