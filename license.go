@@ -27,7 +27,7 @@ type Options struct {
 }
 
 var defaults = Options{
-	MinLength: 15,
+	MinLength: 10,
 	Threshold: 40,
 	Slop:      8,
 }

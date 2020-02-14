@@ -30,7 +30,7 @@ func TestTestdata(t *testing.T) {
 			continue
 		}
 		file := file
-		t.Run(file, func(t *testing.T) {
+		t.Run(name, func(t *testing.T) {
 			t.Parallel() // faster and tests for races in parallel usage
 
 			data, err := ioutil.ReadFile(file)
