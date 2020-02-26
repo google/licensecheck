@@ -78,6 +78,7 @@ func init() {
 		{Name: "NCSA", Text: license_NCSA},
 		{Name: "OpenSSL", Text: license_OpenSSL},
 		{Name: "Unlicense", Text: license_Unlicense},
+		{Name: "WTFPL", Text: license_WTFPL},
 		{Name: "Zlib", Text: license_Zlib},
 		{Name: "bzip2-1.0.5", Text: license_bzip2_1_0_5},
 		{Name: "bzip2-1.0.6", Text: license_bzip2_1_0_6},
@@ -12516,6 +12517,20 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to [http://unlicense.org]`
+const license_WTFPL = `            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004
+
+ Copyright ___
+
+ Everyone is permitted to copy and distribute verbatim or modified
+ copies of this license document, and changing it is allowed as long
+ as the name is changed.
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+`
 const license_Zlib = `Copyright ___
 
 This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
