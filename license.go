@@ -64,11 +64,10 @@ func licenseType(name string) Type {
 type phrase [2]int32
 
 type license struct {
-	typ          Type
-	name         string
-	text         string
-	doc          *document
-	startIndexes map[phrase][]int
+	typ  Type
+	name string
+	text string
+	doc  *document
 }
 
 type document struct {
@@ -83,6 +82,12 @@ type Checker struct {
 	urls     map[string]string
 	dict     map[string]int32 // dict maps word to index in words
 	words    []string         // list of known words
+	index    map[phrase][]indexEntry
+}
+
+type indexEntry struct {
+	licenseID int32
+	start     int32
 }
 
 // A License describes a single license that can be recognized.
@@ -99,8 +104,9 @@ func New(licenses []License) *Checker {
 		licenses: make([]license, 0, len(licenses)),
 		urls:     make(map[string]string),
 		dict:     make(map[string]int32),
+		index:    make(map[phrase][]indexEntry),
 	}
-	for _, l := range licenses {
+	for id, l := range licenses {
 		if l.Text != "" {
 			next := len(c.licenses)
 			c.licenses = c.licenses[:next+1]
@@ -109,12 +115,13 @@ func New(licenses []License) *Checker {
 			cl.typ = licenseType(cl.name)
 			cl.text = l.Text
 			cl.doc = c.normalize([]byte(cl.text), true)
-			cl.startIndexes = startIndexes(cl.doc.words)
+			c.updateIndex(int32(id), cl.doc.words)
 		}
 		if l.URL != "" {
 			c.urls[l.URL] = l.Name
 		}
 	}
+
 	return c
 }
 
@@ -161,25 +168,25 @@ type Match struct {
 }
 
 type submatch struct {
-	start      int // Index of starting word.
-	end        int // Index of first following word.
-	licenseEnd int // Index within license of last matching word.
+	licenseID  int32 // Index of license in c.licenses
+	start      int   // Index of starting word.
+	end        int   // Index of first following word.
+	licenseEnd int   // Index within license of last matching word.
 	// Number of words between start and end that actually match.
 	// Because of slop, this can be less than end-start.
 	matched int
 }
 
-// startIndexes is used during initialization to construct a map from
-// the occurrences of each word in the license to their byte offsets.
-func startIndexes(words []int32) map[phrase][]int {
-	m := make(map[phrase][]int, len(words))
+// updateIndex is used during initialization to construct a map from
+// the occurrences of each phrase in any license to the word offset
+// in that license, like an n-gram posting list index in full-text search.
+func (c *Checker) updateIndex(id int32, words []int32) {
 	var p phrase
 	const n = len(p)
 	for i := 0; i+n <= len(words); i++ {
 		copy(p[:], words[i:])
-		m[p] = append(m[p], i)
+		c.index[p] = append(c.index[p], indexEntry{id, int32(i)})
 	}
-	return m
 }
 
 // Cover computes the coverage of the text according to the
@@ -199,18 +206,12 @@ func Cover(input []byte, opts Options) (Coverage, bool) {
 // set of licenses in the Checker instead of the built-in license set.
 func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
 	doc := c.normalize(input, false)
+
 	// Match the input text against all licenses.
 	var matches []Match
-	for _, l := range c.licenses {
-		// For each license, there may be multiple submatches,
-		// usually indicating multiple licenses in a file.
-		// Create a separate Match for each.
-		for _, s := range l.submatches(doc.words, opts) {
-			matches = append(matches, makeMatch(l, s))
-		}
+	for _, s := range c.submatches(doc.words, opts) {
+		matches = append(matches, makeMatch(&c.licenses[s.licenseID], s))
 	}
-
-	// Sort into lexical order so Coverage is sequential across the input.
 	doc.sort(matches)
 
 	// We have potentially multiple candidate matches and must winnow them
@@ -275,7 +276,12 @@ func (c *Checker) Cover(input []byte, opts Options) (Coverage, bool) {
 
 func (doc *document) sort(matches []Match) {
 	sort.Slice(matches, func(i, j int) bool {
-		return matches[i].Start < matches[j].Start
+		mi := &matches[i]
+		mj := &matches[j]
+		if mi.Start != mj.Start {
+			return mi.Start < mj.Start
+		}
+		return mi.Name < mj.Name
 	})
 }
 
@@ -462,7 +468,7 @@ func (doc *document) endPos(matches []Match, i int) int {
 	return (m.End + next.Start) / 2
 }
 
-func makeMatch(l license, s submatch) Match {
+func makeMatch(l *license, s submatch) Match {
 	var match Match
 	match.Name = l.name
 	match.Type = l.typ
@@ -478,11 +484,11 @@ func (m *Match) overlaps(n *Match) bool {
 }
 
 // submatches returns a list describing the runs of words in text
-// that match the license. Its algorithm is a heuristic and can be
+// that match any of the licenses. Its algorithm is a heuristic and can be
 // defeated, but seems to work well in practice.
-func (l *license) submatches(text []int32, opts Options) (s []submatch) {
-	if len(text) == 0 || len(l.doc.words) == 0 {
-		return s
+func (c *Checker) submatches(text []int32, opts Options) []submatch {
+	if len(text) == 0 {
+		return nil
 	}
 	if opts.MinLength <= 0 {
 		opts.MinLength = defaults.MinLength
@@ -490,117 +496,144 @@ func (l *license) submatches(text []int32, opts Options) (s []submatch) {
 	if opts.Slop <= 0 {
 		opts.Slop = defaults.Slop
 	}
+
+	var matches []submatch
+
+	// byLicense maps a license ID to the index of the last entry in matches
+	// recording a match of that license. Sometimes we extend the last match
+	// instead of adding a new one.
+	byLicense := make([]int, len(c.licenses))
+	for i := range byLicense {
+		byLicense[i] = -1
+	}
+
 	// For each word of the input, look to see if a sequence starting there
-	// matches a sequence in the license.
+	// matches a sequence in any of the licenses.
 	var p phrase
-	for k := 0; k+len(p) <= len(text); { // k updated in loop.
+	for k := 0; k+len(p) <= len(text); k++ {
+		// Look up current phrase in the index (posting list) to find possible match locations.
 		copy(p[:], text[k:])
-		// Find longest match starting with that word.
-		startIndexes := l.startIndexes[p]
-		matchLength := 0
-		matchIndex := 0
-		for _, index := range startIndexes {
-			start := k
-			j := k + len(p)
-			for _, w := range l.doc.words[index+len(p):] {
-				if j == len(text) || w != text[j] {
-					break
+		index := c.index[p]
+		for len(index) > 0 {
+			licenseID := index[0].licenseID
+
+			// If this start index is for a license that we've already matched beyond k,
+			// skip over all the start indexes for that license.
+			if i := byLicense[licenseID]; i >= 0 && k < matches[i].end {
+				for len(index) > 0 && index[0].licenseID == licenseID {
+					index = index[1:]
 				}
-				j++
-			}
-			if j-start > matchLength {
-				matchLength = j - start
-				matchIndex = index
-			}
-		}
-
-		if matchLength < opts.MinLength {
-			k++
-			continue
-		}
-
-		// We have a long match. Remember it and advance the location in
-		// the text. Note that we do not do anything to advance the license
-		// text, which means that certain reorderings will match, perhaps
-		// erroneously. This has not appeared in practice, while handling
-		// things this way means the algorithm can identify multiple
-		// appearances of a license within a single file.
-		start := k
-		end := start + matchLength
-		k = end // The last word is not part of the match, but might be part of the next.
-
-		// The blank (wildcard) ___ maps to word ID -1.
-		// If we see a blank, we allow it to be filled in by up to 70 words.
-		// This allows recognizing quite a few specialized copyright lines
-		// (see for example testdata/MIT.t2) while not being large enough
-		// to jump over an entire other license (our shortest is Apache-2.0-User
-		// at 80 words).
-		const blankMax = 70
-
-		// Does this fit onto the previous match, or is it close
-		// enough to consider? The slop allows text like
-		//	Copyright (c) 2009 Snarfboodle Inc. All rights reserved.
-		// to match
-		// 	Copyright (c) <YEAR> <COMPANY>. All rights reserved.
-		// and be considered a single span.
-		if len(s) > 0 {
-			prev := &s[len(s)-1]
-			textGap := opts.Slop
-			if prev.licenseEnd < len(l.doc.words) && l.doc.words[prev.licenseEnd] == blankID {
-				textGap = blankMax
-			}
-			if prev.end+textGap >= start && matchIndex >= prev.licenseEnd {
-				if textGap == blankMax {
-					prev.matched++ // matched the blank
-				}
-				prev.end = end
-				prev.matched += matchLength
-				prev.licenseEnd = matchIndex + matchLength
 				continue
 			}
-		}
 
-		// Does this match immediately follow an early blank in the license text?
-		// If so, see if we can extend it backward.
-		// The most common case needing this is licenses that start with "Copyright ___".
-		// The text before the blank is too short to be its own match but it can be
-		// part of this one.
-		// This is a for loop instead of an if statement to allow backing up
-		// over multiple nearby blanks, such as in licenses/ISC.
-	BlankLoop:
-		for matchIndex >= 2 && l.doc.words[matchIndex-1] == blankID && l.doc.words[matchIndex-2] != blankID {
-			min := start - blankMax
-			if min < 0 {
-				min = 0
-			}
-			if len(s) > 0 && min < s[len(s)-1].end {
-				min = s[len(s)-1].end
-			}
-			for i := start - 1; i >= min; i-- {
-				if text[i] == l.doc.words[matchIndex-2] {
-					// Found a match across the gap.
-					start = i
-					matchIndex -= 2
-					matchLength += 2
-					// Extend backward if possible.
-					for start > 0 && matchIndex > 0 && text[start-1] == l.doc.words[matchIndex-1] {
-						start--
-						matchIndex--
-						matchLength++
+			// Find longest match within the possible starts in this license.
+			matchLicenseStart := 0 // start in l.doc
+			matchLength := 0
+			l := &c.licenses[licenseID]
+			for len(index) > 0 && index[0].licenseID == licenseID {
+				ix := index[0]
+				index = index[1:]
+				j := k + len(p)
+				for _, w := range l.doc.words[int(ix.start)+len(p):] {
+					if j == len(text) || w != text[j] {
+						break
 					}
-					// See if we're up against another blank.
-					continue BlankLoop
+					j++
+				}
+				if j-k > matchLength {
+					matchLength = j - k
+					matchLicenseStart = int(ix.start)
 				}
 			}
-			break
-		}
 
-		s = append(s, submatch{
-			start:      start,
-			end:        end,
-			matched:    matchLength,
-			licenseEnd: matchIndex + matchLength,
-		})
+			if matchLength < opts.MinLength {
+				continue
+			}
+
+			// We have a long match - the longest for this license.
+			// Remember it. Note that we do not do anything to advance the license
+			// text, which means that certain reorderings will match, perhaps
+			// erroneously. This has not appeared in practice, while handling
+			// things this way means the algorithm can identify multiple
+			// appearances of a license within a single file.
+			start := k
+			end := start + matchLength
+
+			// The blank (wildcard) ___ maps to word ID -1.
+			// If we see a blank, we allow it to be filled in by up to 70 words.
+			// This allows recognizing quite a few specialized copyright lines
+			// (see for example testdata/MIT.t2) while not being large enough
+			// to jump over an entire other license (our shortest is Apache-2.0-User
+			// at 80 words).
+			const blankMax = 70
+
+			// Does this fit onto the previous match, or is it close
+			// enough to consider? The slop allows text like
+			//	Copyright (c) 2009 Snarfboodle Inc. All rights reserved.
+			// to match
+			// 	Copyright (c) <YEAR> <COMPANY>. All rights reserved.
+			// and be considered a single span.
+			if i := byLicense[licenseID]; i >= 0 {
+				prev := &matches[i]
+				textGap := opts.Slop
+				if prev.licenseEnd < len(l.doc.words) && l.doc.words[prev.licenseEnd] == blankID {
+					textGap = blankMax
+				}
+				if prev.end+textGap >= start && matchLicenseStart >= prev.licenseEnd {
+					if textGap == blankMax {
+						prev.matched++ // matched the blank
+					}
+					prev.end = end
+					prev.matched += matchLength
+					prev.licenseEnd = matchLicenseStart + matchLength
+					continue
+				}
+			}
+
+			// Does this match immediately follow an early blank in the license text?
+			// If so, see if we can extend it backward.
+			// The most common case needing this is licenses that start with "Copyright ___".
+			// The text before the blank is too short to be its own match but it can be
+			// part of this one.
+			// This is a for loop instead of an if statement to allow backing up
+			// over multiple nearby blanks, such as in licenses/ISC.
+		BlankLoop:
+			for matchLicenseStart >= 2 && l.doc.words[matchLicenseStart-1] == blankID && l.doc.words[matchLicenseStart-2] != blankID {
+				min := start - blankMax
+				if min < 0 {
+					min = 0
+				}
+				if i := byLicense[licenseID]; i >= 0 && min < matches[i].end {
+					min = matches[i].end
+				}
+				for i := start - 1; i >= min; i-- {
+					if text[i] == l.doc.words[matchLicenseStart-2] {
+						// Found a match across the gap.
+						start = i
+						matchLicenseStart -= 2
+						matchLength += 2
+						// Extend backward if possible.
+						for start > 0 && matchLicenseStart > 0 && text[start-1] == l.doc.words[matchLicenseStart-1] {
+							start--
+							matchLicenseStart--
+							matchLength++
+						}
+						// See if we're up against another blank.
+						continue BlankLoop
+					}
+				}
+				break
+			}
+
+			byLicense[licenseID] = len(matches)
+			matches = append(matches, submatch{
+				start:      start,
+				end:        end,
+				matched:    matchLength,
+				licenseEnd: matchLicenseStart + matchLength,
+				licenseID:  licenseID,
+			})
+		}
 	}
-	return s
+	return matches
 }
