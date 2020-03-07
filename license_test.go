@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"math"
+	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -27,6 +28,9 @@ func TestTestdata(t *testing.T) {
 	for _, file := range files {
 		name := filepath.Base(file)
 		if name == "README" {
+			continue
+		}
+		if info, err := os.Stat(file); err == nil && info.IsDir() {
 			continue
 		}
 		file := file
