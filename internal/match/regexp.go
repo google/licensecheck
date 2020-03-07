@@ -2,8 +2,16 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+// Exported LRE interface.
+
 package match
 
+import (
+	"sync"
+)
+
+// An LRE is a compiled license regular expression.
+//
 // TODO: Move this comment somewhere non-internal later.
 //
 // A license regular expression (LRE) is a pattern syntax intended for
@@ -38,3 +46,45 @@ package match
 //	((men || women || people))
 //	to come to the aid of their __1__.
 //
+type LRE struct {
+	dict   *Dict
+	file   string
+	syntax *reSyntax
+
+	onceDFA sync.Once
+	dfa     reDFA
+}
+
+// ParseLRE parses the string s as a license regexp.
+// The file name is used in error messages if non-empty.
+func ParseLRE(d *Dict, file, s string) (*LRE, error) {
+	syntax, err := reParse(d, s, true)
+	if err != nil {
+		return nil, err
+	}
+	return &LRE{dict: d, file: file, syntax: syntax}, nil
+}
+
+// Dict returns the Dict used by the LRE.
+func (re *LRE) Dict() *Dict {
+	return re.dict
+}
+
+// File returns the file name passed to ParseLRE.
+func (re *LRE) File() string {
+	return re.file
+}
+
+// Match reports whether text matches the license regexp.
+func (re *LRE) match(text string) bool {
+	re.onceDFA.Do(re.compile)
+	match, _ := re.dfa.match(re.dict, text, re.dict.Split(text))
+	return match >= 0
+}
+
+// compile initializes lre.dfa.
+// It is invoked lazily (in Match) because most LREs end up only
+// being inputs to a MultiLRE; we never need their DFAs directly.
+func (re *LRE) compile() {
+	re.dfa = reCompileDFA(re.syntax.compile(nil, 0))
+}
