@@ -419,6 +419,9 @@ func (c *Checker) licenseURL(url string) (string, bool) {
 // percent returns the total percentage of words in the input matched by matches.
 // When it is called, matches (except for URLs) are in units of words.
 func (doc *document) percent(matches []Match) float64 {
+	if len(doc.words) == 0 {
+		return 0 // avoid NaN
+	}
 	matchLength := 0
 	for i, m := range matches {
 		if m.IsURL {
