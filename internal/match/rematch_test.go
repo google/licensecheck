@@ -43,6 +43,17 @@ a __3__ b
 7	word b
 8	match 0
 
+a b c / d e f
+0	alt 5
+1	word a
+2	word b
+3	word c
+4	match 0
+5	word d
+6	word e
+7	word f
+8	match 1
+
 ((c __2__))?? d e f
 0	alt 6
 1	word c
@@ -75,6 +86,19 @@ func TestCompile(t *testing.T) {
 }
 
 func testProg(t *testing.T, dict *Dict, expr string) reProg {
+	if strings.Contains(expr, "/") {
+		var list []*reSyntax
+		for _, str := range strings.Split(expr, "/") {
+			re, err := reParse(dict, str, false)
+			if err != nil {
+				t.Errorf("Parse(%q): %v", expr, err)
+				return nil
+			}
+			list = append(list, re)
+		}
+		return reCompileMulti(list)
+	}
+
 	re, err := reParse(dict, expr, false)
 	if err != nil {
 		t.Errorf("reParse(%q): %v", expr, err)
@@ -96,6 +120,15 @@ a ((b || c)) d
 8 d:11
 11 m0
 
+a b c / a ((c | d)) e
+0 a:3
+3 b:8 c:13
+8 c:11
+11 m0
+13 d:16
+16 e:19
+19 m1
+
 ((c __2__))?? d e f
 0 c:5 d:18
 5 *:10 d:31
@@ -107,6 +140,15 @@ a ((b || c)) d
 26 d:18 e:21
 31 *:15 d:26 e:38
 38 d:18 f:24
+
+
+a b c / a ((c || d)) e
+0 a:3
+3 b:10 c:15 d:15
+10 c:13
+13 m0
+15 e:18
+18 m1
 `
 
 func TestCompileDFA(t *testing.T) {
@@ -151,6 +193,10 @@ var matchTests = []struct {
 	{`a __5__ c`, `a b c d e f g h i j k`, 0, 3},
 	{`a __5__ b`, `a b c d e f g h i j k`, 0, 2},
 	{`a __5__ a`, `a b c d e f g h i j k`, -1, 0},
+	{`a b c / d e f`, `a b c d`, 0, 3},
+	{`a b c / d e f`, `d e f`, 1, 3},
+	{`a b c / d e f`, `a b d e f`, -1, 0},
+	{`a b c / __3__ d e f`, `a b d e f g`, 1, 5},
 }
 
 func TestReDFAMatch(t *testing.T) {

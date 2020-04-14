@@ -7,6 +7,7 @@
 package match
 
 import (
+	"fmt"
 	"sync"
 )
 
@@ -87,4 +88,106 @@ func (re *LRE) match(text string) bool {
 // being inputs to a MultiLRE; we never need their DFAs directly.
 func (re *LRE) compile() {
 	re.dfa = reCompileDFA(re.syntax.compile(nil, 0))
+}
+
+// A MultiLRE matches multiple LREs simultaneously against a text.
+// It is more efficient than matching each LRE in sequence against the text.
+type MultiLRE struct {
+	dict *Dict // dict shared by all LREs
+	dfa  reDFA // compiled DFA for all LREs
+
+	// start contains the two-word phrases
+	// where a match can validly start,
+	// to allow for faster scans over non-license text.
+	start map[phrase]struct{}
+}
+
+// A phrase is a phrase of up to two words.
+// The zero-word phrase is phrase{NoWord, NoWord}.
+// A single-word phrase w is phrase{w, NoWord}.
+type phrase [2]WordID
+
+// NewMultiLRE returns a MultiLRE looking for the given LREs.
+// All the LREs must have been parsed using the same Dict;
+// if not, NewMultiLRE panics.
+func NewMultiLRE(list []*LRE) (_ *MultiLRE, err error) {
+	if len(list) == 0 {
+		return &MultiLRE{}, nil
+	}
+
+	dict := list[0].dict
+	for _, sub := range list[1:] {
+		if sub.dict != dict {
+			panic("MultiRE: LREs parsed with different Dicts")
+		}
+	}
+
+	var syntax []*reSyntax
+	for _, sub := range list {
+		syntax = append(syntax, sub.syntax)
+	}
+	dfa := reCompileDFA(reCompileMulti(syntax))
+
+	start := make(map[phrase]struct{})
+	for _, sub := range list {
+		phrases := sub.syntax.leadingPhrases()
+		if len(phrases) == 0 {
+			return nil, fmt.Errorf("%s: no leading phrases", sub.File())
+		}
+		for _, p := range phrases {
+			if p[1] == BadWord {
+				return nil, fmt.Errorf("%s: no 2-word leading phrases", sub.File())
+			}
+			start[p] = struct{}{}
+		}
+	}
+
+	return &MultiLRE{dict, dfa, start}, nil
+}
+
+// Dict returns the Dict used by the MultiLRE.
+func (re *MultiLRE) Dict() *Dict {
+	return re.dict
+}
+
+// A Matches is a collection of all leftmost-longest, non-overlapping matches in text.
+type Matches struct {
+	Text  string  // the entire text
+	Words []Word  // the text, split into Words
+	List  []Match // the matches
+}
+
+// A Match records the position of a single match in a text.
+type Match struct {
+	ID    int // index of LRE in list passed to NewMultiLRE
+	Start int // word index of start of match
+	End   int // word index of end of match
+}
+
+// Match reports all leftmost-longest, non-overlapping matches in text.
+func (re *MultiLRE) Match(text string) *Matches {
+	m := &Matches{
+		Text:  text,
+		Words: re.dict.Split(text),
+	}
+	p := phrase{BadWord, BadWord}
+	for i := 0; i < len(m.Words); i++ {
+		p[0], p[1] = p[1], m.Words[i].ID
+		if _, ok := re.start[p]; ok {
+			match, end := re.dfa.match(re.dict, text, m.Words[i-1:])
+			if match >= 0 && end > 0 {
+				end += i - 1 // translate from index in m.Words[i-1:] to index in m.Words
+				m.List = append(m.List, Match{ID: int(match), Start: i - 1, End: end})
+
+				// Continue search at end of match.
+				i = end - 1 // loop will i++
+				p[0] = BadWord
+				continue
+			}
+		}
+	}
+	if len(m.List) == 0 {
+		return nil
+	}
+	return m
 }

@@ -489,3 +489,93 @@ func (p *reParser) collapse(op reOp, subs []*reSyntax) *reSyntax {
 	}
 	return re
 }
+
+// leadingPhrases returns the set of possible initial phrases
+// in any match of the given re syntax.
+func (re *reSyntax) leadingPhrases() []phrase {
+	switch re.op {
+	default:
+		panic("bad op in phrases")
+
+	case opWild:
+		return nil
+
+	case opEmpty:
+		return []phrase{{BadWord, BadWord}}
+
+	case opWords:
+		w := re.w
+		var p phrase
+		if len(w) == 0 {
+			p = phrase{BadWord, BadWord}
+		} else if len(w) == 1 {
+			p = phrase{w[0], BadWord}
+		} else {
+			p = phrase{w[0], w[1]}
+		}
+		return []phrase{p}
+
+	case opQuest:
+		list := re.sub[0].leadingPhrases()
+		for _, l := range list {
+			if l[0] == BadWord {
+				return list
+			}
+		}
+		list = append(list, phrase{BadWord, BadWord})
+		return list
+
+	case opAlternate:
+		var list []phrase
+		have := make(map[phrase]bool)
+		for _, sub := range re.sub {
+			for _, p := range sub.leadingPhrases() {
+				if !have[p] {
+					have[p] = true
+					list = append(list, p)
+				}
+			}
+		}
+		return list
+
+	case opConcat:
+		xs := []phrase{{BadWord, BadWord}}
+		for _, sub := range re.sub {
+			ok := true
+			for _, x := range xs {
+				if x[1] == BadWord {
+					ok = false
+				}
+			}
+			if ok {
+				break
+			}
+			ys := sub.leadingPhrases()
+			have := make(map[phrase]bool)
+			var xys []phrase
+			for _, x := range xs {
+				if x[1] != BadWord {
+					if !have[x] {
+						have[x] = true
+						xys = append(xys, x)
+					}
+					continue
+				}
+				for _, y := range ys {
+					var xy phrase
+					if x[0] == BadWord {
+						xy = y
+					} else {
+						xy = phrase{x[0], y[0]}
+					}
+					if !have[xy] {
+						have[xy] = true
+						xys = append(xys, xy)
+					}
+				}
+			}
+			xs = xys
+		}
+		return xs
+	}
+}

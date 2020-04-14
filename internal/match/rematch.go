@@ -130,6 +130,27 @@ func (re *reSyntax) compile1(prog reProg) reProg {
 	return prog
 }
 
+// reCompileMulti returns a program that matches any of the listed regexps.
+// The regexp list[i] returns match value i when it matches.
+func reCompileMulti(list []*reSyntax) reProg {
+	var prog reProg
+	for i, re := range list {
+		alt := -1
+		if i+1 < len(list) {
+			// Insert Alt that can choose to jump over this program (to the next one).
+			alt = len(prog)
+			prog = append(prog, reInst{op: instAlt})
+		}
+
+		prog = re.compile(prog, int32(i))
+
+		if alt >= 0 {
+			prog[alt].arg = int32(len(prog) - (alt + 1))
+		}
+	}
+	return prog
+}
+
 // NFA state operations, in service of building a DFA.
 // (Again, see https://swtch.com/~rsc/regexp/regexp2.html for background.)
 

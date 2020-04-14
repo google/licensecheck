@@ -5,6 +5,8 @@
 package match
 
 import (
+	"fmt"
+	"sort"
 	"strings"
 	"testing"
 )
@@ -76,6 +78,66 @@ func TestReParseError(t *testing.T) {
 		}
 		if !strings.Contains(err.Error(), tt.err) {
 			t.Errorf("reParse(%q): %v, want error: %s", tt.in, err, tt.err)
+		}
+	}
+}
+
+var phraseRETests = []struct {
+	in  string
+	out string
+}{
+	{in: "abc", out: "[[abc]]"},
+	{in: "a b c", out: "[[a b]]"},
+	{in: "abc ??", out: "[[] [abc]]"},
+	{in: "a b c ??", out: "[[a b]]"},
+	{in: "(a b c) ??", out: "[[a b]]"},
+	{in: "(( a b c )) ??", out: "[[] [a b]]"},
+	{in: "(( a b c )) ?? d e f", out: "[[a b] [d e]]"},
+	{in: "(( a __123__ c )) ??", out: "[[]]"},
+	{in: "a b ((c ||| d e)) f", out: "[[a b]]"},
+	{in: "((a || b)) ((c || d))", out: "[[a c] [a d] [b c] [b d]]"},
+	{in: "a?? b c", out: "[[a b] [b c]]"},
+	{in: "((a __1__))?? b c", out: "[[b c]]"},
+}
+
+func TestLeadingPhrases(t *testing.T) {
+	var d Dict
+	for _, tt := range phraseRETests {
+		re, err := reParse(&d, tt.in, false)
+		if err != nil {
+			t.Errorf("reParse(%q): %v", tt.in, err)
+			continue
+		}
+		phrases := re.leadingPhrases()
+		sort.Slice(phrases, func(i, j int) bool {
+			pi := phrases[i]
+			pj := phrases[j]
+			if pi[0] != pj[0] {
+				return pi[0] < pj[0]
+			}
+			return pi[1] < pj[1]
+		})
+		var b strings.Builder
+		words := d.Words()
+		fmt.Fprintf(&b, "[")
+		for i, p := range phrases {
+			if i > 0 {
+				b.WriteString(" ")
+			}
+			b.WriteString("[")
+			if p[1] >= 0 {
+				b.WriteString(words[p[0]])
+				b.WriteString(" ")
+				b.WriteString(words[p[1]])
+			} else if p[0] >= 0 {
+				b.WriteString(words[p[0]])
+			}
+			b.WriteString("]")
+		}
+		b.WriteString("]")
+		out := b.String()
+		if out != tt.out {
+			t.Errorf("reParse(%q).leadingPhrases() = %v, want %v", tt.in, out, tt.out)
 		}
 	}
 }
