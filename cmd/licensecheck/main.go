@@ -10,6 +10,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -17,12 +18,16 @@ import (
 	"github.com/google/licensecheck"
 )
 
+var verbose = flag.Bool("v", false, "print additional details for license matches")
+
 func main() {
-	if len(os.Args) != 2 {
-		fmt.Fprintf(os.Stderr, "usage: licensecheck FILE\n")
+	flag.Usage = usage
+	flag.Parse()
+	if flag.NArg() != 1 {
+		usage()
 		os.Exit(2)
 	}
-	filename := os.Args[1]
+	filename := flag.Arg(0)
 	contents, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "licensecheck: %v\n", err)
@@ -36,7 +41,16 @@ func main() {
 	coverage, ok := licensecheck.Cover(contents, options)
 	if ok {
 		for _, m := range coverage.Match {
-			fmt.Printf("%s\t%f%%\n", m.Name, m.Percent)
+			if *verbose {
+				fmt.Printf("%s\t%s\t%f%%\t%d\t%d\t%t\n", m.Name, m.Type, m.Percent, m.Start, m.End, m.IsURL)
+			} else {
+				fmt.Printf("%s\t%f%%\n", m.Name, m.Percent)
+			}
 		}
 	}
+}
+
+func usage() {
+	fmt.Fprintf(os.Stderr, "usage: licensecheck [-v] <file>\n")
+	flag.PrintDefaults()
 }
