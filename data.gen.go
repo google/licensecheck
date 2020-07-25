@@ -193,6 +193,8 @@ func init() {
 		{Name: "Unlicense", Text: license_Unlicense_lre},
 		{Name: "WTFPL", Text: license_WTFPL_lre},
 		{Name: "Zlib", Text: license_Zlib_lre},
+		{Name: "bzip2-1.0.5", Text: license_bzip2_1_0_5_lre},
+		{Name: "bzip2-1.0.6", Text: license_bzip2_1_0_6_lre},
 	}
 	builtinListLRE = filesLRE // TODO URLs
 }
@@ -38396,3 +38398,99 @@ the following restrictions:
    (( 3. ))??
    This notice may not be removed or altered from any source distribution.
 `
+const license_bzip2_1_0_5_lre = `//**
+bzip2 and libbzip2 License v1.0.5
+https://spdx.org/licenses/bzip2-1.0.5.json
+https://sourceware.org/bzip2/1.0.5/bzip2-manual-1.0.5.html
+http://bzip.org/1.0.5/bzip2-manual-1.0.5.html
+**//
+
+(( Version 1.0.5 of 10 December 2007
+(( Copyright __20__ ))??
+))??
+
+This program, bzip2, the associated library libbzip2, and all documentation, are
+copyright © 1996-2007 Julian Seward. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   •
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   •
+   The origin of this software must not be misrepresented; you must not claim
+   that you wrote the original software. If you use this software in a product,
+   an acknowledgment in the product documentation would be appreciated but is
+   not required.
+
+   •
+   Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   •
+   The name of the author may not be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+
+PATENTS: To the best of my knowledge, bzip2 and libbzip2 do not use any patented
+algorithms. However, I do not have the resources to carry out a patent search.
+Therefore I cannot give any guarantee of the above statement.
+`
+const license_bzip2_1_0_6_lre = `//**
+bzip2 and libbzip2 License v1.0.6
+https://spdx.org/licenses/bzip2-1.0.6.json
+https://sourceware.org/git/?p=bzip2.git;a=blob;f=LICENSE;hb=bzip2-1.0.6
+http://bzip.org/1.0.5/bzip2-manual-1.0.5.html
+**//
+
+//** Copyright **//
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   The origin of this software must not be misrepresented; you must not claim
+   that you wrote the original software. If you use this software in a product,
+   an acknowledgment in the product documentation would be appreciated but is
+   not required.
+
+   (( 3. ))??
+   Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   (( 4. ))??
+   The name of the author may not be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+
+((
+Julian Seward,
+((jseward@bzip.org || jseward@acm.org))
+((bzip2/libbzip2 version 1.0.6 of 6 September 2010))??
+))??`
