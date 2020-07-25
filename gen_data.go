@@ -20,7 +20,9 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
+	"text/template"
 )
 
 var outFile = flag.String("o", "data.gen.go", "`file` to write")
@@ -61,15 +63,14 @@ func main() {
 	code = strings.Replace(code, "FILES_LIST", out.String(), -1)
 
 	out.Reset()
-	for _, file := range filesLRE {
-		name := filepath.Base(file)
-		name = name[:len(name)-len(filepath.Ext(name))]
-		fmt.Fprintf(out, "\t\t{Name: %q, Text: %v},\n", name, varName(file))
+	builtLRE := buildLRE(filesLRE)
+	for _, file := range builtLRE {
+		fmt.Fprintf(out, "\t\t{Name: %q, Text: %v},\n", file.Name, varName(file.Name+".lre"))
 	}
 	code = strings.Replace(code, "FILES_LRE_LIST", out.String(), -1)
 
 	out.Reset()
-	for _, file := range append(files, filesLRE...) {
+	for _, file := range append(files) {
 		data, err := ioutil.ReadFile(file)
 		if err != nil {
 			log.Fatal(err)
@@ -77,6 +78,11 @@ func main() {
 		fmt.Fprintf(out, "const %s = `%s`\n",
 			varName(file),
 			bytes.ReplaceAll(data, []byte("`"), []byte("` + \"`\" + `")))
+	}
+	for _, file := range builtLRE {
+		fmt.Fprintf(out, "const %s = `%s`\n",
+			varName(file.Name+".lre"),
+			bytes.ReplaceAll(file.Data, []byte("`"), []byte("` + \"`\" + `")))
 	}
 	code += out.String()
 
@@ -133,3 +139,51 @@ func init() {
 	builtinScanner = s
 }
 `
+
+type fileData struct {
+	Name string
+	Data []byte
+}
+
+func buildLRE(filesLRE []string) []fileData {
+	var out []fileData
+	t := template.New("").Funcs(template.FuncMap{
+		"list": templateList,
+	})
+	t, err := t.ParseFiles(filesLRE...)
+	if err != nil {
+		log.Fatal("parsing LRE templates:", err)
+	}
+	for _, t := range t.Templates() {
+		if strings.HasSuffix(t.Name(), ".lre") {
+			var buf bytes.Buffer
+			if err := t.Execute(&buf, nil); err != nil {
+				log.Fatalf("executing %s: %v", t.Name(), err)
+			}
+			if len(bytes.TrimSpace(buf.Bytes())) == 0 {
+				// Only contained useful definitions.
+				continue
+			}
+			out = append(out, fileData{strings.TrimSuffix(t.Name(), ".lre"), buf.Bytes()})
+		}
+	}
+	sort.Slice(out, func(i, j int) bool {
+		return out[i].Name < out[j].Name
+	})
+	return out
+}
+
+// templateList returns xs, but it flattens any nested []interface{} into the main list.
+// Called from templates as "list", to pass multiple arguments to templates.
+func templateList(xs ...interface{}) []interface{} {
+	var list []interface{}
+	for _, x := range xs {
+		switch x := x.(type) {
+		case []interface{}:
+			list = append(list, x...)
+		default:
+			list = append(list, x)
+		}
+	}
+	return list
+}
