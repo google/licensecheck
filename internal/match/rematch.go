@@ -459,8 +459,10 @@ func (dfa reDFA) match(dict *Dict, text string, words []Word) (match int32, end 
 	off := int32(0) // offset of current state in DFA
 	dictWords := dict.Words()
 
+	// No range loop here: misspellings can adjust i.
 Words:
-	for i, word := range words {
+	for i := 0; i < len(words); i++ {
+		word := words[i]
 		w := word.ID
 
 		// Find next state in DFA for w.
@@ -481,6 +483,65 @@ Words:
 		for j := 0; j < len(delta); j += 2 {
 			if WordID(delta[j]) == w {
 				off = delta[j+1]
+				continue Words
+			}
+		}
+
+		// No exact word match.
+		// Try context-sensitive spell check.
+		// We know the words that could usefully come next.
+		// Do any of those look enough like the word we have?
+		// TODO: Should the misspellings reduce the match percent?
+
+		// have is the current word; have2 is the word after that.
+		have := toFold(text[words[i].Lo:words[i].Hi])
+		have2 := ""
+		if i+1 < len(words) {
+			have2 = toFold(text[words[i+1].Lo:words[i+1].Hi])
+		}
+
+		for j := 0; j < len(delta); j += 2 {
+			dw, dnext := WordID(delta[j]), delta[j+1]
+			want := dictWords[dw]
+
+			// Can we spell want by joining have and have2?
+			// This can happen with hyphenated line breaks.
+			if canMisspellJoin(want, have, have2) {
+				off = dnext
+				i++ // for have; loop will i++ again for have2
+				continue Words
+			}
+
+			// misspell split
+			// Or can have be split into two words such that
+			// the pair is something we'd expect to see right now?
+			if len(have) > len(want) && have[:len(want)] == want {
+				// have[:len(want)] matches want.
+				// Look to see if have[len(want):] can be the word after want.
+				rest := have[len(want):]
+				m2, delta2 := dfa.stateAt(dnext)
+				next2 := int32(-1)
+				for j2 := 0; j2 < len(delta2); j2 += 2 {
+					dw2, dnext2 := WordID(delta2[j2]), delta2[j2+1]
+					if dw2 == anyWord || dictWords[dw2] == rest {
+						next2 = dnext2
+					}
+				}
+				if next2 >= 0 {
+					// Successfully split have into two words
+					// to drive the DFA forward two steps.
+					if m2 >= 0 {
+						match = m2
+						end = i
+					}
+					off = next2
+					continue Words
+				}
+			}
+
+			// Can we misspell want as have?
+			if canMisspell(want, have) {
+				off = dnext
 				continue Words
 			}
 		}
@@ -534,4 +595,57 @@ func sortWordIDs(x []WordID) {
 	sort.Slice(x, func(i, j int) bool {
 		return x[i] < x[j]
 	})
+}
+
+var allowedMismatches = []struct {
+	x, y string
+}{
+	{"is", "are"},
+	{"it", "them"},
+	{"it", "they"},
+	{"the", "these"},
+	{"the", "this"},
+	{"the", "those"},
+	{"copy", "copies"}, // most plurals are handled as 1-letter typos
+}
+
+// canMisspell reports whether want can be misspelled as have.
+// Both words have been converted to lowercase already
+// (want by the Dict, have by the caller).
+func canMisspell(want, have string) bool {
+	// Allow single-letter replacement, insertion, or deletion.
+	if len(want)-1 <= len(have) && len(have) <= len(want)+1 && (len(have) >= 4 || len(want) >= 4) {
+		// Count common bytes at start and end of strings.
+		i := 0
+		for i < len(have) && i < len(want) && want[i] == have[i] {
+			i++
+		}
+		j := 0
+		for j < len(have) && j < len(want) && want[len(want)-1-j] == have[len(have)-1-j] {
+			j++
+		}
+		// Total common bytes must be at least all but one of both strings.
+		if i+j >= len(want)-1 && i+j >= len(have)-1 {
+			return true
+		}
+	}
+
+	for i := range allowedMismatches {
+		x, y := allowedMismatches[i].x, allowedMismatches[i].y
+		if want == x && have == y || have == x && want == y {
+			return true
+		}
+	}
+
+	return false
+}
+
+// canMisspellJoin reports whether want can be misspelled as the word pair have1, have2.
+// All three words have been converted to lowercase already
+// (want by the Dict, have1, have2 by the caller).
+func canMisspellJoin(want, have1, have2 string) bool {
+	// want == have1+have2 but without allocating the concatenation
+	return len(want) == len(have1)+len(have2) &&
+		want[:len(have1)] == have1 &&
+		want[len(have1):] == have2
 }

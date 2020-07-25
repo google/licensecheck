@@ -197,6 +197,27 @@ var matchTests = []struct {
 	{`a b c / d e f`, `d e f`, 1, 3},
 	{`a b c / d e f`, `a b d e f`, -1, 0},
 	{`a b c / __3__ d e f`, `a b d e f g`, 1, 5},
+
+	// Spell checking
+	// allowedMismatches + singular/plural original(s) via canMisspell
+	{`it is good this copy of it matches the original`, `they are good the copies of them matches those originals`, 0, 10},
+
+	// canMisspell
+	{`abcdef`, `abdef`, 0, 1},
+	{`abcdef`, `bcdef`, 0, 1},
+	{`abcdef`, `abcde`, 0, 1},
+	{`abcdef`, `abcxdef`, 0, 1},
+	{`abcdef`, `xabcdef`, 0, 1},
+	{`abcdef`, `abcdefx`, 0, 1},
+	{`abcdef`, `abxdef`, 0, 1},
+	{`abcdef`, `xbcdef`, 0, 1},
+	{`abcdef`, `abcdex`, 0, 1},
+
+	// canMisspellJoin
+	{`x noninfringement y`, `x non-infringement y`, 0, 4},
+
+	// misspell split
+	{`i non-infringement j`, `i noninfringement j`, 0, 3},
 }
 
 func TestReDFAMatch(t *testing.T) {

@@ -168,6 +168,13 @@ func (d *Dict) split(text string, insert bool) []Word {
 			case string(w) == "©":
 				w = copyright
 			}
+
+			// More of our own.
+			for _, m := range allowedMismatches {
+				if string(w) == m.y {
+					w = append(w[:0], m.x...)
+				}
+			}
 		}
 
 	Emit:
