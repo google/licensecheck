@@ -95,11 +95,23 @@ func init() {
 
 func init() {
 	filesLRE := []License{
+		{Name: "BSD-1-Clause", Text: license_BSD_1_Clause_lre},
+		{Name: "BSD-1-Clause-Clear", Text: license_BSD_1_Clause_Clear_lre},
+		{Name: "BSD-2-Clause", Text: license_BSD_2_Clause_lre},
+		{Name: "BSD-2-Clause-Patent", Text: license_BSD_2_Clause_Patent_lre},
+		{Name: "BSD-3-Clause", Text: license_BSD_3_Clause_lre},
+		{Name: "BSD-3-Clause-Clear", Text: license_BSD_3_Clause_Clear_lre},
+		{Name: "BSD-3-Clause-NoTrademark", Text: license_BSD_3_Clause_NoTrademark_lre},
+		{Name: "BSD-4-Clause", Text: license_BSD_4_Clause_lre},
+		{Name: "BSD-Source-Code", Text: license_BSD_Source_Code_lre},
 		{Name: "JSON", Text: license_JSON_lre},
 		{Name: "MIT", Text: license_MIT_lre},
 		{Name: "MIT-0", Text: license_MIT_0_lre},
 		{Name: "MIT-NoAd", Text: license_MIT_NoAd_lre},
 		{Name: "MITNFA", Text: license_MITNFA_lre},
+		{Name: "OpenSSL", Text: license_OpenSSL_lre},
+		{Name: "PHP-3.0", Text: license_PHP_3_0_lre},
+		{Name: "PHP-3.01", Text: license_PHP_3_01_lre},
 	}
 	builtinListLRE = filesLRE // TODO URLs
 }
@@ -12942,6 +12954,1259 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE AUTHOR ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `
+const license_BSD_1_Clause_lre = `
+//**
+BSD 1-Clause License
+https://spdx.org/licenses/BSD-1-Clause.json
+https://svnweb.freebsd.org/base/head/include/ifaddrs.h?revision=326823
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
+const license_BSD_1_Clause_Clear_lre = `
+//**
+Not known to SPDX - BSD-3-Clause-Clear with only 1 Clause
+Example:
+	https://github.com/spate/glimage
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S
+	PATENT RIGHTS ARE GRANTED BY THIS LICENSE.
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
+const license_BSD_2_Clause_lre = `
+//**
+BSD 2-Clause "Simplified" License
+https://spdx.org/licenses/BSD-2-Clause.json
+https://opensource.org/licenses/BSD-2-Clause
+**//
+//**
+BSD 2-Clause FreeBSD License
+https://spdx.org/licenses/BSD-2-Clause-FreeBSD.json
+http://www.freebsd.org/copyright/freebsd-license.html
+
+This is the same as the BSD-2-Clause plus a paragraph
+about the views of the FreeBSD project, but others have
+copied that paragraph too, and it has no effect on use of
+the software, so we just merge these two together.
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	in binary form must reproduce the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	this list of conditions and the
+	following
+	((two pargraphs of))??
+	disclaimer
+	in the documentation
+	((and/or || and || or))
+	other materials provided with the distribution.
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+
+	((The views and conclusions contained in the software and documentation are those
+	of the authors and should not be interpreted as representing official policies,
+	either expressed or implied, of
+	((The FreeBSD Project))??
+	))??
+
+`
+const license_BSD_2_Clause_Patent_lre = `
+//**
+BSD-2-Clause Plus Patent License
+https://spdx.org/licenses/BSD-2-Clause-Patent.json
+https://opensource.org/licenses/BSDplusPatent
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	in binary form must reproduce the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	this list of conditions and the
+	following
+	((two pargraphs of))??
+	disclaimer
+	in the documentation
+	((and/or || and || or))
+	other materials provided with the distribution.
+
+
+	Subject to the terms and conditions of this license, each copyright holder and
+	contributor hereby grants to those receiving rights under this license a
+	perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+	(except for failure to satisfy the conditions of this license) patent license to
+	make, have made, use, offer to sell, sell, import, and otherwise transfer this
+	software, where such license applies only to those patent claims, already
+	acquired or hereafter acquired, licensable by such copyright holder or
+	contributor that are necessarily infringed by:
+
+	   __1__ their Contribution(s) (the licensed copyrights of copyright holders and
+	   non-copyrightable additions of contributors, in source or binary form) alone;
+	   or
+
+	   __1__ combination of their Contribution(s) with the work of authorship to
+	   which such Contribution(s) was added by such copyright holder or contributor,
+	   if, at the time the Contribution is added, such addition causes such
+	   combination to be necessarily infringed. The patent license shall not apply
+	   to any other combinations which include the Contribution.
+
+	Except as expressly stated above, no rights or licenses from any copyright
+	holder or contributor is granted under this license, whether expressly, by
+	implication, estoppel or otherwise.
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
+const license_BSD_3_Clause_lre = `
+//**
+BSD 3-Clause "New" or "Revised" License
+https://spdx.org/licenses/BSD-3-Clause.json
+https://opensource.org/licenses/BSD-3-Clause
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	in binary form must reproduce the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	this list of conditions and the
+	following
+	((two pargraphs of))??
+	disclaimer
+	in the documentation
+	((and/or || and || or))
+	other materials provided with the distribution.
+
+
+	__1__
+	((Neither || None || Names || The names || The name))
+	__40__ used to endorse or promote
+	products derived from this
+	((software || work))
+	without specific
+	prior written permission
+	((
+		((of || from))
+		__10__
+	))??
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
+const license_BSD_3_Clause_Clear_lre = `
+//**
+BSD 3-Clause Clear License
+https://spdx.org/licenses/BSD-3-Clause-Clear.json
+http://labs.metacarta.com/license-explanation.html#license
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	in binary form must reproduce the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	this list of conditions and the
+	following
+	((two pargraphs of))??
+	disclaimer
+	in the documentation
+	((and/or || and || or))
+	other materials provided with the distribution.
+
+
+	__1__
+	((Neither || None || Names || The names || The name))
+	__40__ used to endorse or promote
+	products derived from this
+	((software || work))
+	without specific
+	prior written permission
+	((
+		((of || from))
+		__10__
+	))??
+
+
+	NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S
+	PATENT RIGHTS ARE GRANTED BY THIS LICENSE.
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
+const license_BSD_3_Clause_NoTrademark_lre = `
+//**
+BSD 3-Clause + no-trademark, like Clear is no-patent.
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	in binary form must reproduce the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	this list of conditions and the
+	following
+	((two pargraphs of))??
+	disclaimer
+	in the documentation
+	((and/or || and || or))
+	other materials provided with the distribution.
+
+
+	__1__
+	((Neither || None || Names || The names || The name))
+	__40__ used to endorse or promote
+	products derived from this
+	((software || work))
+	without specific
+	prior written permission
+	((
+		((of || from))
+		__10__
+	))??
+
+
+	No license is granted to the trademarks of
+	the copyright holders even if such marks
+	are included in this software.
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
+const license_BSD_4_Clause_lre = `
+//**
+BSD 4-Clause "Original" or "Old" License
+https://spdx.org/licenses/BSD-4-Clause.json
+http://directory.fsf.org/wiki/License:BSD_4Clause
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	in binary form must reproduce the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	this list of conditions and the
+	following
+	((two pargraphs of))??
+	disclaimer
+	in the documentation
+	((and/or || and || or))
+	other materials provided with the distribution.
+
+
+	__1__
+	All advertising materials mentioning features or use of this software
+	must display the following acknowledgement:
+
+	This product includes software developed by
+
+	__40__
+
+	be used
+	to endorse or promote products derived from this software without specific
+	prior written permission.
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
+const license_BSD_Source_Code_lre = `
+//**
+BSD 1-Clause License plus non-advertising clause (usual BSD clause #3)
+
+Examples:
+	https://github.com/robbiehanson/XMPPFramework/blob/5f24033e/copying.txt
+	https://github.com/yapstudios/YapDatabase/blob/e3df69f2/LICENSE.txt
+	https://github.com/robbiehanson/CocoaHTTPServer/blob/cb86571a/LICENSE.txt
+	https://github.com/skelterjohn/rerun/blob/eb5929af/LICENSE
+	https://github.com/skelterjohn/go.matrix/blob/go1/LICENSE
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice || notices || notice(s) ))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Neither || None || Names || The names || The name))
+	__40__ used to endorse or promote
+	products derived from this
+	((software || work))
+	without specific
+	prior written permission
+	((
+		((of || from))
+		__10__
+	))??
+
+
+	((DISCLAIMER))??
+
+	((
+		THE
+		((SOFTWARE || WORK))
+		((AND DOCUMENTATION))??
+		IS PROVIDED
+		((BY __20__))??
+		"AS IS"
+		((
+			((WITHOUT ANY WARRANTIES WHATSOEVER))??
+			((AND))??
+			ANY
+			((EXPRESS || EXPRESSED))
+			OR IMPLIED WARRANTIES,
+			INCLUDING, BUT NOT LIMITED TO,
+			THE IMPLIED WARRANTIES
+			((OF || OR))
+			((NONINFRINGEMENT))??
+			((MERCHANTABILITY))??
+			((AND))??
+			FITNESS FOR A PARTICULAR PURPOSE
+			((OR NONINFRINGEMENT))??
+			ARE
+			((EXPRESSLY AND SPECIFICALLY))??
+			((HEREBY))??
+			DISCLAIMED.
+		||
+			//** Alternate form in libpcap, which also omits the IN NO EVENT paragraph. **//
+			AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
+			INCLUDING, WITHOUT LIMITATION,
+			THE IMPLIED WARRANTIES OF MERCHANTABILTY
+			AND FITNESS FOR A PARTICULAR PURPOSE.
+		))
+
+		((
+			IN NO EVENT SHALL __20__ BE
+			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+			LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+			ARISING IN ANY WAY OUT OF THE USE OF THIS
+			((
+				((SOFTWARE || WORK))
+				((AND DOCUMENTATION))??
+				EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			))??
+		))??
+
+	||
+
+		//**
+		Alternate form found in some recent University of California releases.
+		**//
+		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
+		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+		MODIFICATIONS.
+	))
+
+
+`
 const license_JSON_lre = `
 ((JSON license))??
 
@@ -13418,4 +14683,273 @@ OR THE USE OR OTHER DEALINGS IN
 	((SOFTWARE || MATERIALS))
 ))??
 
+`
+const license_OpenSSL_lre = `//**
+OpenSSL License
+https://spdx.org/licenses/OpenSSL.json
+http://www.openssl.org/source/license.html
+**//
+
+(( OpenSSL License
+(( Copyright __20__ ))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   All advertising materials mentioning features or use of this software must
+   display the following acknowledgment: "This product includes software
+   developed by the OpenSSL Project for use in the OpenSSL Toolkit.
+   (http:/www.openssl.org/)"
+
+   (( 4. ))??
+   The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to endorse
+   or promote products derived from this software without prior written
+   permission. For written permission, please contact openssl-core@openssl.org.
+
+   (( 5. ))??
+   Products derived from this software may not be called "OpenSSL" nor may
+   "OpenSSL" appear in their names without prior written permission of the
+   OpenSSL Project.
+
+   (( 6. ))??
+   Redistributions of any form whatsoever must retain the following
+   acknowledgment: "This product includes software developed by the OpenSSL
+   Project for use in the OpenSSL Toolkit (http:/www.openssl.org/)"
+
+THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESSED OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE OpenSSL PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This product includes cryptographic software written by Eric Young
+(eay@cryptsoft.com). This product includes software written by Tim Hudson
+(tjh@cryptsoft.com).
+
+((
+(( Original SSLeay License ))??
+
+Copyright __5__ Eric Young  (eay@cryptsoft.com)
+All rights reserved.
+
+This package is an SSL implementation written by Eric Young (eay@cryptsoft.com).
+The implementation was written so as to conform with Netscapes SSL.
+
+This library is free for commercial and non-commercial use as long as the
+following conditions are aheared to. The following conditions apply to all code
+found in this distribution, be it the RC4, RSA, lhash, DES, etc., code; not just
+the SSL code. The SSL documentation included with this distribution is covered
+by the same copyright terms except that the holder is Tim Hudson
+(tjh@cryptsoft.com).
+
+Copyright remains Eric Young's, and as such any Copyright notices in the code
+are not to be removed. If this package is used in a product, Eric Young should
+be given attribution as the author of the parts of the library used. This can be
+in the form of a textual message at program startup or in documentation (online
+or textual) provided with the package.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the copyright notice, this list of
+   conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   All advertising materials mentioning features or use of this software must
+   display the following acknowledgement:
+
+   "This product includes cryptographic software written by Eric Young
+   (eay@cryptsoft.com)"
+
+   The word 'cryptographic' can be left out if the rouines from the library
+   being used are not cryptographic related :-).
+
+   (( 4. ))??
+   If you include any Windows specific code (or a derivative thereof) from the
+   apps directory (application code) you must include an acknowledgement: "This
+   product includes software written by Tim Hudson (tjh@cryptsoft.com)"
+
+THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+))??
+
+((
+The licence and distribution terms for any publically available version or
+derivative of this code cannot be changed. i.e. this code cannot simply be
+copied and put under another distribution licence [including the GNU Public
+Licence.]
+))??
+`
+const license_PHP_3_0_lre = `//**
+PHP License v3.0
+https://spdx.org/licenses/PHP-3.0.json
+http://www.php.net/license/3_0.txt
+https://opensource.org/licenses/PHP-3.0
+**//
+
+(( The PHP License, version 3.0
+(( Copyright __20__ ))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+is permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   The name "PHP" must not be used to endorse or promote products derived from
+   this software without prior written permission. For written permission,
+   please contact group@php.net.
+
+   (( 4. ))??
+   Products derived from this software may not be called "PHP", nor may "PHP"
+   appear in their name, without prior written permission from group@php.net.
+   You may indicate that your software works in conjunction with PHP by saying
+   "Foo for PHP" instead of calling it "PHP Foo" or "phpfoo"
+
+   (( 5. ))??
+   The PHP Group may publish revised and/or new versions of the license from
+   time to time. Each version will be given a distinguishing version number.
+   Once covered code has been published under a particular version of the
+   license, you may always continue to use it under the terms of that version.
+   You may also choose to use such covered code under the terms of any
+   subsequent version of the license published by the PHP Group. No one other
+   than the PHP Group has the right to modify the terms applicable to covered
+   code created under this License.
+
+   (( 6. ))??
+   Redistributions of any form whatsoever must retain the following
+   acknowledgment: "This product includes PHP, freely available from
+   <http:/www.php.net/>".
+
+THIS SOFTWARE IS PROVIDED BY THE PHP DEVELOPMENT TEAM ` + "`" + `` + "`" + `AS IS'' AND ANY
+EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE PHP DEVELOPMENT TEAM OR ITS CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+((
+This software consists of voluntary contributions made by many individuals on
+behalf of the PHP Group.
+
+The PHP Group can be contacted via Email at group@php.net.
+
+For more information on the PHP Group and the PHP project, please see
+<http:/www.php.net>.
+
+This product includes the Zend Engine, freely available at <http:/www.zend.com>.
+))??
+`
+const license_PHP_3_01_lre = `//**
+PHP License v3.01
+https://spdx.org/licenses/PHP-3.01.json
+http://www.php.net/license/3_01.txt
+**//
+
+(( The PHP License, version 3.01
+(( Copyright __20__ ))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+is permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   The name "PHP" must not be used to endorse or promote products derived from
+   this software without prior written permission. For written permission,
+   please contact group@php.net.
+
+   (( 4. ))??
+   Products derived from this software may not be called "PHP", nor may "PHP"
+   appear in their name, without prior written permission from group@php.net.
+   You may indicate that your software works in conjunction with PHP by saying
+   "Foo for PHP" instead of calling it "PHP Foo" or "phpfoo"
+
+   (( 5. ))??
+   The PHP Group may publish revised and/or new versions of the license from
+   time to time. Each version will be given a distinguishing version number.
+   Once covered code has been published under a particular version of the
+   license, you may always continue to use it under the terms of that version.
+   You may also choose to use such covered code under the terms of any
+   subsequent version of the license published by the PHP Group. No one other
+   than the PHP Group has the right to modify the terms applicable to covered
+   code created under this License.
+
+   (( 6. ))??
+   Redistributions of any form whatsoever must retain the following
+   acknowledgment: "This product includes PHP software, freely available from
+   <http:/www.php.net/software/>".
+
+THIS SOFTWARE IS PROVIDED BY THE PHP DEVELOPMENT TEAM ` + "`" + `` + "`" + `AS IS'' AND ANY
+EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE PHP DEVELOPMENT TEAM OR ITS CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+((
+This software consists of voluntary contributions made by many individuals on
+behalf of the PHP Group.
+
+The PHP Group can be contacted via Email at group@php.net.
+
+For more information on the PHP Group and the PHP project, please see
+<http:/www.php.net>.
+
+PHP includes the Zend Engine, freely available at <http:/www.zend.com>.
+))??
 `
