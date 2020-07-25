@@ -1,16 +1,15 @@
-# This is missing the copyright lines, which used to make the blank loop
-# in license.go infinite loop.
-98.2%
-ISC 98.2% 13,$
+# "above notice" (not "above copyright notice")
+100%
+ISC 99.1% 0,$
 scan
 100%
-ISC 100% 0,$
+ISC 100.0% 0,$
 
-ISC License
+Copyright <YEAR> <OWNER>
 
 Permission to use, copy, modify, and distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
+notice and this permission notice appear in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
 WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
