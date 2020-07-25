@@ -2,26 +2,95 @@
 MIT License
 https://spdx.org/licenses/MIT.json
 https://opensource.org/licenses/MIT
+https://fedoraproject.org/wiki/Licensing:MIT
 **//
 
 (( MIT License))??
 
 //**Copyright**//
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
+Permission is hereby granted,
+((free of charge))??
+to any person obtaining a copy of
+__7__ //** (allow parenthetical descriptions) **//
+((and associated documentation files))??
+the
+((Software || Materials))
+to deal in the
+((Software || Materials))
+((under the copyrights))??
+((without restriction))??
+including
+((without limitation))??
+the rights
+((to))??
+use, copy, modify, merge, publish, distribute,
+((sublicense))??
+and/or
+((sell))??
+((modified))??
+copies of the
+((Software || Materials))
+and to permit persons to whom the
+((Software is || Materials are))
+furnished to do so,
+subject to
+((the following || all))
+conditions:
 
-The above copyright notice and this permission notice
-((including the next paragraph))??
-shall be included in all copies or substantial portions of the Software.
+__1__
+((
+	The above
+	((copyright || authorship))
+	notice
+	(( and this permission notice
+		((including the next paragraph))??
+	|| as well as this permission notice
+	|| this permission notice, and the below disclaimer
+	|| and every other copyright notice found in this software,
+		and all the attributions in every file, and this permission notice
+	|| and this permission notice (or reference to this permission notice) ))
+||
+	This permission notice
+))
+((must || shall))
+be included in all
+copies
+or
+((substantial || any))??
+portions of the
+((Software || Materials))
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL __5__ BE LIABLE
-FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
-THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+((DISCLAIMER))??
+
+__1__
+
+{{template "mit-disclaimer"}}
+
+{{define "mit-disclaimer"}}
+THE
+((SOFTWARE || MATERIALS))
+IS PROVIDED "AS IS",
+WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.
+IN NO EVENT
+((SHALL || WILL))
+__5__ BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT,
+((TORT || FART))
+OR OTHERWISE,
+ARISING FROM, OUT OF OR
+((IN || I))
+CONNECTION WITH
+((TE || THE))
+((SOFTWARE || MATERIALS))
+OR THE USE OR OTHER DEALINGS IN
+((THE
+	((SOFTWARE || MATERIALS))
+))??
+{{end}}
