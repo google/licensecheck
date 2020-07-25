@@ -198,6 +198,7 @@ func init() {
 		{Name: "Zlib", Text: license_Zlib_lre},
 		{Name: "bzip2-1.0.5", Text: license_bzip2_1_0_5_lre},
 		{Name: "bzip2-1.0.6", Text: license_bzip2_1_0_6_lre},
+		{Name: "curl", Text: license_curl_lre},
 	}
 	builtinListLRE = filesLRE // TODO URLs
 }
@@ -39184,3 +39185,29 @@ Julian Seward,
 ((jseward@bzip.org || jseward@acm.org))
 ((bzip2/libbzip2 version 1.0.6 of 6 September 2010))??
 ))??`
+const license_curl_lre = `//**
+curl License
+https://spdx.org/licenses/curl.json
+https://github.com/bagder/curl/blob/master/COPYING
+**//
+
+(( COPYRIGHT AND PERMISSION NOTICE
+(( Copyright __20__ ))??
+))??
+
+Permission to use, copy, modify, and distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be
+used in advertising or otherwise to promote the sale, use or other dealings in
+this Software without prior written authorization of the copyright holder.
+`
