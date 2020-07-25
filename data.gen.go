@@ -117,6 +117,7 @@ func init() {
 		{Name: "BSD-4-Clause", Text: license_BSD_4_Clause_lre},
 		{Name: "BSD-Source-Code", Text: license_BSD_Source_Code_lre},
 		{Name: "BSL-1.0", Text: license_BSL_1_0_lre},
+		{Name: "BlueOak-1.0.0", Text: license_BlueOak_1_0_0_lre},
 		{Name: "CDDL-1.0", Text: license_CDDL_1_0_lre},
 		{Name: "CDDL-1.1", Text: license_CDDL_1_1_lre},
 		{Name: "CPL-1.0", Text: license_CPL_1_0_lre},
@@ -17826,6 +17827,63 @@ FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
 COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES
 OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
 OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+`
+const license_BlueOak_1_0_0_lre = `//**
+Blue Oak Model License 1.0.0
+https://spdx.org/licenses/BlueOak-1.0.0.json
+https://blueoakcouncil.org/license/1.0.0
+**//
+
+(( Blue Oak Model License ))??
+
+Version 1.0.0
+
+Purpose
+
+This license gives everyone as much permission to work with this software as
+possible, while protecting contributors from liability.
+
+Acceptance
+
+In order to receive this license, you must agree to its rules. The rules of this
+license are both obligations under that agreement and conditions to your
+license. You must not do anything with this software that triggers a rule that
+you cannot or will not follow.
+
+Copyright
+
+Each contributor licenses you to do everything with this software that would
+otherwise infringe that contributor's copyright in it.
+
+Notices
+
+You must ensure that everyone who gets a copy of any part of this software from
+you, with or without changes, also gets the text of this license or a link to
+<https:/blueoakcouncil.org/license/1.0.0>.
+
+Excuse
+
+If anyone notifies you in writing that you have not complied with
+//** [Notices](#notices) **//
+__5__
+, you can keep your license by taking all practical steps to comply within 30
+days after the notice. If you do not do so, your license ends immediately.
+
+Patent
+
+Each contributor licenses you to do everything with this software that would
+otherwise infringe any patent claims they can license or become able to
+license.
+
+Reliability
+
+No contributor can revoke this license.
+
+No Liability
+
+***As far as the law allows, this software comes as is, without any warranty or
+condition, and no contributor will be liable to anyone for any damages related
+to this software or this license, under any kind of legal claim.***
 `
 const license_CDDL_1_0_lre = `//**
 Common Development and Distribution License 1.0
