@@ -1,0 +1,143 @@
+{{/* xgpl-header matches the general top-of-file GPL header */}}
+{{define "xgpl-header"}}
+	{{$program := index $ 0}} {{/* "program" or "library" */}}
+	{{$kind := index $ 1}} {{/* "GNU", "GNU Affero", and so on */}}
+	{{$acronym := index $ 2}} {{/* "GPL", "AGPL", and so on */}}
+	{{$version := index $ 3}} {{/* version: 1, 2, "2.1", and so on */}}
+	{{$later := index $ 4}} {{/* "or later" or "only" */}}
+
+	((
+		((This
+		{{$program}}
+		))??
+		//**__5__**//
+		is free software: you can redistribute it
+	||
+		You can
+		((uses))??
+		redistribute __5__
+	))
+	and/or modify
+	((it || this code))
+	under the terms of the
+	{{$kind}}
+	General Public License
+	(({{$acronym}}))??
+	((as published by the Free Software Foundation))??
+	{{if eq $later "or later"}}
+		((
+			either version {{$version}}
+			((of the License))??
+			or
+			((at your option))??
+			any later version.
+		||
+			version {{$version}} or later
+			((of the License))??
+		))
+	{{else}}
+		((under))??
+		version {{$version}}
+		(({{$acronym}}v{{$version}}))??
+		((of the License))??
+	{{end}}
+	((as published by the Free Software Foundation))??
+
+	((
+		See the __3__ file for the full terms of the
+		{{$kind}}
+		General Public License version
+		{{$version}}
+	))??
+
+	((
+		__5__ is distributed
+		((in the hope that it will be useful, but))??
+		WITHOUT ANY WARRANTY;
+		without even the implied warranty
+		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+		See the
+		{{$kind}}
+		General Public License for more details.
+
+		((
+			You should have received a copy of the
+			{{$kind}}
+			General Public License
+			((
+				((version))??
+				{{$version}}
+			))??
+			along with
+			((this program))??
+			(( __5__; if not,
+				((
+					write to the Free Software Foundation, Inc.,
+					{{template "fsf-address"}}
+				||
+					see <http://www.gnu.org/licenses/>.
+				))
+			))??
+		))??
+	))??
+{{end}}
+
+{{define "GPL-2.0-Or-3.0.lre"}}
+//** Used by MongoDB, WiredTiger, KeePassX, KeePassXC, maybe others **//
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or (at your option)
+version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+{{end}}
+
+
+{{/* fsf-address matches one of the FSF's many historical addresses */}}
+{{define "fsf-address"}}
+	((
+		51 Franklin
+		((Street||St))
+		((Fifth Floor||Suite 500,))??
+		Boston, MA 02110 __1__ USA
+	||
+		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
+	||
+		675 Mass Ave, Cambridge, MA 02139, USA
+	))
+{{- end}}
+
+{{/* gpl-header takes $version $later and matches a header for that version of the GPL */}}
+{{define "gpl-header"}}
+	{{template "xgpl-header" list "program" "GNU" "GPL" $}}
+{{end}}
+
+{{/* lgpl-header takes $version $later and matches a header for that version of the LGPL */}}
+{{define "lgpl-header"}}
+	{{template "xgpl-header" list "library" "((GNU\n((Lesser||Library))\n||\n((Lesser||Library))\nGNU))" "LGPL" $}}
+{{end}}
+
+{{/* agpl-header takes $version $later and matches a header for that version of the AGPL */}}
+{{define "agpl-header"}}
+	{{template "xgpl-header" list "program" "GNU Affero" "AGPL" $}}
+{{end}}
+
+{{/* fsf-copyright-block matches the typical FSF copyright block */}}
+{{/* unfortunately, many people modify it to put their name in it instead! */}}
+{{define "fsf-copyright-block"}}
+	((
+		((
+			Copyright __20__
+			((<https://fsf.org/>))??
+			{{template "fsf-address"}}??
+		))??
+
+		Everyone is permitted to copy and distribute verbatim copies
+		of this license document, but changing it is not allowed.
+
+		((Copyright __20__))??
+	))??
+{{end}}
