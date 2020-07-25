@@ -102,6 +102,8 @@ func init() {
 		{Name: "APSL-1.1", Text: license_APSL_1_1_lre},
 		{Name: "APSL-1.2", Text: license_APSL_1_2_lre},
 		{Name: "APSL-2.0", Text: license_APSL_2_0_lre},
+		{Name: "Apache-1.0", Text: license_Apache_1_0_lre},
+		{Name: "Apache-1.1", Text: license_Apache_1_1_lre},
 		{Name: "Apache-2.0", Text: license_Apache_2_0_lre},
 		{Name: "BSD-1-Clause", Text: license_BSD_1_Clause_lre},
 		{Name: "BSD-1-Clause-Clear", Text: license_BSD_1_Clause_Clear_lre},
@@ -15740,6 +15742,143 @@ AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES, INCLUDING WITHOUT LIMITATION,
 ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET
 ENJOYMENT OR NON-INFRINGEMENT. Please see the License for the specific language
 governing rights and limitations under the License." ))??
+`
+const license_Apache_1_0_lre = `//**
+Apache License 1.0
+https://spdx.org/licenses/Apache-1.0.json
+http://www.apache.org/licenses/LICENSE-1.0
+**//
+
+//** Copyright **//
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   All advertising materials mentioning features or use of this software must
+   display the following acknowledgment: "This product includes software
+   developed by the
+   //** Apache Group for use in the Apache HTTP server project (http://www.apache.org/) **//
+   __14__
+
+   (( 4. ))??
+   The name
+   __5__
+   must not be used to endorse or promote products derived from this software
+   without prior written permission. For written permission, please contact
+   //** apache@apache.org **//
+   __5__
+
+   (( 5. ))??
+   Products derived from this software may not be called
+   __5__
+   nor may
+   __5__
+   appear in their name, without prior written permission of
+   //** the Apache Group **//
+   __5__
+
+   (( 6. ))??
+   Redistributions of any form whatsoever must retain the following
+   acknowledgment:
+
+   "This product includes software developed by
+   //** the Apache Group for use in the Apache HTTP server project (http://www.apache.org/) **//
+   __15__
+
+THIS SOFTWARE IS PROVIDED BY
+//** THE APACHE GROUP **//
+__5__
+` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+//** THE APACHE GROUP OR ITS CONTRIBUTORS **//
+__6__
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+(( This software consists of voluntary contributions made by many individuals on
+behalf of the Apache Group and was originally based on public domain software
+written at the National Center for Supercomputing Applications, University of
+Illinois, Urbana-Champaign. For more information on the Apache Group and the
+Apache HTTP server project, please see <http:/www.apache.org/>. ))??
+`
+const license_Apache_1_1_lre = `//**
+Apache License 1.1
+https://spdx.org/licenses/Apache-1.1.json
+http://apache.org/licenses/LICENSE-1.1
+https://opensource.org/licenses/Apache-1.1
+**//
+
+(( Apache License 1.1
+((Copyright __20__))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   The end-user documentation included with the redistribution, if any, must
+   include the following acknowledgment:
+
+   "This product includes software developed by
+   //** the Apache Software Foundation (http://www.apache.org/) **//
+   __10__
+
+   Alternately, this acknowledgment may appear in the software itself, if and
+   wherever such third-party acknowledgments normally appear.
+
+   (( 4. ))??
+   The name
+   __10__
+   must not be used to endorse or promote products derived from this software
+   without prior written permission.
+   (( For written permission, please contact __10__ ))??
+
+   (( 5. ))??
+   Products derived from this software may not be called
+   __20__
+   without prior written permission of __5__.
+
+THIS SOFTWARE IS PROVIDED ''AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+//** THE APACHE SOFTWARE FOUNDATION OR ITS CONTRIBUTORS **//
+__7__
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+(( This software consists of voluntary contributions made by many individuals on
+behalf of the Apache Software Foundation. For more information on the Apache
+Software Foundation, please see http:/www.apache.org/. Portions of this software
+are based upon public domain software originally written at the National Center
+for Supercomputing Applications, University of Illinois, Urbana-Champaign. ))??
 `
 const license_Apache_2_0_lre = `//**
 Apache License 2.0
