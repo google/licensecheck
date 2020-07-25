@@ -191,6 +191,7 @@ func init() {
 		{Name: "PHP-3.0", Text: license_PHP_3_0_lre},
 		{Name: "PHP-3.01", Text: license_PHP_3_01_lre},
 		{Name: "Unlicense", Text: license_Unlicense_lre},
+		{Name: "WTFPL", Text: license_WTFPL_lre},
 	}
 	builtinListLRE = filesLRE // TODO URLs
 }
@@ -38327,4 +38328,38 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 (( For more information, please refer to <https:/unlicense.org/> ))??
+`
+const license_WTFPL_lre = `//**
+Do What The F*ck You Want To Public License
+https://spdx.org/licenses/WTFPL.json
+http://www.wtfpl.net/about/
+http://sam.zoy.org/wtfpl/COPYING
+**//
+
+((
+	DO WHAT THE
+	((FUCK || F*** || F*CK))
+	YOU WANT TO PUBLIC LICENSE
+
+	Version 2, December 2004
+
+	//** Many people put their own name here! **//
+	((Copyright __20__))??
+
+	((
+		Everyone is permitted to copy and distribute verbatim or modified copies of this
+		license document, and changing it is allowed as long as the name is changed.
+	))??
+))??
+
+DO WHAT THE
+((FUCK || F*** || F*CK))
+YOU WANT TO PUBLIC LICENSE
+
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+   (( 0. ))??
+   You just DO WHAT THE
+   ((FUCK || F*** || F*CK))
+   YOU WANT TO.
 `
