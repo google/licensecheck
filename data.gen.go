@@ -192,6 +192,7 @@ func init() {
 		{Name: "PHP-3.01", Text: license_PHP_3_01_lre},
 		{Name: "Unlicense", Text: license_Unlicense_lre},
 		{Name: "WTFPL", Text: license_WTFPL_lre},
+		{Name: "Zlib", Text: license_Zlib_lre},
 	}
 	builtinListLRE = filesLRE // TODO URLs
 }
@@ -38362,4 +38363,36 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
    You just DO WHAT THE
    ((FUCK || F*** || F*CK))
    YOU WANT TO.
+`
+const license_Zlib_lre = `//**
+zlib License
+https://spdx.org/licenses/Zlib.json
+http://www.zlib.net/zlib_license.html
+https://opensource.org/licenses/Zlib
+**//
+
+(( zlib License
+(( Copyright __20__ ))??
+))??
+
+This software is provided 'as-is', without any express or implied warranty. In
+no event will the authors be held liable for any damages arising from the use of
+this software.
+
+Permission is granted to anyone to use this software for any purpose, including
+commercial applications, and to alter it and redistribute it freely, subject to
+the following restrictions:
+
+   (( 1. ))??
+   The origin of this software must not be misrepresented; you must not claim
+   that you wrote the original software. If you use this software in a product,
+   an acknowledgment in the product documentation would be appreciated but is
+   not required.
+
+   (( 2. ))??
+   Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   (( 3. ))??
+   This notice may not be removed or altered from any source distribution.
 `
