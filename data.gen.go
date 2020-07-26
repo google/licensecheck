@@ -218,6 +218,13 @@ func init() {
 		{Name: "Entessa", Text: license_Entessa_lre},
 		{Name: "ErlPL-1.1", Text: license_ErlPL_1_1_lre},
 		{Name: "Eurosym", Text: license_Eurosym_lre},
+		{Name: "FSFAP", Text: license_FSFAP_lre},
+		{Name: "FSFUL", Text: license_FSFUL_lre},
+		{Name: "FSFULLR", Text: license_FSFULLR_lre},
+		{Name: "FTL", Text: license_FTL_lre},
+		{Name: "Fair", Text: license_Fair_lre},
+		{Name: "Frameworx-1.0", Text: license_Frameworx_1_0_lre},
+		{Name: "FreeImage", Text: license_FreeImage_lre},
 		{Name: "GPL-1.0", Text: license_GPL_1_0_lre},
 		{Name: "GPL-2.0", Text: license_GPL_2_0_lre},
 		{Name: "GPL-2.0-Only", Text: license_GPL_2_0_Only_lre},
@@ -43099,6 +43106,828 @@ the following restrictions:
 
 This licence is governed by the Laws of Germany. Disputes shall be settled by
 Saarbruecken City Court.
+`
+const license_FSFAP_lre = `//**
+FSF All Permissive License
+https://spdx.org/licenses/FSFAP.json
+https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html
+**//
+
+Copying and distribution of this file, with or without modification, are
+permitted in any medium without royalty provided the copyright notice and this
+notice are preserved. This file is offered as-is, without any warranty.
+`
+const license_FSFUL_lre = `//**
+FSF Unlimited License
+https://spdx.org/licenses/FSFUL.json
+https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License
+**//
+
+//** Copyright **//
+
+This configure script is free software; the Free Software Foundation gives
+unlimited permission to copy, distribute and modify it.
+`
+const license_FSFULLR_lre = `//**
+FSF Unlimited License (with License Retention)
+https://spdx.org/licenses/FSFULLR.json
+https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License#License_Retention_Variant
+**//
+
+//** Copyright **//
+
+This file is free software; the Free Software Foundation gives unlimited
+permission to copy and/or distribute it, with or without modifications, as long
+as this notice is preserved.
+`
+const license_FTL_lre = `//**
+Freetype Project License
+https://spdx.org/licenses/FTL.json
+http://freetype.fis.uniroma2.it/FTL.TXT
+http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/FTL.TXT
+**//
+
+(( The FreeType Project LICENSE
+
+2006-Jan-27 ))??
+
+(( Copyright 1996-2002, 2006 by David Turner, Robert Wilhelm, and Werner
+Lemberg
+
+Introduction
+
+The FreeType Project is distributed in several archive packages; some of them
+may contain, in addition to the FreeType font engine, various tools and
+contributions which rely on, or relate to, the FreeType Project.
+
+This license applies to all files found in such packages, and which do not fall
+under their own explicit license. The license affects thus the FreeType font
+engine, the test programs, documentation and makefiles, at the very least.
+
+This license was inspired by the BSD, Artistic, and IJG (Independent JPEG Group)
+licenses, which all encourage inclusion and use of free software in commercial
+and freeware products alike. As a consequence, its main points are that:
+
+   (( o ))??
+   We don't promise that this software works. However, we will be interested in
+   any kind of bug reports. (` + "`" + `as is' distribution)
+
+   (( o ))??
+   You can use this software for whatever you want, in parts or full form,
+   without having to pay us. (` + "`" + `royalty-free' usage)
+
+   (( o ))??
+   You may not pretend that you wrote this software. If you use it, or only
+   parts of it, in a program, you must acknowledge somewhere in your
+   documentation that you have used the FreeType code. (` + "`" + `credits')
+
+We specifically permit and encourage the inclusion of this software, with or
+without modifications, in commercial products. We disclaim all warranties
+covering The FreeType Project and assume no liability related to The FreeType
+Project.
+
+Finally, many people asked us for a preferred form for a credit/disclaimer to
+use in compliance with this license. We thus encourage you to use the following
+text:
+
+""" Portions of this software are copyright © <year> The FreeType Project
+(www.freetype.org). All rights reserved. """
+
+Please replace <year> with the value from the FreeType version you actually use. ))??
+
+Legal Terms
+
+   (( 0. ))??
+   Definitions
+
+   Throughout this license, the terms ` + "`" + `package', ` + "`" + `FreeType Project', and
+   ` + "`" + `FreeType archive' refer to the set of files originally distributed by the
+   authors (David Turner, Robert Wilhelm, and Werner Lemberg) as the ` + "`" + `FreeType
+   Project', be they named as alpha, beta or final release.
+
+   ` + "`" + `You' refers to the licensee, or person using the project, where ` + "`" + `using' is a
+   generic term including compiling the project's source code as well as linking
+   it to form a ` + "`" + `program' or ` + "`" + `executable'. This program is referred to as ` + "`" + `a
+   program using the FreeType engine'.
+
+   This license applies to all files distributed in the original FreeType
+   Project, including all source code, binaries and documentation, unless
+   otherwise stated in the file in its original, unmodified form as distributed
+   in the original archive. If you are unsure whether or not a particular file
+   is covered by this license, you must contact us to verify this.
+
+   The FreeType Project is copyright (C) 1996-2000 by David Turner, Robert
+   Wilhelm, and Werner Lemberg. All rights reserved except as specified below.
+
+   (( 1. ))??
+   No Warranty
+
+   THE FREETYPE PROJECT IS PROVIDED ` + "`" + `AS IS' WITHOUT WARRANTY OF ANY KIND, EITHER
+   EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF
+   MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL ANY OF
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY DAMAGES CAUSED BY THE USE
+   OR THE INABILITY TO USE, OF THE FREETYPE PROJECT.
+
+   (( 2. ))??
+   Redistribution
+
+   This license grants a worldwide, royalty-free, perpetual and irrevocable
+   right and license to use, execute, perform, compile, display, copy, create
+   derivative works of, distribute and sublicense the FreeType Project (in both
+   source and object code forms) and derivative works thereof for any purpose;
+   and to authorize others to exercise some or all of the rights granted herein,
+   subject to the following conditions:
+
+      (( o ))??
+      Redistribution of source code must retain this license file (` + "`" + `FTL.TXT')
+      unaltered; any additions, deletions or changes to the original files must
+      be clearly indicated in accompanying documentation. The copyright notices
+      of the unaltered, original files must be preserved in all copies of source
+      files.
+
+      (( o ))??
+      Redistribution in binary form must provide a disclaimer that states that
+      the software is based in part of the work of the FreeType Team, in the
+      distribution documentation. We also encourage you to put an URL to the
+      FreeType web page in your documentation, though this isn't mandatory.
+
+   These conditions apply to any software derived from or based on the FreeType
+   Project, not just the unmodified files. If you use our work, you must
+   acknowledge us. However, no fee need be paid to us.
+
+   (( 3. ))??
+   Advertising
+
+   Neither the FreeType authors and contributors nor you shall use the name of
+   the other for commercial, advertising, or promotional purposes without
+   specific prior written permission.
+
+   We suggest, but do not require, that you use one or more of the following
+   phrases to refer to this software in your documentation or advertising
+   materials: ` + "`" + `FreeType Project', ` + "`" + `FreeType Engine', ` + "`" + `FreeType library', or
+   ` + "`" + `FreeType Distribution'.
+
+   As you have not signed this license, you are not required to accept it.
+   However, as the FreeType Project is copyrighted material, only this license,
+   or another one contracted with the authors, grants you the right to use,
+   distribute, and modify it. Therefore, by using, distributing, or modifying
+   the FreeType Project, you indicate that you understand and accept all the
+   terms of this license.
+
+   (( 4. ))??
+   Contacts
+
+   There are two mailing lists related to FreeType:
+
+      (( o ))??
+      freetype@nongnu.org
+
+      Discusses general use and applications of FreeType, as well as future and
+      wanted additions to the library and distribution. If you are looking for
+      support, start in this list if you haven't found anything to help you in
+      the documentation.
+
+      (( o ))??
+      freetype-devel@nongnu.org
+
+      Discusses bugs, as well as engine internals, design issues, specific
+      licenses, porting, etc.
+
+   Our home page can be found at
+
+   http:/www.freetype.org
+   (( --- end of FTL.TXT --- ))??
+`
+const license_Fair_lre = `//**
+Fair License
+https://spdx.org/licenses/Fair.json
+http://fairlicense.org/
+https://opensource.org/licenses/Fair
+**//
+
+(( Fair License
+(( Copyright __20__ ))??
+))??
+
+Usage of the works is permitted provided that this instrument is retained with
+the works, so that any entity that uses the works is notified of this
+instrument.
+
+DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
+`
+const license_Frameworx_1_0_lre = `//**
+Frameworx Open License 1.0
+https://spdx.org/licenses/Frameworx-1.0.json
+https://opensource.org/licenses/Frameworx-1.0
+**//
+
+(( THE FRAMEWORX OPEN LICENSE 1.0 ))??
+
+This License Agreement, The Frameworx Open License 1.0, has been entered into
+between The Frameworx Company and you, the licensee hereunder, effective as of
+Your acceptance of the Frameworx Code Base or an Downstream Distribution (each
+as defined below).
+
+AGREEMENT BACKGROUND
+
+The Frameworx Company is committed to the belief that open source software
+results in better quality, greater technical and product innovation in the
+market place and a more empowered and productive developer and end-user
+community. Our objective is to ensure that the Frameworx Code Base, and the
+source code for improvements and innovations to it, remain free and open to the
+community.To further these beliefs and objectives, we are distributing the
+Frameworx Code Base, without royalties and in source code form, to the community
+pursuant to this License Agreement.
+
+AGREEMENT TERMS
+
+The Frameworx Company and You have agreed as follows:
+
+   (( 1. ))??
+   Definitions.The following terms have the following respective meanings:
+
+      (( (a) ))??
+      Frameworx Code Base means the software developed by The Frameworx Company
+      and made available under this License Agreement
+
+      (( (b) ))??
+      Downstream Distribution means any direct or indirect release, distribution
+      or remote availability of software (i) that directly or indirectly
+      contains, or depends for its intended functioning on, the Frameworx Code
+      Base or any portion or element thereof and (ii) in which rights to use and
+      distribute such Frameworx Code Base software depend, directly or
+      indirectly, on the License provided in Section 2 below.
+
+      (( c ))??
+      "Source Code" to any software means the preferred form for making
+      modifications to that software, including any associated documentation,
+      interface definition files and compilation or installation scripts, or any
+      version thereof that has been compressed or archived, and can be
+      reconstituted, using an appropriate and generally available archival or
+      compression technology.
+
+      (( (d) ))??
+      Value-Added Services means any commercial or fee-based software-related
+      service, including without limitation: system or application development
+      or consulting; technical or end-user support or training; distribution
+      maintenance, configuration or versioning; or outsourced, hosted or
+      network-based application services.
+
+   (( 2. ))??
+   License Grant. Subject to the terms and conditions hereof, The Frameworx
+   Company hereby grants You a non-exclusive license (the License), subject to
+   third party intellectual property claims, and for no fee other than a nominal
+   charge reflecting the costs of physical distribution, to:
+
+      (( (a) ))??
+      use the Frameworx Code Base, in either Source Code or machine-readable
+      form;
+
+      (( (b) ))??
+      make modifications, additions and deletions to the content or structure of
+      the Frameworx Code Base; or
+
+      (( c ))??
+      create larger works or derivative works including the Frameworx Code Base
+      or any portion or element thereof; and
+
+      (( (d) ))??
+      release, distribute or make available, either generally or to any specific
+      third-party, any of the foregoing in Source Code or binary form.
+
+   (( 3. ))??
+   License Conditions. The grant of the License under Section 1 hereof, and your
+   exercise of all rights in connection with this License Agreement, will remain
+   subject to the following terms and conditions, as well as to the other
+   provisions hereof:
+
+      (( (a) ))??
+      Complete Source Code for any Downstream Distribution directly or
+      indirectly made by You that contains, or depends for its intended
+      functionality on, the Frameworx Code Base, or any portion or element
+      thereof, shall be made freely available to all users thereof on terms and
+      conditions no more restrictive, and no less favorable for any user
+      (including, without limitation, with regard to Source Code availability
+      and royalty-free use) than those terms and conditions provided in this
+      License Agreement.
+
+      (( (b) ))??
+      Any Value-Added Services that you offer or provide, directly or
+      indirectly, in relation to any Downstream Distribution shall be offered
+      and provided on commercial terms that are reasonably commensurate to the
+      fair market value of such Value-Added Services. In addition, the terms and
+      conditions on which any such Value Added Services are so offered or
+      provided shall be consistent with, and shall fully support, the intent and
+      purpose of this License Agreement.
+
+      (( c ))??
+      All Downstream Distributions shall:
+
+         (( (i) ))??
+         include all portions and elements of the Frameworx Code Base required
+         to build the Source Code of such Downstream Distribution into a fully
+         functional machine-executable system, or additional build scripts or
+         comparable software necessary and sufficient for such purposes;
+
+         (( (ii) ))??
+         include, in each file containing any portion or element of the
+         Frameworx Code Base, the following identifying legend: This file
+         contains software that has been made available under The Frameworx Open
+         License 1.0. Use and distribution hereof are subject to the
+         restrictions set forth therein.
+
+         (( (iii) ))??
+         include all other copyright notices, authorship credits, warranty
+         disclaimers (including that provided in Section 6 below), legends,
+         documentation, annotations and comments contained in the Frameworx Code
+         Base as provided to You hereunder;
+
+         (( (iv) ))??
+         contain an unaltered copy of the html file named
+         frameworx_community_invitation.html included within the Frameworx Code
+         Base that acknowledges new users and provides them with information on
+         the Frameworx Code Base community;
+
+         (( (v) ))??
+         contain an unaltered copy of the text file named
+         the_frameworx_license.txt included within the Frameworx Code Base that
+         includes a text copy of the form of this License Agreement; and
+
+         (( (vi) ))??
+         prominently display to any viewer or user of the Source Code of such
+         Open Downstream Distribution, in the place and manner normally used for
+         such displays, the following legend:
+
+   Source code licensed under from The Frameworx Company is contained herein,
+   and such source code has been obtained either under The Frameworx Open
+   License, or another license granted by The Frameworx Company. Use and
+   distribution hereof is subject to the restrictions provided in the relevant
+   such license and to the copyrights of the licensor thereunder. A copy of The
+   Frameworx Open License is provided in a file named the_frameworx_license.txt
+   and included herein, and may also be available for inspection at
+   http:/www.frameworx.com.
+
+   (( 4. ))??
+   Restrictions on Open Downstream Distributions. Each Downstream Distribution
+   made by You, and by any party directly or indirectly obtaining rights to the
+   Frameworx Code Base through You, shall be made subject to a license grant or
+   agreement to the extent necessary so that each distributee under that
+   Downstream Distribution will be subject to the same restrictions on
+   re-distribution and use as are binding on You hereunder. You may satisfy this
+   licensing requirement either by:
+
+      (( (a) ))??
+      requiring as a condition to any Downstream Distribution made by you, or by
+      any direct or indirect distributee of Your Downstream Distribution (or any
+      portion or element thereof), that each distributee under the relevant
+      Downstream Distribution obtain a direct license (on the same terms and
+      conditions as those in this License Agreement) from The Frameworx Company;
+      or
+
+      (( (b) ))??
+      sub-licensing all (and not less than all) of Your rights and obligations
+      hereunder to that distributee, including (without limitation) Your
+      obligation to require distributees to be bound by license restrictions as
+      contemplated by this Section 4 above.
+
+   The Frameworx Company hereby grants to you all rights to sub-license your
+   rights hereunder as necessary to fully effect the intent and purpose of this
+   Section 4 above, provided, however, that your rights and obligations
+   hereunder shall be unaffected by any such sublicensing. In addition, The
+   Frameworx Company expressly retains all rights to take all appropriate action
+   (including legal action) against any such direct or indirect sub-licensee to
+   ensure its full compliance with the intent and purposes of this License
+   Agreement.
+
+   (( 5. ))??
+   Intellectual Property. Except as expressly provided herein, this License
+   Agreement preserves and respects Your and The Frameworx Companys respective
+   intellectual property rights, including, in the case of The Frameworx
+   Company, its copyrights and patent rights relating to the Frameworx Code
+   Base.
+
+   (( 6. ))??
+   Warranty Disclaimer. THE SOFTWARE LICENSED HEREUNDER IS PROVIDED ` + "`" + `` + "`" + `AS IS.''
+   ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+   NON-INFRINGEMENT, ARE HEREBY DISCLAIMED. IN NO EVENT SHALL THE LICENSOR OF
+   THIS SOFTWARE, BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+   EXEMPLARY, OR CONSEQUENTIAL DAMAGES INCLUDING (BUT NOT LIMITED TO)
+   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+   OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+   WHETHER IN CONTRACT, STRICT LIABILITY OR TORT (INCLUDING NEGLIGENCE OR
+   OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+   (( 7. ))??
+   License Violation. The License, and all of your rights thereunder, shall be
+   deemed automatically terminated and void as of any Downstream Distribution
+   directly or indirectly made or facilitated by You that violates the
+   provisions of this License Agreement, provided, however, that this License
+   Agreement shall survive any such termination in order to remedy the effects
+   of such violation. This License Agreement shall be binding on the legal
+   successors and assigns of the parties hereto.
+
+   Your agreement to the foregoing as of the date hereof has been evidenced by
+   your acceptance of the relevant software distribution hereunder.
+
+   (( (C) THE FRAMEWORX COMPANY 2003 ))??
+`
+const license_FreeImage_lre = `//**
+FreeImage Public License v1.0
+https://spdx.org/licenses/FreeImage.json
+http://freeimage.sourceforge.net/freeimage-license.txt
+**//
+
+(( FreeImage Public License - Version 1.0 ))??
+
+   (( 1. ))??
+   Definitions.
+
+      (( 1.1. ))??
+      "Contributor" means each entity that creates or contributes to the
+      creation of Modifications.
+
+      (( 1.2. ))??
+      "Contributor Version" means the combination of the Original Code, prior
+      Modifications used by a Contributor, and the Modifications made by that
+      particular Contributor.
+
+      (( 1.3. ))??
+      "Covered Code" means the Original Code or Modifications or the combination
+      of the Original Code and Modifications, in each case including portions
+      thereof.
+
+      (( 1.4. ))??
+      "Electronic Distribution Mechanism" means a mechanism generally accepted
+      in the software development community for the electronic transfer of
+      data.
+
+      (( 1.5. ))??
+      "Executable" means Covered Code in any form other than Source Code.
+
+      (( 1.6. ))??
+      "Initial Developer" means the individual or entity identified as the
+      Initial Developer in the Source Code notice required by Exhibit A.
+
+      (( 1.7. ))??
+      "Larger Work" means a work which combines Covered Code or portions thereof
+      with code not governed by the terms of this License.
+
+      (( 1.8. ))??
+      "License" means this document.
+
+      (( 1.9. ))??
+      "Modifications" means any addition to or deletion from the substance or
+      structure of either the Original Code or any previous Modifications. When
+      Covered Code is released as a series of files, a
+
+      Modification is:
+
+         (( A. ))??
+         Any addition to or deletion from the contents of a file containing
+         Original Code or previous Modifications.
+
+         (( B. ))??
+         Any new file that contains any part of the Original Code or previous
+         Modifications.
+
+      (( 1.10. ))??
+      "Original Code" means Source Code of computer software code which is
+      described in the Source Code notice required by Exhibit A as Original
+      Code, and which, at the time of its release under this License is not
+      already Covered Code governed by this License.
+
+      (( 1.11. ))??
+      "Source Code" means the preferred form of the Covered Code for making
+      modifications to it, including all modules it contains, plus any
+      associated interface definition files, scripts used to control compilation
+      and installation of an Executable, or a list of source code differential
+      comparisons against either the Original Code or another well known,
+      available Covered Code of the Contributor's choice. The Source Code can be
+      in a compressed or archival form, provided the appropriate decompression
+      or de-archiving software is widely available for no charge.
+
+      (( 1.12. ))??
+      "You" means an individual or a legal entity exercising rights under, and
+      complying with all of the terms of, this License or a future version of
+      this License issued under Section 6.1. For legal entities, "You" includes
+      any entity which controls, is controlled by, or is under common control
+      with You. For purposes of this definition, "control" means (a) the power,
+      direct or indirect, to cause the direction or management of such entity,
+      whether by contract or otherwise, or (b) ownership of fifty percent (50%)
+      or more of the outstanding shares or beneficial ownership of such entity.
+
+   (( 2. ))??
+   Source Code License.
+
+      (( 2.1. ))??
+      The Initial Developer Grant.
+
+      The Initial Developer hereby grants You a world-wide, royalty-free,
+      non-exclusive license, subject to third party intellectual property
+      claims:
+
+         (( (a) ))??
+         to use, reproduce, modify, display, perform, sublicense and distribute
+         the Original Code (or portions thereof) with or without Modifications,
+         or as part of a Larger Work; and
+
+         (( (b) ))??
+         under patents now or hereafter owned or controlled by Initial
+         Developer, to make, have made, use and sell ("Utilize") the Original
+         Code (or portions thereof), but solely to the extent that any such
+         patent is reasonably necessary to enable You to Utilize the Original
+         Code (or portions thereof) and not to any greater extent that may be
+         necessary to Utilize further Modifications or combinations.
+
+      (( 2.2. ))??
+      Contributor Grant.
+
+      Each Contributor hereby grants You a world-wide, royalty-free,
+      non-exclusive license, subject to third party intellectual property
+      claims:
+
+         (( (a) ))??
+         to use, reproduce, modify, display, perform, sublicense and distribute
+         the Modifications created by such Contributor (or portions thereof)
+         either on an unmodified basis, with other Modifications, as Covered
+         Code or as part of a Larger Work; and
+
+         (( (b) ))??
+         under patents now or hereafter owned or controlled by Contributor, to
+         Utilize the Contributor Version (or portions thereof), but solely to
+         the extent that any such patent is reasonably necessary to enable You
+         to Utilize the Contributor Version (or portions thereof), and not to
+         any greater extent that may be necessary to Utilize further
+         Modifications or combinations.
+
+   (( 3. ))??
+   Distribution Obligations.
+
+      (( 3.1. ))??
+      Application of License.
+
+      The Modifications which You create or to which You contribute are governed
+      by the terms of this License, including without limitation Section 2.2.
+      The Source Code version of Covered Code may be distributed only under the
+      terms of this License or a future version of this License released under
+      Section 6.1, and You must include a copy of this License with every copy
+      of the Source Code You distribute. You may not offer or impose any terms
+      on any Source Code version that alters or restricts the applicable version
+      of this License or the recipients' rights hereunder. However, You may
+      include an additional document offering the additional rights described in
+      Section 3.5.
+
+      (( 3.2. ))??
+      Availability of Source Code.
+
+      Any Modification which You create or to which You contribute must be made
+      available in Source Code form under the terms of this License either on
+      the same media as an Executable version or via an accepted Electronic
+      Distribution Mechanism to anyone to whom you made an Executable version
+      available; and if made available via Electronic Distribution Mechanism,
+      must remain available for at least twelve (12) months after the date it
+      initially became available, or at least six (6) months after a subsequent
+      version of that particular Modification has been made available to such
+      recipients. You are responsible for ensuring that the Source Code version
+      remains available even if the Electronic Distribution Mechanism is
+      maintained by a third party.
+
+      (( 3.3. ))??
+      Description of Modifications.
+
+      You must cause all Covered Code to which you contribute to contain a file
+      documenting the changes You made to create that Covered Code and the date
+      of any change. You must include a prominent statement that the
+      Modification is derived, directly or indirectly, from Original Code
+      provided by the Initial Developer and including the name of the Initial
+      Developer in (a) the Source Code, and (b) in any notice in an Executable
+      version or related documentation in which You describe the origin or
+      ownership of the Covered Code.
+
+      (( 3.4. ))??
+      Intellectual Property Matters
+
+         (( (a) ))??
+         Third Party Claims.
+
+         If You have knowledge that a party claims an intellectual property
+         right in particular functionality or code (or its utilization under
+         this License), you must include a text file with the source code
+         distribution titled "LEGAL" which describes the claim and the party
+         making the claim in sufficient detail that a recipient will know whom
+         to contact. If you obtain such knowledge after You make Your
+         Modification available as described in Section 3.2, You shall promptly
+         modify the LEGAL file in all copies You make available thereafter and
+         shall take other steps (such as notifying appropriate mailing lists or
+         newsgroups) reasonably calculated to inform those who received the
+         Covered Code that new knowledge has been obtained.
+
+         (( (b) ))??
+         Contributor APIs.
+
+         If Your Modification is an application programming interface and You
+         own or control patents which are reasonably necessary to implement that
+         API, you must also include this information in the LEGAL file.
+
+      (( 3.5. ))??
+      Required Notices.
+
+      You must duplicate the notice in Exhibit A in each file of the Source
+      Code, and this License in any documentation for the Source Code, where You
+      describe recipients' rights relating to Covered Code. If You created one
+      or more Modification(s), You may add your name as a Contributor to the
+      notice described in Exhibit A. If it is not possible to put such notice in
+      a particular Source Code file due to its structure, then you must include
+      such notice in a location (such as a relevant directory file) where a user
+      would be likely to look for such a notice. You may choose to offer, and to
+      charge a fee for, warranty, support, indemnity or liability obligations to
+      one or more recipients of Covered Code. However, You may do so only on
+      Your own behalf, and not on behalf of the Initial Developer or any
+      Contributor. You must make it absolutely clear than any such warranty,
+      support, indemnity or liability obligation is offered by You alone, and
+      You hereby agree to indemnify the Initial Developer and every Contributor
+      for any liability incurred by the Initial Developer or such Contributor as
+      a result of warranty, support, indemnity or liability terms You offer.
+
+      (( 3.6. ))??
+      Distribution of Executable Versions.
+
+      You may distribute Covered Code in Executable form only if the
+      requirements of Section 3.1-3.5 have been met for that Covered Code, and
+      if You include a notice stating that the Source Code version of the
+      Covered Code is available under the terms of this License, including a
+      description of how and where You have fulfilled the obligations of Section
+      3.2. The notice must be conspicuously included in any notice in an
+      Executable version, related documentation or collateral in which You descr
+      ibe recipients' rights relating to the Covered Code. You may distribute
+      the Executable version of Covered Code under a license of Your choice,
+      which may contain terms different from this License, provided that You are
+      in compliance with the terms of this License and that the license for the
+      Executable version does not attempt to limit or alter the recipient's
+      rights in the Source Code version from the rights set forth in this
+      License. If You distribute the Executable version under a different
+      license You must make it absolutely clear that any terms which differ from
+      this License are offered by You alone, not by the Initial Developer or any
+      Contributor. You hereby agree to indemnify the Initial Developer and every
+      Contributor for any liability incurred by the Initial Developer or such
+      Contributor as a result of any such terms You offer.
+
+      (( 3.7. ))??
+      Larger Works.
+
+      You may create a Larger Work by combining Covered Code with other code not
+      governed by the terms of this License and distribute the Larger Work as a
+      single product. In such a case, You must make sure the requirements of
+      this License are fulfilled for the Covered Code.
+
+   (( 4. ))??
+   Inability to Comply Due to Statute or Regulation.
+
+   If it is impossible for You to comply with any of the terms of this License
+   with respect to some or all of the Covered Code due to statute or regulation
+   then You must: (a) comply with the terms of this License to the maximum
+   extent possible; and (b) describe the limitations and the code they affect.
+   Such description must be included in the LEGAL file described in Section 3.4
+   and must be included with all distributions of the Source Code. Except to the
+   extent prohibited by statute or regulation, such description must be
+   sufficiently detailed for a recipient of ordinary skill to be able to
+   understand it.
+
+   (( 5. ))??
+   Application of this License.
+
+   This License applies to code to which the Initial Developer has attached the
+   notice in Exhibit A, and to related Covered Code.
+
+   (( 6. ))??
+   Versions of the License.
+
+      (( 6.1. ))??
+      New Versions.
+
+      Floris van den Berg may publish revised and/or new versions of the License
+      from time to time. Each version will be given a distinguishing version
+      number.
+
+      (( 6.2. ))??
+      Effect of New Versions.
+
+      Once Covered Code has been published under a particular version of the
+      License, You may always continue to use it under the terms of that
+      version. You may also choose to use such Covered Code under the terms of
+      any subsequent version of the License published by Floris van den Berg
+
+      No one other than Floris van den Berg has the right to modify the terms
+      applicable to Covered Code created under this License.
+
+      (( 6.3. ))??
+      Derivative Works.
+
+      If you create or use a modified version of this License (which you may
+      only do in order to apply it to code which is not already Covered Code
+      governed by this License), you must (a) rename Your license so that the
+      phrases "FreeImage", ` + "`" + `FreeImage Public License", "FIPL", or any
+      confusingly similar phrase do not appear anywhere in your license and (b)
+      otherwise make it clear that your version of the license contains terms
+      which differ from the FreeImage Public License. (Filling in the name of
+      the Initial Developer, Original Code or Contributor in the notice
+      described in Exhibit A shall not of themselves be deemed to be
+      modifications of this License.)
+
+   (( 7. ))??
+   DISCLAIMER OF WARRANTY.
+
+   COVERED CODE IS PROVIDED UNDER THIS LICENSE ON AN "AS IS" BASIS, WITHOUT
+   WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT
+   LIMITATION, WARRANTIES THAT THE COVERED CODE IS FREE OF DEFECTS,
+   MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE RISK
+   AS TO THE QUALITY AND PERFORMANCE OF THE COVERED CODE IS WITH YOU. SHOULD ANY
+   COVERED CODE PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL DEVELOPER
+   OR ANY OTHER CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY SERVICING, REPAIR
+   OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF
+   THIS LICENSE. NO USE OF ANY COVERED CODE IS AUTHORIZED HEREUNDER EXCEPT UNDER
+   THIS DISCLAIMER.
+
+   (( 8. ))??
+   TERMINATION.
+
+   This License and the rights granted hereunder will terminate automatically if
+   You fail to comply with terms herein and fail to cure such breach within 30
+   days of becoming aware of the breach. All sublicenses to the Covered Code
+   which are properly granted shall survive any termination of this License.
+   Provisions which, by their nature, must remain in effect beyond the
+   termination of this License shall survive.
+
+   (( 9. ))??
+   LIMITATION OF LIABILITY.
+
+   UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER TORT (INCLUDING
+   NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE INITIAL DEVELOPER, ANY OTHER
+   CONTRIBUTOR, OR ANY DISTRIBUTOR OF COVERED CODE, OR ANY SUPPLIER OF ANY OF
+   SUCH PARTIES, BE LIABLE TO YOU OR ANY OTHER PERSON FOR ANY INDIRECT, SPECIAL,
+   INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT
+   LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+   MALFUNCTION, OR ANY AND ALL OTHER COMMERCIAL DAMAGES OR LOSSES, EVEN IF SUCH
+   PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES. THIS
+   LIMITATION OF LIABILITY SHALL NOT APPLY TO LIABILITY FOR DEATH OR PERSONAL
+   INJURY RESULTING FROM SUCH PARTY'S NEGLIGENCE TO THE EXTENT APPLICABLE LAW
+   PROHIBITS SUCH LIMITATION. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR
+   LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THAT EXCLUSION AND
+   LIMITATION MAY NOT APPLY TO YOU.
+
+   (( 10. ))??
+   U.S. GOVERNMENT END USERS.
+
+   The Covered Code is a "commercial item," as that term is defined in 48 C.F.R.
+   2.101 (Oct. 1995), consisting of "commercial computer software" and
+   "commercial computer software documentation," as such terms are used in 48
+   C.F.R. 12.212 (Sept. 1995). Consistent with 48 C.F.R. 12.212 and 48 C.F.R.
+   227.7202-1 through 227.7202-4 (June 1995), all U.S. Government End Users
+   acquire Covered Code with only those rights set forth herein.
+
+   (( 11. ))??
+   MISCELLANEOUS.
+
+   This License represents the complete agreement concerning subject matter
+   hereof. If any provision of this License is held to be unenforceable, such
+   provision shall be reformed only to the extent necessary to make it
+   enforceable. This License shall be governed by Dutch law provisions (except
+   to the extent applicable law, if any, provides otherwise), excluding its
+   conflict-of-law provisions. With respect to disputes in which at least one
+   party is a citizen of, or an entity chartered or registered to do business
+   in, the The Netherlands: (a) unless otherwise agreed in writing, all disputes
+   relating to this License (excepting any dispute relating to intellectual
+   property rights) shall be subject to final and binding arbitration, with the
+   losing party paying all costs of arbitration; (b) any arbitration relating to
+   this Agreement shall be held in Almelo, The Netherlands; and (c) any
+   litigation relating to this Agreement shall be subject to the jurisdiction of
+   the court of Almelo, The Netherlands with the losing party responsible for
+   costs, including without limitation, court costs and reasonable attorneys
+   fees and expenses. Any law or regulation which provides that the language of
+   a contract shall be construed against the drafter shall not apply to this
+   License.
+
+   (( 12. ))??
+   RESPONSIBILITY FOR CLAIMS.
+
+   Except in cases where another Contributor has failed to comply with Section
+   3.4, You are responsible for damages arising, directly or indirectly, out of
+   Your utilization of rights under this License, based on the number of copies
+   of Covered Code you made available, the revenues you received from utilizing
+   such rights, and other relevant factors. You agree to work with affected
+   parties to distribute responsibility on an equitable basis.
+   (( EXHIBIT A.
+
+"The contents of this file are subject to the FreeImage Public License Version
+1.0 (the "License"); you may not use this file except in compliance with the
+License. You may obtain a copy of the License at
+http:/home.wxs.nl/~flvdberg/freeimage-license.txt
+
+Software distributed under the License is distributed on an "AS IS" basis,
+WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
+specific language governing rights and limitations under the License. ))??
 `
 const license_GPL_1_0_lre = `//**
 GNU General Public License v1.0
