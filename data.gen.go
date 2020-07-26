@@ -107,6 +107,8 @@ func init() {
 		{Name: "Apache-1.1", Text: license_Apache_1_1_lre},
 		{Name: "Apache-2.0", Text: license_Apache_2_0_lre},
 		{Name: "Artistic-1.0", Text: license_Artistic_1_0_lre},
+		{Name: "Artistic-1.0-Perl", Text: license_Artistic_1_0_Perl_lre},
+		{Name: "Artistic-1.0-cl8", Text: license_Artistic_1_0_cl8_lre},
 		{Name: "Artistic-2.0", Text: license_Artistic_2_0_lre},
 		{Name: "BSD-1-Clause", Text: license_BSD_1_Clause_lre},
 		{Name: "BSD-1-Clause-Clear", Text: license_BSD_1_Clause_Clear_lre},
@@ -156,6 +158,7 @@ func init() {
 		{Name: "CDDL-1.1", Text: license_CDDL_1_1_lre},
 		{Name: "CPAL-1.0", Text: license_CPAL_1_0_lre},
 		{Name: "CPL-1.0", Text: license_CPL_1_0_lre},
+		{Name: "ClArtistic", Text: license_ClArtistic_lre},
 		{Name: "ECL-1.0", Text: license_ECL_1_0_lre},
 		{Name: "ECL-2.0", Text: license_ECL_2_0_lre},
 		{Name: "EPL-1.0", Text: license_EPL_1_0_lre},
@@ -187,12 +190,19 @@ func init() {
 		{Name: "MPL-1.0", Text: license_MPL_1_0_lre},
 		{Name: "MPL-1.1", Text: license_MPL_1_1_lre},
 		{Name: "MPL-2.0", Text: license_MPL_2_0_lre},
+		{Name: "NBPL-1.0", Text: license_NBPL_1_0_lre},
 		{Name: "NCSA", Text: license_NCSA_lre},
 		{Name: "NIST", Text: license_NIST_lre},
+		{Name: "OGTSL", Text: license_OGTSL_lre},
+		{Name: "OLDAP-1.1", Text: license_OLDAP_1_1_lre},
+		{Name: "OLDAP-1.2", Text: license_OLDAP_1_2_lre},
+		{Name: "OLDAP-1.3", Text: license_OLDAP_1_3_lre},
+		{Name: "OLDAP-1.4", Text: license_OLDAP_1_4_lre},
 		{Name: "OSL-3.0", Text: license_OSL_3_0_lre},
 		{Name: "OpenSSL", Text: license_OpenSSL_lre},
 		{Name: "PHP-3.0", Text: license_PHP_3_0_lre},
 		{Name: "PHP-3.01", Text: license_PHP_3_01_lre},
+		{Name: "Ruby", Text: license_Ruby_lre},
 		{Name: "UPL-1.0", Text: license_UPL_1_0_lre},
 		{Name: "Unlicense", Text: license_Unlicense_lre},
 		{Name: "WTFPL", Text: license_WTFPL_lre},
@@ -16401,6 +16411,281 @@ of the item may redistribute it under the same conditions they received it.
    MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
    (( The End ))??
 `
+const license_Artistic_1_0_Perl_lre = `//**
+Artistic License 1.0 (Perl)
+https://spdx.org/licenses/Artistic-1.0-Perl.json
+http://dev.perl.org/licenses/artistic.html
+**//
+
+(( The "Artistic License" ))??
+
+Preamble
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications.
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder as specified
+below.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major archive site
+      such as uunet.uu.net, or by allowing the Copyright Holder to include your
+      modifications in the Standard Version of the Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      give non-standard executables non-standard names, and clearly document the
+      differences in manual pages (or equivalent), together with instructions on
+      where to get the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own. You may embed this Package's
+   interpreter within an executable of yours (by linking); this shall be
+   construed as a mere form of aggregation, provided that the complete Standard
+   Version of the interpreter is so embedded.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whoever generated them, and may be sold
+   commercially, and may be aggregated with this Package. If such scripts or
+   library files are aggregated with this Package via the so-called "undump" or
+   "unexec" methods of producing a binary executable image, then distribution of
+   such an image shall neither be construed as a distribution of this Package
+   nor shall it fall under the restrictions of Paragraphs 3 and 4, provided that
+   you do not represent such an executable image as a Standard Version of this
+   Package.
+
+   (( 7. ))??
+   C subroutines (or comparably compiled subroutines in other languages)
+   supplied by you and linked into this Package in order to emulate subroutines
+   and variables of the language defined by this Package shall not be considered
+   part of this Package, but are the equivalent of input as in Paragraph 6,
+   provided these subroutines do not change the language in any way that would
+   cause it to fail the regression tests for the language.
+
+   (( 8. ))??
+   Aggregation of this Package with a commercial distribution is always
+   permitted provided that the use of this Package is embedded; that is, when no
+   overt attempt is made to make this Package's interfaces visible to the end
+   user of the commercial distribution. Such use shall not be construed as a
+   distribution of this Package.
+
+   (( 9. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 10. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
+const license_Artistic_1_0_cl8_lre = `//**
+Artistic License 1.0 w/clause 8
+https://spdx.org/licenses/Artistic-1.0-cl8.json
+https://opensource.org/licenses/Artistic-1.0
+**//
+
+(( The Artistic License ))??
+
+Preamble
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications.
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major archive site
+      such as ftp.uu.net, or by allowing the Copyright Holder to include your
+      modifications in the Standard Version of the Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      accompany any non-standard executables with their corresponding Standard
+      Version executables, giving the non-standard executables non-standard
+      names, and clearly documenting the differences in manual pages (or
+      equivalent), together with instructions on where to get the Standard
+      Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whomever generated them, and may be sold
+   commercially, and may be aggregated with this Package.
+
+   (( 7. ))??
+   C or perl subroutines supplied by you and linked into this Package shall not
+   be considered part of this Package.
+
+   8.Aggregation of this Package with a commercial distribution is always
+   permitted provided that the use of this Package is embedded; that is, when no
+   overt attempt is made to make this Package's interfaces visible to the end
+   user of the commercial distribution. Such use shall not be construed as a
+   distribution of this Package.
+
+   (( 9. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 10. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
 const license_Artistic_2_0_lre = `//**
 Artistic License 2.0
 https://spdx.org/licenses/Artistic-2.0.json
@@ -30174,6 +30459,164 @@ Agreement will bring a legal action under this Agreement more than one year
 after the cause of action arose. Each party waives its rights to a jury trial in
 any resulting litigation.
 `
+const license_ClArtistic_lre = `//**
+Clarified Artistic License
+https://spdx.org/licenses/ClArtistic.json
+http://gianluca.dellavedova.org/2011/01/03/clarified-artistic-license/
+http://www.ncftp.com/ncftp/doc/LICENSE.txt
+**//
+
+(( The Clarified Artistic License ))??
+
+Preamble
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications.
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder as specified
+below.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Distribution fee" is a fee you charge for providing a copy of this Package to
+another party.
+
+"Freely Available" means that no fee is charged for the right to use the item,
+though there may be fees involved in handling the item. It also means that
+recipients of the item may redistribute it under the same conditions they
+received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain, or those made Freely Available, or from the Copyright
+   Holder. A Package modified in such a way shall still be considered the
+   Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major network archive
+      site allowing unrestricted access to them, or by allowing the Copyright
+      Holder to include your modifications in the Standard Version of the
+      Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+      (( e) ))??
+      permit and encourge anyone who receives a copy of the modified Package
+      permission to make your modifications Freely Available in some specific
+      way.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      give non-standard executables non-standard names, and clearly document the
+      differences in manual pages (or equivalent), together with instructions on
+      where to get the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+      (( e) ))??
+      offer the machine-readable source of the Package, with your modifications,
+      by mail order.
+
+   (( 5. ))??
+   You may charge a distribution fee for any distribution of this Package. If
+   you offer support for this Package, you may charge any fee you choose for
+   that support. You may not charge a license fee for the right to use this
+   Package itself. You may distribute this Package in aggregate with other
+   (possibly commercial and possibly nonfree) programs as part of a larger
+   (possibly commercial and possibly nonfree) software distribution, and charge
+   license fees for other parts of that software distribution, provided that you
+   do not advertise this Package as a product of your own. If the Package
+   includes an interpreter, You may embed this Package's interpreter within an
+   executable of yours (by linking); this shall be construed as a mere form of
+   aggregation, provided that the complete Standard Version of the interpreter
+   is so embedded.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whoever generated them, and may be sold
+   commercially, and may be aggregated with this Package. If such scripts or
+   library files are aggregated with this Package via the so-called "undump" or
+   "unexec" methods of producing a binary executable image, then distribution of
+   such an image shall neither be construed as a distribution of this Package
+   nor shall it fall under the restrictions of Paragraphs 3 and 4, provided that
+   you do not represent such an executable image as a Standard Version of this
+   Package.
+
+   (( 7. ))??
+   C subroutines (or comparably compiled subroutines in other languages)
+   supplied by you and linked into this Package in order to emulate subroutines
+   and variables of the language defined by this Package shall not be considered
+   part of this Package, but are the equivalent of input as in Paragraph 6,
+   provided these subroutines do not change the language in any way that would
+   cause it to fail the regression tests for the language.
+
+   (( 8. ))??
+   Aggregation of the Standard Version of the Package with a commercial
+   distribution is always permitted provided that the use of this Package is
+   embedded; that is, when no overt attempt is made to make this Package's
+   interfaces visible to the end user of the commercial distribution. Such use
+   shall not be construed as a distribution of this Package.
+
+   (( 9. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 10. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
 const license_ECL_1_0_lre = `//**
 Educational Community License v1.0
 https://spdx.org/licenses/ECL-1.0.json
@@ -38423,6 +38866,141 @@ the Mozilla Public License, v. 2.0. ))??
 
 ))
 `
+const license_NBPL_1_0_lre = `//**
+Net Boolean Public License v1
+https://spdx.org/licenses/NBPL-1.0.json
+http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=37b4b3f6cc4bf34e1d3dec61e69914b9819d8894
+**//
+
+(( The Net Boolean Public License
+(( Version 1, 22 August 1998 ))??
+(( Copyright __20__ ))??
+))??
+
+(( Note: This license is derived from the "Artistic License" as distributed with
+the Perl Programming Language. Its terms are different from those of the
+"Artistic License."
+
+PREAMBLE
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications. ))??
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major archive site
+      such as uunet.uu.net, or by allowing the Copyright Holder to include your
+      modifications in the Standard Version of the Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      accompany any non-standard executables with their corresponding Standard
+      Version executables, giving the non-standard executables non-standard
+      names, and clearly documenting the differences in manual pages (or
+      equivalent), together with instructions on where to get the Standard
+      Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whomever generated them, and may be sold
+   commercially, and may be aggregated with this Package.
+
+   (( 7. ))??
+   C subroutines supplied by you and linked into this Package in order to
+   emulate subroutines and variables of the language defined by this Package
+   shall not be considered part of this Package, but are the equivalent of input
+   as in Paragraph 6, provided these subroutines do not change the language in
+   any way that would cause it to fail the regression tests for the language.
+
+   (( 8. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 9. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
 const license_NCSA_lre = `//**
 University of Illinois/NCSA Open Source License
 https://spdx.org/licenses/NCSA.json
@@ -38491,6 +39069,691 @@ CONTRACT, TORT, OR OTHERWISE, WHETHER OR NOT INJURY WAS SUSTAINED BY
 PERSONS OR PROPERTY OR OTHERWISE, AND WHETHER OR NOT LOSS WAS
 SUSTAINED FROM, OR AROSE OUT OF THE RESULTS OF, OR USE OF, THE
 SOFTWARE OR SERVICES PROVIDED HEREUNDER.
+`
+const license_OGTSL_lre = `//**
+Open Group Test Suite License
+https://spdx.org/licenses/OGTSL.json
+http://www.opengroup.org/testing/downloads/The_Open_Group_TSL.txt
+https://opensource.org/licenses/OGTSL
+**//
+
+(( The Open Group Test Suite License ))??
+
+(( Preamble
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications.
+
+Testing is essential for proper development and maintenance of standards-based
+products.
+
+For buyers: adequate conformance testing leads to reduced integration costs and
+protection of investments in applications, software and people.
+
+For software developers: conformance testing of platforms and middleware greatly
+reduces the cost of developing and maintaining multi-platform application
+software.
+
+For suppliers: In-depth testing increases customer satisfaction and keeps
+development and support costs in check. API conformance is highly measurable and
+suppliers who claim it must be able to substantiate that claim.
+
+As such, since these are benchmark measures of conformance, we feel the
+integrity of test tools is of importance. In order to preserve the integrity of
+the existing conformance modes of this test package and to permit recipients of
+modified versions of this package to run the original test modes, this license
+requires that the original test modes be preserved.
+
+If you find a bug in one of the standards mode test cases, please let us know so
+we can feed this back into the original, and also raise any specification issues
+with the appropriate bodies (for example the POSIX committees). ))??
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least the following:
+
+   rename any non-standard executables and testcases so the names do not
+   conflict with standard executables and testcases, which must also be
+   provided, and provide a separate manual page for each non-standard executable
+   and testcase that clearly documents how it differs from the Standard
+   Version.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least the following:
+
+   accompany any non-standard executables and testcases with their corresponding
+   Standard Version executables and testcases, giving the non-standard
+   executables and testcases non-standard names, and clearly documenting the
+   differences in manual pages (or equivalent), together with instructions on
+   where to get the Standard Version.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whomever generated them, and may be sold
+   commercially, and may be aggregated with this Package.
+
+   7.Subroutines supplied by you and linked into this Package shall not be
+   considered part of this Package.
+
+   (( 8. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 9. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
+const license_OLDAP_1_1_lre = `//**
+Open LDAP Public License v1.1
+https://spdx.org/licenses/OLDAP-1.1.json
+http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=806557a5ad59804ef3a44d5abfbe91d706b0791f
+**//
+
+(( The OpenLDAP Public License
+Version 1.1, 25 August 1998
+
+(( Copyright __20__ ))??
+))??
+
+(( Note: This license is derived from the "Artistic License" as distributed with
+the Perl Programming Language. Its terms are different from those of the
+"Artistic License."
+))??
+
+((
+PREAMBLE
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications. ))??
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major archive site
+      such as uunet.uu.net, or by allowing the Copyright Holder to include your
+      modifications in the Standard Version of the Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      accompany any non-standard executables with their corresponding Standard
+      Version executables, giving the non-standard executables non-standard
+      names, and clearly documenting the differences in manual pages (or
+      equivalent), together with instructions on where to get the Standard
+      Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whomever generated them, and may be sold
+   commercially, and may be aggregated with this Package.
+
+   (( 7. ))??
+   C subroutines supplied by you and linked into this Package in order to
+   emulate subroutines and variables of the language defined by this Package
+   shall not be considered part of this Package, but are the equivalent of input
+   as in Paragraph 6, provided these subroutines do not change the language in
+   any way that would cause it to fail the regression tests for the language.
+
+   (( 8. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 9. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
+const license_OLDAP_1_2_lre = `//**
+Open LDAP Public License v1.2
+https://spdx.org/licenses/OLDAP-1.2.json
+http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=42b0383c50c299977b5893ee695cf4e486fb0dc7
+**//
+
+(( The OpenLDAP Public License
+Version 1.2, 1 September 1998
+(( Copyright __20__ ))??
+))??
+
+(( Note: This license is derived from the "Artistic License" as distributed with
+the Perl Programming Language. As differences may exist, the complete license
+should be read.))??
+
+(( PREAMBLE
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications. ))??
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major archive site
+      such as uunet.uu.net, or by allowing the Copyright Holder to include your
+      modifications in the Standard Version of the Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      accompany any non-standard executables with their corresponding Standard
+      Version executables, giving the non-standard executables non-standard
+      names, and clearly documenting the differences in manual pages (or
+      equivalent), together with instructions on where to get the Standard
+      Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whomever generated them, and may be sold
+   commercially, and may be aggregated with this Package.
+
+   (( 7. ))??
+   C subroutines supplied by you and linked into this Package in order to
+   emulate subroutines and variables of the language defined by this Package
+   shall not be considered part of this Package, but are the equivalent of input
+   as in Paragraph 6, provided these subroutines do not change the language in
+   any way that would cause it to fail the regression tests for the language.
+
+   (( 8. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 9. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
+const license_OLDAP_1_3_lre = `//**
+Open LDAP Public License v1.3
+https://spdx.org/licenses/OLDAP-1.3.json
+http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=e5f8117f0ce088d0bd7a8e18ddf37eaa40eb09b1
+**//
+
+(( The OpenLDAP Public License
+Version 1.3, 17 January 1999
+(( Copyright __20__ ))??
+))??
+
+(( Note: This license is derived from the "Artistic License" as distributed with
+the Perl Programming Language. As significant differences exist, the complete
+license should be read. ))??
+
+(( PREAMBLE
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications. ))??
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major archive site
+      such as uunet.uu.net, or by allowing the Copyright Holder to include your
+      modifications in the Standard Version of the Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      accompany any non-standard executables with their corresponding Standard
+      Version executables, giving the non-standard executables non-standard
+      names, and clearly documenting the differences in manual pages (or
+      equivalent), together with instructions on where to get the Standard
+      Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whomever generated them, and may be sold
+   commercially, and may be aggregated with this Package.
+
+   (( 7. ))??
+   C subroutines supplied by you and linked into this Package in order to
+   emulate subroutines and variables defined by this Package shall not be
+   considered part of this Package, but are the equivalent of input as in
+   Paragraph 6, provided these subroutines do not change the behavior of the
+   Package in any way that would cause it to fail the regression tests for the
+   Package.
+
+   (( 8. ))??
+   Software supplied by you and linked with this Package in order to use
+   subroutines and variables defined by this Package shall not be considered
+   part of this Package and do not automatically fall under the copyright of
+   this Package, and the executables produced by linking your software with this
+   Package may be used and redistributed without restriction and may be sold
+   commercially.
+
+   (( 9. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 10. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
+`
+const license_OLDAP_1_4_lre = `//**
+Open LDAP Public License v1.4
+https://spdx.org/licenses/OLDAP-1.4.json
+http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=c9f95c2f3f2ffb5e0ae55fe7388af75547660941
+**//
+
+(( The OpenLDAP Public License
+Version 1.4, 18 January 1999
+(( Copyright __20__ ))??
+))??
+
+(( Note: This license is derived from the "Artistic License" as distributed with
+the Perl Programming Language. As significant differences exist, the complete
+license should be read. ))??
+
+(( PREAMBLE
+
+The intent of this document is to state the conditions under which a Package may
+be copied, such that the Copyright Holder maintains some semblance of artistic
+control over the development of the package, while giving the users of the
+package the right to use and distribute the Package in a more-or-less customary
+fashion, plus the right to make reasonable modifications. ))??
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright Holder,
+and derivatives of that collection of files created through textual
+modification.
+
+"Standard Version" refers to such a Package if it has not been modified, or has
+been modified in accordance with the wishes of the Copyright Holder.
+
+"Copyright Holder" is whoever is named in the copyright or copyrights for the
+package.
+
+"You" is you, if you're thinking about copying or distributing this Package.
+
+"Reasonable copying fee" is whatever you can justify on the basis of media cost,
+duplication charges, time of people involved, and so on. (You will not be
+required to justify it to the Copyright Holder, but only to the computing
+community at large as a market that must bear the fee.)
+
+"Freely Available" means that no fee is charged for the item itself, though
+there may be fees involved in handling the item. It also means that recipients
+of the item may redistribute it under the same conditions they received it.
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the Standard
+   Version of this Package without restriction, provided that you duplicate all
+   of the original copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may apply bug fixes, portability fixes and other modifications derived
+   from the Public Domain or from the Copyright Holder. A Package modified in
+   such a way shall still be considered the Standard Version.
+
+   (( 3. ))??
+   You may otherwise modify your copy of this Package in any way, provided that
+   you insert a prominent notice in each changed file stating how and when you
+   changed that file, and provided that you do at least ONE of the following:
+
+      (( a) ))??
+      place your modifications in the Public Domain or otherwise make them
+      Freely Available, such as by posting said modifications to Usenet or an
+      equivalent medium, or placing the modifications on a major archive site
+      such as uunet.uu.net, or by allowing the Copyright Holder to include your
+      modifications in the Standard Version of the Package.
+
+      (( b) ))??
+      use the modified Package only within your corporation or organization.
+
+      (( c) ))??
+      rename any non-standard executables so the names do not conflict with
+      standard executables, which must also be provided, and provide a separate
+      manual page for each non-standard executable that clearly documents how it
+      differs from the Standard Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 4. ))??
+   You may distribute the programs of this Package in object code or executable
+   form, provided that you do at least ONE of the following:
+
+      (( a) ))??
+      distribute a Standard Version of the executables and library files,
+      together with instructions (in the manual page or equivalent) on where to
+      get the Standard Version.
+
+      (( b) ))??
+      accompany the distribution with the machine-readable source of the Package
+      with your modifications.
+
+      (( c) ))??
+      accompany any non-standard executables with their corresponding Standard
+      Version executables, giving the non-standard executables non-standard
+      names, and clearly documenting the differences in manual pages (or
+      equivalent), together with instructions on where to get the Standard
+      Version.
+
+      (( d) ))??
+      make other distribution arrangements with the Copyright Holder.
+
+   (( 5. ))??
+   You may charge a reasonable copying fee for any distribution of this Package.
+   You may charge any fee you choose for support of this Package. You may not
+   charge a fee for this Package itself. However, you may distribute this
+   Package in aggregate with other (possibly commercial) programs as part of a
+   larger (possibly commercial) software distribution provided that you do not
+   advertise this Package as a product of your own.
+
+   (( 6. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the programs of this Package do not automatically fall under the copyright of
+   this Package, but belong to whomever generated them, and may be sold
+   commercially, and may be aggregated with this Package.
+
+   (( 7. ))??
+   C subroutines supplied by you and linked into this Package in order to
+   emulate subroutines and variables defined by this Package shall not be
+   considered part of this Package, but are the equivalent of input as in
+   Paragraph 6, provided these subroutines do not change the behavior of the
+   Package in any way that would cause it to fail the regression tests for the
+   Package.
+
+   (( 8. ))??
+   Software supplied by you and linked with this Package in order to use
+   subroutines and variables defined by this Package shall not be considered
+   part of this Package and do not automatically fall under the copyright of
+   this Package. Executables produced by linking your software with this Package
+   may be used and redistributed without restriction and may be sold
+   commercially so long as the primary function of your software is different
+   than the package itself.
+
+   (( 9. ))??
+   The name of the Copyright Holder may not be used to endorse or promote
+   products derived from this software without specific prior written
+   permission.
+
+   (( 10. ))??
+   THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   (( The End ))??
 `
 const license_OSL_3_0_lre = `//**
 Open Software License 3.0
@@ -38968,6 +40231,106 @@ For more information on the PHP Group and the PHP project, please see
 
 PHP includes the Zend Engine, freely available at <http:/www.zend.com>.
 ))??
+`
+const license_Ruby_lre = `//**
+Ruby License
+https://spdx.org/licenses/Ruby.json
+http://www.ruby-lang.org/en/LICENSE.txt
+**//
+
+   (( 1. ))??
+   You may make and give away verbatim copies of the source form of the software
+   without restriction, provided that you
+   ((duplicate || retain))
+   all of the original
+   copyright notices and associated disclaimers.
+
+   (( 2. ))??
+   You may modify your copy of the software in any way, provided that you do at
+   least ONE of the following:
+
+   (( a) ))??
+   place your modifications in the Public Domain or otherwise make them Freely
+   Available, such as by posting said modifications to Usenet or an equivalent
+   medium, or by allowing the
+   ((author || owner))
+   to include your modifications in the
+   software.
+
+   (( b) ))??
+   use the modified software only within your corporation or organization.
+
+   (( c) ))??
+   ((
+   	give non-standard
+   	((binaries || executables))
+   	non-standard names, with instructions on where to
+   	get the original software distribution.
+   ||
+   	rename any non-standard executables so the names do not conflict with
+   	standard executables, which must also be provided.
+   ))
+
+   (( d) ))??
+   make other distribution arrangements with the
+   ((author || owner))
+
+   (( 3. ))??
+   You may distribute the software in object code or
+   ((binary || executable))
+   form, provided that
+   you do at least ONE of the following:
+
+   (( a) ))??
+   distribute the
+   ((binaries || executables))
+   and library files of the software, together with
+   instructions (in
+   ((a || the))
+   manual page or equivalent) on where to get the original
+   distribution.
+
+   (( b) ))??
+   accompany the distribution with the machine-readable source of the software.
+
+   (( c) ))??
+   give non-standard
+   ((binaries || executables))
+    non-standard names, with instructions on where to
+   get the original software distribution.
+
+   (( d) ))??
+   make other distribution arrangements with the
+   ((author || owner))
+
+   (( 4. ))??
+   You may modify and include
+   ((the part || parts))
+   of the software into any other software
+   (possibly commercial).
+   ((provided you comply with the terms in Sections 1, 2, and 3 above))??
+
+   ((But some files in the distribution are not written by the
+   ((author || owner))
+   so
+   (( that they are not under these terms.
+   || they may be made available to you under different terms.))
+   ))??
+
+   (( For the list of those files and their copying conditions, see the file LEGAL.
+   || __30__
+   ))??
+
+   (( 5. ))??
+   The scripts and library files supplied as input to or produced as output from
+   the software do not automatically fall under the copyright of the software,
+   but belong to whomever generated them, and may be sold commercially, and may
+   be aggregated with this software.
+
+   (( 6. ))??
+   THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+   WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 `
 const license_UPL_1_0_lre = `//**
 Universal Permissive License v1.0
