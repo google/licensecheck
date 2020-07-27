@@ -414,7 +414,26 @@ func init() {
 		{Name: "VOSTROM", Text: license_VOSTROM_lre},
 		{Name: "VSL-1.0", Text: license_VSL_1_0_lre},
 		{Name: "Vim", Text: license_Vim_lre},
+		{Name: "W3C", Text: license_W3C_lre},
+		{Name: "W3C-19980720", Text: license_W3C_19980720_lre},
+		{Name: "W3C-20150513", Text: license_W3C_20150513_lre},
 		{Name: "WTFPL", Text: license_WTFPL_lre},
+		{Name: "Watcom-1.0", Text: license_Watcom_1_0_lre},
+		{Name: "Wsuipa", Text: license_Wsuipa_lre},
+		{Name: "X11", Text: license_X11_lre},
+		{Name: "XFree86-1.1", Text: license_XFree86_1_1_lre},
+		{Name: "XSkat", Text: license_XSkat_lre},
+		{Name: "Xerox", Text: license_Xerox_lre},
+		{Name: "Xnet", Text: license_Xnet_lre},
+		{Name: "YPL-1.0", Text: license_YPL_1_0_lre},
+		{Name: "YPL-1.1", Text: license_YPL_1_1_lre},
+		{Name: "ZPL-1.1", Text: license_ZPL_1_1_lre},
+		{Name: "ZPL-2.0", Text: license_ZPL_2_0_lre},
+		{Name: "ZPL-2.1", Text: license_ZPL_2_1_lre},
+		{Name: "Zed", Text: license_Zed_lre},
+		{Name: "Zend-2.0", Text: license_Zend_2_0_lre},
+		{Name: "Zimbra-1.3", Text: license_Zimbra_1_3_lre},
+		{Name: "Zimbra-1.4", Text: license_Zimbra_1_4_lre},
 		{Name: "Zlib", Text: license_Zlib_lre},
 		{Name: "bzip2-1.0.5", Text: license_bzip2_1_0_5_lre},
 		{Name: "bzip2-1.0.6", Text: license_bzip2_1_0_6_lre},
@@ -77504,6 +77523,182 @@ http://vimdoc.sourceforge.net/htmldoc/uganda.html
    __5__
    releases instead of the license that they came with, at your option.
 `
+const license_W3C_lre = `//**
+W3C Software Notice and License (2002-12-31)
+https://spdx.org/licenses/W3C.json
+http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231.html
+https://opensource.org/licenses/W3C
+**//
+
+(( W3C SOFTWARE NOTICE AND LICENSE ))??
+
+This work (and included software, documentation such as READMEs, or other
+related items) is being provided by the copyright holders under the following
+license.
+
+License
+
+By obtaining, using and/or copying this work, you (the licensee) agree that you
+have read, understood, and will comply with the following terms and conditions.
+
+Permission to copy, modify, and distribute this software and its documentation,
+with or without modification, for any purpose and without fee or royalty is
+hereby granted, provided that you include the following on ALL copies of the
+software and documentation or portions thereof, including modifications:
+
+The full text of this NOTICE in a location viewable to users of the
+redistributed or derivative work.
+
+Any pre-existing intellectual property disclaimers, notices, or terms and
+conditions. If none exist, the W3C Software Short Notice should be included
+(hypertext is preferred, text is permitted) within the body of any redistributed
+or derivative code.
+
+Notice of any changes or modifications to the files, including the date changes
+were made. (We recommend you provide URIs to the location from which the code is
+derived.)
+
+Disclaimers
+
+THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE
+NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT
+THE USE OF THE SOFTWARE OR DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY
+PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+
+COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENTATION.
+
+The name and trademarks of copyright holders may NOT be used in advertising or
+publicity pertaining to the software without specific, written prior permission.
+Title to copyright in this software and any associated documentation will at all
+times remain with copyright holders.
+(( Notes
+
+This version:
+http:/www.w3.org/Consortium/Legal/2002/copyright-software-20021231
+
+This formulation of W3C's notice and license became active on December 31 2002.
+This version removes the copyright ownership notice such that this license can
+be used with materials other than those owned by the W3C, reflects that ERCIM is
+now a host of the W3C, includes references to this specific dated version of the
+license, and removes the ambiguous grant of "use". Otherwise, this version is
+the same as the previous version and is written so as to preserve the Free
+Software Foundation's assessment of GPL compatibility and OSI's certification
+under the Open Source Definition. ))??
+`
+const license_W3C_19980720_lre = `//**
+W3C Software Notice and License (1998-07-20)
+https://spdx.org/licenses/W3C-19980720.json
+http://www.w3.org/Consortium/Legal/copyright-software-19980720.html
+**//
+
+(( W3C® SOFTWARE NOTICE AND LICENSE
+(( Copyright __30__ ))??
+))??
+
+This W3C work (including software, documents, or other related items) is being
+provided by the copyright holders under the following license. By obtaining,
+using and/or copying this work, you (the licensee) agree that you have read,
+understood, and will comply with the following terms and conditions:
+
+Permission to use, copy, modify, and distribute this software and its
+documentation, with or without modification, for any purpose and without fee or
+royalty is hereby granted, provided that you include the following on ALL copies
+of the software and documentation or portions thereof, including modifications,
+that you make:
+
+   (( 1. ))??
+   The full text of this NOTICE in a location viewable to users of the
+   redistributed or derivative work.
+
+   (( 2. ))??
+   Any pre-existing intellectual property disclaimers, notices, or terms and
+   conditions. If none exist, a short notice of the following form (hypertext is
+   preferred, text is permitted) should be used within the body of any
+   redistributed or derivative code: "Copyright © [$date-of-software] World
+   Wide Web Consortium, (Massachusetts Institute of Technology, Institut
+   National de Recherche en Informatique et en Automatique, Keio University).
+   All Rights Reserved. http:/www.w3.org/Consortium/Legal/"
+
+   (( 3. ))??
+   Notice of any changes or modifications to the W3C files, including the date
+   changes were made. (We recommend you provide URIs to the location from which
+   the code is derived.)
+
+THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE
+NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT
+THE USE OF THE SOFTWARE OR DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY
+PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+
+COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENTATION.
+
+The name and trademarks of copyright holders may NOT be used in advertising or
+publicity pertaining to the software without specific, written prior permission.
+Title to copyright in this software and any associated documentation will at all
+times remain with copyright holders.
+(( _
+
+This formulation of W3C's notice and license became active on August 14 1998 so
+as to improve compatibility with GPL. This version ensures that W3C software
+licensing terms are no more restrictive than GPL and consequently W3C software
+may be distributed in GPL packages. See the older formulation for the policy
+prior to this date. Please see our Copyright FAQ for common questions about
+using materials from our site, including specific terms and conditions for
+packages like libwww, Amaya, and Jigsaw. Other questions about this notice can
+be directed to site-policy@w3.org. ))??
+`
+const license_W3C_20150513_lre = `//**
+W3C Software Notice and Document License (2015-05-13)
+https://spdx.org/licenses/W3C-20150513.json
+https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+**//
+
+This work is being provided by the copyright holders under the following
+license.
+
+License
+
+By obtaining and/or copying this work, you (the licensee) agree that you have
+read, understood, and will comply with the following terms and conditions.
+
+Permission to copy, modify, and distribute this work, with or without
+modification, for any purpose and without fee or royalty is hereby granted,
+provided that you include the following on ALL copies of the work or portions
+thereof, including modifications:
+
+   •
+   The full text of this NOTICE in a location viewable to users of the
+   redistributed or derivative work.
+
+   •
+   Any pre-existing intellectual property disclaimers, notices, or terms and
+   conditions. If none exist, the W3C Software and Document Short Notice should
+   be included.
+
+   •
+   Notice of any changes or modifications, through a copyright statement on the
+   new code or document such as "This software or document includes material
+   copied from or derived from [title and URI of the W3C document]. Copyright
+   (c) [YEAR] W3C® (MIT, ERCIM, Keio, Beihang)."
+
+Disclaimers
+
+THIS WORK IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF
+MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE
+SOFTWARE OR DOCUMENT WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS,
+TRADEMARKS OR OTHER RIGHTS.
+
+COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENT.
+
+The name and trademarks of copyright holders may NOT be used in advertising or
+publicity pertaining to the work without specific, written prior permission.
+Title to copyright in this work will at all times remain with copyright holders.
+`
 const license_WTFPL_lre = `//**
 Do What The F*ck You Want To Public License
 https://spdx.org/licenses/WTFPL.json
@@ -77537,6 +77732,1597 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
    You just DO WHAT THE
    ((FUCK || F*** || F*CK))
    YOU WANT TO.
+`
+const license_Watcom_1_0_lre = `//**
+Sybase Open Watcom Public License 1.0
+https://spdx.org/licenses/Watcom-1.0.json
+https://opensource.org/licenses/Watcom-1.0
+**//
+
+(( Sybase Open Watcom Public License version 1.0 ))??
+
+USE OF THE SYBASE OPEN WATCOM SOFTWARE DESCRIBED BELOW ("SOFTWARE") IS SUBJECT
+TO THE TERMS AND CONDITIONS SET FORTH IN THE SYBASE OPEN WATCOM PUBLIC LICENSE
+SET FORTH BELOW ("LICENSE"). YOU MAY NOT USE THE SOFTWARE IN ANY MANNER UNLESS
+YOU ACCEPT THE TERMS AND CONDITIONS OF THE LICENSE. YOU INDICATE YOUR ACCEPTANCE
+BY IN ANY MANNER USING (INCLUDING WITHOUT LIMITATION BY REPRODUCING, MODIFYING
+OR DISTRIBUTING) THE SOFTWARE. IF YOU DO NOT ACCEPT ALL OF THE TERMS AND
+CONDITIONS OF THE LICENSE, DO NOT USE THE SOFTWARE IN ANY MANNER.
+
+Sybase Open Watcom Public License version 1.0
+
+   (( 1. ))??
+   General; Definitions. This License applies only to the following software
+   programs: the open source versions of Sybase's Watcom C/C++ and Fortran
+   compiler products ("Software"), which are modified versions of, with
+   significant changes from, the last versions made commercially available by
+   Sybase. As used in this License:
+
+      (( 1.1 ))??
+      "Applicable Patent Rights" mean: (a) in the case where Sybase is the
+      grantor of rights, (i) claims of patents that are now or hereafter
+      acquired, owned by or assigned to Sybase and (ii) that cover subject
+      matter contained in the Original Code, but only to the extent necessary to
+      use, reproduce and/or distribute the Original Code without infringement;
+      and (b) in the case where You are the grantor of rights, (i) claims of
+      patents that are now or hereafter acquired, owned by or assigned to You
+      and (ii) that cover subject matter in Your Modifications, taken alone or
+      in combination with Original Code.
+
+      (( 1.2 ))??
+      "Contributor" means any person or entity that creates or contributes to
+      the creation of Modifications.
+
+      (( 1.3 ))??
+      "Covered Code" means the Original Code, Modifications, the combination of
+      Original Code and any Modifications, and/or any respective portions
+      thereof.
+
+      (( 1.4 ))??
+      "Deploy" means to use, sublicense or distribute Covered Code other than
+      for Your internal research and development (R&D) and/or Personal Use, and
+      includes without limitation, any and all internal use or distribution of
+      Covered Code within Your business or organization except for R&D use
+      and/or Personal Use, as well as direct or indirect sublicensing or
+      distribution of Covered Code by You to any third party in any form or
+      manner.
+
+      (( 1.5 ))??
+      "Larger Work" means a work which combines Covered Code or portions thereof
+      with code not governed by the terms of this License.
+
+      (( 1.6 ))??
+      "Modifications" mean any addition to, deletion from, and/or change to, the
+      substance and/or structure of the Original Code, any previous
+      Modifications, the combination of Original Code and any previous
+      Modifications, and/or any respective portions thereof. When code is
+      released as a series of files, a Modification is: (a) any addition to or
+      deletion from the contents of a file containing Covered Code; and/or (b)
+      any new file or other representation of computer program statements that
+      contains any part of Covered Code.
+
+      (( 1.7 ))??
+      "Original Code" means (a) the Source Code of a program or other work as
+      originally made available by Sybase under this License, including the
+      Source Code of any updates or upgrades to such programs or works made
+      available by Sybase under this License, and that has been expressly
+      identified by Sybase as such in the header file(s) of such work; and (b)
+      the object code compiled from such Source Code and originally made
+      available by Sybase under this License.
+
+      (( 1.8 ))??
+      "Personal Use" means use of Covered Code by an individual solely for his
+      or her personal, private and non-commercial purposes. An individual's use
+      of Covered Code in his or her capacity as an officer, employee, member,
+      independent contractor or agent of a corporation, business or organization
+      (commercial or non-commercial) does not qualify as Personal Use.
+
+      (( 1.9 ))??
+      "Source Code" means the human readable form of a program or other work
+      that is suitable for making modifications to it, including all modules it
+      contains, plus any associated interface definition files, scripts used to
+      control compilation and installation of an executable (object code).
+
+      (( 1.10 ))??
+      "You" or "Your" means an individual or a legal entity exercising rights
+      under this License. For legal entities, "You" or "Your" includes any
+      entity which controls, is controlled by, or is under common control with,
+      You, where "control" means (a) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or otherwise,
+      or (b) ownership of fifty percent (50%) or more of the outstanding shares
+      or beneficial ownership of such entity.
+
+   (( 2. ))??
+   Permitted Uses; Conditions & Restrictions.Subject to the terms and conditions
+   of this License, Sybase hereby grants You, effective on the date You accept
+   this License and download the Original Code, a world-wide, royalty-free,
+   non-exclusive license, to the extent of Sybase's Applicable Patent Rights and
+   copyrights covering the Original Code, to do the following:
+
+      (( 2.1 ))??
+      You may use, reproduce, display, perform, modify and distribute Original
+      Code, with or without Modifications, solely for Your internal research and
+      development and/or Personal Use, provided that in each instance:
+
+         (( (a) ))??
+         You must retain and reproduce in all copies of Original Code the
+         copyright and other proprietary notices and disclaimers of Sybase as
+         they appear in the Original Code, and keep intact all notices in the
+         Original Code that refer to this License; and
+
+         (( (b) ))??
+         You must retain and reproduce a copy of this License with every copy of
+         Source Code of Covered Code and documentation You distribute, and You
+         may not offer or impose any terms on such Source Code that alter or
+         restrict this License or the recipients' rights hereunder, except as
+         permitted under Section 6.
+
+         (( c ))??
+         Whenever reasonably feasible you should include the copy of this
+         License in a click-wrap format, which requires affirmative acceptance
+         by clicking on an "I accept" button or similar mechanism. If a
+         click-wrap format is not included, you must include a statement that
+         any use (including without limitation reproduction, modification or
+         distribution) of the Software, and any other affirmative act that you
+         define, constitutes acceptance of the License, and instructing the user
+         not to use the Covered Code in any manner if the user does not accept
+         all of the terms and conditions of the License.
+
+      (( 2.2 ))??
+      You may use, reproduce, display, perform, modify and Deploy Covered Code,
+      provided that in each instance:
+
+         (( (a) ))??
+         You must satisfy all the conditions of Section 2.1 with respect to the
+         Source Code of the Covered Code;
+
+         (( (b) ))??
+         You must duplicate, to the extent it does not already exist, the notice
+         in Exhibit A in each file of the Source Code of all Your Modifications,
+         and cause the modified files to carry prominent notices stating that
+         You changed the files and the date of any change;
+
+         (( c ))??
+         You must make Source Code of all Your Deployed Modifications publicly
+         available under the terms of this License, including the license grants
+         set forth in Section 3 below, for as long as you Deploy the Covered
+         Code or twelve (12) months from the date of initial Deployment,
+         whichever is longer. You should preferably distribute the Source Code
+         of Your Deployed Modifications electronically (e.g. download from a web
+         site);
+
+         (( (d) ))??
+         if You Deploy Covered Code in object code, executable form only, You
+         must include a prominent notice, in the code itself as well as in
+         related documentation, stating that Source Code of the Covered Code is
+         available under the terms of this License with information on how and
+         where to obtain such Source Code; and
+
+         (( (e) ))??
+         the object code form of the Covered Code may be distributed under Your
+         own license agreement, provided that such license agreement contains
+         terms no less protective of Sybase and each Contributor than the terms
+         of this License, and stating that any provisions which differ from this
+         License are offered by You alone and not by any other party.
+
+      (( 2.3 ))??
+      You expressly acknowledge and agree that although Sybase and each
+      Contributor grants the licenses to their respective portions of the
+      Covered Code set forth herein, no assurances are provided by Sybase or any
+      Contributor that the Covered Code does not infringe the patent or other
+      intellectual property rights of any other entity. Sybase and each
+      Contributor disclaim any liability to You for claims brought by any other
+      entity based on infringement of intellectual property rights or otherwise.
+      As a condition to exercising the rights and licenses granted hereunder,
+      You hereby assume sole responsibility to secure any other intellectual
+      property rights needed, if any. For example, if a third party patent
+      license is required to allow You to distribute the Covered Code, it is
+      Your responsibility to acquire that license before distributing the
+      Covered Code.
+
+   (( 3. ))??
+   Your Grants. In consideration of, and as a condition to, the licenses granted
+   to You under this License, You hereby grant to Sybase and all third parties a
+   non-exclusive, royalty-free license, under Your Applicable Patent Rights and
+   other intellectual property rights (other than patent) owned or controlled by
+   You, to use, reproduce, display, perform, modify, distribute and Deploy Your
+   Modifications of the same scope and extent as Sybase's licenses under
+   Sections 2.1 and 2.2.
+
+   (( 4. ))??
+   Larger Works. You may create a Larger Work by combining Covered Code with
+   other code not governed by the terms of this License and distribute the
+   Larger Work as a single product. In each such instance, You must make sure
+   the requirements of this License are fulfilled for the Covered Code or any
+   portion thereof.
+
+   (( 5. ))??
+   Limitations on Patent License. Except as expressly stated in Section 2, no
+   other patent rights, express or implied, are granted by Sybase herein.
+   Modifications and/or Larger Works may require additional patent licenses from
+   Sybase which Sybase may grant in its sole discretion.
+
+   (( 6. ))??
+   Additional Terms. You may choose to offer, and to charge a fee for, warranty,
+   support, indemnity or liability obligations and/or other rights consistent
+   with this License ("Additional Terms") to one or more recipients of Covered
+   Code. However, You may do so only on Your own behalf and as Your sole
+   responsibility, and not on behalf of Sybase or any Contributor. You must
+   obtain the recipient's agreement that any such Additional Terms are offered
+   by You alone, and You hereby agree to indemnify, defend and hold Sybase and
+   every Contributor harmless for any liability incurred by or claims asserted
+   against Sybase or such Contributor by reason of any such Additional Terms.
+
+   (( 7. ))??
+   Versions of the License. Sybase may publish revised and/or new versions of
+   this License from time to time. Each version will be given a distinguishing
+   version number. Once Original Code has been published under a particular
+   version of this License, You may continue to use it under the terms of that
+   version. You may also choose to use such Original Code under the terms of any
+   subsequent version of this License published by Sybase. No one other than
+   Sybase has the right to modify the terms applicable to Covered Code created
+   under this License.
+
+   (( 8. ))??
+   NO WARRANTY OR SUPPORT. The Covered Code may contain in whole or in part
+   pre-release, untested, or not fully tested works. The Covered Code may
+   contain errors that could cause failures or loss of data, and may be
+   incomplete or contain inaccuracies. You expressly acknowledge and agree that
+   use of the Covered Code, or any portion thereof, is at Your sole and entire
+   risk. THE COVERED CODE IS PROVIDED "AS IS" AND WITHOUT WARRANTY, UPGRADES OR
+   SUPPORT OF ANY KIND AND SYBASE AND SYBASE'S LICENSOR(S) (COLLECTIVELY
+   REFERRED TO AS "SYBASE" FOR THE PURPOSES OF SECTIONS 8 AND 9) AND ALL
+   CONTRIBUTORS EXPRESSLY DISCLAIM ALL WARRANTIES AND/OR CONDITIONS, EXPRESS OR
+   IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR
+   CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A
+   PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NONINFRINGEMENT OF
+   THIRD PARTY RIGHTS. SYBASE AND EACH CONTRIBUTOR DOES NOT WARRANT AGAINST
+   INTERFERENCE WITH YOUR ENJOYMENT OF THE COVERED CODE, THAT THE FUNCTIONS
+   CONTAINED IN THE COVERED CODE WILL MEET YOUR REQUIREMENTS, THAT THE OPERATION
+   OF THE COVERED CODE WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN
+   THE COVERED CODE WILL BE CORRECTED. NO ORAL OR WRITTEN INFORMATION OR ADVICE
+   GIVEN BY SYBASE, A SYBASE AUTHORIZED REPRESENTATIVE OR ANY CONTRIBUTOR SHALL
+   CREATE A WARRANTY. You acknowledge that the Covered Code is not intended for
+   use in the operation of nuclear facilities, aircraft navigation,
+   communication systems, or air traffic control machines in which case the
+   failure of the Covered Code could lead to death, personal injury, or severe
+   physical or environmental damage.
+
+   (( 9. ))??
+   LIMITATION OF LIABILITY. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT
+   SHALL SYBASE OR ANY CONTRIBUTOR BE LIABLE FOR ANY DIRECT, INCIDENTAL,
+   SPECIAL, INDIRECT, CONSEQUENTIAL OR OTHER DAMAGES OF ANY KIND ARISING OUT OF
+   OR RELATING TO THIS LICENSE OR YOUR USE OR INABILITY TO USE THE COVERED CODE,
+   OR ANY PORTION THEREOF, WHETHER UNDER A THEORY OF CONTRACT, WARRANTY, TORT
+   (INCLUDING NEGLIGENCE), PRODUCTS LIABILITY OR OTHERWISE, EVEN IF SYBASE OR
+   SUCH CONTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, AND
+   NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY REMEDY. SOME
+   JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY OF INCIDENTAL OR
+   CONSEQUENTIAL OR OTHER DAMAGES OF ANY KIND, SO THIS LIMITATION MAY NOT APPLY
+   TO YOU. In no event shall Sybase's or any Contributor's total liability to
+   You for all damages (other than as may be required by applicable law) under
+   this License exceed the amount of five hundred dollars ($500.00).
+
+   (( 10. ))??
+   Trademarks. This License does not grant any rights to use the trademarks or
+   trade names "Sybase" or any other trademarks or trade names belonging to
+   Sybase (collectively "Sybase Marks") or to any trademark or trade name
+   belonging to any Contributor("Contributor Marks"). No Sybase Marks or
+   Contributor Marks may be used to endorse or promote products derived from the
+   Original Code or Covered Code other than with the prior written consent of
+   Sybase or the Contributor, as applicable.
+
+   (( 11. ))??
+   Ownership. Subject to the licenses granted under this License, each
+   Contributor retains all rights, title and interest in and to any
+   Modifications made by such Contributor. Sybase retains all rights, title and
+   interest in and to the Original Code and any Modifications made by or on
+   behalf of Sybase ("Sybase Modifications"), and such Sybase Modifications will
+   not be automatically subject to this License. Sybase may, at its sole
+   discretion, choose to license such Sybase Modifications under this License,
+   or on different terms from those contained in this License or may choose not
+   to license them at all.
+
+   (( 12. ))??
+   Termination.
+
+      (( 12.1 ))??
+      Termination. This License and the rights granted hereunder will
+      terminate:
+
+         (( (a) ))??
+         automatically without notice if You fail to comply with any term(s) of
+         this License and fail to cure such breach within 30 days of becoming
+         aware of such breach;
+
+         (( (b) ))??
+         immediately in the event of the circumstances described in Section
+         13.5(b); or
+
+         (( c ))??
+         automatically without notice if You, at any time during the term of
+         this License, commence an action for patent infringement (including as
+         a cross claim or counterclaim) against Sybase or any Contributor.
+
+      (( 12.2 ))??
+      Effect of Termination. Upon termination, You agree to immediately stop any
+      further use, reproduction, modification, sublicensing and distribution of
+      the Covered Code and to destroy all copies of the Covered Code that are in
+      your possession or control. All sublicenses to the Covered Code that have
+      been properly granted prior to termination shall survive any termination
+      of this License. Provisions which, by their nature, should remain in
+      effect beyond the termination of this License shall survive, including but
+      not limited to Sections 3, 5, 8, 9, 10, 11, 12.2 and 13. No party will be
+      liable to any other for compensation, indemnity or damages of any sort
+      solely as a result of terminating this License in accordance with its
+      terms, and termination of this License will be without prejudice to any
+      other right or remedy of any party.
+
+   (( 13. ))??
+   Miscellaneous.
+
+      (( 13.1 ))??
+      Government End Users. The Covered Code is a "commercial item" as defined
+      in FAR 2.101. Government software and technical data rights in the Covered
+      Code include only those rights customarily provided to the public as
+      defined in this License. This customary commercial license in technical
+      data and software is provided in accordance with FAR 12.211 (Technical
+      Data) and 12.212 (Computer Software) and, for Department of Defense
+      purchases, DFAR 252.227-7015 (Technical Data -- Commercial Items) and
+      227.7202-3 (Rights in Commercial Computer Software or Computer Software
+      Documentation). Accordingly, all U.S. Government End Users acquire Covered
+      Code with only those rights set forth herein.
+
+      (( 13.2 ))??
+      Relationship of Parties. This License will not be construed as creating an
+      agency, partnership, joint venture or any other form of legal association
+      between or among you, Sybase or any Contributor, and You will not
+      represent to the contrary, whether expressly, by implication, appearance
+      or otherwise.
+
+      (( 13.3 ))??
+      Independent Development. Nothing in this License will impair Sybase's or
+      any Contributor's right to acquire, license, develop, have others develop
+      for it, market and/or distribute technology or products that perform the
+      same or similar functions as, or otherwise compete with, Modifications,
+      Larger Works, technology or products that You may develop, produce, market
+      or distribute.
+
+      (( 13.4 ))??
+      Waiver; Construction. Failure by Sybase or any Contributor to enforce any
+      provision of this License will not be deemed a waiver of future
+      enforcement of that or any other provision. Any law or regulation which
+      provides that the language of a contract shall be construed against the
+      drafter will not apply to this License.
+
+      (( 13.5 ))??
+      Severability. (a) If for any reason a court of competent jurisdiction
+      finds any provision of this License, or portion thereof, to be
+      unenforceable, that provision of the License will be enforced to the
+      maximum extent permissible so as to effect the economic benefits and
+      intent of the parties, and the remainder of this License will continue in
+      full force and effect. (b) Notwithstanding the foregoing, if applicable
+      law prohibits or restricts You from fully and/or specifically complying
+      with Sections 2 and/or 3 or prevents the enforceability of either of those
+      Sections, this License will immediately terminate and You must immediately
+      discontinue any use of the Covered Code and destroy all copies of it that
+      are in your possession or control.
+
+      (( 13.6 ))??
+      Dispute Resolution. Any litigation or other dispute resolution between You
+      and Sybase relating to this License shall take place in the Northern
+      District of California, and You and Sybase hereby consent to the personal
+      jurisdiction of, and venue in, the state and federal courts within that
+      District with respect to this License. The application of the United
+      Nations Convention on Contracts for the International Sale of Goods is
+      expressly excluded.
+
+      (( 13.7 ))??
+      Entire Agreement; Governing Law. This License constitutes the entire
+      agreement between the parties with respect to the subject matter hereof.
+      This License shall be governed by the laws of the United States and the
+      State of California, except that body of California law concerning
+      conflicts of law.
+
+Where You are located in the province of Quebec, Canada, the following clause
+applies: The parties hereby confirm that they have requested that this License
+and all related documents be drafted in English. Les parties ont exigè que le
+prèsent contrat et tous les documents connexes soient rèdiès en anglais.
+(( EXHIBIT A.
+
+"Portions Copyright (c) 1983-2002 Sybase, Inc. All Rights Reserved.
+
+This file contains Original Code and/or Modifications of Original Code as
+defined in and that are subject to the Sybase Open Watcom Public License version
+1.0 (the 'License'). You may not use this file except in compliance with the
+License. BY USING THIS FILE YOU AGREE TO ALL TERMS AND CONDITIONS OF THE
+LICENSE. A copy of the License is provided with the Original Code and
+Modifications, and is also available at www.sybase.com/developer/opensource.
+
+The Original Code and all software distributed under the License are distributed
+on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+AND SYBASE AND ALL CONTRIBUTORS HEREBY DISCLAIM ALL SUCH WARRANTIES, INCLUDING
+WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT. Please see the License for the
+specific language governing rights and limitations under the License." ))??
+`
+const license_Wsuipa_lre = `//**
+Wsuipa License
+https://spdx.org/licenses/Wsuipa.json
+https://fedoraproject.org/wiki/Licensing/Wsuipa
+**//
+
+(( This file was added by Clea F. Rees on 2008/11/30 with the permission of Dean
+Guenther and pointers to this file were added to all source files. ))??
+
+Unlimited copying and redistribution of each of the files is permitted as long
+as the file is not modified. Modifications, and redistribution of modified
+versions, are also permitted, but only if the resulting file is renamed.
+The copyright holder is Washington State University. The original author of the
+fonts is Janene Winter. The primary contact
+(( (as of 2008) is Dean Guenther. ))??
+`
+const license_X11_lre = `//**
+X11 License
+https://spdx.org/licenses/X11.json
+http://www.xfree86.org/3.3.6/COPYRIGHT2.html#3
+**//
+
+(( X11 License
+(( Copyright __20__ ))??
+))??
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE X CONSORTIUM
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of the X Consortium shall not be
+used in advertising or otherwise to promote the sale, use or other dealings in
+this Software without prior written authorization from the X Consortium.
+
+X Window System is a trademark of X Consortium, Inc.
+`
+const license_XFree86_1_1_lre = `//**
+XFree86 License 1.1
+https://spdx.org/licenses/XFree86-1.1.json
+http://www.xfree86.org/current/LICENSE4.html
+**//
+
+(( XFree86 License (version 1.1)
+(( Copyright __20__ ))??
+))??
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions, and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution, and in the same place
+   and form as other copyright, license and disclaimer information.
+
+   (( 3. ))??
+   The end-user documentation included with the redistribution, if any, must
+   include the following acknowledgment: "This product includes software
+   developed by The XFree86 Project, Inc (http:/www.xfree86.org/) and its
+   contributors", in the same place and form as other third-party
+   acknowledgments. Alternately, this acknowledgment may appear in the software
+   itself, in the same form and location as other such third-party
+   acknowledgments.
+
+   (( 4. ))??
+   Except as contained in this notice, the name of The XFree86 Project, Inc
+   shall not be used in advertising or otherwise to promote the sale, use or
+   other dealings in this Software without prior written authorization from The
+   XFree86 Project, Inc.
+
+THIS SOFTWARE IS PROVIDED ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE XFREE86
+PROJECT, INC OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+`
+const license_XSkat_lre = `//**
+XSkat License
+https://spdx.org/licenses/XSkat.json
+https://fedoraproject.org/wiki/Licensing/XSkat_License
+**//
+
+This program is free software; you can redistribute it freely.
+
+Use it at your own risk; there is NO WARRANTY.
+
+Redistribution of modified versions is permitted provided that the following
+conditions are met:
+
+   (( 1. ))??
+   All copyright & permission notices are preserved.
+
+   (( 2.a) ))??
+   Only changes required for packaging or porting are made.
+
+   or
+
+   (( 2.b) ))??
+   It is clearly stated who last changed the program. The program is renamed or
+   the version number is of the form x.y.z, where x.y is the version of the
+   original program and z is an arbitrary suffix.
+`
+const license_Xerox_lre = `//**
+Xerox License
+https://spdx.org/licenses/Xerox.json
+https://fedoraproject.org/wiki/Licensing/Xerox
+**//
+
+//** Copyright **//
+
+Use and copying of this software and preparation of derivative works based upon
+this software are permitted. Any copy of this software or of any derivative work
+must include the above copyright notice of Xerox Corporation, this paragraph and
+the one after it. Any distribution of this software or derivative works must
+comply with all applicable United States export control laws.
+
+This software is made available AS IS, and XEROX CORPORATION DISCLAIMS ALL
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, AND
+NOTWITHSTANDING ANY OTHER PROVISION CONTAINED HEREIN, ANY LIABILITY FOR DAMAGES
+RESULTING FROM THE SOFTWARE OR ITS USE IS EXPRESSLY DISCLAIMED, WHETHER ARISING
+IN CONTRACT, TORT (INCLUDING NEGLIGENCE) OR STRICT LIABILITY, EVEN IF XEROX
+CORPORATION IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+`
+const license_Xnet_lre = `//**
+X.Net License
+https://spdx.org/licenses/Xnet.json
+https://opensource.org/licenses/Xnet
+**//
+
+(( The X.Net, Inc. License
+(( Copyright __20__ ))??
+))??
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+This agreement shall be governed in all respects by the laws of the State of
+California and by the laws of the United States of America.
+`
+const license_YPL_1_0_lre = `//**
+Yahoo! Public License v1.0
+https://spdx.org/licenses/YPL-1.0.json
+http://www.zimbra.com/license/yahoo_public_license_1.0.html
+**//
+
+(( Yahoo! Public License, Version 1.0 (YPL) ))??
+
+This Yahoo! Public License (this "Agreement") is a legal agreement that
+describes the terms under which Yahoo! Inc., a Delaware corporation having its
+principal place of business at 701 First Avenue, Sunnyvale, California 94089
+("Yahoo!") will provide software to you via download or otherwise ("Software").
+By using the Software, you, an individual or an entity ("You") agree to the
+terms of this Agreement.
+
+In consideration of the mutual promises and upon the terms and conditions set
+forth below, the parties agree as follows:
+
+   (( 1. ))??
+   Grant of Copyright License
+
+      (( 1.1 ))??
+      - Subject to the terms and conditions of this Agreement, Yahoo! hereby
+      grants to You, under any and all of its copyright interest in and to the
+      Software, a royalty-free, non-exclusive, non-transferable license to copy,
+      modify, compile, execute, and distribute the Software and Modifications.
+      For the purposes of this Agreement, any change to, addition to, or
+      abridgement of the Software made by You is a "Modification;" however, any
+      file You add to the Software that does not contain any part of the
+      Software is not a "Modification."
+
+      (( 1.2 ))??
+      - If You are an individual acting on behalf of a corporation or other
+      entity, Your use of the Software or any Modification is subject to Your
+      having the authority to bind such corporation or entity to this Agreement.
+      Providing copies to persons within such corporation or entity is not
+      considered distribution for purposes of this Agreement.
+
+      (( 1.3 ))??
+      - For the Software or any Modification You distribute in source code
+      format, You must do so only under the terms of this Agreement, and You
+      must include a complete copy of this Agreement with Your distribution.
+      With respect to any Modification You distribute in source code format, the
+      terms of this Agreement will apply to You in the same way those terms
+      apply to Yahoo! with respect to the Software. In other words, when You are
+      distributing Modifications under this Agreement, You "stand in the shoes"
+      of Yahoo! in terms of the rights You grant and how the terms and
+      conditions apply to You and the licensees of Your Modifications.
+      Notwithstanding the foregoing, when You "stand in the shoes" of Yahoo!,
+      You are not subject to the jurisdiction provision under Section 7, which
+      requires all disputes under this Agreement to be subject to the
+      jurisdiction of federal or state courts of northern California.
+
+      (( 1.4 ))??
+      - For the Software or any Modification You distribute in compiled or
+      object code format, You must also provide recipients with access to the
+      Software or Modification in source code format along with a complete copy
+      of this Agreement. The distribution of the Software or Modifications in
+      compiled or object code format may be under a license of Your choice,
+      provided that You are in compliance with the terms of this Agreement. In
+      addition, You must make absolutely clear that any license terms applying
+      to such Software or Modification that differ from this Agreement are
+      offered by You alone and not by Yahoo!, and that such license does not
+      restrict recipients from exercising rights in the source code to the
+      Software granted by Yahoo! under this Agreement or rights in the source
+      code to any Modification granted by You as described in Section 1.3.
+
+      (( 1.5 ))??
+      - This Agreement does not limit Your right to distribute files that are
+      entirely Your own work (i.e., which do not incorporate any portion of the
+      Software and are not Modifications) under any terms You choose.
+
+   (( 2. ))??
+   Support
+
+   Yahoo! has no obligation to provide technical support or updates to You.
+   Nothing in this Agreement requires Yahoo! to enter into any license with You
+   for any other edition of the Software.
+
+   (( 3. ))??
+   Intellectual Property Rights
+
+      (( 3.1 ))??
+      - Except for the license expressly granted under copyright in Section 1.1,
+      no rights, licenses or forbearances are granted or may arise in relation
+      to this Agreement whether expressly, by implication, exhaustion, estoppel
+      or otherwise. All rights, including all intellectual property rights, that
+      are not expressly granted under this Agreement are hereby reserved.
+
+      (( 3.2 ))??
+      - In any copy of the Software or in any Modification you create, You must
+      retain and reproduce, any and all copyright, patent, trademark, and
+      attribution notices that are included in the Software in the same form as
+      they appear in the Software. This includes the preservation of attribution
+      notices in the form of trademarks or logos that exist within a user
+      interface of the Software.
+
+      (( 3.3 ))??
+      - This license does not grant You rights to use any party's name, logo, or
+      trademarks, except solely as necessary to comply with Section 3.2.
+
+   (( 4. ))??
+   Disclaimer of Warranties
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND. YAHOO!
+   MAKES NO WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY REGARDING OR
+   RELATING TO THE SOFTWARE. SPECIFICALLY, YAHOO! DOES NOT WARRANT THAT THE
+   SOFTWARE WILL BE ERROR FREE OR WILL PERFORM IN AN UNINTERRUPTED MANNER. TO
+   THE GREATEST EXTENT ALLOWED BY LAW, YAHOO! SPECIFICALLY DISCLAIMS ALL IMPLIED
+   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE (EVEN IF
+   YAHOO! HAD BEEN INFORMED OF SUCH PURPOSE), AND NONINFRINGEMENT WITH RESPECT
+   TO THE SOFTWARE, ANY MODIFICATIONS THERETO AND WITH RESPECT TO THE USE OF THE
+   FOREGOING.
+
+   (( 5. ))??
+   Limitation of Liability
+
+   IN NO EVENT WILL YAHOO! BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING WITHOUT
+   LIMITATION LOSS OF PROFITS, LOSS OF USE, BUSINESS INTERRUPTION, LOSS OF DATA,
+   COST OF COVER) IN CONNECTION WITH OR ARISING OUT OF OR RELATING TO THE
+   FURNISHING, PERFORMANCE OR USE OF THE SOFTWARE OR ANY OTHER RIGHTS GRANTED
+   HEREUNDER, WHETHER ALLEGED AS A BREACH OF CONTRACT OR TORTIOUS CONDUCT,
+   INCLUDING NEGLIGENCE, AND EVEN IF YAHOO! HAS BEEN ADVISED OF THE POSSIBILITY
+   OF SUCH DAMAGES.
+
+   (( 6. ))??
+   Term and Termination
+
+      (( 6.1 ))??
+      - This Agreement will continue in effect unless and until terminated
+      earlier pursuant to this Section 6.
+
+      (( 6.2 ))??
+      - In the event Yahoo! determines that You have breached this Agreement,
+      Yahoo! may terminate this Agreement.
+
+      (( 6.3 ))??
+      - All licenses granted hereunder shall terminate upon the termination of
+      this Agreement. Termination will be in addition to any rights and remedies
+      available to Yahoo! at law or equity or under this Agreement.
+
+      (( 6.4 ))??
+      - Termination of this Agreement will not affect the provisions regarding
+      reservation of rights (Section 3.1), provisions disclaiming or limiting
+      Yahoo!'s liability (Sections 4 and 5), Termination (Section 6) or
+      Miscellaneous (Section 7), which provisions will survive termination of
+      this Agreement.
+
+   (( 7. ))??
+   Miscellaneous
+
+   This Agreement contains the entire agreement of the parties with respect to
+   the subject matter of this Agreement and supersedes all previous
+   communications, representations, understandings and agreements, either oral
+   or written, between the parties with respect to said subject matter. The
+   relationship of the parties hereunder is that of independent contractors, and
+   this Agreement will not be construed as creating an agency, partnership,
+   joint venture or any other form of legal association between the parties. If
+   any term, condition, or provision in this Agreement is found to be invalid,
+   unlawful or unenforceable to any extent, this Agreement will be construed in
+   a manner that most closely effectuates the intent of this Agreement. Such
+   invalid term, condition or provision will be severed from the remaining
+   terms, conditions and provisions, which will continue to be valid and
+   enforceable to the fullest extent permitted by law. This Agreement will be
+   interpreted and construed in accordance with the laws of the State of
+   California and the United States of America, without regard to conflict of
+   law principles. The U.N. Convention on Contracts for the International Sale
+   of Goods shall not apply to this Agreement. All disputes arising out of this
+   Agreement involving Yahoo! or any of its subsidiaries shall be subject to the
+   jurisdiction of the federal or state courts of northern California, with
+   venue lying in Santa Clara County, California. No rights may be assigned, no
+   obligations may be delegated, and this Agreement may not be transferred by
+   You, in whole or in part, whether voluntary or by operation of law, including
+   by way of sale of assets, merger or consolidation, without the prior written
+   consent of Yahoo!, and any purported assignment, delegation or transfer
+   without such consent shall be void ab initio. Any waiver of the provisions of
+   this Agreement or of a party's rights or remedies under this Agreement must
+   be in writing to be effective. Failure, neglect or delay by a party to
+   enforce the provisions of this Agreement or its rights or remedies at any
+   time, will not be construed or be deemed to be a waiver of such party's
+   rights under this Agreement and will not in any way affect the validity of
+   the whole or any part of this Agreement or prejudice such party's right to
+   take subsequent action.
+`
+const license_YPL_1_1_lre = `//**
+Yahoo! Public License v1.1
+https://spdx.org/licenses/YPL-1.1.json
+http://www.zimbra.com/license/yahoo_public_license_1.1.html
+**//
+
+(( Yahoo! Public License, Version 1.1 (YPL) ))??
+
+This Yahoo! Public License (this "Agreement") is a legal agreement that
+describes the terms under which Yahoo! Inc., a Delaware corporation having its
+principal place of business at 701 First Avenue, Sunnyvale, California 94089
+("Yahoo!") will provide software to you via download or otherwise ("Software").
+By using the Software, you, an individual or an entity ("You") agree to the
+terms of this Agreement.
+
+In consideration of the mutual promises and upon the terms and conditions set
+forth below, the parties agree as follows:
+
+   (( 1. ))??
+   Grant of Copyright License
+
+      (( 1.1 ))??
+      - Subject to the terms and conditions of this Agreement, Yahoo! hereby
+      grants to You, under any and all of its copyright interest in and to the
+      Software, a royalty-free, non-exclusive, non-transferable license to copy,
+      modify, compile, execute, and distribute the Software and Modifications.
+      For the purposes of this Agreement, any change to, addition to, or
+      abridgement of the Software made by You is a "Modification;" however, any
+      file You add to the Software that does not contain any part of the
+      Software is not a "Modification."
+
+      (( 1.2 ))??
+      - If You are an individual acting on behalf of a corporation or other
+      entity, Your use of the Software or any Modification is subject to Your
+      having the authority to bind such corporation or entity to this Agreement.
+      Providing copies to persons within such corporation or entity is not
+      considered distribution for purposes of this Agreement.
+
+      (( 1.3 ))??
+      - For the Software or any Modification You distribute in source code
+      format, You must do so only under the terms of this Agreement, and You
+      must include a complete copy of this Agreement with Your distribution.
+      With respect to any Modification You distribute in source code format, the
+      terms of this Agreement will apply to You in the same way those terms
+      apply to Yahoo! with respect to the Software. In other words, when You are
+      distributing Modifications under this Agreement, You "stand in the shoes"
+      of Yahoo! in terms of the rights You grant and how the terms and
+      conditions apply to You and the licensees of Your Modifications.
+      Notwithstanding the foregoing, when You "stand in the shoes" of Yahoo!,
+      You are not subject to the jurisdiction provision under Section 7, which
+      requires all disputes under this Agreement to be subject to the
+      jurisdiction of federal or state courts of northern California.
+
+      (( 1.4 ))??
+      - For the Software or any Modification You distribute in compiled or
+      object code format, You must also provide recipients with access to the
+      Software or Modification in source code format along with a complete copy
+      of this Agreement. The distribution of the Software or Modifications in
+      compiled or object code format may be under a license of Your choice,
+      provided that You are in compliance with the terms of this Agreement. In
+      addition, You must make absolutely clear that any license terms applying
+      to such Software or Modification that differ from this Agreement are
+      offered by You alone and not by Yahoo!, and that such license does not
+      restrict recipients from exercising rights in the source code to the
+      Software granted by Yahoo! under this Agreement or rights in the source
+      code to any Modification granted by You as described in Section 1.3.
+
+      (( 1.5 ))??
+      - This Agreement does not limit Your right to distribute files that are
+      entirely Your own work (i.e., which do not incorporate any portion of the
+      Software and are not Modifications) under any terms You choose.
+
+   (( 2. ))??
+   Support
+
+   Yahoo! has no obligation to provide technical support or updates to You.
+   Nothing in this Agreement requires Yahoo! to enter into any license with You
+   for any other edition of the Software.
+
+   (( 3. ))??
+   Intellectual Property Rights
+
+      (( 3.1 ))??
+      - Except for the license expressly granted under copyright in Section 1.1,
+      no rights, licenses or forbearances are granted or may arise in relation
+      to this Agreement whether expressly, by implication, exhaustion, estoppel
+      or otherwise. All rights, including all intellectual property rights, that
+      are not expressly granted under this Agreement are hereby reserved.
+
+      (( 3.2 ))??
+      - In any copy of the Software or in any Modification you create, You must
+      retain and reproduce, any and all copyright, patent, trademark, and
+      attribution notices that are included in the Software in the same form as
+      they appear in the Software. This includes the preservation of attribution
+      notices in the form of trademarks or logos that exist within a user
+      interface of the Software.
+
+      (( 3.3 ))??
+      - This license does not grant You rights to use any party's name, logo, or
+      trademarks, except solely as necessary to comply with Section 3.2.
+
+   (( 4. ))??
+   Disclaimer of Warranties
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND. YAHOO!
+   MAKES NO WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY REGARDING OR
+   RELATING TO THE SOFTWARE. SPECIFICALLY, YAHOO! DOES NOT WARRANT THAT THE
+   SOFTWARE WILL BE ERROR FREE OR WILL PERFORM IN AN UNINTERRUPTED MANNER. TO
+   THE GREATEST EXTENT ALLOWED BY LAW, YAHOO! SPECIFICALLY DISCLAIMS ALL IMPLIED
+   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE (EVEN IF
+   YAHOO! HAD BEEN INFORMED OF SUCH PURPOSE), AND NONINFRINGEMENT WITH RESPECT
+   TO THE SOFTWARE, ANY MODIFICATIONS THERETO AND WITH RESPECT TO THE USE OF THE
+   FOREGOING.
+
+   (( 5. ))??
+   Limitation of Liability
+
+   IN NO EVENT WILL YAHOO! BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING WITHOUT
+   LIMITATION LOSS OF PROFITS, LOSS OF USE, BUSINESS INTERRUPTION, LOSS OF DATA,
+   COST OF COVER) IN CONNECTION WITH OR ARISING OUT OF OR RELATING TO THE
+   FURNISHING, PERFORMANCE OR USE OF THE SOFTWARE OR ANY OTHER RIGHTS GRANTED
+   HEREUNDER, WHETHER ALLEGED AS A BREACH OF CONTRACT OR TORTIOUS CONDUCT,
+   INCLUDING NEGLIGENCE, AND EVEN IF YAHOO! HAS BEEN ADVISED OF THE POSSIBILITY
+   OF SUCH DAMAGES.
+
+   (( 6. ))??
+   Term and Termination
+
+      (( 6.1 ))??
+      - This Agreement will continue in effect unless and until terminated
+      earlier pursuant to this Section 6.
+
+      (( 6.2 ))??
+      - In the event You violate the terms of this Agreement, Yahoo! may
+      terminate this Agreement.
+
+      (( 6.3 ))??
+      - All licenses granted hereunder shall terminate upon the termination of
+      this Agreement. Termination will be in addition to any rights and remedies
+      available to Yahoo! at law or equity or under this Agreement.
+
+      (( 6.4 ))??
+      - Termination of this Agreement will not affect the provisions regarding
+      reservation of rights (Section 3.1), provisions disclaiming or limiting
+      Yahoo!'s liability (Sections 4 and 5), Termination (Section 6) or
+      Miscellaneous (Section 7), which provisions will survive termination of
+      this Agreement.
+
+   (( 7. ))??
+   Miscellaneous
+
+   This Agreement contains the entire agreement of the parties with respect to
+   the subject matter of this Agreement and supersedes all previous
+   communications, representations, understandings and agreements, either oral
+   or written, between the parties with respect to said subject matter. The
+   relationship of the parties hereunder is that of independent contractors, and
+   this Agreement will not be construed as creating an agency, partnership,
+   joint venture or any other form of legal association between the parties. If
+   any term, condition, or provision in this Agreement is found to be invalid,
+   unlawful or unenforceable to any extent, this Agreement will be construed in
+   a manner that most closely effectuates the intent of this Agreement. Such
+   invalid term, condition or provision will be severed from the remaining
+   terms, conditions and provisions, which will continue to be valid and
+   enforceable to the fullest extent permitted by law. This Agreement will be
+   interpreted and construed in accordance with the laws of the State of
+   California and the United States of America, without regard to conflict of
+   law principles. The U.N. Convention on Contracts for the International Sale
+   of Goods shall not apply to this Agreement. All disputes arising out of this
+   Agreement involving Yahoo! or any of its subsidiaries shall be subject to the
+   jurisdiction of the federal or state courts of northern California, with
+   venue lying in Santa Clara County, California. No rights may be assigned, no
+   obligations may be delegated, and this Agreement may not be transferred by
+   You, in whole or in part, whether voluntary or by operation of law, including
+   by way of sale of assets, merger or consolidation, without the prior written
+   consent of Yahoo!, and any purported assignment, delegation or transfer
+   without such consent shall be void ab initio. Any waiver of the provisions of
+   this Agreement or of a party's rights or remedies under this Agreement must
+   be in writing to be effective. Failure, neglect or delay by a party to
+   enforce the provisions of this Agreement or its rights or remedies at any
+   time, will not be construed or be deemed to be a waiver of such party's
+   rights under this Agreement and will not in any way affect the validity of
+   the whole or any part of this Agreement or prejudice such party's right to
+   take subsequent action.
+`
+const license_ZPL_1_1_lre = `//**
+Zope Public License 1.1
+https://spdx.org/licenses/ZPL-1.1.json
+http://old.zope.org/Resources/License/ZPL-1.1
+**//
+
+(( Zope Public License (ZPL) Version 1.1
+(( Copyright __20__ ))??
+))??
+
+(( This license has been certified as open source. ))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions in source code must retain the above copyright notice, this
+   list of conditions, and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions, and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   All advertising materials and documentation mentioning features derived from
+   or use of this software must display the following acknowledgement:
+
+   "This product includes software developed by Zope Corporation for use in the
+   Z Object Publishing Environment (http:/www.zope.com/)."
+
+   In the event that the product being advertised includes an intact Zope
+   distribution (with copyright and license included) then this clause is
+   waived.
+
+   (( 4. ))??
+   Names associated with Zope or Zope Corporation must not be used to endorse or
+   promote products derived from this software without prior written permission
+   from Zope Corporation.
+
+   (( 5. ))??
+   Modified redistributions of any form whatsoever must retain the following
+   acknowledgment:
+
+   "This product includes software developed by Zope Corporation for use in the
+   Z Object Publishing Environment (http:/www.zope.com/)."
+
+   Intact (re-)distributions of any official Zope release do not require an
+   external acknowledgement.
+
+   (( 6. ))??
+   Modifications are encouraged but must be packaged separately as patches to
+   official Zope releases. Distributions that do not clearly separate the
+   patches from the original work must be clearly labeled as unofficial
+   distributions. Modifications which do not carry the name Zope may be packaged
+   in any form, as long as they conform to all of the clauses above.
+
+Disclaimer
+
+THIS SOFTWARE IS PROVIDED BY ZOPE CORPORATION ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESSED OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL ZOPE CORPORATION OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+(( This software consists of contributions made by Zope Corporation and many
+individuals on behalf of Zope Corporation. Specific attributions are listed in
+the accompanying credits file. ))??
+`
+const license_ZPL_2_0_lre = `//**
+Zope Public License 2.0
+https://spdx.org/licenses/ZPL-2.0.json
+http://old.zope.org/Resources/License/ZPL-2.0
+https://opensource.org/licenses/ZPL-2.0
+**//
+
+(( Zope Public License (ZPL) Version 2.0 ))??
+
+(( This software is Copyright (c) Zope Corporation (tm) and Contributors.
+All rights reserved. ))??
+
+(( This license has been certified as open source. It has also been designated
+as GPL compatible by the Free Software Foundation (FSF). ))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions in source code must retain the above copyright notice, this
+   list of conditions, and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions, and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   The name Zope Corporation (tm) must not be used to endorse or promote
+   products derived from this software without prior written permission from
+   Zope Corporation.
+
+   (( 4. ))??
+   The right to distribute this software or to use it for any purpose does not
+   give you the right to use Servicemarks (sm) or Trademarks (tm) of Zope
+   Corporation. Use of them is covered in a separate agreement (see
+   http:/www.zope.com/Marks).
+
+   (( 5. ))??
+   If any files are modified, you must cause the modified files to carry
+   prominent notices stating that you changed the files and the date of any
+   change.
+
+Disclaimer
+
+THIS SOFTWARE IS PROVIDED BY ZOPE CORPORATION ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESSED OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL ZOPE CORPORATION OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+(( This software consists of contributions made by Zope Corporation and many
+individuals on behalf of Zope Corporation. Specific attributions are listed in
+the accompanying credits file. ))??
+`
+const license_ZPL_2_1_lre = `//**
+Zope Public License 2.1
+https://spdx.org/licenses/ZPL-2.1.json
+http://old.zope.org/Resources/ZPL/
+**//
+
+(( Zope Public License (ZPL) Version 2.1 ))??
+
+(( A copyright notice accompanies this license document that identifies the
+copyright holders.
+
+This license has been certified as open source. It has also been designated as
+GPL compatible by the Free Software Foundation (FSF). ))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions in source code must retain the accompanying copyright notice,
+   this list of conditions, and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the accompanying copyright
+   notice, this list of conditions, and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   Names of the copyright holders must not be used to endorse or promote
+   products derived from this software without prior written permission from the
+   copyright holders.
+
+   (( 4. ))??
+   The right to distribute this software or to use it for any purpose does not
+   give you the right to use Servicemarks (sm) or Trademarks (tm) of the
+   copyright holders. Use of them is covered by separate agreement with the
+   copyright holders.
+
+   (( 5. ))??
+   If any files are modified, you must cause the modified files to carry
+   prominent notices stating that you changed the files and the date of any
+   change.
+
+Disclaimer
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESSED
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+`
+const license_Zed_lre = `//**
+Zed License
+https://spdx.org/licenses/Zed.json
+https://fedoraproject.org/wiki/Licensing/Zed
+**//
+
+//** Copyright **//
+
+You may copy and distribute this file freely. Any queries and complaints should
+be forwarded to Jim.Davies@comlab.ox.ac.uk.
+
+If you make any changes to this file, please do not distribute the results under
+the name ` + "`" + `zed-csp.sty'.
+`
+const license_Zend_2_0_lre = `//**
+Zend License v2.0
+https://spdx.org/licenses/Zend-2.0.json
+https://web.archive.org/web/20130517195954/http://www.zend.com/license/2_00.txt
+**//
+
+(( The Zend Engine License, version 2.00
+(( Copyright __20__ ))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+is permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   The names "Zend" and "Zend Engine" must not be used to endorse or promote
+   products derived from this software without prior permission from Zend
+   Technologies Ltd. For written permission, please contact license@zend.com.
+
+   (( 4. ))??
+   Zend Technologies Ltd. may publish revised and/or new versions of the license
+   from time to time. Each version will be given a distinguishing version
+   number. Once covered code has been published under a particular version of
+   the license, you may always continue to use it under the terms of that
+   version. You may also choose to use such covered code under the terms of any
+   subsequent version of the license published by Zend Technologies Ltd. No one
+   other than Zend Technologies Ltd. has the right to modify the terms
+   applicable to covered code created under this License.
+
+   (( 5. ))??
+   Redistributions of any form whatsoever must retain the following
+   acknowledgment: "This product includes the Zend Engine, freely available at
+   http:/www.zend.com"
+
+   (( 6. ))??
+   All advertising materials mentioning features or use of this software must
+   display the following acknowledgment: "The Zend Engine is freely available at
+   http:/www.zend.com"
+
+THIS SOFTWARE IS PROVIDED BY ZEND TECHNOLOGIES LTD. ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESSED
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL ZEND TECHNOLOGIES LTD. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+`
+const license_Zimbra_1_3_lre = `//**
+Zimbra Public License v1.3
+https://spdx.org/licenses/Zimbra-1.3.json
+http://web.archive.org/web/20100302225219/http://www.zimbra.com/license/zimbra-public-license-1-3.html
+**//
+
+(( Zimbra Public License, Version 1.3 (ZPL) ))??
+
+This Zimbra Public License (this "Agreement") is a legal agreement that
+describes the terms under which VMware, Inc., a Delaware corporation having its
+principal place of business at 3401 Hillview Avenue, Palo Alto, California 94304
+("VMware") will provide software to you via download or otherwise ("Software").
+By using the Software, you, an individual or an entity ("You") agree to the
+terms of this Agreement.
+
+In consideration of the mutual promises and upon the terms and conditions set
+forth below, the parties agree as follows:
+
+   (( 1. ))??
+   Grant of Copyright License
+
+      (( 1.1 - ))??
+      Subject to the terms and conditions of this Agreement, VMware hereby
+      grants to You, under any and all of its copyright interest in and to the
+      Software, a royalty-free, non-exclusive, non-transferable license to copy,
+      modify, compile, execute, and distribute the Software and Modifications.
+      For the purposes of this Agreement, any change to, addition to, or
+      abridgement of the Software made by You is a "Modification;" however, any
+      file You add to the Software that does not contain any part of the
+      Software is not a "Modification."
+
+      (( 1.2 - ))??
+      If You are an individual acting on behalf of a corporation or other
+      entity, Your use of the Software or any Modification is subject to Your
+      having the authority to bind such corporation or entity to this Agreement.
+      Providing copies to persons within such corporation or entity is not
+      considered distribution for purposes of this Agreement.
+
+      (( 1.3 - ))??
+      For the Software or any Modification You distribute in source code format,
+      You must do so only under the terms of this Agreement, and You must
+      include a complete copy of this Agreement with Your distribution. With
+      respect to any Modification You distribute in source code format, the
+      terms of this Agreement will apply to You in the same way those terms
+      apply to VMware with respect to the Software. In other words, when You are
+      distributing Modifications under this Agreement, You "stand in the shoes"
+      of VMware in terms of the rights You grant and how the terms and
+      conditions apply to You and the licensees of Your Modifications.
+      Notwithstanding the foregoing, when You "stand in the shoes" of VMware,
+      You are not subject to the jurisdiction provision under Section 7, which
+      requires all disputes under this Agreement to be subject to the
+      jurisdiction of federal or state courts of northern California.
+
+      (( 1.4 - ))??
+      For the Software or any Modification You distribute in compiled or object
+      code format, You must also provide recipients with access to the Software
+      or Modification in source code format along with a complete copy of this
+      Agreement. The distribution of the Software or Modifications in compiled
+      or object code format may be under a license of Your choice, provided that
+      You are in compliance with the terms of this Agreement. In addition, You
+      must make absolutely clear that any license terms applying to such
+      Software or Modification that differ from this Agreement are offered by
+      You alone and not by VMware, and that such license does not restrict
+      recipients from exercising rights in the source code to the Software
+      granted by VMware under this Agreement or rights in the source code to any
+      Modification granted by You as described in Section 1.3.
+
+      (( 1.5 - ))??
+      This Agreement does not limit Your right to distribute files that are
+      entirely Your own work (i.e., which do not incorporate any portion of the
+      Software and are not Modifications) under any terms You choose.
+
+   (( 2. ))??
+   Support
+
+   VMware has no obligation to provide technical support or updates to You.
+   Nothing in this Agreement requires VMware to enter into any license with You
+   for any other edition of the Software.
+
+   (( 3. ))??
+   Intellectual Property Rights
+
+      (( 3.1 - ))??
+      Except for the license expressly granted under copyright in Section 1.1,
+      no rights, licenses or forbearances are granted or may arise in relation
+      to this Agreement whether expressly, by implication, exhaustion, estoppel
+      or otherwise. All rights, including all intellectual property rights, that
+      are not expressly granted under this Agreement are hereby reserved.
+
+      (( 3.2 - ))??
+      In any copy of the Software or in any Modification you create, You must
+      retain and reproduce, any and all copyright, patent, trademark, and
+      attribution notices that are included in the Software in the same form as
+      they appear in the Software. This includes the preservation of attribution
+      notices in the form of trademarks or logos that exist within a user
+      interface of the Software.
+
+      (( 3.3 - ))??
+      This license does not grant You rights to use any party's name, logo, or
+      trademarks, except solely as necessary to comply with Section 3.2.
+
+   (( 4. ))??
+   Disclaimer of Warranties
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND. VMWARE
+   MAKES NO WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY REGARDING OR
+   RELATING TO THE SOFTWARE. SPECIFICALLY, VMWARE DOES NOT WARRANT THAT THE
+   SOFTWARE WILL BE ERROR FREE OR WILL PERFORM IN AN UNINTERRUPTED MANNER. TO
+   THE GREATEST EXTENT ALLOWED BY LAW, VMWARE SPECIFICALLY DISCLAIMS ALL IMPLIED
+   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE (EVEN IF
+   VMWARE HAD BEEN INFORMED OF SUCH PURPOSE), AND NONINFRINGEMENT WITH RESPECT
+   TO THE SOFTWARE, ANY MODIFICATIONS THERETO AND WITH RESPECT TO THE USE OF THE
+   FOREGOING.
+
+   (( 5. ))??
+   Limitation of Liability
+
+   IN NO EVENT WILL VMWARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING WITHOUT
+   LIMITATION LOSS OF PROFITS, LOSS OF USE, BUSINESS INTERRUPTION, LOSS OF DATA,
+   COST OF COVER) IN CONNECTION WITH OR ARISING OUT OF OR RELATING TO THE
+   FURNISHING, PERFORMANCE OR USE OF THE SOFTWARE OR ANY OTHER RIGHTS GRANTED
+   HEREUNDER, WHETHER ALLEGED AS A BREACH OF CONTRACT OR TORTIOUS CONDUCT,
+   INCLUDING NEGLIGENCE, AND EVEN IF VMWARE HAS BEEN ADVISED OF THE POSSIBILITY
+   OF SUCH DAMAGES.
+
+   (( 6. ))??
+   Term and Termination
+
+      (( 6.1 - ))??
+      This Agreement will continue in effect unless and until terminated earlier
+      pursuant to this Section 6.
+
+      (( 6.2 - ))??
+      In the event You violate the terms of this Agreement, VMware may terminate
+      this Agreement.
+
+      (( 6.3 - ))??
+      All licenses granted hereunder shall terminate upon the termination of
+      this Agreement. Termination will be in addition to any rights and remedies
+      available to VMware at law or equity or under this Agreement.
+
+      (( 6.4 - ))??
+      Termination of this Agreement will not affect the provisions regarding
+      reservation of rights (Section 3.1), provisions disclaiming or limiting
+      VMware's liability (Sections 4 and 5), Termination (Section 6) or
+      Miscellaneous (Section 7), which provisions will survive termination of
+      this Agreement.
+
+   (( 7. ))??
+   Miscellaneous
+
+   This Agreement contains the entire agreement of the parties with respect to
+   the subject matter of this Agreement and supersedes all previous
+   communications, representations, understandings and agreements, either oral
+   or written, between the parties with respect to said subject matter. The
+   relationship of the parties hereunder is that of independent contractors, and
+   this Agreement will not be construed as creating an agency, partnership,
+   joint venture or any other form of legal association between the parties. If
+   any term, condition, or provision in this Agreement is found to be invalid,
+   unlawful or unenforceable to any extent, this Agreement will be construed in
+   a manner that most closely effectuates the intent of this Agreement. Such
+   invalid term, condition or provision will be severed from the remaining
+   terms, conditions and provisions, which will continue to be valid and
+   enforceable to the fullest extent permitted by law. This Agreement will be
+   interpreted and construed in accordance with the laws of the State of
+   California and the United States of America, without regard to conflict of
+   law principles. The U.N. Convention on Contracts for the International Sale
+   of Goods shall not apply to this Agreement. All disputes arising out of this
+   Agreement involving VMware or any of its subsidiaries shall be subject to the
+   jurisdiction of the federal or state courts of northern California, with
+   venue lying in Santa Clara County, California. No rights may be assigned, no
+   obligations may be delegated, and this Agreement may not be transferred by
+   You, in whole or in part, whether voluntary or by operation of law, including
+   by way of sale of assets, merger or consolidation, without the prior written
+   consent of VMware, and any purported assignment, delegation or transfer
+   without such consent shall be void ab initio. Any waiver of the provisions of
+   this Agreement or of a party's rights or remedies under this Agreement must
+   be in writing to be effective. Failure, neglect or delay by a party to
+   enforce the provisions of this Agreement or its rights or remedies at any
+   time, will not be construed or be deemed to be a waiver of such party's
+   rights under this Agreement and will not in any way affect the validity of
+   the whole or any part of this Agreement or prejudice such party's right to
+   take subsequent action.
+`
+const license_Zimbra_1_4_lre = `//**
+Zimbra Public License v1.4
+https://spdx.org/licenses/Zimbra-1.4.json
+http://www.zimbra.com/legal/zimbra-public-license-1-4
+**//
+
+(( Zimbra Public License, Version 1.4 (ZPL) ))??
+
+This Zimbra Public License (this "Agreement") is a legal agreement that
+describes the terms under which Zimbra, Inc., a Texas corporation ("Zimbra")
+will provide software to you via download or otherwise ("Software"). By using
+the Software, you, an individual or an entity ("You") agree to the terms of this
+Agreement.
+
+In consideration of the mutual promises and upon the terms and conditions set
+forth below, the parties agree as follows:
+
+   (( 1. ))??
+   Grant of Copyright License
+
+      (( 1.1 ))??
+      - Subject to the terms and conditions of this Agreement, Zimbra hereby
+      grants to You, under any and all of its copyright interest in and to the
+      Software, a royalty-free, non-exclusive, non-transferable license to copy,
+      modify, compile, execute, and distribute the Software and Modifications.
+      For the purposes of this Agreement, any change to, addition to, or
+      abridgement of the Software made by You is a "Modification;" however, any
+      file You add to the Software that does not contain any part of the
+      Software is not a "Modification."
+
+      (( 1.2 ))??
+      - If You are an individual acting on behalf of a corporation or other
+      entity, Your use of the Software or any Modification is subject to Your
+      having the authority to bind such corporation or entity to this Agreement.
+      Providing copies to persons within such corporation or entity is not
+      considered distribution for purposes of this Agreement.
+
+      (( 1.3 ))??
+      - For the Software or any Modification You distribute in source code
+      format, You must do so only under the terms of this Agreement, and You
+      must include a complete copy of this Agreement with Your distribution.
+      With respect to any Modification You distribute in source code format, the
+      terms of this Agreement will apply to You in the same way those terms
+      apply to Zimbra with respect to the Software. In other words, when You are
+      distributing Modifications under this Agreement, You "stand in the shoes"
+      of Zimbra in terms of the rights You grant and how the terms and
+      conditions apply to You and the licensees of Your Modifications.
+      Notwithstanding the foregoing, when You "stand in the shoes" of Zimbra,
+      You are not subject to the jurisdiction provision under Section 7, which
+      requires all disputes under this Agreement to be subject to the
+      jurisdiction of federal or state courts of Northern Texas.
+
+      (( 1.4 ))??
+      - For the Software or any Modification You distribute in compiled or
+      object code format, You must also provide recipients with access to the
+      Software or Modification in source code format along with a complete copy
+      of this Agreement. The distribution of the Software or Modifications in
+      compiled or object code format may be under a license of Your choice,
+      provided that You are in compliance with the terms of this Agreement. In
+      addition, You must make absolutely clear that any license terms applying
+      to such Software or Modification that differ from this Agreement are
+      offered by You alone and not by Zimbra, and that such license does not
+      restrict recipients from exercising rights in the source code to the
+      Software granted by Zimbra under this Agreement or rights in the source
+      code to any Modification granted by You as described in Section 1.3.
+
+      (( 1.5 ))??
+      - This Agreement does not limit Your right to distribute files that are
+      entirely Your own work (i.e., which do not incorporate any portion of the
+      Software and are not Modifications) under any terms You choose.
+
+   (( 2. ))??
+   Support
+
+   Zimbra has no obligation to provide technical support or updates to You.
+   Nothing in this Agreement requires Zimbra to enter into any license with You
+   for any other edition of the Software.
+
+   (( 3. ))??
+   Intellectual Property Rights
+
+      (( 3.1 - ))??
+      Except for the license expressly granted under copyright in Section 1.1,
+      no rights, licenses or forbearances are granted or may arise in relation
+      to this Agreement whether expressly, by implication, exhaustion, estoppel
+      or otherwise. All rights, including all intellectual property rights, that
+      are not expressly granted under this Agreement are hereby reserved.
+
+      (( 3.2 - ))??
+      In any copy of the Software or in any Modification you create, You must
+      retain and reproduce any and all copyright, patent, trademark, and
+      attribution notices that are included in the Software in the same form as
+      they appear in the Software. This includes the preservation of attribution
+      notices in the form of trademarks or logos that exist within a user
+      interface of the Software.
+
+      (( 3.3 - ))??
+      This license does not grant You rights to use any party's name, logo, or
+      trademarks, except solely as necessary to comply with Section 3.2.
+
+   (( 4. ))??
+   Disclaimer of Warranties
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND. ZIMBRA
+   MAKES NO WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, REGARDING OR
+   RELATING TO THE SOFTWARE. SPECIFICALLY, ZIMBRA DOES NOT WARRANT THAT THE
+   SOFTWARE WILL BE ERROR FREE OR WILL PERFORM IN AN UNINTERRUPTED MANNER. TO
+   THE GREATEST EXTENT ALLOWED BY LAW, ZIMBRA SPECIFICALLY DISCLAIMS ALL IMPLIED
+   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE (EVEN IF
+   ZIMBRA HAD BEEN INFORMED OF SUCH PURPOSE), AND NONINFRINGEMENT WITH RESPECT
+   TO THE SOFTWARE, ANY MODIFICATIONS THERETO, AND WITH RESPECT TO THE USE OF
+   THE FOREGOING.
+
+   (( 5. ))??
+   Limitation of Liability
+
+   IN NO EVENT WILL ZIMBRA BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING WITHOUT
+   LIMITATION LOSS OF PROFITS, LOSS OF USE, BUSINESS INTERRUPTION, LOSS OF DATA,
+   AND COST OF COVER) IN CONNECTION WITH OR ARISING OUT OF OR RELATING TO THE
+   FURNISHING, PERFORMANCE, OR USE OF THE SOFTWARE OR ANY OTHER RIGHTS GRANTED
+   HEREUNDER, WHETHER ALLEGED AS A BREACH OF CONTRACT OR TORTIOUS CONDUCT,
+   INCLUDING NEGLIGENCE, AND EVEN IF ZIMBRA HAS BEEN ADVISED OF THE POSSIBILITY
+   OF SUCH DAMAGES.
+
+   (( 6. ))??
+   Term and Termination
+
+      (( 6.1 - ))??
+      This Agreement will continue in effect unless and until terminated earlier
+      pursuant to this Section 6.
+
+      (( 6.2 - ))??
+      In the event You violate the terms of this Agreement, Zimbra may terminate
+      this Agreement.
+
+      (( 6.3 - ))??
+      All licenses granted hereunder shall terminate upon the termination of
+      this Agreement. Termination will be in addition to any rights and remedies
+      available to Zimbra at law or equity or under this Agreement.
+
+      (( 6.4 - ))??
+      Termination of this Agreement will not affect the provisions regarding
+      reservation of rights (Section 3.1), provisions disclaiming or limiting
+      Zimbra's liability (Sections 4 and 5), Termination (Section 6), or
+      Miscellaneous (Section 7), which provisions will survive termination of
+      this Agreement.
+
+   (( 7. ))??
+   Miscellaneous
+
+   This Agreement contains the entire agreement of the parties with respect to
+   the subject matter of this Agreement and supersedes all previous
+   communications, representations, understandings, and agreements, either oral
+   or written, between the parties with respect to said subject matter. The
+   relationship of the parties hereunder is that of independent contractors, and
+   this Agreement will not be construed as creating an agency, partnership,
+   joint venture, or any other form of legal association between the parties. If
+   any term, condition, or provision in this Agreement is found to be invalid,
+   unlawful, or unenforceable to any extent, this Agreement will be construed in
+   a manner that most closely effectuates the intent of this Agreement. Such
+   invalid term, condition or provision will be severed from the remaining
+   terms, conditions, and provisions, which will continue to be valid and
+   enforceable to the fullest extent permitted by law. This Agreement will be
+   interpreted and construed in accordance with the laws of the State of
+   Delaware and the United States of America, without regard to conflict of law
+   principles. The U.N. Convention on Contracts for the International Sale of
+   Goods shall not apply to this Agreement. All disputes arising out of this
+   Agreement involving Zimbra or any of its parents or subsidiaries shall be
+   subject to the jurisdiction of the federal or state courts of Northern Texas,
+   with venue lying in Dallas County, Texas. No rights may be assigned, no
+   obligations may be delegated, and this Agreement may not be transferred by
+   You, in whole or in part, whether voluntary or by operation of law, including
+   by way of sale of assets, merger, or consolidation, without the prior written
+   consent of Zimbra, and any purported assignment, delegation, or transfer
+   without such consent shall be void ab initio. Any waiver of the provisions of
+   this Agreement or of a party's rights or remedies under this Agreement must
+   be in writing to be effective. Failure, neglect, or delay by a party to
+   enforce the provisions of this Agreement or its rights or remedies at any
+   time will not be construed or be deemed to be a waiver of such party's rights
+   under this Agreement and will not in any way affect the validity of the whole
+   or any part of this Agreement or prejudice such party's right to take
+   subsequent action.
 `
 const license_Zlib_lre = `//**
 zlib License
