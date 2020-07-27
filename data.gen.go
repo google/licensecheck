@@ -397,8 +397,23 @@ func init() {
 		{Name: "Spencer-94", Text: license_Spencer_94_lre},
 		{Name: "Spencer-99", Text: license_Spencer_99_lre},
 		{Name: "SugarCRM-1.1.3", Text: license_SugarCRM_1_1_3_lre},
+		{Name: "TAPR-OHL-1.0", Text: license_TAPR_OHL_1_0_lre},
+		{Name: "TCL", Text: license_TCL_lre},
+		{Name: "TCP-wrappers", Text: license_TCP_wrappers_lre},
+		{Name: "TMate", Text: license_TMate_lre},
+		{Name: "TORQUE-1.1", Text: license_TORQUE_1_1_lre},
+		{Name: "TOSL", Text: license_TOSL_lre},
+		{Name: "TU-Berlin-1.0", Text: license_TU_Berlin_1_0_lre},
+		{Name: "TU-Berlin-2.0", Text: license_TU_Berlin_2_0_lre},
+		{Name: "UCL-1.0", Text: license_UCL_1_0_lre},
 		{Name: "UPL-1.0", Text: license_UPL_1_0_lre},
+		{Name: "Unicode-DFS-2015", Text: license_Unicode_DFS_2015_lre},
+		{Name: "Unicode-DFS-2016", Text: license_Unicode_DFS_2016_lre},
+		{Name: "Unicode-TOU", Text: license_Unicode_TOU_lre},
 		{Name: "Unlicense", Text: license_Unlicense_lre},
+		{Name: "VOSTROM", Text: license_VOSTROM_lre},
+		{Name: "VSL-1.0", Text: license_VSL_1_0_lre},
+		{Name: "Vim", Text: license_Vim_lre},
 		{Name: "WTFPL", Text: license_WTFPL_lre},
 		{Name: "Zlib", Text: license_Zlib_lre},
 		{Name: "bzip2-1.0.5", Text: license_bzip2_1_0_5_lre},
@@ -75974,6 +75989,877 @@ Additional Terms applicable to the SugarCRM Public License.
    screen. When users click on the copyright notice, it must direct them back to
    http:/www.sugarcrm.com ))??
 `
+const license_TAPR_OHL_1_0_lre = `//**
+TAPR Open Hardware License v1.0
+https://spdx.org/licenses/TAPR-OHL-1.0.json
+https://www.tapr.org/OHL
+**//
+
+(( The TAPR Open Hardware License Version 1.0 (May 25, 2007)
+(( Copyright __20__ ))??
+))??
+
+PREAMBLE
+
+Open Hardware is a thing - a physical artifact, either electrical or mechanical
+- whose design information is available to, and usable by, the public in a way
+that allows anyone to make, modify, distribute, and use that thing. In this
+preface, design information is called "documentation" and things created from it
+are called "products."
+
+The TAPR Open Hardware License ("OHL") agreement provides a legal framework for
+Open Hardware projects. It may be used for any kind of product, be it a hammer
+or a computer motherboard, and is TAPR's contribution to the community; anyone
+may use the OHL for their Open Hardware project.
+
+Like the GNU General Public License, the OHL is designed to guarantee your
+freedom to share and to create. It forbids anyone who receives rights under the
+OHL to deny any other licensee those same rights to copy, modify, and distribute
+documentation, and to make, use and distribute products based on that
+documentation.
+
+Unlike the GPL, the OHL is not primarily a copyright license. While copyright
+protects documentation from unauthorized copying, modification, and
+distribution, it has little to do with your right to make, distribute, or use a
+product based on that documentation. For better or worse, patents play a
+significant role in those activities. Although it does not prohibit anyone from
+patenting inventions embodied in an Open Hardware design, and of course cannot
+prevent a third party from enforcing their patent rights, those who benefit from
+an OHL design may not bring lawsuits claiming that design infringes their
+patents or other intellectual property.
+
+The OHL addresses unique issues involved in the creation of tangible, physical
+things, but does not cover software, firmware, or code loaded into programmable
+devices. A copyright-oriented license such as the GPL better suits these
+creations.
+
+How can you use the OHL, or a design based upon it? While the terms and
+conditions below take precedence over this preamble, here is a summary:
+
+   *
+   You may modify the documentation and make products based upon it.
+
+   *
+   You may use products for any legal purpose without limitation.
+
+   *
+   You may distribute unmodified documentation, but you must include the
+   complete package as you received it.
+
+   *
+   You may distribute products you make to third parties, if you either include
+   the documentation on which the product is based, or make it available without
+   charge for at least three years to anyone who requests it.
+
+   *
+   You may distribute modified documentation or products based on it, if you:
+
+      *
+      License your modifications under the OHL.
+
+      *
+      Include those modifications, following the requirements stated below.
+
+      *
+      Attempt to send the modified documentation by email to any of the
+      developers who have provided their email address. This is a good faith
+      obligation - if the email fails, you need do nothing more and may go on
+      with your distribution.
+
+   *
+   If you create a design that you want to license under the OHL, you should:
+
+      *
+      Include this document in a file named LICENSE (with the appropriate
+      extension) that is included in the documentation package.
+
+      *
+      If the file format allows, include a notice like "Licensed under the TAPR
+      Open Hardware License (www.tapr.org/OHL)" in each documentation file.
+      While not required, you should also include this notice on printed circuit
+      board artwork and the product itself; if space is limited the notice can
+      be shortened or abbreviated.
+
+      *
+      Include a copyright notice in each file and on printed circuit board
+      artwork.
+
+      *
+      If you wish to be notified of modifications that others may make, include
+      your email address in a file named "CONTRIB.TXT" or something similar.
+
+   *
+   Any time the OHL requires you to make documentation available to others, you
+   must include all the materials you received from the upstream licensors. In
+   addition, if you have modified the documentation:
+
+      *
+      You must identify the modifications in a text file (preferably named
+      "CHANGES.TXT") that you include with the documentation. That file must
+      also include a statement like "These modifications are licensed under the
+      TAPR Open Hardware License."
+
+      *
+      You must include any new files you created, including any manufacturing
+      files (such as Gerber files) you create in the course of making products.
+
+      *
+      You must include both "before" and "after" versions of all files you
+      modified.
+
+      *
+      You may include files in proprietary formats, but you must also include
+      open format versions (such as Gerber, ASCII, Postscript, or PDF) if your
+      tools can create them.
+
+TERMS AND CONDITIONS
+
+1. Introduction
+
+   (( 1.1 ))??
+   This Agreement governs how you may use, copy, modify, and distribute
+   Documentation, and how you may make, have made, and distribute Products based
+   on that Documentation. As used in this Agreement, to "distribute"
+   Documentation means to directly or indirectly make copies available to a
+   third party, and to "distribute" Products means to directly or indirectly
+   give, loan, sell or otherwise transfer them to a third party.
+
+   (( 1.2 ))??
+   "Documentation" includes:
+
+      (( (a) ))??
+      schematic diagrams;
+
+      (( (b) ))??
+      circuit or circuit board layouts, including Gerber and other data files
+      used for manufacture;
+
+      (( c ))??
+      mechanical drawings, including CAD, CAM, and other data files used for
+      manufacture;
+
+      (( (d) ))??
+      flow charts and descriptive text; and
+
+      (( (e) ))??
+      other explanatory material.
+
+   Documentation may be in any tangible or intangible form of expression,
+   including but not limited to computer files in open or proprietary formats
+   and representations on paper, film, or other media.
+
+   (( 1.3 ))??
+   "Products" include:
+
+      (( (a) ))??
+      circuit boards, mechanical assemblies, and other physical parts and
+      components;
+
+      (( (b) ))??
+      assembled or partially assembled units (including components and
+      subassemblies); and
+
+      (( c ))??
+      parts and components combined into kits intended for assembly by others;
+      which are based in whole or in part on the Documentation.
+
+   (( 1.4 ))??
+   This Agreement applies to any Documentation which contains a notice stating
+   it is subject to the TAPR Open Hardware License, and to all Products based in
+   whole or in part on that Documentation. If Documentation is distributed in an
+   archive (such as a "zip" file) which includes this document, all files in
+   that archive are subject to this Agreement unless they are specifically
+   excluded. Each person who contributes content to the Documentation is
+   referred to in this Agreement as a "Licensor."
+
+   (( 1.5 ))??
+   By (a) using, copying, modifying, or distributing the Documentation, or (b)
+   making or having Products made or distributing them, you accept this
+   Agreement, agree to comply with its terms, and become a "Licensee." Any
+   activity inconsistent with this Agreement will automatically terminate your
+   rights under it (including the immunities from suit granted in Section 2),
+   but the rights of others who have received Documentation, or have obtained
+   Products, directly or indirectly from you will not be affected so long as
+   they fully comply with it themselves.
+
+   (( 1.6 ))??
+   This Agreement does not apply to software, firmware, or code loaded into
+   programmable devices which may be used in conjunction with Documentation or
+   Products. Such software is subject to the license terms established by its
+   copyright holder(s).
+
+2. Patents
+
+   (( 2.1 ))??
+   Each Licensor grants you, every other Licensee, and every possessor or user
+   of Products a perpetual, worldwide, and royalty-free immunity from suit under
+   any patent, patent application, or other intellectual property right which he
+   or she controls, to the extent necessary to make, have made, possess, use,
+   and distribute Products. This immunity does not extend to infringement
+   arising from modifications subsequently made by others.
+
+   (( 2.2 ))??
+   If you make or have Products made, or distribute Documentation that you have
+   modified, you grant every Licensor, every other Licensee, and every possessor
+   or user of Products a perpetual, worldwide, and royalty-free immunity from
+   suit under any patent, patent application, or other intellectual property
+   right which you control, to the extent necessary to make, have made, possess,
+   use, and distribute Products. This immunity does not extend to infringement
+   arising from modifications subsequently made by others.
+
+   (( 2.3 ))??
+   To avoid doubt, providing Documentation to a third party for the sole purpose
+   of having that party make Products on your behalf is not considered
+   "distribution,"\" and a third party's act of making Products solely on your
+   behalf does not cause that party to grant the immunity described in the
+   preceding paragraph.
+
+   (( 2.4 ))??
+   These grants of immunity are a material part of this Agreement, and form a
+   portion of the consideration given by each party to the other. If any court
+   judgment or legal agreement prevents you from granting the immunity required
+   by this Section, your rights under this Agreement will terminate and you may
+   no longer use, copy, modify or distribute the Documentation, or make, have
+   made, or distribute Products.
+
+3. Modifications
+
+You may modify the Documentation, and those modifications will become part of
+the Documentation. They are subject to this Agreement, as are Products based in
+whole or in part on them. If you distribute the modified Documentation, or
+Products based in whole or in part upon it, you must email the modified
+Documentation in a form compliant with Section 4 to each Licensor who has
+provided an email address with the Documentation. Attempting to send the email
+completes your obligations under this Section and you need take no further
+action if any address fails.
+
+4. Distributing Documentation
+
+   (( 4.1 ))??
+   You may distribute unmodified copies of the Documentation in its entirety in
+   any medium, provided that you retain all copyright and other notices
+   (including references to this Agreement) included by each Licensor, and
+   include an unaltered copy of this Agreement.
+
+   (( 4.2 ))??
+   You may distribute modified copies of the Documentation if you comply with
+   all the requirements of the preceding paragraph and:
+
+      (( (a) ))??
+      include a prominent notice in an ASCII or other open format file
+      identifying those elements of the Documentation that you changed, and
+      stating that the modifications are licensed under the terms of this
+      Agreement;
+
+      (( (b) ))??
+      include all new documentation files that you create, as well as both the
+      original and modified versions of each file you change (files may be in
+      your development tool's native file format, but if reasonably possible,
+      you must also include open format, such as Gerber, ASCII, Postscript, or
+      PDF, versions);
+
+      (( c ))??
+      do not change the terms of this Agreement with respect to subsequent
+      licensees; and
+
+      (( (d) ))??
+      if you make or have Products made, include in the Documentation all
+      elements reasonably required to permit others to make Products, including
+      Gerber, CAD/CAM and other files used for manufacture.
+
+5. Making Products
+
+   (( 5.1 ))??
+   You may use the Documentation to make or have Products made, provided that
+   each Product retains any notices included by the Licensor (including, but not
+   limited to, copyright notices on circuit boards).
+
+   (( 5.2 ))??
+   You may distribute Products you make or have made, provided that you include
+   with each unit a copy of the Documentation in a form consistent with Section
+   4. Alternatively, you may include either (i) an offer valid for at least
+   three years to provide that Documentation, at no charge other than the
+   reasonable cost of media and postage, to any person who requests it; or (ii)
+   a URL where that Documentation may be downloaded, available for at least
+   three years after you last distribute the Product.
+
+6. NEW LICENSE VERSIONS
+
+TAPR may publish updated versions of the OHL which retain the same general
+provisions as the present version, but differ in detail to address new problems
+or concerns, and carry a distinguishing version number. If the Documentation
+specifies a version number which applies to it and "any later version", you may
+choose either that version or any later version published by TAPR. If the
+Documentation does not specify a version number, you may choose any version ever
+published by TAPR. TAPR owns the copyright to the OHL, but grants permission to
+any person to copy, distribute, and use it in unmodified form.
+
+7. WARRANTY AND LIABILITY LIMITATIONS
+
+   (( 7.1 ))??
+   THE DOCUMENTATION IS PROVIDED ON AN"AS-IS" BASIS WITHOUT WARRANTY OF ANY
+   KIND, TO THE EXTENT PERMITTED BY APPLICABLE LAW. ALL WARRANTIES, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND TITLE, ARE HEREBY EXPRESSLY
+   DISCLAIMED.
+
+   (( 7.2 ))??
+   IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW WILL ANY LICENSOR BE LIABLE TO
+   YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL,
+   PUNITIVE, OR EXEMPLARY DAMAGES ARISING OUT OF THE USE OF, OR INABILITY TO
+   USE, THE DOCUMENTATION OR PRODUCTS, INCLUDING BUT NOT LIMITED TO CLAIMS OF
+   INTELLECTUAL PROPERTY INFRINGEMENT OR LOSS OF DATA, EVEN IF THAT PARTY HAS
+   BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+   (( 7.3 ))??
+   You agree that the foregoing limitations are reasonable due to the
+   non-financial nature of the transaction represented by this Agreement, and
+   acknowledge that were it not for these limitations, the Licensor(s) would not
+   be willing to make the Documentation available to you.
+
+   (( 7.4 ))??
+   You agree to defend, indemnify, and hold each Licensor harmless from any
+   claim brought by a third party alleging any defect in the design,
+   manufacture, or operation of any Product which you make, have made, or
+   distribute pursuant to this Agreement.
+
+####
+`
+const license_TCL_lre = `//**
+TCL/TK License
+https://spdx.org/licenses/TCL.json
+http://www.tcl.tk/software/tcltk/license.html
+https://fedoraproject.org/wiki/Licensing/TCL
+**//
+
+//** Copyright **//
+
+((
+This software is copyrighted by the Regents of the University of California,
+Sun Microsystems, Inc., Scriptics Corporation, ActiveState Corporation and
+other parties.
+))??
+
+The following terms apply to all files associated with the software unless
+explicitly disclaimed in individual files.
+
+The authors hereby grant permission to use, copy, modify, distribute, and
+license this software and its documentation for any purpose, provided that
+existing copyright notices are retained in all copies and that this notice is
+included verbatim in any distributions. No written agreement, license, or
+royalty fee is required for any of the authorized uses. Modifications to this
+software may be copyrighted by their authors and need not follow the licensing
+terms described here, provided that the new terms are clearly indicated on the
+first page of each file where they apply.
+
+IN NO EVENT SHALL THE AUTHORS OR DISTRIBUTORS BE LIABLE TO ANY PARTY FOR DIRECT,
+INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE
+OF THIS SOFTWARE, ITS DOCUMENTATION, OR ANY DERIVATIVES THEREOF, EVEN IF THE
+AUTHORS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+THE AUTHORS AND DISTRIBUTORS SPECIFICALLY DISCLAIM ANY WARRANTIES, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THIS SOFTWARE IS PROVIDED ON AN "AS
+IS" BASIS, AND THE AUTHORS AND DISTRIBUTORS HAVE NO OBLIGATION TO PROVIDE
+MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+
+GOVERNMENT USE: If you are acquiring this software on behalf of the U.S.
+government, the Government shall have only "Restricted Rights" in the software
+and related documentation as defined in the Federal Acquisition Regulations
+(FARs) in Clause 52.227.19 (c) (2). If you are acquiring the software on behalf
+of the Department of Defense, the software shall be classified as "Commercial
+Computer Software" and the Government shall have only "Restricted Rights" as
+defined in Clause 252.227-7013 (c) (1) of DFARs. Notwithstanding the foregoing,
+the authors grant the U.S. Government and others acting in its behalf permission
+to use and distribute the software in accordance with the terms specified in
+this license.
+`
+const license_TCP_wrappers_lre = `//**
+TCP Wrappers License
+https://spdx.org/licenses/TCP-wrappers.json
+http://rc.quest.com/topics/openssh/license.php#tcpwrappers
+**//
+
+//** Copyright **//
+
+This material was originally written and compiled by Wietse Venema at Eindhoven
+University of Technology, The Netherlands, in 1990, 1991, 1992, 1993, 1994 and
+1995.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that this entire copyright notice is duplicated in all
+such copies.
+
+This software is provided "as is" and without any expressed or implied
+warranties, including, without limitation, the implied warranties of
+merchantibility and fitness for any particular purpose.
+`
+const license_TMate_lre = `//**
+TMate Open Source License
+https://spdx.org/licenses/TMate.json
+http://svnkit.com/license.html
+**//
+
+(( The TMate Open Source License. ))??
+
+(( This license applies to all portions of TMate SVNKit library, which are not
+externally-maintained libraries (e.g. Ganymed SSH library).
+
+All the source code and compiled classes in package org.tigris.subversion.javahl
+except SvnClient class are covered by the license in JAVAHL-LICENSE file
+
+Copyright __5__ TMate Software. All rights reserved.
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   *
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   *
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   *
+   Redistributions in any form must be accompanied by information on how to
+   obtain complete source code for the software that uses SVNKit and any
+   accompanying software that uses the software that uses SVNKit. The source
+   code must either be included in the distribution or be available for no more
+   than the cost of distribution plus a nominal fee, and must be freely
+   redistributable under reasonable conditions. For an executable file, complete
+   source code means the source code for all modules it contains. It does not
+   include source code for modules or files that typically accompany the major
+   components of the operating system on which the executable file runs.
+
+   *
+   Redistribution in any form without redistributing source code for software
+   that uses SVNKit is possible only when such redistribution is explictly
+   permitted by TMate Software. Please, contact TMate Software at
+   support@svnkit.com to get such permission.
+
+THIS SOFTWARE IS PROVIDED BY TMATE SOFTWARE ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT, ARE
+DISCLAIMED.
+
+IN NO EVENT SHALL TMATE SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+`
+const license_TORQUE_1_1_lre = `//**
+TORQUE v2.5+ Software License v1.1
+https://spdx.org/licenses/TORQUE-1.1.json
+https://fedoraproject.org/wiki/Licensing/TORQUEv1.1
+**//
+
+(( TORQUE v2.5+ Software License v1.1
+((Copyright __20__))??
+))??
+
+(( Use this license to use or redistribute the TORQUE software v2.5+ and later
+versions. For free support for TORQUE users, questions should be emailed to the
+community of TORQUE users at torqueusers@supercluster.org. Users can also
+subscribe to the user mailing list at
+http:/www.supercluster.org/mailman/listinfo/torqueusers. Customers using TORQUE
+that also are licensed users of Moab branded software from Adaptive Computing
+Inc. can get TORQUE support from Adaptive Computing via:
+
+Email: torque-support@adaptivecomputing.com.
+
+Phone: (801) 717-3700
+
+Web: www.adaptivecomputing.com www.clusterresources.com ))??
+
+This license covers use of the TORQUE v2.5 software (the "Software") at your
+site or location, and, for certain users, redistribution of the Software to
+other sites and locations1. Later versions of TORQUE are also covered by this
+license. Use and redistribution of TORQUE v2.5 in source and binary forms, with
+or without modification, are permitted provided that all of the following
+conditions are met.
+
+   (( 1. ))??
+   Any Redistribution of source code must retain the above copyright notice and
+   the acknowledgment contained in paragraph 5, this list of conditions and the
+   disclaimer contained in paragraph 5.
+
+   (( 2. ))??
+   Any Redistribution in binary form must reproduce the above copyright notice
+   and the acknowledgment contained in paragraph 4, this list of conditions and
+   the disclaimer contained in paragraph 5 in the documentation and/or other
+   materials provided with the distribution.
+
+   (( 3. ))??
+   Redistributions in any form must be accompanied by information on how to
+   obtain complete source code for TORQUE and any modifications and/or additions
+   to TORQUE. The source code must either be included in the distribution or be
+   available for no more than the cost of distribution plus a nominal fee, and
+   all modifications and additions to the Software must be freely
+   redistributable by any party (including Licensor) without restriction.
+
+   (( 4. ))??
+   All advertising materials mentioning features or use of the Software must
+   display the following acknowledgment:
+
+   "TORQUE is a modification of OpenPBS which was developed by NASA Ames
+   Research Center, Lawrence Livermore National Laboratory, and Veridian TORQUE
+   Open Source License v1.1. 1 Information Solutions, Inc. Visit
+   www.clusterresources.com/products/ for more information about TORQUE and to
+   download TORQUE. For information about Moab branded products and so receive
+   support from Adaptive Computing for TORQUE, see www.adaptivecomputing.com."
+
+   (( 5. ))??
+   DISCLAIMER OF WARRANTY THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+   ANY KIND. ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+   THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+   AND NON-INFRINGEMENT ARE EXPRESSLY DISCLAIMED. IN NO EVENT SHALL ADAPTIVE
+   COMPUTING ENTERPRISES, INC. CORPORATION, ITS AFFILIATED COMPANIES, OR THE
+   U.S. GOVERNMENT OR ANY OF ITS AGENCIES BE LIABLE FOR ANY DIRECT OR INDIRECT,
+   INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+   OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+   EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This license will be governed by the laws of Utah, without reference to its
+choice of law rules.
+(( Note 1: TORQUE is developed from an earlier version v2.3 of OpenPBS. TORQUE
+has been developed beyond OpenPBS v2.3. The OpenPBS v2.3 license and OpenPBS
+software can be obtained at:
+
+http:/www.pbsworks.com/ResLibSearchResult.aspx?keywords=openpbs&industry=All&pro
+duct_service=All&category=Free%20Software%20Downloads&order_by=title. Users of
+TORQUE should comply with the TORQUE license as well as the OpenPBS license. ))??
+`
+const license_TOSL_lre = `//**
+Trusster Open Source License
+https://spdx.org/licenses/TOSL.json
+https://fedoraproject.org/wiki/Licensing/TOSL
+**//
+
+((
+Trusster Open Source License version 1.0a (TRUST)
+((Copyright __20__))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   *
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   *
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   *
+   Redistributions in any form must be accompanied by information on how to
+   obtain complete source code for this software and any accompanying software
+   that uses this software. The source code must either be included in the
+   distribution or be available in a timely fashion for no more than the cost of
+   distribution plus a nominal fee, and must be freely redistributable under
+   reasonable and no more restrictive conditions. For an executable file,
+   complete source code means the source code for all modules it contains. It
+   does not include source code for modules or files that typically accompany
+   the major components of the operating system on which the executable file
+   runs.
+
+THIS SOFTWARE IS PROVIDED BY MIKE MINTZ AND ROBERT EKENDAHL ` + "`" + `` + "`" + `AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
+NON-INFRINGEMENT, ARE DISCLAIMED. IN NO EVENT SHALL MIKE MINTZ AND ROBERT
+EKENDAHL OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+`
+const license_TU_Berlin_1_0_lre = `//**
+Technische Universitaet Berlin License 1.0
+https://spdx.org/licenses/TU-Berlin-1.0.json
+https://github.com/swh/ladspa/blob/7bf6f3799fdba70fda297c2d8fd9f526803d9680/gsm/COPYRIGHT
+**//
+
+//** Copyright **//
+
+Any use of this software is permitted provided that this notice is not removed
+and that neither the authors nor the Technische Universitaet Berlin are deemed
+to have made any representations as to the suitability of this software for any
+purpose nor are held responsible for any defects of this software. THERE IS
+ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.
+
+As a matter of courtesy, the authors request to be informed about uses this
+software has found, about bugs in this software, and about any improvements that
+may be of general interest.
+(( Berlin,
+//** 28.11.1994 **//
+__5__
+
+Jutta Degener
+
+Carsten Bormann ))??
+`
+const license_TU_Berlin_2_0_lre = `//**
+Technische Universitaet Berlin License 2.0
+https://spdx.org/licenses/TU-Berlin-2.0.json
+https://github.com/CorsixTH/deps/blob/fd339a9f526d1d9c9f01ccf39e438a015da50035/licences/libgsm.txt
+**//
+
+//** Copyright **//
+
+Any use of this software is permitted provided that this notice is not removed
+and that neither the authors nor the Technische Universitaet Berlin are deemed
+to have made any representations as to the suitability of this software for any
+purpose nor are held responsible for any defects of this software. THERE IS
+ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.
+
+As a matter of courtesy, the authors request to be informed about uses this
+software has found, about bugs in this software, and about any improvements that
+may be of general interest.
+(( Berlin,
+//** 28.11.1994 **//
+__5__
+
+Jutta Degener
+
+Carsten Bormann ))??
+
+(( oOo ))??
+
+Since the original terms of 15 years ago maybe do not make our intentions
+completely clear given today's refined usage of the legal terms, we append this
+additional permission:
+
+Permission to use, copy, modify, and distribute this software for any purpose
+with or without fee is hereby granted, provided that this notice is not removed
+and that neither the authors nor the Technische Universitaet Berlin are deemed
+to have made any representations as to the suitability of this software for any
+purpose nor are held responsible for any defects of this software. THERE IS
+ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.
+(( Berkeley/Bremen,
+//** 05.04.2009 **//
+__5__
+
+Jutta Degener
+
+Carsten Bormann ))??
+`
+const license_UCL_1_0_lre = `//**
+Upstream Compatibility License v1.0
+https://spdx.org/licenses/UCL-1.0.json
+https://opensource.org/licenses/UCL-1.0
+**//
+
+(( Upstream Compatibility License v. 1.0 (UCL-1.0) ))??
+
+This Upstream Compatibility License (the "License") applies to any original work
+of authorship (the "Original Work") whose owner (the "Licensor") has placed the
+following licensing notice adjacent to the copyright notice for the Original
+Work:
+
+Licensed under the Upstream Compatibility License 1.0
+
+   (( 1) ))??
+   Grant of Copyright License. Licensor grants You a worldwide, royalty-free,
+   non-exclusive, sublicensable license, for the duration of the copyright, to
+   do the following:
+
+      (( a) ))??
+      to reproduce the Original Work in copies, either alone or as part of a
+      collective work;
+
+      (( b) ))??
+      to translate, adapt, alter, transform, modify, or arrange the Original
+      Work, thereby creating derivative works ("Derivative Works") based upon
+      the Original Work;
+
+      (( c) ))??
+      to distribute or communicate copies of the Original Work and Derivative
+      Works to the public, with the proviso that copies of Original Work You
+      distribute or communicate shall be licensed under this Upstream
+      Compatibility License and all Derivative Work You distribute or
+      communicate shall be licensed under both this Upstream Compatibility
+      License and the Apache License 2.0 or later;
+
+      (( d) ))??
+      to perform the Original Work publicly; and
+
+      (( e) ))??
+      to display the Original Work publicly.
+
+   (( 2) ))??
+   Grant of Patent License. Licensor grants You a worldwide, royalty-free,
+   non-exclusive, sublicensable license, under patent claims owned or controlled
+   by the Licensor that are embodied in the Original Work as furnished by the
+   Licensor, for the duration of the patents, to make, use, sell, offer for
+   sale, have made, and import the Original Work and Derivative Works.
+
+   (( 3) ))??
+   Grant of Source Code License. The term "Source Code" means the preferred form
+   of the Original Work for making modifications to it and all available
+   documentation describing how to modify the Original Work. Licensor agrees to
+   provide a machine-readable copy of the Source Code of the Original Work along
+   with each copy of the Original Work that Licensor distributes. Licensor
+   reserves the right to satisfy this obligation by placing a machine-readable
+   copy of the Source Code in an information repository reasonably calculated to
+   permit inexpensive and convenient access by You for as long as Licensor
+   continues to distribute the Original Work.
+
+   (( 4) ))??
+   Exclusions From License Grant. Neither the names of Licensor, nor the names
+   of any contributors to the Original Work, nor any of their trademarks or
+   service marks, may be used to endorse or promote products derived from this
+   Original Work without express prior permission of the Licensor. Except as
+   expressly stated herein, nothing in this License grants any license to
+   Licensor's trademarks, copyrights, patents, trade secrets or any other
+   intellectual property. No patent license is granted to make, use, sell, offer
+   for sale, have made, or import embodiments of any patent claims other than
+   the licensed claims defined in Section 2. No license is granted to the
+   trademarks of Licensor even if such marks are included in the Original Work.
+   Nothing in this License shall be interpreted to prohibit Licensor from
+   licensing under terms different from this License any Original Work that
+   Licensor otherwise would have a right to license.
+
+   (( 5) ))??
+   External Deployment. The term "External Deployment" means the use,
+   distribution, or communication of the Original Work or Derivative Works in
+   any way such that the Original Work or Derivative Works may be used by anyone
+   other than You, whether those works are distributed or communicated to those
+   persons or made available as an application intended for use over a network.
+   As an express condition for the grants of license hereunder, You must treat
+   any External Deployment by You of the Original Work or a Derivative Work as a
+   distribution under section 1(c).
+
+   (( 6) ))??
+   Attribution Rights. You must retain, in the Source Code of any Derivative
+   Works that You create, all copyright, patent, or trademark notices from the
+   Source Code of the Original Work, as well as any notices of licensing and any
+   descriptive text identified therein as an "Attribution Notice." You must
+   cause the Source Code for any Derivative Works that You create to carry a
+   prominent Attribution Notice reasonably calculated to inform recipients that
+   You have modified the Original Work.
+
+   (( 7) ))??
+   Warranty of Provenance and Disclaimer of Warranty. Licensor warrants that the
+   copyright in and to the Original Work and the patent rights granted herein by
+   Licensor are owned by the Licensor or are sublicensed to You under the terms
+   of this License with the permission of the contributor(s) of those copyrights
+   and patent rights. Except as expressly stated in the immediately preceding
+   sentence, the Original Work is provided under this License on an "AS IS"
+   BASIS and WITHOUT WARRANTY, either express or implied, including, without
+   limitation, the warranties of non-infringement, merchantability or fitness
+   for a particular purpose. THE ENTIRE RISK AS TO THE QUALITY OF THE ORIGINAL
+   WORK IS WITH YOU. This DISCLAIMER OF WARRANTY constitutes an essential part
+   of this License. No license to the Original Work is granted by this License
+   except under this disclaimer.
+
+   (( 8) ))??
+   Limitation of Liability. Under no circumstances and under no legal theory,
+   whether in tort (including negligence), contract, or otherwise, shall the
+   Licensor be liable to anyone for any indirect, special, incidental, or
+   consequential damages of any character arising as a result of this License or
+   the use of the Original Work including, without limitation, damages for loss
+   of goodwill, work stoppage, computer failure or malfunction, or any and all
+   other commercial damages or losses. This limitation of liability shall not
+   apply to the extent applicable law prohibits such limitation.
+
+   (( 9) ))??
+   Acceptance and Termination. If, at any time, You expressly assented to this
+   License, that assent indicates your clear and irrevocable acceptance of this
+   License and all of its terms and conditions. If You distribute or communicate
+   copies of the Original Work or a Derivative Work, You must make a reasonable
+   effort under the circumstances to obtain the express assent of recipients to
+   the terms of this License. This License conditions your rights to undertake
+   the activities listed in Section 1, including your right to create Derivative
+   Works based upon the Original Work, and doing so without honoring these terms
+   and conditions is prohibited by copyright law and international treaty.
+   Nothing in this License is intended to affect copyright exceptions and
+   limitations (including "fair use" or "fair dealing"). This License shall
+   terminate immediately and You may no longer exercise any of the rights
+   granted to You by this License upon your failure to honor the conditions in
+   Section 1(c).
+
+   (( 10) ))??
+   Termination for Patent Action. This License shall terminate automatically and
+   You may no longer exercise any of the rights granted to You by this License
+   as of the date You commence an action, including a cross-claim or
+   counterclaim, against Licensor or any licensee alleging that the Original
+   Work infringes a patent. This termination provision shall not apply for an
+   action alleging patent infringement by combinations of the Original Work with
+   other software or hardware.
+
+   (( 11) ))??
+   Jurisdiction, Venue and Governing Law. Any action or suit relating to this
+   License may be brought only in the courts of a jurisdiction wherein the
+   Licensor resides or in which Licensor conducts its primary business, and
+   under the laws of that jurisdiction excluding its conflict-of-law provisions.
+   The application of the United Nations Convention on Contracts for the
+   International Sale of Goods is expressly excluded. Any use of the Original
+   Work outside the scope of this License or after its termination shall be
+   subject to the requirements and penalties of copyright or patent law in the
+   appropriate jurisdiction. This section shall survive the termination of this
+   License.
+
+   (( 12) ))??
+   Attorneys' Fees. In any action to enforce the terms of this License or
+   seeking damages relating thereto, the prevailing party shall be entitled to
+   recover its costs and expenses, including, without limitation, reasonable
+   attorneys' fees and costs incurred in connection with such action, including
+   any appeal of such action. This section shall survive the termination of this
+   License.
+
+   (( 13) ))??
+   Miscellaneous. If any provision of this License is held to be unenforceable,
+   such provision shall be reformed only to the extent necessary to make it
+   enforceable.
+
+   (( 14) ))??
+   Definition of "You" in This License. "You" throughout this License, whether
+   in upper or lower case, means an individual or a legal entity exercising
+   rights under, and complying with all of the terms of, this License. For legal
+   entities, "You" includes any entity that controls, is controlled by, or is
+   under common control with you. For purposes of this definition, "control"
+   means (i) the power, direct or indirect, to cause the direction or management
+   of such entity, whether by contract or otherwise, or (ii) ownership of fifty
+   percent (50%) or more of the outstanding shares, or (iii) beneficial
+   ownership of such entity.
+
+   (( 15) ))??
+   Right to Use. You may use the Original Work in all ways not otherwise
+   restricted or conditioned by this License or by law, and Licensor promises
+   not to interfere with or be responsible for such uses by You.
+
+   (( 16) ))??
+   Modification of This License. This License is Copyright (c) 2005 Lawrence
+   Rosen and Copyright (c) 2017 Nigel Tzeng. Permission is granted to copy,
+   distribute, or communicate this License without modification. Nothing in this
+   License permits You to modify this License as applied to the Original Work or
+   to Derivative Works. However, You may modify the text of this License and
+   copy, distribute or communicate your modified version (the "Modified
+   License") and apply it to other original works of authorship subject to the
+   following conditions: (i) You may not indicate in any way that your Modified
+   License is the "Open Software License" or "OSL" or the "Upstream
+   Compatibility License" or "UCL" and you may not use those names in the name
+   of your Modified License; (ii) You must replace the notice specified in the
+   first paragraph above with the notice "Licensed under
+   (( <insert your license name here> ))??
+   " or with a notice of your own that is not confusingly similar to the notice
+   in this License; and (iii) You may not claim that your original works are
+   open source software unless your Modified License has been approved by Open
+   Source Initiative (OSI) and You comply with its license review and
+   certification process.
+`
 const license_UPL_1_0_lre = `//**
 Universal Permissive License v1.0
 https://spdx.org/licenses/UPL-1.0.json
@@ -76019,6 +76905,294 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 `
+const license_Unicode_DFS_2015_lre = `//**
+Unicode License Agreement - Data Files and Software (2015)
+https://spdx.org/licenses/Unicode-DFS-2015.json
+https://web.archive.org/web/20151224134844/http://unicode.org/copyright.html
+**//
+
+(( UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE ))??
+
+Unicode Data Files include all data files under the directories
+http:/www.unicode.org/Public/, http:/www.unicode.org/reports/, and
+http:/www.unicode.org/cldr/data/. Unicode Data Files do not include PDF online
+code charts under the directory http:/www.unicode.org/Public/. Software includes
+any source code published in the Unicode Standard or under the directories
+http:/www.unicode.org/Public/, http:/www.unicode.org/reports/, and
+http:/www.unicode.org/cldr/data/.
+
+NOTICE TO USER: Carefully read the following legal agreement. BY DOWNLOADING,
+INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S DATA FILES ("DATA FILES"),
+AND/OR SOFTWARE ("SOFTWARE"), YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND
+BY, ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO
+NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright © 1991-2015 Unicode, Inc. All rights reserved. Distributed under the
+Terms of Use in http:/www.unicode.org/copyright.html.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+the Unicode data files and any associated documentation (the "Data Files") or
+Unicode software and any associated documentation (the "Software") to deal in
+the Data Files or Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, and/or sell copies of
+the Data Files or Software, and to permit persons to whom the Data Files or
+Software are furnished to do so, provided that
+
+   (( (a) ))??
+   ((this || the above))
+   copyright
+   ((notices))??
+   and
+   ((this))??
+   permission notice appear with all copies of the Data Files
+   or Software,
+
+   (( (b) ))??
+   ((both))??
+   ((this || the above))
+   copyright
+   ((notices))??
+   and
+   ((this))??
+   permission notice appear in associated documentation, and
+
+   (( c ))??
+   there is clear notice in each modified Data File or in the Software as well
+   as in the documentation associated with the Data File(s) or Software that the
+   data or software has been modified.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD
+PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
+OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA FILES OR
+SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be
+used in advertising or otherwise to promote the sale, use or other dealings in
+these Data Files or Software without prior written authorization of the
+copyright holder.
+`
+const license_Unicode_DFS_2016_lre = `//**
+Unicode License Agreement - Data Files and Software (2016)
+https://spdx.org/licenses/Unicode-DFS-2016.json
+http://www.unicode.org/copyright.html
+**//
+
+(( UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE ))??
+
+Unicode Data Files include all data files under the directories
+http:/www.unicode.org/Public/, http:/www.unicode.org/reports/,
+http:/www.unicode.org/cldr/data/, http:/source.icu-project.org/repos/icu/,
+(( http:/www.unicode.org/ivd/data/, ))??
+and http:/www.unicode.org/utility/trac/browser/.
+
+Unicode Data Files do not include PDF online code charts under the directory
+http:/www.unicode.org/Public/.
+
+Software includes any source code published in the Unicode Standard or under the
+directories http:/www.unicode.org/Public/, http:/www.unicode.org/reports/,
+http:/www.unicode.org/cldr/data/, http:/source.icu-project.org/repos/icu/, and
+http:/www.unicode.org/utility/trac/browser/.
+
+NOTICE TO USER: Carefully read the following legal agreement. BY DOWNLOADING,
+INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S DATA FILES ("DATA FILES"),
+AND/OR SOFTWARE ("SOFTWARE"), YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND
+BY, ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO
+NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
+
+COPYRIGHT AND PERMISSION NOTICE
+Copyright __5__ Unicode, Inc.
+All rights reserved. Distributed under the Terms of Use in http://www.unicode.org/copyright.html.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+the Unicode data files and any associated documentation (the "Data Files") or
+Unicode software and any associated documentation (the "Software") to deal in
+the Data Files or Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, and/or sell copies of
+the Data Files or Software, and to permit persons to whom the Data Files or
+Software are furnished to do so, provided that either
+
+   (( (a) ))??
+   this copyright and permission notice appear with all copies of the Data Files
+   or Software, or
+
+   (( (b) ))??
+   this copyright and permission notice appear in associated Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD
+PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
+OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA FILES OR
+SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be
+used in advertising or otherwise to promote the sale, use or other dealings in
+these Data Files or Software without prior written authorization of the
+copyright holder.
+`
+const license_Unicode_TOU_lre = `//**
+Unicode Terms of Use
+https://spdx.org/licenses/Unicode-TOU.json
+http://www.unicode.org/copyright.html
+**//
+
+(( Unicode Terms of Use ))??
+
+For the general privacy policy governing access to this site, see the Unicode
+Privacy Policy. For trademark usage, see the Unicode® Consortium Name and
+Trademark Usage Policy.
+
+   (( A. ))??
+   Unicode Copyright.
+
+      (( 1. ))??
+      Copyright © 1991-2014 Unicode, Inc. All rights reserved.
+
+      (( 2. ))??
+      Certain documents and files on this website contain a legend indicating
+      that "Modification is permitted." Any person is hereby authorized, without
+      fee, to modify such documents and files to create derivative works
+      conforming to the Unicode® Standard, subject to Terms and Conditions
+      herein.
+
+      (( 3. ))??
+      Any person is hereby authorized, without fee, to view, use, reproduce, and
+      distribute all documents and files solely for informational purposes in
+      the creation of products supporting the Unicode Standard, subject to the
+      Terms and Conditions herein.
+
+      (( 4. ))??
+      Further specifications of rights and restrictions pertaining to the use of
+      the particular set of data files known as the "Unicode Character Database"
+      can be found in Exhibit 1.
+
+      (( 5. ))??
+      Each version of the Unicode Standard has further specifications of rights
+      and restrictions of use. For the book editions (Unicode 5.0 and earlier),
+      these are found on the back of the title page. The online code charts
+      carry specific restrictions. All other files, including online
+      documentation of the core specification for Unicode 6.0 and later, are
+      covered under these general Terms of Use.
+
+      (( 6. ))??
+      No license is granted to "mirror" the Unicode website where a fee is
+      charged for access to the "mirror" site.
+
+      (( 7. ))??
+      Modification is not permitted with respect to this document. All copies of
+      this document must be verbatim.
+
+   (( B. ))??
+   Restricted Rights Legend. Any technical data or software which is licensed to
+   the United States of America, its agencies and/or instrumentalities under
+   this Agreement is commercial technical data or commercial computer software
+   developed exclusively at private expense as defined in FAR 2.101, or DFARS
+   252.227-7014 (June 1995), as applicable. For technical data, use,
+   duplication, or disclosure by the Government is subject to restrictions as
+   set forth in DFARS 202.227-7015 Technical Data, Commercial and Items (Nov
+   1995) and this Agreement. For Software, in accordance with FAR 12-212 or
+   DFARS 227-7202, as applicable, use, duplication or disclosure by the
+   Government is subject to the restrictions set forth in this Agreement.
+
+   (( C. ))??
+   Warranties and Disclaimers.
+
+      (( 1. ))??
+      This publication and/or website may include technical or typographical
+      errors or other inaccuracies . Changes are periodically added to the
+      information herein; these changes will be incorporated in new editions of
+      the publication and/or website. Unicode may make improvements and/or
+      changes in the product(s) and/or program(s) described in this publication
+      and/or website at any time.
+
+      (( 2. ))??
+      If this file has been purchased on magnetic or optical media from Unicode,
+      Inc. the sole and exclusive remedy for any claim will be exchange of the
+      defective media within ninety (90) days of original purchase.
+
+      (( 3. ))??
+      EXCEPT AS PROVIDED IN SECTION C.2, THIS PUBLICATION AND/OR SOFTWARE IS
+      PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND EITHER EXPRESS, IMPLIED, OR
+      STATUTORY, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+      UNICODE AND ITS LICENSORS ASSUME NO RESPONSIBILITY FOR ERRORS OR OMISSIONS
+      IN THIS PUBLICATION AND/OR SOFTWARE OR OTHER DOCUMENTS WHICH ARE
+      REFERENCED BY OR LINKED TO THIS PUBLICATION OR THE UNICODE WEBSITE.
+
+   (( D. ))??
+   Waiver of Damages. In no event shall Unicode or its licensors be liable for
+   any special, incidental, indirect or consequential damages of any kind, or
+   any damages whatsoever, whether or not Unicode was advised of the possibility
+   of the damage, including, without limitation, those resulting from the
+   following: loss of use, data or profits, in connection with the use,
+   modification or distribution of this information or its derivatives.
+
+   (( E. ))??
+   Trademarks & Logos.
+
+      (( 1. ))??
+      The Unicode Word Mark and the Unicode Logo are trademarks of Unicode, Inc.
+      "The Unicode Consortium" and "Unicode, Inc." are trade names of Unicode,
+      Inc. Use of the information and materials found on this website indicates
+      your acknowledgement of Unicode, Inc.'s exclusive worldwide rights in the
+      Unicode Word Mark, the Unicode Logo, and the Unicode trade names.
+
+      (( 2. ))??
+      The Unicode Consortium Name and Trademark Usage Policy ("Trademark
+      Policy") are incorporated herein by reference and you agree to abide by
+      the provisions of the Trademark Policy, which may be changed from time to
+      time in the sole discretion of Unicode, Inc.
+
+      (( 3. ))??
+      All third party trademarks referenced herein are the property of their
+      respective owners.
+
+   (( F. ))??
+   Miscellaneous.
+
+      (( 1. ))??
+      Jurisdiction and Venue. This server is operated from a location in the
+      State of California, United States of America. Unicode makes no
+      representation that the materials are appropriate for use in other
+      locations. If you access this server from other locations, you are
+      responsible for compliance with local laws. This Agreement, all use of
+      this site and any claims and damages resulting from use of this site are
+      governed solely by the laws of the State of California without regard to
+      any principles which would apply the laws of a different jurisdiction. The
+      user agrees that any disputes regarding this site shall be resolved solely
+      in the courts located in Santa Clara County, California. The user agrees
+      said courts have personal jurisdiction and agree to waive any right to
+      transfer the dispute to any other forum.
+
+      (( 2. ))??
+      Modification by Unicode Unicode shall have the right to modify this
+      Agreement at any time by posting it to this site. The user may not assign
+      any part of this Agreement without Unicode's prior written consent.
+
+      (( 3. ))??
+      Taxes. The user agrees to pay any taxes arising from access to this
+      website or use of the information herein, except for those based on
+      Unicode's net income.
+
+      (( 4. ))??
+      Severability. If any provision of this Agreement is declared invalid or
+      unenforceable, the remaining provisions of this Agreement shall remain in
+      effect.
+
+      (( 5. ))??
+      Entire Agreement. This Agreement constitutes the entire agreement between
+      the parties.
+`
 const license_Unlicense_lre = `//**
 The Unlicense
 https://spdx.org/licenses/Unlicense.json
@@ -76047,6 +77221,288 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 (( For more information, please refer to <https:/unlicense.org/> ))??
+`
+const license_VOSTROM_lre = `//**
+VOSTROM Public License for Open Source
+https://spdx.org/licenses/VOSTROM.json
+https://fedoraproject.org/wiki/Licensing/VOSTROM
+**//
+
+(( VOSTROM Public License for Open Source
+(( Copyright __20__ ))??
+))??
+
+This VOSTROM Holdings, Inc. (VOSTROM) Distribution (code and documentation) is
+made available to the open source community as a public service by VOSTROM.
+Contact VOSTROM at license@vostrom.com for information on other licensing
+arrangements (e.g. for use in proprietary applications).
+
+Under this license, this Distribution may be modified and the original version
+and modified versions may be copied, distributed, publicly displayed and
+performed provided that the following conditions are met:
+
+   (( 1. ))??
+   Modified versions are distributed with source code and documentation and with
+   permission for others to use any code and documentation (whether in original
+   or modified versions) as granted under this license;
+
+   (( 2. ))??
+   if modified, the source code, documentation, and user run-time elements
+   should be clearly labeled by placing an identifier of origin (such as a name,
+   initial, or other tag) after the version number;
+
+   (( 3. ))??
+   users, modifiers, distributors, and others coming into possession or using
+   the Distribution in original or modified form accept the entire risk as to
+   the possession, use, and performance of the Distribution;
+
+   (( 4. ))??
+   this copyright management information (software identifier and version
+   number, copyright notice and license) shall be retained in all versions of
+   the Distribution;
+
+   (( 5. ))??
+   VOSTROM may make modifications to the Distribution that are substantially
+   similar to modified versions of the Distribution, and may make, use, sell,
+   copy, distribute, publicly display, and perform such modifications, including
+   making such modifications available under this or other licenses, without
+   obligation or restriction;
+
+   (( 6. ))??
+   modifications incorporating code, libraries, and/or documentation subject to
+   any other open source license may be made, and the resulting work may be
+   distributed under the terms of such open source license if required by that
+   open source license, but doing so will not affect this Distribution, other
+   modifications made under this license or modifications made under other
+   VOSTROM licensing arrangements;
+
+   (( 7. ))??
+   no permission is granted to distribute, publicly display, or publicly perform
+   modifications to the Distribution made using proprietary materials that
+   cannot be released in source format under conditions of this license;
+
+   (( 8. ))??
+   the name of VOSTROM may not be used in advertising or publicity pertaining to
+   Distribution of the software without specific, prior written permission.
+
+This software is made available "as is", and
+
+VOSTROM DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, WITH REGARD TO THIS
+SOFTWARE, INCLUDING WITHOUT LIMITATION ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS FOR A PARTICULAR PURPOSE, AND IN NO EVENT SHALL VOSTROM BE LIABLE
+FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER
+RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+TORT (INCLUDING NEGLIGENCE) OR STRICT LIABILITY, ARISING OUT OF OR IN CONNECTION
+WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+`
+const license_VSL_1_0_lre = `//**
+Vovida Software License v1.0
+https://spdx.org/licenses/VSL-1.0.json
+https://opensource.org/licenses/VSL-1.0
+**//
+
+(( Vovida Software License v. 1.0 ))??
+
+(( This license applies to all software incorporated in the "Vovida Open
+Communication Application Library" except for those portions incorporating third
+party software specifically identified as being licensed under separate license. ))??
+
+(( The Vovida Software License, Version 1.0
+(( Copyright __20__ ))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1. ))??
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   (( 2. ))??
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+   (( 3. ))??
+   The names "VOCAL", "Vovida Open Communication Application Library", and
+   "Vovida Open Communication Application Library (VOCAL)" must not be used to
+   endorse or promote products derived from this software without prior written
+   permission. For written permission, please contact vocal@vovida.org.
+
+   (( 4. ))??
+   Products derived from this software may not be called "VOCAL", nor may
+   "VOCAL" appear in their name, without prior written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT ARE DISCLAIMED. IN
+NO EVENT SHALL VOVIDA NETWORKS, INC. OR ITS CONTRIBUTORS BE LIABLE FOR ANY
+DAMAGES IN EXCESS OF $1,000, NOR FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+`
+const license_Vim_lre = `//**
+Vim License
+https://spdx.org/licenses/Vim.json
+http://vimdoc.sourceforge.net/htmldoc/uganda.html
+**//
+
+(( VIM LICENSE ))??
+
+   (( I) ))??
+   There are no restrictions on distributing unmodified copies of
+   //** Vim **//
+   __5__
+   except that they must include this license text. You can also distribute
+   unmodified parts of
+   //** Vim **//
+   __5__
+   , likewise unrestricted except that they must include this license text. You
+   are also allowed to include executables that you made from the unmodified
+   //** Vim **//
+   __5__
+   sources, plus your own usage examples and Vim scripts.
+
+   (( II) ))??
+   It is allowed to distribute a modified (or extended) version of
+   //** Vim **//
+   __5__
+   , including executables and/or source code, when the following four
+   conditions are met:
+
+      (( 1) ))??
+      This license text must be included unmodified.
+
+      (( 2) ))??
+      The modified
+      //** Vim **//
+      __5__
+      must be distributed in one of the following five ways:
+
+         (( a) ))??
+         If you make changes to
+         //** Vim **//
+         __5__
+         yourself, you must clearly describe in the distribution how to contact
+         you. When the maintainer asks you (in any way) for a copy of the
+         modified
+         //** Vim **//
+         __5__
+         you distributed, you must make your changes, including source code,
+         available to the maintainer without fee. The maintainer reserves the
+         right to include your changes in the official version of
+         //** Vim **//
+         __5__
+         . What the maintainer will do with your changes and under what license
+         they will be distributed is negotiable. If there has been no
+         negotiation then this license, or a later version, also applies to your
+         changes. The current maintainer is Bram Moolenaar <Bram@vim.org>. If
+         this changes it will be announced in appropriate places (most likely
+         vim.sf.net, www.vim.org and/or comp.editors). When it is completely
+         impossible to contact the maintainer, the obligation to send him your
+         changes ceases. Once the maintainer has confirmed that he has received
+         your changes they will not have to be sent again.
+
+         (( b) ))??
+         If you have received a modified
+         //** Vim **//
+         __5__
+         that was distributed as mentioned under a) you are allowed to further
+         distribute it unmodified, as mentioned at I). If you make additional
+         changes the text under a) applies to those changes.
+
+         (( c) ))??
+         Provide all the changes, including source code, with every copy of the
+         modified
+         //** Vim **//
+         __5__
+         you distribute. This may be done in the form of a context diff. You can
+         choose what license to use for new code you add. The changes and their
+         license must not restrict others from making their own changes to the
+         official version of
+         //** Vim **//
+         __5__
+
+         (( d) ))??
+         When you have a modified
+         //** Vim **//
+         __5__
+         which includes changes as mentioned under c), you can distribute it
+         without the source code for the changes if the following three
+         conditions are met:
+
+            -
+            The license that applies to the changes permits you to distribute
+            the changes to the Vim maintainer without fee or restriction, and
+            permits the Vim maintainer to include the changes in the official
+            version of
+            //** Vim **//
+            __5__
+            without fee or restriction.
+
+            -
+            You keep the changes for at least three years after last
+            distributing the corresponding modified
+            //** Vim **//
+            __5__
+            . When the maintainer or someone who you distributed the modified
+            //** Vim **//
+            __5__
+            to asks you (in any way) for the changes within this period, you
+            must make them available to him.
+
+            -
+            You clearly describe in the distribution how to contact you. This
+            contact information must remain valid for at least three years after
+            last distributing the corresponding modified
+            //** Vim **//
+            __5__
+            , or as long as possible.
+
+         (( e) ))??
+         When the GNU General Public License (GPL) applies to the changes, you
+         can distribute the modified
+         //** Vim **//
+         __5__
+         under the GNU GPL version 2 or any later version.
+
+      (( 3) ))??
+      A message must be added, at least in the output of the ":version" command
+      and in the intro screen, such that the user of the modified
+      //** Vim **//
+      __5__
+      is able to see that it was modified. When distributing as mentioned under
+      2)e) adding the message is only required for as far as this does not
+      conflict with the license used for the changes.
+
+      (( 4) ))??
+      The contact information as required under 2)a) and 2)d) must not be
+      removed or changed, except that the person himself can make corrections.
+
+   (( III) ))??
+   If you distribute a modified version of
+   //** Vim **//
+   __5__
+   , you are encouraged to use the Vim license for your changes and make them
+   available to the maintainer, including the source code. The preferred way to
+   do this is by e-mail or by uploading the files to a server and e-mailing the
+   URL. If the number of changes is small (e.g., a modified Makefile) e-mailing
+   a context diff will do. The e-mail address to be used is
+   <maintainer@vim.org>
+
+   (( IV) ))??
+   It is not allowed to remove this license from the distribution of the
+   //** Vim **//
+   __5__
+   sources, parts of it or from a modified version. You may use this license for
+   previous
+   //** Vim **//
+   __5__
+   releases instead of the license that they came with, at your option.
 `
 const license_WTFPL_lre = `//**
 Do What The F*ck You Want To Public License
