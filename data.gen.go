@@ -258,14 +258,29 @@ func init() {
 		{Name: "JPNIC", Text: license_JPNIC_lre},
 		{Name: "JSON", Text: license_JSON_lre},
 		{Name: "JasPer-2.0", Text: license_JasPer_2_0_lre},
+		{Name: "LAL-1.2", Text: license_LAL_1_2_lre},
+		{Name: "LAL-1.3", Text: license_LAL_1_3_lre},
 		{Name: "LGPL-2.0", Text: license_LGPL_2_0_lre},
 		{Name: "LGPL-2.0-Only", Text: license_LGPL_2_0_Only_lre},
 		{Name: "LGPL-2.1", Text: license_LGPL_2_1_lre},
 		{Name: "LGPL-2.1-Only", Text: license_LGPL_2_1_Only_lre},
 		{Name: "LGPL-3.0", Text: license_LGPL_3_0_lre},
 		{Name: "LGPL-3.0-Only", Text: license_LGPL_3_0_Only_lre},
+		{Name: "LGPLLR", Text: license_LGPLLR_lre},
 		{Name: "LPL-1.0", Text: license_LPL_1_0_lre},
 		{Name: "LPL-1.02", Text: license_LPL_1_02_lre},
+		{Name: "LPPL-1.0", Text: license_LPPL_1_0_lre},
+		{Name: "LPPL-1.1", Text: license_LPPL_1_1_lre},
+		{Name: "LPPL-1.2", Text: license_LPPL_1_2_lre},
+		{Name: "LPPL-1.3a", Text: license_LPPL_1_3a_lre},
+		{Name: "LPPL-1.3c", Text: license_LPPL_1_3c_lre},
+		{Name: "Latex2e", Text: license_Latex2e_lre},
+		{Name: "Leptonica", Text: license_Leptonica_lre},
+		{Name: "LiLiQ-P-1.1", Text: license_LiLiQ_P_1_1_lre},
+		{Name: "LiLiQ-R-1.1", Text: license_LiLiQ_R_1_1_lre},
+		{Name: "LiLiQ-Rplus-1.1", Text: license_LiLiQ_Rplus_1_1_lre},
+		{Name: "Libpng", Text: license_Libpng_lre},
+		{Name: "Linux-OpenIB", Text: license_Linux_OpenIB_lre},
 		{Name: "MIT", Text: license_MIT_lre},
 		{Name: "MIT-0", Text: license_MIT_0_lre},
 		{Name: "MIT-NoAd", Text: license_MIT_NoAd_lre},
@@ -49624,6 +49639,422 @@ SEVERE PHYSICAL OR ENVIRONMENTAL DAMAGE ("HIGH RISK ACTIVITIES"). THE COPYRIGHT
 HOLDERS SPECIFICALLY DISCLAIM ANY EXPRESS OR IMPLIED WARRANTY OF FITNESS FOR
 HIGH RISK ACTIVITIES.
 `
+const license_LAL_1_2_lre = `//**
+Licence Art Libre 1.2
+https://spdx.org/licenses/LAL-1.2.json
+http://artlibre.org/licence/lal/licence-art-libre-12/
+**//
+
+(( Licence Art Libre
+
+[ Copyleft Attitude ]
+
+Version 1.2 ))??
+
+Préambule :
+
+Avec cette Licence Art Libre, l'autorisation est donnée de copier, de diffuser
+et de transformer librement les oeuvres dans le respect des droits de l'auteur.
+
+Loin d'ignorer les droits de l'auteur, cette licence les reconnaît et les
+protège. Elle en reformule le principe en permettant au public de faire un
+usage créatif des oeuvres d'art.
+
+Alors que l'usage fait du droit de la propriété littéraire et artistique
+conduit à restreindre l'accès du public à l'oeuvre, la Licence Art Libre a
+pour but de le favoriser.
+
+L'intention est d'ouvrir l'accès et d'autoriser l'utilisation des ressources
+d'une oeuvre par le plus grand nombre. En avoir jouissance pour en multiplier
+les réjouissances, créer de nouvelles conditions de création pour amplifier
+les possibilités de création. Dans le respect des auteurs avec la
+reconnaissance et la défense de leur droit moral.
+
+En effet, avec la venue du numérique, l'invention de l'internet et des
+logiciels libres, un nouveau mode de création et de production est apparu. Il
+est aussi l'amplification de ce qui a été expérimenté par nombre d'artistes
+contemporains.
+
+Le savoir et la création sont des ressources qui doivent demeurer libres pour
+être encore véritablement du savoir et de la création. C'est à dire rester
+une recherche fondamentale qui ne soit pas directement liée à une application
+concrète. Créer c'est découvrir l'inconnu, c'est inventer le réel avant tout
+souci de réalisme.
+
+Ainsi, l'objet de l'art n'est pas confondu avec l'objet d'art fini et défini
+comme tel.
+
+C'est la raison essentielle de cette Licence Art Libre : promouvoir et protéger
+des pratiques artistiques libérées des seules règles de l'économie de
+marché.
+
+DÉFINITIONS
+
+– L'oeuvre :
+
+il s'agit d'une oeuvre commune qui comprend l'oeuvre originelle ainsi que toutes
+les contributions postérieures (les originaux conséquents et les copies). Elle
+est créée à l'initiative de l'auteur originel qui par cette licence définit
+les conditions selon lesquelles les contributions sont faites.
+
+– L'oeuvre originelle :
+
+c'est-à-dire l'oeuvre créée par l'initiateur de l'oeuvre commune dont les
+copies vont être modifiées par qui le souhaite.
+
+– Les oeuvres conséquentes :
+
+c'est-à-dire les propositions des auteurs qui contribuent à la formation de
+l'oeuvre en faisant usage des droits de reproduction, de diffusion et de
+modification que leur confère la licence.
+
+– Original (source ou ressource de l'oeuvre) :
+
+exemplaire daté de l'oeuvre, de sa définition, de sa partition ou de son
+programme que l'auteur présente comme référence pour toutes actualisations,
+interprétations, copies ou reproductions ultérieures.
+
+– Copie :
+
+toute reproduction d'un original au sens de cette licence.
+
+– Auteur de l'oeuvre originelle :
+
+c'est la personne qui a créé l'oeuvre à l'origine d'une arborescence de cette
+oeuvre modifiée. Par cette licence, l'auteur détermine les conditions dans
+lesquelles ce travail se fait.
+
+– Contributeur :
+
+toute personne qui contribue à la création de l'oeuvre. Il est l'auteur d'une
+oeuvre originale résultant de la modification d'une copie de l'oeuvre
+originelle ou de la modification d'une copie d'une oeuvre conséquente.
+
+   (( 1. ))??
+   OBJET
+
+   Cette licence a pour objet de définir les conditions selon lesquelles vous
+   pouvez jouir librement de cette oeuvre.
+
+   (( 2. ))??
+   L'ÉTENDUE DE LA JOUISSANCE
+
+   Cette oeuvre est soumise au droit d'auteur, et l'auteur par cette licence
+   vous indique quelles sont vos libertés pour la copier, la diffuser et la
+   modifier:
+
+   (( 2.1 ))??
+   LA LIBERTÉ DE COPIER (OU DE REPRODUCTION)
+
+   Vous avez la liberté de copier cette oeuvre pour un usage personnel, pour
+   vos amis, ou toute autre personne et quelque soit la technique employée.
+
+   (( 2.2 ))??
+   LA LIBERTÉ DE DIFFUSER, D'INTERPRÉTER (OU DE REPRÉSENTATION)
+
+   Vous pouvez diffuser librement les copies de ces oeuvres, modifiées ou non,
+   quel que soit le support, quel que soit le lieu, à titre onéreux ou gratuit
+   si vous respectez toutes les conditions suivantes:
+
+   – joindre aux copies, cette licence à l'identique, ou indiquer
+   précisément où se trouve la licence,
+
+   – indiquer au destinataire le nom de l'auteur des originaux,
+
+   – indiquer au destinataire où il pourra avoir accès aux originaux
+
+   (originels et/ou conséquents). L'auteur de l'original pourra, s'il le
+   souhaite, vous autoriser à diffuser l'original dans les mêmes conditions
+   que les copies.
+
+   (( 2.3 ))??
+   LA LIBERTÉ DE MODIFIER
+
+   Vous avez la liberté de modifier les copies des originaux (originels et
+   conséquents), qui peuvent être partielles ou non, dans le respect des
+   conditions prévues à l'article 2.2 en cas de diffusion (ou représentation)
+   de la copie modifiée. L'auteur de l'original pourra, s'il le souhaite, vous
+   autoriser à modifier l'original dans les mêmes conditions que les copies.
+
+   (( 3. ))??
+   L'INCORPORATION DE L'OEUVRE
+
+   Tous les éléments de cette oeuvre doivent demeurer libres, c'est pourquoi
+   il ne vous est pas permis d'intégrer les originaux (originels et
+   conséquents) dans une autre oeuvre qui ne serait pas soumise à cette
+   licence.
+
+   (( 4. ))??
+   VOS DROITS D'AUTEUR
+
+   Cette licence n'a pas pour objet de nier vos droits d'auteur sur votre
+   contribution. En choisissant de contribuer à l'évolution de cette oeuvre,
+   vous acceptez seulement d'offrir aux autres les mêmes droits sur votre
+   contribution que ceux qui vous ont été accordés par cette licence.
+
+   (( 5. ))??
+   LA DURÉE DE LA LICENCE
+
+   Cette licence prend effet dès votre acceptation de ses dispositions. Le fait
+   de copier, de diffuser, ou de modifier l'oeuvre constitue une acception
+   tacite.
+
+   Cette licence a pour durée la durée des droits d'auteur attachés à
+   l'oeuvre.
+
+   Si vous ne respectez pas les termes de cette licence, vous perdez
+   automatiquement les droits qu'elle vous confère.
+
+   Si le régime juridique auquel vous êtes soumis ne vous permet pas de
+   respecter les termes de cette licence, vous ne pouvez pas vous prévaloir des
+   libertés qu'elle confère.
+
+   (( 6. ))??
+   LES DIFFÉRENTES VERSIONS DE LA LICENCE
+
+   Cette licence pourra être modifiée régulièrement, en vue de son
+   amélioration, par ses auteurs (les acteurs du mouvement « copyleft
+   attitude ») sous la forme de nouvelles versions numérotées.
+
+   Vous avez toujours le choix entre vous contenter des dispositions contenues
+   dans la version sous laquelle la copie vous a été communiquée ou alors,
+   vous prévaloir des dispositions d'une des versions ultérieures.
+
+   (( 7. ))??
+   LES SOUS-LICENCES
+
+   Les sous licences ne sont pas autorisées par la présente. Toute personne
+   qui souhaite bénéficier des libertés qu'elle confère sera liée
+   directement à l'auteur de l'oeuvre originelle.
+
+   (( 8. ))??
+   LA LOI APPLICABLE AU CONTRAT
+
+Cette licence est soumise au droit français.
+`
+const license_LAL_1_3_lre = `//**
+Licence Art Libre 1.3
+https://spdx.org/licenses/LAL-1.3.json
+https://artlibre.org/
+**//
+
+(( Licence Art Libre 1.3 (LAL 1.3) ))??
+
+Préambule :
+
+Avec la Licence Art Libre, l'autorisation est donnée de copier, de diffuser et
+de transformer librement les œuvres dans le respect des droits de l'auteur.
+
+Loin d'ignorer ces droits, la Licence Art Libre les reconnaît et les protège.
+Elle en reformule l'exercice en permettant à tout un chacun de faire un usage
+créatif des productions de l'esprit quels que soient leur genre et leur forme
+d'expression.
+
+Si, en règle générale, l'application du droit d'auteur conduit à restreindre
+l'accès aux œuvres de l'esprit, la Licence Art Libre, au contraire, le
+favorise. L'intention est d'autoriser l'utilisation des ressources d'une
+œuvre ; créer de nouvelles conditions de création pour amplifier les
+possibilités de création. La Licence Art Libre permet d'avoir jouissance des
+œuvres tout en reconnaissant les droits et les responsabilités de chacun.
+
+Avec le développement du numérique, l'invention d'internet et des logiciels
+libres, les modalités de création ont évolué : les productions de l'esprit
+s'offrent naturellement à la circulation, à l'échange et aux transformations.
+Elles se prêtent favorablement à la réalisation d'œuvres communes que chacun
+peut augmenter pour l'avantage de tous.
+
+C'est la raison essentielle de la Licence Art Libre : promouvoir et protéger
+ces productions de l'esprit selon les principes du copyleft : liberté d'usage,
+de copie, de diffusion, de transformation et interdiction d'appropriation
+exclusive.
+
+Définitions :
+
+Nous désignons par « œuvre », autant l'œuvre initiale, les œuvres
+conséquentes, que l'œuvre commune telles que définies ci-après :
+
+L'œuvre commune : Il s'agit d'une œuvre qui comprend l'œuvre initiale ainsi
+que toutes les contributions postérieures (les originaux conséquents et les
+copies). Elle est créée à l'initiative de l'auteur initial qui par cette
+licence définit les conditions selon lesquelles les contributions sont faites.
+
+L'œuvre initiale : C'est-à-dire l'œuvre créée par l'initiateur de l'œuvre
+commune dont les copies vont être modifiées par qui le souhaite.
+
+Les œuvres conséquentes : C'est-à-dire les contributions des auteurs qui
+participent à la formation de l'œuvre commune en faisant usage des droits de
+reproduction, de diffusion et de modification que leur confère la licence.
+
+Originaux (sources ou ressources de l'œuvre) : Chaque exemplaire daté de
+l'œuvre initiale ou conséquente que leurs auteurs présentent comme
+référence pour toutes actualisations, interprétations, copies ou
+reproductions ultérieures.
+
+Copie : Toute reproduction d'un original au sens de cette licence.
+
+   (( 1- ))??
+   OBJET.
+
+   Cette licence a pour objet de définir les conditions selon lesquelles vous
+   pouvez jouir librement de l'œuvre.
+
+   (( 2. ))??
+   L'ÉTENDUE DE LA JOUISSANCE.
+
+   Cette œuvre est soumise au droit d'auteur, et l'auteur par cette licence
+   vous indique quelles sont vos libertés pour la copier, la diffuser et la
+   modifier.
+
+      (( 2.1 ))??
+      LA LIBERTÉ DE COPIER (OU DE REPRODUCTION).
+
+      Vous avez la liberté de copier cette œuvre pour vous, vos amis ou toute
+      autre personne, quelle que soit la technique employée.
+
+      (( 2.2 ))??
+      LA LIBERTÉ DE DIFFUSER (INTERPRÉTER, REPRÉSENTER, DISTRIBUER).
+
+      Vous pouvez diffuser librement les copies de ces œuvres, modifiées ou
+      non, quel que soit le support, quel que soit le lieu, à titre onéreux ou
+      gratuit, si vous respectez toutes les conditions suivantes :
+
+         (( 1. ))??
+         joindre aux copies cette licence à l'identique ou indiquer
+         précisément où se trouve la licence ;
+
+         (( 2. ))??
+         indiquer au destinataire le nom de chaque auteur des originaux, y
+         compris le vôtre si vous avez modifié l'œuvre ;
+
+         (( 3. ))??
+         indiquer au destinataire où il pourrait avoir accès aux originaux
+         (initiaux et/ou conséquents). Les auteurs des originaux pourront,
+         s'ils le souhaitent, vous autoriser à diffuser l'original dans les
+         mêmes conditions que les copies.
+
+      (( 2.3 ))??
+      LA LIBERTÉ DE MODIFIER.
+
+      Vous avez la liberté de modifier les copies des originaux (initiaux et
+      conséquents) dans le respect des conditions suivantes :
+
+         (( 1. ))??
+         celles prévues à l'article 2.2 en cas de diffusion de la copie
+         modifiée ;
+
+         (( 2. ))??
+         indiquer qu'il s'agit d'une œuvre modifiée et, si possible, la nature
+         de la modification ;
+
+         (( 3. ))??
+         diffuser cette œuvre conséquente avec la même licence ou avec toute
+         licence compatible ;
+
+         (( 4. ))??
+         Les auteurs des originaux pourront, s'ils le souhaitent, vous autoriser
+         à modifier l'original dans les mêmes conditions que les copies.
+
+   (( 3. ))??
+   DROITS CONNEXES.
+
+   Les actes donnant lieu à des droits d'auteur ou des droits voisins ne
+   doivent pas constituer un obstacle aux libertés conférées par cette
+   licence.
+
+   C'est pourquoi, par exemple, les interprétations doivent être soumises à
+   la même licence ou une licence compatible. De même, l'intégration de
+   l'œuvre à une base de données, une compilation ou une anthologie ne doit
+   pas faire obstacle à la jouissance de l'œuvre telle que définie par cette
+   licence.
+
+   (( 4. ))??
+   L' INTÉGRATION DE L'ŒUVRE.
+
+   Toute intégration de cette œuvre à un ensemble non soumis à la LAL doit
+   assurer l'exercice des libertés conférées par cette licence.
+
+   Si l'œuvre n'est plus accessible indépendamment de l'ensemble, alors
+   l'intégration n'est possible qu'à condition que l'ensemble soit soumis à
+   la LAL ou une licence compatible.
+
+   (( 5. ))??
+   CRITÈRES DE COMPATIBILITÉ.
+
+   Une licence est compatible avec la LAL si et seulement si :
+
+      (( 1. ))??
+      elle accorde l'autorisation de copier, diffuser et modifier des copies de
+      l'œuvre, y compris à des fins lucratives, et sans autres restrictions
+      que celles qu'impose le respect des autres critères de compatibilité ;
+
+      (( 2. ))??
+      elle garantit la paternité de l'œuvre et l'accès aux versions
+      antérieures de l'œuvre quand cet accès est possible ;
+
+      (( 3. ))??
+      elle reconnaît la LAL également compatible (réciprocité) ;
+
+      (( 4. ))??
+      elle impose que les modifications faites sur l'œuvre soient soumises à
+      la même licence ou encore à une licence répondant aux critères de
+      compatibilité posés par la LAL.
+
+   (( 6. ))??
+   VOS DROITS INTELLECTUELS.
+
+   La LAL n'a pas pour objet de nier vos droits d'auteur sur votre contribution
+   ni vos droits connexes. En choisissant de contribuer à l'évolution de cette
+   œuvre commune, vous acceptez seulement d'offrir aux autres les mêmes
+   autorisations sur votre contribution que celles qui vous ont été accordées
+   par cette licence. Ces autorisations n'entraînent pas un dessaisissement de
+   vos droits intellectuels.
+
+   (( 7. ))??
+   VOS RESPONSABILITÉS.
+
+   La liberté de jouir de l'œuvre tel que permis par la LAL (liberté de
+   copier, diffuser, modifier) implique pour chacun la responsabilité de ses
+   propres faits.
+
+   (( 8. ))??
+   LA DURÉE DE LA LICENCE.
+
+   Cette licence prend effet dès votre acceptation de ses dispositions. Le fait
+   de copier, de diffuser, ou de modifier l'œuvre constitue une acceptation
+   tacite.
+
+   Cette licence a pour durée la durée des droits d'auteur attachés à
+   l'œuvre. Si vous ne respectez pas les termes de cette licence, vous perdez
+   automatiquement les droits qu'elle vous confère.
+
+   Si le régime juridique auquel vous êtes soumis ne vous permet pas de
+   respecter les termes de cette licence, vous ne pouvez pas vous prévaloir des
+   libertés qu'elle confère.
+
+   (( 9. ))??
+   LES DIFFÉRENTES VERSIONS DE LA LICENCE.
+
+   Cette licence pourra être modifiée régulièrement, en vue de son
+   amélioration, par ses auteurs (les acteurs du mouvement Copyleft Attitude)
+   sous la forme de nouvelles versions numérotées.
+
+   Vous avez toujours le choix entre vous contenter des dispositions contenues
+   dans la version de la LAL sous laquelle la copie vous a été communiquée ou
+   alors, vous prévaloir des dispositions d'une des versions ultérieures.
+
+   (( 10. ))??
+   LES SOUS-LICENCES.
+
+   Les sous-licences ne sont pas autorisées par la présente. Toute personne
+   qui souhaite bénéficier des libertés qu'elle confère sera liée
+   directement aux auteurs de l'œuvre commune.
+
+   (( 11. ))??
+   LE CONTEXTE JURIDIQUE.
+
+   Cette licence est rédigée en référence au droit français et à la
+   Convention de Berne relative au droit d'auteur.
+`
 const license_LGPL_2_0_lre = `//**
 GNU Library General Public License v2
 https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html
@@ -51478,6 +51909,294 @@ GNU))
 
 
 `
+const license_LGPLLR_lre = `//**
+Lesser General Public License For Linguistic Resources
+https://spdx.org/licenses/LGPLLR.json
+http://www-igm.univ-mlv.fr/~unitex/lgpllr.html
+**//
+
+(( Lesser General Public License For Linguistic Resources ))??
+
+Preamble
+
+The licenses for most data are designed to take away your freedom to share and
+change it. By contrast, this License is intended to guarantee your freedom to
+share and change free data--to make sure the data are free for all their users.
+
+This License, the Lesser General Public License for Linguistic Resources,
+applies to some specially designated linguistic resources -- typically lexicons
+and grammars.
+
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+   (( 0. ))??
+   This License Agreement applies to any Linguistic Resource which contains a
+   notice placed by the copyright holder or other authorized party saying it may
+   be distributed under the terms of this Lesser General Public License for
+   Linguistic Resources (also called "this License"). Each licensee is addressed
+   as "you".
+
+   A "linguistic resource" means a collection of data about language prepared so
+   as to be used with application programs.
+
+   The "Linguistic Resource", below, refers to any such work which has been
+   distributed under these terms. A "work based on the Linguistic Resource"
+   means either the Linguistic Resource or any derivative work under copyright
+   law: that is to say, a work containing the Linguistic Resource or a portion
+   of it, either verbatim or with modifications and/or translated
+   straightforwardly into another language. (Hereinafter, translation is
+   included without limitation in the term "modification".)
+
+   "Legible form" for a linguistic resource means the preferred form of the
+   resource for making modifications to it.
+
+   Activities other than copying, distribution and modification are not covered
+   by this License; they are outside its scope. The act of running a program
+   using the Linguistic Resource is not restricted, and output from such a
+   program is covered only if its contents constitute a work based on the
+   Linguistic Resource (independent of the use of the Linguistic Resource in a
+   tool for writing it). Whether that is true depends on what the program that
+   uses the Linguistic Resource does.
+
+   (( 1. ))??
+   You may copy and distribute verbatim copies of the Linguistic Resource as you
+   receive it, in any medium, provided that you conspicuously and appropriately
+   publish on each copy an appropriate copyright notice and disclaimer of
+   warranty; keep intact all the notices that refer to this License and to the
+   absence of any warranty; and distribute a copy of this License along with the
+   Linguistic Resource.
+
+   You may charge a fee for the physical act of transferring a copy, and you may
+   at your option offer warranty protection in exchange for a fee.
+
+   (( 2. ))??
+   You may modify your copy or copies of the Linguistic Resource or any portion
+   of it, thus forming a work based on the Linguistic Resource, and copy and
+   distribute such modifications or work under the terms of Section 1 above,
+   provided that you also meet all of these conditions:
+
+      (( a) ))??
+      The modified work must itself be a linguistic resource.
+
+      (( b) ))??
+      You must cause the files modified to carry prominent notices stating that
+      you changed the files and the date of any change.
+
+      (( c) ))??
+      You must cause the whole of the work to be licensed at no charge to all
+      third parties under the terms of this License.
+
+   These requirements apply to the modified work as a whole. If identifiable
+   sections of that work are not derived from the Linguistic Resource, and can
+   be reasonably considered independent and separate works in themselves, then
+   this License, and its terms, do not apply to those sections when you
+   distribute them as separate works. But when you distribute the same sections
+   as part of a whole which is a work based on the Linguistic Resource, the
+   distribution of the whole must be on the terms of this License, whose
+   permissions for other licensees extend to the entire whole, and thus to each
+   and every part regardless of who wrote it.
+
+   Thus, it is not the intent of this section to claim rights or contest your
+   rights to work written entirely by you; rather, the intent is to exercise the
+   right to control the distribution of derivative or collective works based on
+   the Linguistic Resource.
+
+   In addition, mere aggregation of another work not based on the Linguistic
+   Resource with the Linguistic Resource (or with a work based on the Linguistic
+   Resource) on a volume of a storage or distribution medium does not bring the
+   other work under the scope of this License.
+
+   (( 3. ))??
+   A program that contains no derivative of any portion of the Linguistic
+   Resource, but is designed to work with the Linguistic Resource (or an
+   encrypted form of the Linguistic Resource) by reading it or being compiled or
+   linked with it, is called a "work that uses the Linguistic Resource". Such a
+   work, in isolation, is not a derivative work of the Linguistic Resource, and
+   therefore falls outside the scope of this License.
+
+   However, combining a "work that uses the Linguistic Resource" with the
+   Linguistic Resource (or an encrypted form of the Linguistic Resource) creates
+   a package that is a derivative of the Linguistic Resource (because it
+   contains portions of the Linguistic Resource), rather than a "work that uses
+   the Linguistic Resource". If the package is a derivative of the Linguistic
+   Resource, you may distribute the package under the terms of Section 4. Any
+   works containing that package also fall under Section 4.
+
+   (( 4. ))??
+   As an exception to the Sections above, you may also combine a "work that uses
+   the Linguistic Resource" with the Linguistic Resource (or an encrypted form
+   of the Linguistic Resource) to produce a package containing portions of the
+   Linguistic Resource, and distribute that package under terms of your choice,
+   provided that the terms permit modification of the package for the customer's
+   own use and reverse engineering for debugging such modifications.
+
+   You must give prominent notice with each copy of the package that the
+   Linguistic Resource is used in it and that the Linguistic Resource and its
+   use are covered by this License. You must supply a copy of this License. If
+   the package during execution displays copyright notices, you must include the
+   copyright notice for the Linguistic Resource among them, as well as a
+   reference directing the user to the copy of this License. Also, you must do
+   one of these things:
+
+      (( a) ))??
+      Accompany the package with the complete corresponding machine-readable
+      legible form of the Linguistic Resource including whatever changes were
+      used in the package (which must be distributed under Sections 1 and 2
+      above); and, if the package contains an encrypted form of the Linguistic
+      Resource, with the complete machine-readable "work that uses the
+      Linguistic Resource", as object code and/or source code, so that the user
+      can modify the Linguistic Resource and then encrypt it to produce a
+      modified package containing the modified Linguistic Resource.
+
+      (( b) ))??
+      Use a suitable mechanism for combining with the Linguistic Resource. A
+      suitable mechanism is one that will operate properly with a modified
+      version of the Linguistic Resource, if the user installs one, as long as
+      the modified version is interface-compatible with the version that the
+      package was made with.
+
+      (( c) ))??
+      Accompany the package with a written offer, valid for at least three
+      years, to give the same user the materials specified in Subsection 4a,
+      above, for a charge no more than the cost of performing this
+      distribution.
+
+      (( d) ))??
+      If distribution of the package is made by offering access to copy from a
+      designated place, offer equivalent access to copy the above specified
+      materials from the same place.
+
+      (( e) ))??
+      Verify that the user has already received a copy of these materials or
+      that you have already sent this user a copy.
+
+   If the package includes an encrypted form of the Linguistic Resource, the
+   required form of the "work that uses the Linguistic Resource" must include
+   any data and utility programs needed for reproducing the package from it.
+   However, as a special exception, the materials to be distributed need not
+   include anything that is normally distributed (in either source or binary
+   form) with the major components (compiler, kernel, and so on) of the
+   operating system on which the executable runs, unless that component itself
+   accompanies the executable.
+
+   It may happen that this requirement contradicts the license restrictions of
+   proprietary libraries that do not normally accompany the operating system.
+   Such a contradiction means you cannot use both them and the Linguistic
+   Resource together in a package that you distribute.
+
+   (( 5. ))??
+   You may not copy, modify, sublicense, link with, or distribute the Linguistic
+   Resource except as expressly provided under this License. Any attempt
+   otherwise to copy, modify, sublicense, link with, or distribute the
+   Linguistic Resource is void, and will automatically terminate your rights
+   under this License. However, parties who have received copies, or rights,
+   from you under this License will not have their licenses terminated so long
+   as such parties remain in full compliance.
+
+   (( 6. ))??
+   You are not required to accept this License, since you have not signed it.
+   However, nothing else grants you permission to modify or distribute the
+   Linguistic Resource or its derivative works. These actions are prohibited by
+   law if you do not accept this License. Therefore, by modifying or
+   distributing the Linguistic Resource (or any work based on the Linguistic
+   Resource), you indicate your acceptance of this License to do so, and all its
+   terms and conditions for copying, distributing or modifying the Linguistic
+   Resource or works based on it.
+
+   (( 7. ))??
+   Each time you redistribute the Linguistic Resource (or any work based on the
+   Linguistic Resource), the recipient automatically receives a license from the
+   original licensor to copy, distribute, link with or modify the Linguistic
+   Resource subject to these terms and conditions. You may not impose any
+   further restrictions on the recipients' exercise of the rights granted
+   herein. You are not responsible for enforcing compliance by third parties
+   with this License.
+
+   (( 8. ))??
+   If, as a consequence of a court judgment or allegation of patent infringement
+   or for any other reason (not limited to patent issues), conditions are
+   imposed on you (whether by court order, agreement or otherwise) that
+   contradict the conditions of this License, they do not excuse you from the
+   conditions of this License. If you cannot distribute so as to satisfy
+   simultaneously your obligations under this License and any other pertinent
+   obligations, then as a consequence you may not distribute the Linguistic
+   Resource at all. For example, if a patent license would not permit
+   royalty-free redistribution of the Linguistic Resource by all those who
+   receive copies directly or indirectly through you, then the only way you
+   could satisfy both it and this License would be to refrain entirely from
+   distribution of the Linguistic Resource.
+
+   If any portion of this section is held invalid or unenforceable under any
+   particular circumstance, the balance of the section is intended to apply, and
+   the section as a whole is intended to apply in other circumstances.
+
+   It is not the purpose of this section to induce you to infringe any patents
+   or other property right claims or to contest validity of any such claims;
+   this section has the sole purpose of protecting the integrity of the free
+   resource distribution system which is implemented by public license
+   practices. Many people have made generous contributions to the wide range of
+   data distributed through that system in reliance on consistent application of
+   that system; it is up to the author/donor to decide if he or she is willing
+   to distribute resources through any other system and a licensee cannot impose
+   that choice.
+
+   This section is intended to make thoroughly clear what is believed to be a
+   consequence of the rest of this License.
+
+   (( 9. ))??
+   If the distribution and/or use of the Linguistic Resource is restricted in
+   certain countries either by patents or by copyrighted interfaces, the
+   original copyright holder who places the Linguistic Resource under this
+   License may add an explicit geographical distribution limitation excluding
+   those countries, so that distribution is permitted only in or among countries
+   not thus excluded. In such case, this License incorporates the limitation as
+   if written in the body of this License.
+
+   (( 10. ))??
+   The Free Software Foundation may publish revised and/or new versions of the
+   Lesser General Public License for Linguistic Resources from time to time.
+   Such new versions will be similar in spirit to the present version, but may
+   differ in detail to address new problems or concerns.
+
+   Each version is given a distinguishing version number. If the Linguistic
+   Resource specifies a version number of this License which applies to it and
+   "any later version", you have the option of following the terms and
+   conditions either of that version or of any later version published by the
+   Free Software Foundation. If the Linguistic Resource does not specify a
+   license version number, you may choose any version ever published by the Free
+   Software Foundation.
+
+   (( 11. ))??
+   If you wish to incorporate parts of the Linguistic Resource into other free
+   programs whose distribution conditions are incompatible with these, write to
+   the author to ask for permission.
+
+   NO WARRANTY
+
+   (( 12. ))??
+   BECAUSE THE LINGUISTIC RESOURCE IS LICENSED FREE OF CHARGE, THERE IS NO
+   WARRANTY FOR THE LINGUISTIC RESOURCE, TO THE EXTENT PERMITTED BY APPLICABLE
+   LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR
+   OTHER PARTIES PROVIDE THE LINGUISTIC RESOURCE "AS IS" WITHOUT WARRANTY OF ANY
+   KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+   WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
+   ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE LINGUISTIC RESOURCE IS
+   WITH YOU. SHOULD THE LINGUISTIC RESOURCE PROVE DEFECTIVE, YOU ASSUME THE COST
+   OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+   (( 13. ))??
+   IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL
+   ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE
+   THE LINGUISTIC RESOURCE AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,
+   INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING
+   OUT OF THE USE OR INABILITY TO USE THE LINGUISTIC RESOURCE (INCLUDING BUT NOT
+   LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED
+   BY YOU OR THIRD PARTIES OR A FAILURE OF THE LINGUISTIC RESOURCE TO OPERATE
+   WITH ANY OTHER SOFTWARE), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED
+   OF THE POSSIBILITY OF SUCH DAMAGES.
+
+END OF TERMS AND CONDITIONS
+`
 const license_LPL_1_0_lre = `//**
 Lucent Public License Version 1.0
 https://spdx.org/licenses/LPL-1.0.json
@@ -52015,6 +52734,2543 @@ RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
    Agreement will bring a legal action under this Agreement more than one year
    after the cause of action arose. Each party waives its rights to a jury trial
    in any resulting litigation.
+`
+const license_LPPL_1_0_lre = `//**
+LaTeX Project Public License v1.0
+https://spdx.org/licenses/LPPL-1.0.json
+http://www.latex-project.org/lppl/lppl-1-0.txt
+**//
+
+(( LaTeX Project Public License
+LPPL Version 1.0 1999-03-01
+
+((Copyright __20__))??
+))??
+
+Everyone is permitted to copy and distribute verbatim copies of this license
+document, but modification is not allowed.
+
+Preamble
+
+The LaTeX Project Public License (LPPL) is the license under which the base
+LaTeX distribution is distributed. As described below you may use this licence
+for any software that you wish to distribute.
+
+It may be particularly suitable if your software is TeX related (such as a LaTeX
+package file) but it may be used for any software, even if it is unrelated to
+TeX.
+
+To use this license, the files of your distribution should have an explicit
+copyright notice giving your name and the year, together with a reference to
+this license.
+
+A typical example would be
+
+%% pig.sty
+%% Copyright 2001 M. Y. Name
+% This program can redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN
+% archives in directory macros/latex/base/lppl.txt; either
+% version 1 of the License, or (at your option) any later version.
+
+Given such a notice in the file, the conditions of this document would apply,
+with:
+
+` + "`" + `The Program' referring to the software ` + "`" + `pig.sty' and ` + "`" + `The Copyright Holder'
+referring to the person ` + "`" + `M. Y. Name'.
+
+To see a real example, see the file legal.txt which carries the copyright notice
+for the base latex distribution.
+
+This license gives terms under which files of The Program may be distributed and
+modified. Individual files may have specific further constraints on
+modification, but no file should have restrictions on distribution other than
+those specified below.
+
+This is to ensure that a distributor wishing to distribute a complete unmodified
+copy of The Program need only check the conditions in this file, and does not
+need to check every file in The Program for extra restrictions. If you do need
+to modify the distribution terms of some files, do not refer to this license,
+instead distribute The Program under a different license. You may use the parts
+of the text of LPPL as a model for your own license, but your license should not
+directly refer to the LPPL or otherwise give the impression that The Program is
+distributed under the LPPL.
+
+The LaTeX Project Public License
+
+================================
+
+Terms And Conditions For Copying, Distribution And Modification
+
+===============================================================
+
+WARRANTY
+
+========
+
+There is no warranty for The Program, to the extent permitted by applicable law.
+Except when otherwise stated in writing, The Copyright Holder provides The
+Program ` + "`" + `as is' without warranty of any kind, either expressed or implied,
+including, but not limited to, the implied warranties of merchantability and
+fitness for a particular purpose. The entire risk as to the quality and
+performance of the program is with you. Should The Program prove defective, you
+assume the cost of all necessary servicing, repair or correction.
+
+In no event unless required by applicable law or agreed to in writing will The
+Copyright Holder, or any of the individual authors named in the source for The
+Program, be liable to you for damages, including any general, special,
+incidental or consequential damages arising out of any use of The Program or out
+of inability to use The Program (including but not limited to loss of data or
+data being rendered inaccurate or losses sustained by you or by third parties as
+a result of a failure of The Program to operate with any other programs), even
+if such holder or other party has been advised of the possibility of such
+damages.
+
+DISTRIBUTION
+
+============
+
+Redistribution of unchanged files is allowed provided that all files that make
+up the distribution of The Program are distributed. In particular this means
+that The Program has to be distributed including its documentation if
+documentation was part of the original distribution.
+
+The distribution of The Program will contain a prominent file listing all the
+files covered by this license.
+
+If you receive only some of these files from someone, complain!
+
+The distribution of changed versions of certain files included in the The
+Program, and the reuse of code from The Program, are allowed under the following
+restrictions:
+
+   *
+   It is allowed only if the legal notice in the file does not expressly forbid
+   it. See note below, under "Conditions on individual files".
+
+   *
+   You rename the file before you make any changes to it, unless the file
+   explicitly says that renaming is not required. Any such changed files must be
+   distributed under a license that forbids distribution of those files, and any
+   files derived from them, under the names used by the original files in the
+   distribution of The Program.
+
+   *
+   You change any ` + "`" + `identification string' in The Program to clearly indicate
+   that the file is not part of the standard system.
+
+   *
+   If The Program includes an ` + "`" + `error report address' so that errors may be
+   reported to The Copyright Holder, or other specified addresses, this address
+   must be changed in any modified versions of The Program, so that reports for
+   files not maintained by the original program maintainers are directed to the
+   maintainers of the changed files.
+
+   *
+   You acknowledge the source and authorship of the original version in the
+   modified file.
+
+   *
+   You also distribute the unmodified version of the file or alternatively
+   provide sufficient information so that the user of your modified file can be
+   reasonably expected to be able to obtain an original, unmodified copy of The
+   Program. For example, you may specify a URL to a site that you expect will
+   freely provide the user with a copy of The Program (either the version on
+   which your modification is based, or perhaps a later version).
+
+   *
+   If The Program is intended to be used with, or is based on, LaTeX, then files
+   with the following file extensions which have special meaning in LaTeX
+   Software, have special modification rules under the license:
+
+      -
+      Files with extension ` + "`" + `.ins' (installation files): these files may not be
+      modified at all because they contain the legal notices that are placed in
+      the generated files.
+
+      -
+      Files with extension ` + "`" + `.fd' (LaTeX font definitions files): these files are
+      allowed to be modified without changing the name, but only to enable use
+      of all available fonts and to prevent attempts to access unavailable
+      fonts. However, modified files are not allowed to be distributed in place
+      of original files.
+
+      -
+      Files with extension ` + "`" + `.cfg' (configuration files): these files can be
+      created or modified to enable easy configuration of the system. The
+      documentation in cfgguide.tex in the base LaTeX distribution describes
+      when it makes sense to modify or generate such files.
+
+The above restrictions are not intended to prohibit, and hence do not apply to,
+the updating, by any method, of a file so that it becomes identical to the
+latest version of that file in The Program.
+
+========================================================================
+
+NOTES
+
+=====
+
+We believe that these requirements give you the freedom you to make
+modifications that conform with whatever technical specifications you wish,
+whilst maintaining the availability, integrity and reliability of The Program.
+If you do not see how to achieve your goal whilst adhering to these requirements
+then read the document cfgguide.tex in the base LaTeX distribution for
+suggestions.
+
+Because of the portability and exchangeability aspects of systems like LaTeX,
+The LaTeX3 Project deprecates the distribution of non-standard versions of
+components of LaTeX or of generally available contributed code for them but such
+distributions are permitted under the above restrictions.
+
+The document modguide.tex in the base LaTeX distribution details the reasons for
+the legal requirements detailed above. Even if The Program is unrelated to
+LaTeX, the argument in modguide.tex may still apply, and should be read before a
+modified version of The Program is distributed.
+
+Conditions on individual files
+
+==============================
+
+The individual files may bear additional conditions which supersede the general
+conditions on distribution and modification contained in this file. If there are
+any such files, the distribution of The Program will contain a prominent file
+that lists all the exceptional files.
+
+Typical examples of files with more restrictive modification conditions would be
+files that contain the text of copyright notices.
+
+   *
+   The conditions on individual files differ only in the extent of
+   *modification* that is allowed.
+
+   *
+   The conditions on *distribution* are the same for all the files. Thus a
+   (re)distributor of a complete, unchanged copy of The Program need meet only
+   the conditions in this file; it is not necessary to check the header of every
+   file in the distribution to check that a distribution meets these
+   requirements.
+`
+const license_LPPL_1_1_lre = `//**
+LaTeX Project Public License v1.1
+https://spdx.org/licenses/LPPL-1.1.json
+http://www.latex-project.org/lppl/lppl-1-1.txt
+**//
+
+(( The LaTeX Project Public License
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+LPPL Version 1.1 1999-07-10
+
+((Copyright __20__))??
+))??
+
+Everyone is allowed to distribute verbatim copies of this license document, but
+modification of it is not allowed.
+
+PREAMBLE
+
+========
+
+The LaTeX Project Public License (LPPL) is the license under which the base
+LaTeX distribution is distributed.
+
+You may use this license for any program that you have written and wish to
+distribute. This license may be particularly suitable if your program is
+TeX-related (such as a LaTeX package), but you may use it even if your program
+is unrelated to TeX. The section ` + "`" + `WHETHER AND HOW TO DISTRIBUTE PROGRAMS UNDER
+THIS LICENSE', below, gives instructions, examples, and recommendations for
+authors who are considering distributing their programs under this license.
+
+In this license document, ` + "`" + `The Program' refers to any program distributed under
+this license.
+
+This license gives conditions under which The Program may be distributed and
+conditions under which modified versions of The Program may be distributed.
+Individual files of The Program may bear supplementary and/or superseding
+conditions on modification of themselves and on the distribution of modified
+versions of themselves, but *no* file of The Program may bear supplementary or
+superseding conditions on the distribution of an unmodified copy of the file. A
+distributor wishing to distribute a complete, unmodified copy of The Program
+therefore needs to check the conditions only in this license and nowhere else.
+
+Activities other than distribution and/or modification of The Program are not
+covered by this license; they are outside its scope. In particular, the act of
+running The Program is not restricted.
+
+We, the LaTeX3 Project, believe that the conditions below give you the freedom
+to make and distribute modified versions of The Program that conform with
+whatever technical specifications you wish while maintaining the availability,
+integrity, and reliability of The Program. If you do not see how to achieve your
+goal while meeting these conditions, then read the document ` + "`" + `cfgguide.tex' in
+the base LaTeX distribution for suggestions.
+
+CONDITIONS ON DISTRIBUTION AND MODIFICATION
+
+===========================================
+
+You may distribute a complete, unmodified copy of The Program. Distribution of
+only part of The Program is not allowed.
+
+You may not modify in any way a file of The Program that bears a legal notice
+forbidding modification of that file.
+
+You may distribute a modified file of The Program if, and only if, the following
+eight conditions are met:
+
+   (( 1. ))??
+   You must meet any additional conditions borne by the file on the distribution
+   of a modified version of the file as described below in the subsection
+   ` + "`" + `Additional Conditions on Individual Files of The Program'.
+
+   (( 2. ))??
+   If the file is a LaTeX software file, then you must meet any applicable
+   additional conditions on the distribution of a modified version of the file
+   that are described below in the subsection ` + "`" + `Additional Conditions on LaTeX
+   Software Files'.
+
+   (( 3. ))??
+   You must not distribute the modified file with the filename of the original
+   file.
+
+   (( 4. ))??
+   In the modified file, you must acknowledge the authorship and name of the
+   original file, and the name (if any) of the program which contains it.
+
+   (( 5. ))??
+   You must change any identification string in the file to indicate clearly
+   that the modified file is not part of The Program.
+
+   (( 6. ))??
+   You must change any addresses in the modified file for the reporting of
+   errors in the file or in The Program generally to ensure that reports for
+   files no longer maintained by the original maintainers will be directed to
+   the maintainers of the modified files.
+
+   (( 7. ))??
+   You must distribute the modified file under a license that forbids
+   distribution both of the modified file and of any files derived from the
+   modified file with the filename of the original file.
+
+   (( 8. ))??
+   You must do either (A) or (B):
+
+      (( (A) ))??
+      distribute a copy of The Program (that is, a complete, unmodified copy of
+      The Program) together with the modified file; if your distribution of the
+      modified file is made by offering access to copy the modified file from a
+      designated place, then offering equivalent access to copy The Program from
+      the same place meets this condition, even though third parties are not
+      compelled to copy The Program along with the modified file;
+
+      (( (B) ))??
+      provide to those who receive the modified file information that is
+      sufficient for them to obtain a copy of The Program; for example, you may
+      provide a Uniform Resource Locator (URL) for a site that you expect will
+      provide them with a copy of The Program free of charge (either the version
+      from which your modification is derived, or perhaps a later version).
+
+Note that in the above, ` + "`" + `distribution' of a file means making the file available
+to others by any means. This includes, for instance, installing the file on any
+machine in such a way that the file is accessible by users other than yourself.
+` + "`" + `Modification' of a file means any procedure that produces a derivative file
+under any applicable law -- that is, a file containing the original file or a
+significant portion of it, either verbatim or with modifications and/or
+translated into another language.
+
+Changing the name of a file is considered to be a modification of the file.
+
+The distribution conditions in this license do not have to be applied to files
+that have been modified in accordance with the above conditions. Note, however,
+that Condition 7. does apply to any such modified file.
+
+The conditions above are not intended to prohibit, and hence do not apply to,
+the updating, by any method, of a file so that it becomes identical to the
+latest version of that file of The Program.
+
+A Recommendation on Modification Without Distribution
+
+-----------------------------------------------------
+
+It is wise never to modify a file of The Program, even for your own personal
+use, without also meeting the above eight conditions for distributing the
+modified file. While you might intend that such modified files will never be
+distributed, often this will happen by accident -- you may forget that you have
+modified the file; or it may not occur to you when allowing others to access the
+modified file that you are thus distributing it and violating the conditions of
+this license. It is usually in your best interest to keep your copy of The
+Program identical with the public one. Many programs provide ways to control the
+behavior of that program without altering its licensed files.
+
+Additional Conditions on Individual Files of The Program
+
+--------------------------------------------------------
+
+An individual file of The Program may bear additional conditions that supplement
+and/or supersede the conditions in this license if, and only if, such additional
+conditions exclusively concern modification of the file or distribution of a
+modified version of the file. The conditions on individual files of The Program
+therefore may differ only with respect to the kind and extent of modification of
+those files that is allowed, and with respect to the distribution of modified
+versions of those files.
+
+Additional Conditions on LaTeX Software Files
+
+---------------------------------------------
+
+If a file of The Program is intended to be used with LaTeX (that is, if it is a
+LaTeX software file), then the following additional conditions, which supplement
+and/or supersede the conditions above, apply to the file according to its
+filename extension:
+
+   -
+   You may not modify any file with filename extension ` + "`" + `.ins' since these are
+   installation files containing the legal notices that are placed in the files
+   they generate.
+
+   -
+   You may distribute modified versions of files with filename extension ` + "`" + `.fd'
+   (LaTeX font definition files) under the standard conditions of the LPPL as
+   described above. You may also distribute such modified LaTeX font definition
+   files with their original names provided that:
+
+      (( (1) ))??
+      the only changes to the original files either enable use of available
+      fonts or prevent attempts to access unavailable fonts;
+
+      (( (2) ))??
+      you also distribute the original, unmodified files (TeX input paths can be
+      used to control which set of LaTeX font definition files is actually used
+      by TeX).
+
+   -
+   You may distribute modified versions of files with filename extension ` + "`" + `.cfg'
+   (configuration files) with their original names. The Program may (and usually
+   will) specify the range of commands that are allowed in a particular
+   configuration file.
+
+Because of portability and exchangeability issues in LaTeX software, The LaTeX3
+Project deprecates the distribution of modified versions of components of LaTeX
+or of generally available contributed code for them, but such distribution can
+meet the conditions of this license.
+
+NO WARRANTY
+
+===========
+
+There is no warranty for The Program. Except when otherwise stated in writing,
+The Copyright Holder provides The Program ` + "`" + `as is', without warranty of any kind,
+either expressed or implied, including, but not limited to, the implied
+warranties of merchantability and fitness for a particular purpose. The entire
+risk as to the quality and performance of The Program is with you. Should The
+Program prove defective, you assume the cost of all necessary servicing, repair,
+or correction.
+
+In no event unless agreed to in writing will The Copyright Holder, or any author
+named in the files of The Program, or any other party who may distribute and/or
+modify The Program as permitted below, be liable to you for damages, including
+any general, special, incidental or consequential damages arising out of any use
+of The Program or out of inability to use The Program (including, but not
+limited to, loss of data, data being rendered inaccurate, or losses sustained by
+anyone as a result of any failure of The Program to operate with any other
+programs), even if The Copyright Holder or said author or said other party has
+been advised of the possibility of such damages.
+
+WHETHER AND HOW TO DISTRIBUTE PROGRAMS UNDER THIS LICENSE
+
+=========================================================
+
+This section contains important instructions, examples, and recommendations for
+authors who are considering distributing their programs under this license.
+These authors are addressed as ` + "`" + `you' in this section.
+
+Choosing This License or Another License
+
+----------------------------------------
+
+If for any part of your program you want or need to use *distribution*
+conditions that differ from those in this license, then do not refer to this
+license anywhere in your program but instead distribute your program under a
+different license. You may use the text of this license as a model for your own
+license, but your license should not refer to the LPPL or otherwise give the
+impression that your program is distributed under the LPPL.
+
+The document ` + "`" + `modguide.tex' in the base LaTeX distribution explains the
+motivation behind the conditions of this license. It explains, for example, why
+distributing LaTeX under the GNU General Public License (GPL) was considered
+inappropriate. Even if your program is unrelated to LaTeX, the discussion in
+` + "`" + `modguide.tex' may still be relevant, and authors intending to distribute their
+programs under any license are encouraged to read it.
+
+How to Use This License
+
+-----------------------
+
+To use this license, place in each of the files of your program both an explicit
+copyright notice including your name and the year and also a statement that the
+distribution and/or modification of the file is constrained by the conditions in
+this license.
+
+Here is an example of such a notice and statement:
+
+%% pig.dtx
+%% Copyright 2001 M. Y. Name
+%
+% This program may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.1
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+% http://www.latex-project.org/lppl.txt
+% and version 1.1 or later is part of all distributions of LaTeX
+% version 1999/06/01 or later.
+%
+% This program consists of the files pig.dtx and pig.ins
+
+Given such a notice and statement in a file, the conditions given in this
+license document would apply, with ` + "`" + `The Program' referring to the two files
+` + "`" + `pig.dtx' and ` + "`" + `pig.ins', and ` + "`" + `The Copyright Holder' referring to the person ` + "`" + `M.
+Y. Name'.
+
+Important Recommendations
+
+-------------------------
+
+Defining What Constitutes The Program
+
+The LPPL requires that distributions of The Program contain all the files of The
+Program. It is therefore important that you provide a way for the licensee to
+determine which files constitute The Program. This could, for example, be
+achieved by explicitly listing all the files of The Program near the copyright
+notice of each file or by using a line like
+
+% This program consists of all files listed in manifest.txt.
+
+in that place. In the absence of an unequivocal list it might be impossible for
+the licensee to determine what is considered by you to comprise The Program.
+
+Noting Exceptional Files
+
+If The Program contains any files bearing additional conditions on modification,
+or on distribution of modified versions, of those files (other than those listed
+in ` + "`" + `Additional Conditions on LaTeX Software Files'), then it is recommended that
+The Program contain a prominent file that defines the exceptional conditions,
+and either lists the exceptional files or defines one or more categories of
+exceptional files.
+
+Files containing the text of a license (such as this file) are often examples of
+files bearing more restrictive conditions on modification. LaTeX configuration
+files (with filename extension ` + "`" + `.cfg') are examples of files bearing less
+restrictive conditions on the distribution of a modified version of the file.
+The additional conditions on LaTeX software given above are examples of
+declaring a category of files bearing exceptional additional conditions.
+`
+const license_LPPL_1_2_lre = `//**
+LaTeX Project Public License v1.2
+https://spdx.org/licenses/LPPL-1.2.json
+http://www.latex-project.org/lppl/lppl-1-2.txt
+**//
+
+(( The LaTeX Project Public License
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+LPPL Version 1.2 1999-09-03
+((Copyright __20__))??
+))??
+
+Everyone is allowed to distribute verbatim copies of this license document, but
+modification of it is not allowed.
+
+PREAMBLE
+
+========
+
+The LaTeX Project Public License (LPPL) is the license under which the base
+LaTeX distribution is distributed.
+
+You may use this license for any program that you have written and wish to
+distribute. This license may be particularly suitable if your program is
+TeX-related (such as a LaTeX package), but you may use it even if your program
+is unrelated to TeX. The section ` + "`" + `WHETHER AND HOW TO DISTRIBUTE PROGRAMS UNDER
+THIS LICENSE', below, gives instructions, examples, and recommendations for
+authors who are considering distributing their programs under this license.
+
+In this license document, ` + "`" + `The Program' refers to any program distributed under
+this license.
+
+This license gives conditions under which The Program may be distributed and
+conditions under which modified versions of The Program may be distributed.
+Individual files of The Program may bear supplementary and/or superseding
+conditions on modification of themselves and on the distribution of modified
+versions of themselves, but *no* file of The Program may bear supplementary or
+superseding conditions on the distribution of an unmodified copy of the file. A
+distributor wishing to distribute a complete, unmodified copy of The Program
+therefore needs to check the conditions only in this license and nowhere else.
+
+Activities other than distribution and/or modification of The Program are not
+covered by this license; they are outside its scope. In particular, the act of
+running The Program is not restricted.
+
+We, the LaTeX3 Project, believe that the conditions below give you the freedom
+to make and distribute modified versions of The Program that conform with
+whatever technical specifications you wish while maintaining the availability,
+integrity, and reliability of The Program. If you do not see how to achieve your
+goal while meeting these conditions, then read the document ` + "`" + `cfgguide.tex' in
+the base LaTeX distribution for suggestions.
+
+CONDITIONS ON DISTRIBUTION AND MODIFICATION
+
+===========================================
+
+You may distribute a complete, unmodified copy of The Program. Distribution of
+only part of The Program is not allowed.
+
+You may not modify in any way a file of The Program that bears a legal notice
+forbidding modification of that file.
+
+You may distribute a modified file of The Program if, and only if, the following
+eight conditions are met:
+
+   (( 1. ))??
+   You must meet any additional conditions borne by the file on the distribution
+   of a modified version of the file as described below in the subsection
+   ` + "`" + `Additional Conditions on Individual Files of The Program'.
+
+   (( 2. ))??
+   If the file is a LaTeX software file, then you must meet any applicable
+   additional conditions on the distribution of a modified version of the file
+   that are described below in the subsection ` + "`" + `Additional Conditions on LaTeX
+   Software Files'.
+
+   (( 3. ))??
+   You must not distribute the modified file with the filename of the original
+   file.
+
+   (( 4. ))??
+   In the modified file, you must acknowledge the authorship and name of the
+   original file, and the name (if any) of the program which contains it.
+
+   (( 5. ))??
+   You must change any identification string in the file to indicate clearly
+   that the modified file is not part of The Program.
+
+   (( 6. ))??
+   You must change any addresses in the modified file for the reporting of
+   errors in the file or in The Program generally to ensure that reports for
+   files no longer maintained by the original maintainers will be directed to
+   the maintainers of the modified files.
+
+   (( 7. ))??
+   You must distribute the modified file under a license that forbids
+   distribution both of the modified file and of any files derived from the
+   modified file with the filename of the original file.
+
+   (( 8. ))??
+   You must do either (A) or (B):
+
+      (( (A) ))??
+      distribute a copy of The Program (that is, a complete, unmodified copy of
+      The Program) together with the modified file; if your distribution of the
+      modified file is made by offering access to copy the modified file from a
+      designated place, then offering equivalent access to copy The Program from
+      the same place meets this condition, even though third parties are not
+      compelled to copy The Program along with the modified file;
+
+      (( (B) ))??
+      provide to those who receive the modified file information that is
+      sufficient for them to obtain a copy of The Program; for example, you may
+      provide a Uniform Resource Locator (URL) for a site that you expect will
+      provide them with a copy of The Program free of charge (either the version
+      from which your modification is derived, or perhaps a later version).
+
+Note that in the above, ` + "`" + `distribution' of a file means making the file available
+to others by any means. This includes, for instance, installing the file on any
+machine in such a way that the file is accessible by users other than yourself.
+` + "`" + `Modification' of a file means any procedure that produces a derivative file
+under any applicable law -- that is, a file containing the original file or a
+significant portion of it, either verbatim or with modifications and/or
+translated into another language.
+
+Changing the name of a file (other than as necessitated by the file conventions
+of the target file systems) is considered to be a modification of the file.
+
+The distribution conditions in this license do not have to be applied to files
+that have been modified in accordance with the above conditions. Note, however,
+that Condition 7. does apply to any such modified file.
+
+The conditions above are not intended to prohibit, and hence do not apply to,
+the updating, by any method, of a file so that it becomes identical to the
+latest version of that file of The Program.
+
+A Recommendation on Modification Without Distribution
+-----------------------------------------------------
+
+It is wise never to modify a file of The Program, even for your own personal
+use, without also meeting the above eight conditions for distributing the
+modified file. While you might intend that such modified files will never be
+distributed, often this will happen by accident -- you may forget that you have
+modified the file; or it may not occur to you when allowing others to access the
+modified file that you are thus distributing it and violating the conditions of
+this license. It is usually in your best interest to keep your copy of The
+Program identical with the public one. Many programs provide ways to control the
+behavior of that program without altering its licensed files.
+
+Additional Conditions on Individual Files of The Program
+--------------------------------------------------------
+
+An individual file of The Program may bear additional conditions that supplement
+and/or supersede the conditions in this license if, and only if, such additional
+conditions exclusively concern modification of the file or distribution of a
+modified version of the file. The conditions on individual files of The Program
+therefore may differ only with respect to the kind and extent of modification of
+those files that is allowed, and with respect to the distribution of modified
+versions of those files.
+
+Additional Conditions on LaTeX Software Files
+
+---------------------------------------------
+
+If a file of The Program is intended to be used with LaTeX (that is, if it is a
+LaTeX software file), then the following additional conditions, which supplement
+and/or supersede the conditions above, apply to the file according to its
+filename extension:
+
+   -
+   You may not modify any file with filename extension ` + "`" + `.ins' since these are
+   installation files containing the legal notices that are placed in the files
+   they generate.
+
+   -
+   You may distribute modified versions of files with filename extension ` + "`" + `.fd'
+   (LaTeX font definition files) under the standard conditions of the LPPL as
+   described above. You may also distribute such modified LaTeX font definition
+   files with their original names provided that:
+
+      (( (1) ))??
+      the only changes to the original files either enable use of available
+      fonts or prevent attempts to access unavailable fonts;
+
+      (( (2) ))??
+      you also distribute the original, unmodified files (TeX input paths can be
+      used to control which set of LaTeX font definition files is actually used
+      by TeX).
+
+   -
+   You may distribute modified versions of files with filename extension ` + "`" + `.cfg'
+   (configuration files) with their original names. The Program may (and usually
+   will) specify the range of commands that are allowed in a particular
+   configuration file.
+
+Because of portability and exchangeability issues in LaTeX software, The LaTeX3
+Project deprecates the distribution of modified versions of components of LaTeX
+or of generally available contributed code for them, but such distribution can
+meet the conditions of this license.
+
+NO WARRANTY
+
+===========
+
+There is no warranty for The Program. Except when otherwise stated in writing,
+The Copyright Holder provides The Program ` + "`" + `as is', without warranty of any kind,
+either expressed or implied, including, but not limited to, the implied
+warranties of merchantability and fitness for a particular purpose. The entire
+risk as to the quality and performance of The Program is with you. Should The
+Program prove defective, you assume the cost of all necessary servicing, repair,
+or correction.
+
+In no event unless agreed to in writing will The Copyright Holder, or any author
+named in the files of The Program, or any other party who may distribute and/or
+modify The Program as permitted above, be liable to you for damages, including
+any general, special, incidental or consequential damages arising out of any use
+of The Program or out of inability to use The Program (including, but not
+limited to, loss of data, data being rendered inaccurate, or losses sustained by
+anyone as a result of any failure of The Program to operate with any other
+programs), even if The Copyright Holder or said author or said other party has
+been advised of the possibility of such damages.
+
+WHETHER AND HOW TO DISTRIBUTE PROGRAMS UNDER THIS LICENSE
+=========================================================
+
+This section contains important instructions, examples, and recommendations for
+authors who are considering distributing their programs under this license.
+These authors are addressed as ` + "`" + `you' in this section.
+
+Choosing This License or Another License
+
+----------------------------------------
+
+If for any part of your program you want or need to use *distribution*
+conditions that differ from those in this license, then do not refer to this
+license anywhere in your program but instead distribute your program under a
+different license. You may use the text of this license as a model for your own
+license, but your license should not refer to the LPPL or otherwise give the
+impression that your program is distributed under the LPPL.
+
+The document ` + "`" + `modguide.tex' in the base LaTeX distribution explains the
+motivation behind the conditions of this license. It explains, for example, why
+distributing LaTeX under the GNU General Public License (GPL) was considered
+inappropriate. Even if your program is unrelated to LaTeX, the discussion in
+` + "`" + `modguide.tex' may still be relevant, and authors intending to distribute their
+programs under any license are encouraged to read it.
+
+How to Use This License
+
+-----------------------
+
+To use this license, place in each of the files of your program both an explicit
+copyright notice including your name and the year and also a statement that the
+distribution and/or modification of the file is constrained by the conditions in
+this license.
+
+Here is an example of such a notice and statement:
+
+%% pig.dtx
+%% Copyright 2001 M. Y. Name
+%
+% This program may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.2
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+% http://www.latex-project.org/lppl.txt
+% and version 1.2 or later is part of all distributions of LaTeX
+% version 1999/12/01 or later.
+%
+% This program consists of the files pig.dtx and pig.ins
+
+Given such a notice and statement in a file, the conditions given in this
+license document would apply, with ` + "`" + `The Program' referring to the two files
+` + "`" + `pig.dtx' and ` + "`" + `pig.ins', and ` + "`" + `The Copyright Holder' referring to the person ` + "`" + `M.
+Y. Name'.
+
+Important Recommendations
+
+-------------------------
+
+Defining What Constitutes The Program
+
+The LPPL requires that distributions of The Program contain all the files of The
+Program. It is therefore important that you provide a way for the licensee to
+determine which files constitute The Program. This could, for example, be
+achieved by explicitly listing all the files of The Program near the copyright
+notice of each file or by using a line like
+
+% This program consists of all files listed in manifest.txt.
+
+in that place. In the absence of an unequivocal list it might be impossible for
+the licensee to determine what is considered by you to comprise The Program.
+
+Noting Exceptional Files If The Program contains any files bearing additional
+conditions on modification, or on distribution of modified versions, of those
+files (other than those listed in ` + "`" + `Additional Conditions on LaTeX Software
+Files'), then it is recommended that The Program contain a prominent file that
+defines the exceptional conditions, and either lists the exceptional files or
+defines one or more categories of exceptional files.
+
+Files containing the text of a license (such as this file) are often examples of
+files bearing more restrictive conditions on modification. LaTeX configuration
+files (with filename extension ` + "`" + `.cfg') are examples of files bearing less
+restrictive conditions on the distribution of a modified version of the file.
+The additional conditions on LaTeX software given above are examples of
+declaring a category of files bearing exceptional additional conditions.
+`
+const license_LPPL_1_3a_lre = `//**
+LaTeX Project Public License v1.3a
+https://spdx.org/licenses/LPPL-1.3a.json
+http://www.latex-project.org/lppl/lppl-1-3a.txt
+**//
+
+(( The LaTeX Project Public License
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+LPPL Version 1.3a 2004-10-01
+
+((Copyright __20__))??
+))??
+
+Everyone is allowed to distribute verbatim copies of this license document, but
+modification of it is not allowed.
+
+PREAMBLE
+
+========
+
+The LaTeX Project Public License (LPPL) is the primary license under which the
+the LaTeX kernel and the base LaTeX packages are distributed.
+
+You may use this license for any work of which you hold the copyright and which
+you wish to distribute. This license may be particularly suitable if your work
+is TeX-related (such as a LaTeX package), but you may use it with small
+modifications even if your work is unrelated to TeX.
+
+The section ` + "`" + `WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE', below,
+gives instructions, examples, and recommendations for authors who are
+considering distributing their works under this license.
+
+This license gives conditions under which a work may be distributed and
+modified, as well as conditions under which modified versions of that work may
+be distributed.
+
+We, the LaTeX3 Project, believe that the conditions below give you the freedom
+to make and distribute modified versions of your work that conform with whatever
+technical specifications you wish while maintaining the availability, integrity,
+and reliability of that work. If you do not see how to achieve your goal while
+meeting these conditions, then read the document ` + "`" + `cfgguide.tex' and
+` + "`" + `modguide.tex' in the base LaTeX distribution for suggestions.
+
+DEFINITIONS
+
+===========
+
+In this license document the following terms are used:
+
+` + "`" + `Work' Any work being distributed under this License. ` + "`" + `Derived Work' Any work
+that under any applicable law is derived from the Work.
+
+` + "`" + `Modification' Any procedure that produces a Derived Work under any applicable
+law -- for example, the production of a file containing an original file
+associated with the Work or a significant portion of such a file, either
+verbatim or with modifications and/or translated into another language.
+
+` + "`" + `Modify' To apply any procedure that produces a Derived Work under any
+applicable law. ` + "`" + `Distribution' Making copies of the Work available from one
+person to another, in whole or in part. Distribution includes (but is not
+limited to) making any electronic components of the Work accessible by file
+transfer protocols such as FTP or HTTP or by shared file systems such as Sun's
+Network File System (NFS).
+
+` + "`" + `Compiled Work' A version of the Work that has been processed into a form where
+it is directly usable on a computer system. This processing may include using
+installation facilities provided by the Work, transformations of the Work,
+copying of components of the Work, or other activities. Note that modification
+of any installation facilities provided by the Work constitutes modification of
+the Work.
+
+` + "`" + `Current Maintainer' A person or persons nominated as such within the Work. If
+there is no such explicit nomination then it is the ` + "`" + `Copyright Holder' under any
+applicable law.
+
+` + "`" + `Base Interpreter' A program or process that is normally needed for running or
+interpreting a part or the whole of the Work. A Base Interpreter may depend on
+external components but these are not considered part of the Base Interpreter
+provided that each external component clearly identifies itself whenever it is
+used interactively. Unless explicitly specified when applying the license to the
+Work, the only applicable Base Interpreter is a "LaTeX-Format".
+
+CONDITIONS ON DISTRIBUTION AND MODIFICATION
+
+===========================================
+
+   (( 1. ))??
+   Activities other than distribution and/or modification of the Work are not
+   covered by this license; they are outside its scope. In particular, the act
+   of running the Work is not restricted and no requirements are made concerning
+   any offers of support for the Work.
+
+   (( 2. ))??
+   You may distribute a complete, unmodified copy of the Work as you received
+   it. Distribution of only part of the Work is considered modification of the
+   Work, and no right to distribute such a Derived Work may be assumed under the
+   terms of this clause.
+
+   (( 3. ))??
+   You may distribute a Compiled Work that has been generated from a complete,
+   unmodified copy of the Work as distributed under Clause 2 above, as long as
+   that Compiled Work is distributed in such a way that the recipients may
+   install the Compiled Work on their system exactly as it would have been
+   installed if they generated a Compiled Work directly from the Work.
+
+   (( 4. ))??
+   If you are the Current Maintainer of the Work, you may, without restriction,
+   modify the Work, thus creating a Derived Work. You may also distribute the
+   Derived Work without restriction, including Compiled Works generated from the
+   Derived Work. Derived Works distributed in this manner by the Current
+   Maintainer are considered to be updated versions of the Work.
+
+   (( 5. ))??
+   If you are not the Current Maintainer of the Work, you may modify your copy
+   of the Work, thus creating a Derived Work based on the Work, and compile this
+   Derived Work, thus creating a Compiled Work based on the Derived Work.
+
+   (( 6. ))??
+   If you are not the Current Maintainer of the Work, you may distribute a
+   Derived Work provided the following conditions are met for every component of
+   the Work unless that component clearly states in the copyright notice that it
+   is exempt from that condition. Only the Current Maintainer is allowed to add
+   such statements of exemption to a component of the Work.
+
+      (( a. ))??
+      If a component of this Derived Work can be a direct replacement for a
+      component of the Work when that component is used with the Base
+      Interpreter, then, wherever this component of the Work identifies itself
+      to the user when used interactively with that Base Interpreter, the
+      replacement component of this Derived Work clearly and unambiguously
+      identifies itself as a modified version of this component to the user when
+      used interactively with that Base Interpreter.
+
+      (( b. ))??
+      Every component of the Derived Work contains prominent notices detailing
+      the nature of the changes to that component, or a prominent reference to
+      another file that is distributed as part of the Derived Work and that
+      contains a complete and accurate log of the changes.
+
+      (( c. ))??
+      No information in the Derived Work implies that any persons, including
+      (but not limited to) the authors of the original version of the Work,
+      provide any support, including (but not limited to) the reporting and
+      handling of errors, to recipients of the Derived Work unless those persons
+      have stated explicitly that they do provide such support for the Derived
+      Work.
+
+      (( d. ))??
+      You distribute at least one of the following with the Derived Work:
+
+         (( 1. ))??
+         A complete, unmodified copy of the Work; if your distribution of a
+         modified component is made by offering access to copy the modified
+         component from a designated place, then offering equivalent access to
+         copy the Work from the same or some similar place meets this condition,
+         even though third parties are not compelled to copy the Work along with
+         the modified component;
+
+         (( 2. ))??
+         Information that is sufficient to obtain a complete, unmodified copy of
+         the Work.
+
+   (( 7. ))??
+   If you are not the Current Maintainer of the Work, you may distribute a
+   Compiled Work generated from a Derived Work, as long as the Derived Work is
+   distributed to all recipients of the Compiled Work, and as long as the
+   conditions of Clause 6, above, are met with regard to the Derived Work.
+
+   (( 8. ))??
+   The conditions above are not intended to prohibit, and hence do not apply to,
+   the modification, by any method, of any component so that it becomes
+   identical to an updated version of that component of the Work as it is
+   distributed by the Current Maintainer under Clause 4, above.
+
+   (( 9. ))??
+   Distribution of the Work or any Derived Work in an alternative format, where
+   the Work or that Derived Work (in whole or in part) is then produced by
+   applying some process to that format, does not relax or nullify any sections
+   of this license as they pertain to the results of applying that process.
+
+   (( 10. ))??
+
+      (( a. ))??
+      A Derived Work may be distributed under a different license provided that
+      license itself honors the conditions listed in Clause 6 above, in regard
+      to the Work, though it does not have to honor the rest of the conditions
+      in this license.
+
+      (( b. ))??
+      If a Derived Work is distributed under this license, that Derived Work
+      must provide sufficient documentation as part of itself to allow each
+      recipient of that Derived Work to honor the restrictions in Clause 6
+      above, concerning changes from the Work.
+
+   (( 11. ))??
+   This license places no restrictions on works that are unrelated to the Work,
+   nor does this license place any restrictions on aggregating such works with
+   the Work by any means.
+
+   (( 12. ))??
+   Nothing in this license is intended to, or may be used to, prevent complete
+   compliance by all parties with all applicable laws.
+
+NO WARRANTY
+
+===========
+
+There is no warranty for the Work. Except when otherwise stated in writing, the
+Copyright Holder provides the Work ` + "`" + `as is', without warranty of any kind, either
+expressed or implied, including, but not limited to, the implied warranties of
+merchantability and fitness for a particular purpose. The entire risk as to the
+quality and performance of the Work is with you. Should the Work prove
+defective, you assume the cost of all necessary servicing, repair, or
+correction.
+
+In no event unless required by applicable law or agreed to in writing will The
+Copyright Holder, or any author named in the components of the Work, or any
+other party who may distribute and/or modify the Work as permitted above, be
+liable to you for damages, including any general, special, incidental or
+consequential damages arising out of any use of the Work or out of inability to
+use the Work (including, but not limited to, loss of data, data being rendered
+inaccurate, or losses sustained by anyone as a result of any failure of the Work
+to operate with any other programs), even if the Copyright Holder or said author
+or said other party has been advised of the possibility of such damages.
+
+MAINTENANCE OF THE WORK
+
+=======================
+
+The Work has the status ` + "`" + `author-maintained' if the Copyright Holder explicitly
+and prominently states near the primary copyright notice in the Work that the
+Work can only be maintained by the Copyright Holder or simply that is
+` + "`" + `author-maintained'.
+
+The Work has the status ` + "`" + `maintained' if there is a Current Maintainer who has
+indicated in the Work that they are willing to receive error reports for the
+Work (for example, by supplying a valid e-mail address). It is not required for
+the Current Maintainer to acknowledge or act upon these error reports.
+
+The Work changes from status ` + "`" + `maintained' to ` + "`" + `unmaintained' if there is no
+Current Maintainer, or the person stated to be Current Maintainer of the work
+cannot be reached through the indicated means of communication for a period of
+six months, and there are no other significant signs of active maintenance.
+
+You can become the Current Maintainer of the Work by agreement with any existing
+Current Maintainer to take over this role.
+
+If the Work is unmaintained, you can become the Current Maintainer of the Work
+through the following steps:
+
+   (( 1. ))??
+   Make a reasonable attempt to trace the Current Maintainer (and the Copyright
+   Holder, if the two differ) through the means of an Internet or similar
+   search.
+
+   (( 2. ))??
+   If this search is successful, then enquire whether the Work is still
+   maintained.
+
+      (( a. ))??
+      If it is being maintained, then ask the Current Maintainer to update their
+      communication data within one month.
+
+      (( b. ))??
+      If the search is unsuccessful or no action to resume active maintenance is
+      taken by the Current Maintainer, then announce within the pertinent
+      community your intention to take over maintenance. (If the Work is a LaTeX
+      work, this could be done, for example, by posting to comp.text.tex.)
+
+      (( 3a. ))??
+      If the Current Maintainer is reachable and agrees to pass maintenance of
+      the Work to you, then this takes effect immediately upon announcement.
+
+      (( b. ))??
+      If the Current Maintainer is not reachable and the Copyright Holder agrees
+      that maintenance of the Work be passed to you, then this takes effect
+      immediately upon announcement.
+
+   (( 4. ))??
+   If you make an ` + "`" + `intention announcement' as described in 2b. above and after
+   three months your intention is challenged neither by the Current Maintainer
+   nor by the Copyright Holder nor by other people, then you may arrange for the
+   Work to be changed so as to name you as the (new) Current Maintainer.
+
+   (( 5. ))??
+   If the previously unreachable Current Maintainer becomes reachable once more
+   within three months of a change completed under the terms of 3b) or 4), then
+   that Current Maintainer must become or remain the Current Maintainer upon
+   request provided they then update their communication data within one month.
+
+A change in the Current Maintainer does not, of itself, alter the fact that the
+Work is distributed under the LPPL license.
+
+If you become the Current Maintainer of the Work, you should immediately
+provide, within the Work, a prominent and unambiguous statement of your status
+as Current Maintainer. You should also announce your new status to the same
+pertinent community as in 2b) above.
+
+WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE
+
+======================================================
+
+This section contains important instructions, examples, and recommendations for
+authors who are considering distributing their works under this license. These
+authors are addressed as ` + "`" + `you' in this section.
+
+Choosing This License or Another License
+
+----------------------------------------
+
+If for any part of your work you want or need to use *distribution* conditions
+that differ significantly from those in this license, then do not refer to this
+license anywhere in your work but, instead, distribute your work under a
+different license. You may use the text of this license as a model for your own
+license, but your license should not refer to the LPPL or otherwise give the
+impression that your work is distributed under the LPPL.
+
+The document ` + "`" + `modguide.tex' in the base LaTeX distribution explains the
+motivation behind the conditions of this license. It explains, for example, why
+distributing LaTeX under the GNU General Public License (GPL) was considered
+inappropriate. Even if your work is unrelated to LaTeX, the discussion in
+` + "`" + `modguide.tex' may still be relevant, and authors intending to distribute their
+works under any license are encouraged to read it.
+
+A Recommendation on Modification Without Distribution
+
+-----------------------------------------------------
+
+It is wise never to modify a component of the Work, even for your own personal
+use, without also meeting the above conditions for distributing the modified
+component. While you might intend that such modifications will never be
+distributed, often this will happen by accident -- you may forget that you have
+modified that component; or it may not occur to you when allowing others to
+access the modified version that you are thus distributing it and violating the
+conditions of this license in ways that could have legal implications and,
+worse, cause problems for the community. It is therefore usually in your best
+interest to keep your copy of the Work identical with the public one. Many works
+provide ways to control the behavior of that work without altering any of its
+licensed components.
+
+How to Use This License
+
+-----------------------
+
+To use this license, place in each of the components of your work both an
+explicit copyright notice including your name and the year the work was authored
+and/or last substantially modified. Include also a statement that the
+distribution and/or modification of that component is constrained by the
+conditions in this license.
+
+Here is an example of such a notice and statement:
+
+%% pig.dtx
+%% Copyright 2003 M. Y. Name
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+% http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2003/12/01 or later.
+%
+% This work has the LPPL maintenance status " maintained ".
+%
+% This Current Maintainer of this work is M. Y. Name .
+%
+% This work consists of the files pig.dtx and pig.ins
+% and the derived file pig.sty .
+
+Given such a notice and statement in a file, the conditions given in this
+license document would apply, with the ` + "`" + `Work' referring to the three files
+` + "`" + `pig.dtx', ` + "`" + `pig.ins', and ` + "`" + `pig.sty' (the last being generated from ` + "`" + `pig.dtx'
+using ` + "`" + `pig.ins'), the ` + "`" + `Base Interpreter' referring to any "LaTeX-Format", and
+both ` + "`" + `Copyright Holder' and ` + "`" + `Current Maintainer' referring to the person ` + "`" + `M. Y.
+Name'.
+
+If you do not want the Maintenance section of LPPL to apply to your Work, change
+"maintained" above into "author-maintained". However, we recommend that you use
+"maintained" as the Maintenance section was added in order to ensure that your
+Work remains useful to the community even when you can no longer maintain and
+support it yourself.
+
+Important Recommendations
+
+-------------------------
+
+Defining What Constitutes the Work
+
+The LPPL requires that distributions of the Work contain all the files of the
+Work. It is therefore important that you provide a way for the licensee to
+determine which files constitute the Work. This could, for example, be achieved
+by explicitly listing all the files of the Work near the copyright notice of
+each file or by using a line such as:
+
+% This work consists of all files listed in manifest.txt.
+
+in that place. In the absence of an unequivocal list it might be impossible for
+the licensee to determine what is considered by you to comprise the Work and, in
+such a case, the licensee would be entitled to make reasonable conjectures as to
+which files comprise the Work.
+`
+const license_LPPL_1_3c_lre = `//**
+LaTeX Project Public License v1.3c
+https://spdx.org/licenses/LPPL-1.3c.json
+http://www.latex-project.org/lppl/lppl-1-3c.txt
+https://opensource.org/licenses/LPPL-1.3c
+**//
+
+(( The LaTeX Project Public License
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+LPPL Version 1.3c 2008-05-04
+
+(( Copyright __20__ ))??
+
+))??
+
+Everyone is allowed to distribute verbatim copies of this license document, but
+modification of it is not allowed.
+
+PREAMBLE
+
+========
+
+The LaTeX Project Public License (LPPL) is the primary license under which the
+LaTeX kernel and the base LaTeX packages are distributed.
+
+You may use this license for any work of which you hold the copyright and which
+you wish to distribute. This license may be particularly suitable if your work
+is TeX-related (such as a LaTeX package), but it is written in such a way that
+you can use it even if your work is unrelated to TeX.
+
+The section ` + "`" + `WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE', below,
+gives instructions, examples, and recommendations for authors who are
+considering distributing their works under this license.
+
+This license gives conditions under which a work may be distributed and
+modified, as well as conditions under which modified versions of that work may
+be distributed.
+
+We, the LaTeX3 Project, believe that the conditions below give you the freedom
+to make and distribute modified versions of your work that conform with whatever
+technical specifications you wish while maintaining the availability, integrity,
+and reliability of that work. If you do not see how to achieve your goal while
+meeting these conditions, then read the document ` + "`" + `cfgguide.tex' and
+` + "`" + `modguide.tex' in the base LaTeX distribution for suggestions.
+
+DEFINITIONS
+
+===========
+
+In this license document the following terms are used:
+
+` + "`" + `Work' Any work being distributed under this License. ` + "`" + `Derived Work' Any work
+that under any applicable law is derived from the Work.
+
+` + "`" + `Modification' Any procedure that produces a Derived Work under any applicable
+law -- for example, the production of a file containing an original file
+associated with the Work or a significant portion of such a file, either
+verbatim or with modifications and/or translated into another language.
+
+` + "`" + `Modify' To apply any procedure that produces a Derived Work under any
+applicable law. ` + "`" + `Distribution' Making copies of the Work available from one
+person to another, in whole or in part. Distribution includes (but is not
+limited to) making any electronic components of the Work accessible by file
+transfer protocols such as FTP or HTTP or by shared file systems such as Sun's
+Network File System (NFS).
+
+` + "`" + `Compiled Work' A version of the Work that has been processed into a form where
+it is directly usable on a computer system. This processing may include using
+installation facilities provided by the Work, transformations of the Work,
+copying of components of the Work, or other activities. Note that modification
+of any installation facilities provided by the Work constitutes modification of
+the Work.
+
+` + "`" + `Current Maintainer' A person or persons nominated as such within the Work. If
+there is no such explicit nomination then it is the ` + "`" + `Copyright Holder' under any
+applicable law.
+
+` + "`" + `Base Interpreter' A program or process that is normally needed for running or
+interpreting a part or the whole of the Work.
+
+A Base Interpreter may depend on external components but these are not
+considered part of the Base Interpreter provided that each external component
+clearly identifies itself whenever it is used interactively. Unless explicitly
+specified when applying the license to the Work, the only applicable Base
+Interpreter is a ` + "`" + `LaTeX-Format' or in the case of files belonging to the
+` + "`" + `LaTeX-format' a program implementing the ` + "`" + `TeX language'.
+
+CONDITIONS ON DISTRIBUTION AND MODIFICATION
+
+===========================================
+
+   (( 1. ))??
+   Activities other than distribution and/or modification of the Work are not
+   covered by this license; they are outside its scope. In particular, the act
+   of running the Work is not restricted and no requirements are made concerning
+   any offers of support for the Work.
+
+   (( 2. ))??
+   You may distribute a complete, unmodified copy of the Work as you received
+   it. Distribution of only part of the Work is considered modification of the
+   Work, and no right to distribute such a Derived Work may be assumed under the
+   terms of this clause.
+
+   (( 3. ))??
+   You may distribute a Compiled Work that has been generated from a complete,
+   unmodified copy of the Work as distributed under Clause 2 above, as long as
+   that Compiled Work is distributed in such a way that the recipients may
+   install the Compiled Work on their system exactly as it would have been
+   installed if they generated a Compiled Work directly from the Work.
+
+   (( 4. ))??
+   If you are the Current Maintainer of the Work, you may, without restriction,
+   modify the Work, thus creating a Derived Work. You may also distribute the
+   Derived Work without restriction, including Compiled Works generated from the
+   Derived Work. Derived Works distributed in this manner by the Current
+   Maintainer are considered to be updated versions of the Work.
+
+   (( 5. ))??
+   If you are not the Current Maintainer of the Work, you may modify your copy
+   of the Work, thus creating a Derived Work based on the Work, and compile this
+   Derived Work, thus creating a Compiled Work based on the Derived Work.
+
+   (( 6. ))??
+   If you are not the Current Maintainer of the Work, you may distribute a
+   Derived Work provided the following conditions are met for every component of
+   the Work unless that component clearly states in the copyright notice that it
+   is exempt from that condition. Only the Current Maintainer is allowed to add
+   such statements of exemption to a component of the Work.
+
+      (( a. ))??
+      If a component of this Derived Work can be a direct replacement for a
+      component of the Work when that component is used with the Base
+      Interpreter, then, wherever this component of the Work identifies itself
+      to the user when used interactively with that Base Interpreter, the
+      replacement component of this Derived Work clearly and unambiguously
+      identifies itself as a modified version of this component to the user when
+      used interactively with that Base Interpreter.
+
+      (( b. ))??
+      Every component of the Derived Work contains prominent notices detailing
+      the nature of the changes to that component, or a prominent reference to
+      another file that is distributed as part of the Derived Work and that
+      contains a complete and accurate log of the changes.
+
+      (( c. ))??
+      No information in the Derived Work implies that any persons, including
+      (but not limited to) the authors of the original version of the Work,
+      provide any support, including (but not limited to) the reporting and
+      handling of errors, to recipients of the Derived Work unless those persons
+      have stated explicitly that they do provide such support for the Derived
+      Work.
+
+      (( d. ))??
+      You distribute at least one of the following with the Derived Work:
+
+         (( 1. ))??
+         A complete, unmodified copy of the Work; if your distribution of a
+         modified component is made by offering access to copy the modified
+         component from a designated place, then offering equivalent access to
+         copy the Work from the same or some similar place meets this condition,
+         even though third parties are not compelled to copy the Work along with
+         the modified component;
+
+         (( 2. ))??
+         Information that is sufficient to obtain a complete, unmodified copy of
+         the Work.
+
+   (( 7. ))??
+   If you are not the Current Maintainer of the Work, you may distribute a
+   Compiled Work generated from a Derived Work, as long as the Derived Work is
+   distributed to all recipients of the Compiled Work, and as long as the
+   conditions of Clause 6, above, are met with regard to the Derived Work.
+
+   (( 8. ))??
+   The conditions above are not intended to prohibit, and hence do not apply to,
+   the modification, by any method, of any component so that it becomes
+   identical to an updated version of that component of the Work as it is
+   distributed by the Current Maintainer under Clause 4, above.
+
+   (( 9. ))??
+   Distribution of the Work or any Derived Work in an alternative format, where
+   the Work or that Derived Work (in whole or in part) is then produced by
+   applying some process to that format, does not relax or nullify any sections
+   of this license as they pertain to the results of applying that process.
+
+   (( 10. ))??
+
+      (( a. ))??
+      A Derived Work may be distributed under a different license provided that
+      license itself honors the conditions listed in Clause 6 above, in regard
+      to the Work, though it does not have to honor the rest of the conditions
+      in this license.
+
+      (( b. ))??
+      If a Derived Work is distributed under a different license, that Derived
+      Work must provide sufficient documentation as part of itself to allow each
+      recipient of that Derived Work to honor the restrictions in Clause 6
+      above, concerning changes from the Work.
+
+   (( 11. ))??
+   This license places no restrictions on works that are unrelated to the Work,
+   nor does this license place any restrictions on aggregating such works with
+   the Work by any means.
+
+   (( 12. ))??
+   Nothing in this license is intended to, or may be used to, prevent complete
+   compliance by all parties with all applicable laws.
+
+NO WARRANTY
+
+===========
+
+There is no warranty for the Work. Except when otherwise stated in writing, the
+Copyright Holder provides the Work ` + "`" + `as is', without warranty of any kind, either
+expressed or implied, including, but not limited to, the implied warranties of
+merchantability and fitness for a particular purpose. The entire risk as to the
+quality and performance of the Work is with you. Should the Work prove
+defective, you assume the cost of all necessary servicing, repair, or
+correction.
+
+In no event unless required by applicable law or agreed to in writing will The
+Copyright Holder, or any author named in the components of the Work, or any
+other party who may distribute and/or modify the Work as permitted above, be
+liable to you for damages, including any general, special, incidental or
+consequential damages arising out of any use of the Work or out of inability to
+use the Work (including, but not limited to, loss of data, data being rendered
+inaccurate, or losses sustained by anyone as a result of any failure of the Work
+to operate with any other programs), even if the Copyright Holder or said author
+or said other party has been advised of the possibility of such damages.
+
+MAINTENANCE OF THE WORK
+
+=======================
+
+The Work has the status ` + "`" + `author-maintained' if the Copyright Holder explicitly
+and prominently states near the primary copyright notice in the Work that the
+Work can only be maintained by the Copyright Holder or simply that it is
+` + "`" + `author-maintained'.
+
+The Work has the status ` + "`" + `maintained' if there is a Current Maintainer who has
+indicated in the Work that they are willing to receive error reports for the
+Work (for example, by supplying a valid e-mail address). It is not required for
+the Current Maintainer to acknowledge or act upon these error reports.
+
+The Work changes from status ` + "`" + `maintained' to ` + "`" + `unmaintained' if there is no
+Current Maintainer, or the person stated to be Current Maintainer of the work
+cannot be reached through the indicated means of communication for a period of
+six months, and there are no other significant signs of active maintenance.
+
+You can become the Current Maintainer of the Work by agreement with any existing
+Current Maintainer to take over this role.
+
+If the Work is unmaintained, you can become the Current Maintainer of the Work
+through the following steps:
+
+   (( 1. ))??
+   Make a reasonable attempt to trace the Current Maintainer (and the Copyright
+   Holder, if the two differ) through the means of an Internet or similar
+   search.
+
+   (( 2. ))??
+   If this search is successful, then enquire whether the Work is still
+   maintained.
+
+      (( a. ))??
+      If it is being maintained, then ask the Current Maintainer to update their
+      communication data within one month.
+
+      (( b. ))??
+      If the search is unsuccessful or no action to resume active maintenance is
+      taken by the Current Maintainer, then announce within the pertinent
+      community your intention to take over maintenance. (If the Work is a LaTeX
+      work, this could be done, for example, by posting to comp.text.tex.)
+
+      (( 3a. ))??
+      If the Current Maintainer is reachable and agrees to pass maintenance of
+      the Work to you, then this takes effect immediately upon announcement.
+
+      (( b. ))??
+      If the Current Maintainer is not reachable and the Copyright Holder agrees
+      that maintenance of the Work be passed to you, then this takes effect
+      immediately upon announcement.
+
+   (( 4. ))??
+   If you make an ` + "`" + `intention announcement' as described in 2b. above and after
+   three months your intention is challenged neither by the Current Maintainer
+   nor by the Copyright Holder nor by other people, then you may arrange for the
+   Work to be changed so as to name you as the (new) Current Maintainer.
+
+   (( 5. ))??
+   If the previously unreachable Current Maintainer becomes reachable once more
+   within three months of a change completed under the terms of 3b) or 4), then
+   that Current Maintainer must become or remain the Current Maintainer upon
+   request provided they then update their communication data within one month.
+
+A change in the Current Maintainer does not, of itself, alter the fact that the
+Work is distributed under the LPPL license.
+
+If you become the Current Maintainer of the Work, you should immediately
+provide, within the Work, a prominent and unambiguous statement of your status
+as Current Maintainer. You should also announce your new status to the same
+pertinent community as in 2b) above.
+
+WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE
+
+======================================================
+
+This section contains important instructions, examples, and recommendations for
+authors who are considering distributing their works under this license. These
+authors are addressed as ` + "`" + `you' in this section.
+
+Choosing This License or Another License
+
+----------------------------------------
+
+If for any part of your work you want or need to use *distribution* conditions
+that differ significantly from those in this license, then do not refer to this
+license anywhere in your work but, instead, distribute your work under a
+different license. You may use the text of this license as a model for your own
+license, but your license should not refer to the LPPL or otherwise give the
+impression that your work is distributed under the LPPL.
+
+The document ` + "`" + `modguide.tex' in the base LaTeX distribution explains the
+motivation behind the conditions of this license. It explains, for example, why
+distributing LaTeX under the GNU General Public License (GPL) was considered
+inappropriate. Even if your work is unrelated to LaTeX, the discussion in
+` + "`" + `modguide.tex' may still be relevant, and authors intending to distribute their
+works under any license are encouraged to read it.
+
+A Recommendation on Modification Without Distribution
+
+-----------------------------------------------------
+
+It is wise never to modify a component of the Work, even for your own personal
+use, without also meeting the above conditions for distributing the modified
+component. While you might intend that such modifications will never be
+distributed, often this will happen by accident -- you may forget that you have
+modified that component; or it may not occur to you when allowing others to
+access the modified version that you are thus distributing it and violating the
+conditions of this license in ways that could have legal implications and,
+worse, cause problems for the community. It is therefore usually in your best
+interest to keep your copy of the Work identical with the public one. Many works
+provide ways to control the behavior of that work without altering any of its
+licensed components.
+
+How to Use This License
+
+-----------------------
+
+To use this license, place in each of the components of your work both an
+explicit copyright notice including your name and the year the work was authored
+and/or last substantially modified. Include also a statement that the
+distribution and/or modification of that component is constrained by the
+conditions in this license.
+
+Here is an example of such a notice and statement:
+
+%% pig.dtx
+%% Copyright 2005 M. Y. Name
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+% http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status " maintained ".
+%
+% The Current Maintainer of this work is M. Y. Name .
+%
+% This work consists of the files pig.dtx and pig.ins
+% and the derived file pig.sty .
+
+Given such a notice and statement in a file, the conditions given in this
+license document would apply, with the ` + "`" + `Work' referring to the three files
+` + "`" + `pig.dtx', ` + "`" + `pig.ins', and ` + "`" + `pig.sty' (the last being generated from ` + "`" + `pig.dtx'
+using ` + "`" + `pig.ins'), the ` + "`" + `Base Interpreter' referring to any ` + "`" + `LaTeX-Format', and
+both ` + "`" + `Copyright Holder' and ` + "`" + `Current Maintainer' referring to the person ` + "`" + `M. Y.
+Name'.
+
+If you do not want the Maintenance section of LPPL to apply to your Work, change
+` + "`" + `maintained' above into ` + "`" + `author-maintained'. However, we recommend that you use
+` + "`" + `maintained', as the Maintenance section was added in order to ensure that your
+Work remains useful to the community even when you can no longer maintain and
+support it yourself.
+
+Derived Works That Are Not Replacements
+
+---------------------------------------
+
+Several clauses of the LPPL specify means to provide reliability and stability
+for the user community. They therefore concern themselves with the case that a
+Derived Work is intended to be used as a (compatible or incompatible)
+replacement of the original Work. If this is not the case (e.g., if a few lines
+of code are reused for a completely different task), then clauses 6b and 6d
+shall not apply.
+
+Important Recommendations
+
+-------------------------
+
+Defining What Constitutes the Work
+
+The LPPL requires that distributions of the Work contain all the files of the
+Work. It is therefore important that you provide a way for the licensee to
+determine which files constitute the Work. This could, for example, be achieved
+by explicitly listing all the files of the Work near the copyright notice of
+each file or by using a line such as:
+
+% This work consists of all files listed in manifest.txt.
+
+in that place. In the absence of an unequivocal list it might be impossible for
+the licensee to determine what is considered by you to comprise the Work and, in
+such a case, the licensee would be entitled to make reasonable conjectures as to
+which files comprise the Work.
+`
+const license_Latex2e_lre = `//**
+Latex2e License
+https://spdx.org/licenses/Latex2e.json
+https://fedoraproject.org/wiki/Licensing/Latex2e
+**//
+
+//** Copyright **//
+
+Permission is granted to make and distribute verbatim copies of this manual
+provided the copyright notice and this permission notice are preserved on all
+copies.
+
+Permission is granted to copy and distribute modified versions of this manual
+under the conditions for verbatim copying, provided that the entire resulting
+derived work is distributed under the terms of a permission notice identical to
+this one.
+
+Permission is granted to copy and distribute translations of this manual into
+another language, under the above conditions for modified versions.
+`
+const license_Leptonica_lre = `//**
+Leptonica License
+https://spdx.org/licenses/Leptonica.json
+https://fedoraproject.org/wiki/Licensing/Leptonica
+**//
+
+//** Copyright **//
+
+This software is distributed in the hope that it will be useful, but with NO
+WARRANTY OF ANY KIND.
+
+No author or distributor accepts responsibility to anyone for the consequences
+of using this software, or for whether it serves any particular purpose or works
+at all, unless he or she says so in writing. Everyone is granted permission to
+copy, modify and redistribute this source code, for commercial or non-commercial
+purposes, with the following restrictions:
+
+   (( (1) ))??
+   the origin of this source code must not be misrepresented;
+
+   (( (2) ))??
+   modified versions must be plainly marked as such; and
+
+   (( (3) ))??
+   this notice may not be removed or altered from any source or modified source
+   distribution.
+`
+const license_LiLiQ_P_1_1_lre = `//**
+Licence Libre du Québec – Permissive version 1.1
+https://spdx.org/licenses/LiLiQ-P-1.1.json
+https://forge.gouv.qc.ca/licence/fr/liliq-v1-1/
+http://opensource.org/licenses/LiLiQ-P-1.1
+**//
+
+(( Licence Libre du Québec – Permissive (LiLiQ-P)
+
+Version 1.1 ))??
+
+   (( 1. ))??
+   Préambule
+
+   Cette licence s'applique à tout logiciel distribué dont le titulaire du
+   droit d'auteur précise qu'il est sujet aux termes de la Licence Libre du
+   Québec – Permissive (LiLiQ-P) (ci-après appelée la « licence »).
+
+   (( 2. ))??
+   Définitions
+
+   Dans la présente licence, à moins que le contexte n'indique un sens
+   différent, on entend par:
+
+   « concédant » : le titulaire du droit d'auteur sur le logiciel, ou
+   toute personne dûment autorisée par ce dernier à accorder la présente
+   licence;
+
+   « contributeur » : le titulaire du droit d'auteur ou toute personne
+   autorisée par ce dernier à soumettre au concédant une contribution. Un
+   contributeur dont sa contribution est incorporée au logiciel est considéré
+   comme un concédant en regard de sa contribution;
+
+   « contribution » : tout logiciel original, ou partie de logiciel
+   original soumis et destiné à être incorporé dans le logiciel;
+
+   « distribution » : le fait de délivrer une copie du logiciel;
+
+   « licencié » : toute personne qui possède une copie du logiciel et qui
+   exerce les droits concédés par la licence;
+
+   « logiciel » : une œuvre protégée par le droit d'auteur, telle qu'un
+   programme d'ordinateur et sa documentation, pour laquelle le titulaire du
+   droit d'auteur a précisé qu'elle est sujette aux termes de la présente
+   licence;
+
+   « logiciel dérivé » : tout logiciel original réalisé par un
+   licencié, autre que le logiciel ou un logiciel modifié, qui produit ou
+   reproduit la totalité ou une partie importante du logiciel;
+
+   « logiciel modifié » : toute modification par un licencié de l'un des
+   fichiers source du logiciel ou encore tout nouveau fichier source qui
+   incorpore le logiciel ou une partie importante de ce dernier.
+
+   (( 3. ))??
+   Licence de droit d'auteur
+
+   Sous réserve des termes de la licence, le concédant accorde au licencié
+   une licence non exclusive et libre de redevances lui permettant d'exercer les
+   droits suivants sur le logiciel :
+
+      (( 1  ))??
+      Produire ou reproduire la totalité ou une partie importante;
+
+      (( 2  ))??
+      Exécuter ou représenter la totalité ou une partie importante en
+      public;
+
+      (( 3  ))??
+      Publier la totalité ou une partie importante;
+
+      (( 4  ))??
+      Sous-licencier sous une autre licence libre, approuvée ou certifiée par
+      la Free Software Foundation ou l'Open Source Initiative.
+
+   Cette licence est accordée sans limite territoriale et sans limite de
+   temps.
+
+   L'exercice complet de ces droits est sujet à la distribution par le
+   concédant du code source du logiciel, lequel doit être sous une forme
+   permettant d'y apporter des modifications. Le concédant peut aussi
+   distribuer le logiciel accompagné d'une offre de distribuer le code source
+   du logiciel, sans frais supplémentaires, autres que ceux raisonnables afin
+   de permettre la livraison du code source. Cette offre doit être valide
+   pendant une durée raisonnable.
+
+   (( 4. ))??
+   Distribution
+
+   Le licencié peut distribuer des copies du logiciel, d'un logiciel modifié
+   ou dérivé, sous réserve de respecter les conditions suivantes :
+
+      (( 1  ))??
+      Le logiciel doit être accompagné d'un exemplaire de cette licence;
+
+      (( 2  ))??
+      Si le logiciel a été modifié, le licencié doit en faire la mention, de
+      préférence dans chacun des fichiers modifiés dont la nature permet une
+      telle mention;
+
+      (( 3  ))??
+      Les étiquettes ou mentions faisant état des droits d'auteur, des marques
+      de commerce, des garanties ou de la paternité concernant le logiciel ne
+      doivent pas être modifiées ou supprimées, à moins que ces étiquettes
+      ou mentions ne soient inapplicables à un logiciel modifié ou dérivé
+      donné.
+
+   (( 5. ))??
+
+   Contributions
+
+   Sous réserve d'une entente distincte, toute contribution soumise par un
+   contributeur au concédant pour inclusion dans le logiciel sera soumise aux
+   termes de cette licence.
+
+   (( 6. ))??
+   Marques de commerce
+
+   La licence n'accorde aucune permission particulière qui permettrait
+   d'utiliser les marques de commerce du concédant, autre que celle requise
+   permettant d'identifier la provenance du logiciel.
+
+   (( 7. ))??
+   Garanties
+
+   Sauf mention contraire, le concédant distribue le logiciel sans aucune
+   garantie, aux risques et périls de l'acquéreur de la copie du logiciel, et
+   ce, sans assurer que le logiciel puisse répondre à un besoin particulier ou
+   puisse donner un résultat quelconque.
+
+   Sans lier le concédant d'une quelconque manière, rien n'empêche un
+   licencié d'offrir ou d'exclure des garanties ou du support.
+
+   (( 8. ))??
+   Responsabilité
+
+   Le licencié est responsable de tout préjudice résultant de l'exercice des
+   droits accordés par la licence.
+
+   Le concédant ne saurait être tenu responsable de dommages subis par le
+   licencié ou par des tiers, pour quelque cause que ce soit en lien avec la
+   licence et les droits qui y sont accordés.
+
+   (( 9. ))??
+   Résiliation
+
+   La présente licence est automatiquement résiliée dès que les droits qui y
+   sont accordés ne sont pas exercés conformément aux termes qui y sont
+   stipulés.
+
+   Toutefois, si le défaut est corrigé dans un délai de 30 jours de sa prise
+   de connaissance par la personne en défaut, et qu'il s'agit du premier
+   défaut, la licence est accordée de nouveau.
+
+   Pour tout défaut subséquent, le consentement exprès du concédant est
+   nécessaire afin que la licence soit accordée de nouveau.
+
+   (( 10. ))??
+   Version de la licence
+
+   Le Centre de services partagés du Québec, ses ayants cause ou toute
+   personne qu'il désigne, peuvent diffuser des versions révisées ou
+   modifiées de cette licence. Chaque version recevra un numéro unique. Si un
+   logiciel est déjà soumis aux termes d'une version spécifique, c'est
+   seulement cette version qui liera les parties à la licence.
+
+   Le concédant peut aussi choisir de concéder la licence sous la version
+   actuelle ou toute version ultérieure, auquel cas le licencié peut choisir
+   sous quelle version la licence lui est accordée.
+
+   (( 11. ))??
+   Divers
+
+   Dans la mesure où le concédant est un ministère, un organisme public ou
+   une personne morale de droit public, créés en vertu d'une loi de
+   l'Assemblée nationale du Québec, la licence est régie par le droit
+   applicable au Québec et en cas de contestation, les tribunaux du Québec
+   seront seuls compétents.
+
+   La présente licence peut être distribuée sans conditions particulières.
+   Toutefois, une version modifiée doit être distribuée sous un nom
+   différent. Toute référence au Centre de services partagés du Québec, et,
+   le cas échéant, ses ayant cause, doit être retirée, autre que celle
+   permettant d'identifier la provenance de la licence.
+`
+const license_LiLiQ_R_1_1_lre = `//**
+Licence Libre du Québec – Réciprocité version 1.1
+https://spdx.org/licenses/LiLiQ-R-1.1.json
+https://www.forge.gouv.qc.ca/participez/licence-logicielle/licence-libre-du-quebec-liliq-en-francais/licence-libre-du-quebec-reciprocite-liliq-r-v1-1/
+http://opensource.org/licenses/LiLiQ-R-1.1
+**//
+
+(( Licence Libre du Québec – Réciprocité (LiLiQ-R)
+
+Version 1.1 ))??
+
+   (( 1. ))??
+   Préambule
+
+   Cette licence s'applique à tout logiciel distribué dont le titulaire du
+   droit d'auteur précise qu'il est sujet aux termes de la Licence Libre du
+   Québec – Réciprocité (LiLiQ-R) (ci-après appelée la « licence »).
+
+   (( 2. ))??
+   Définitions
+
+   Dans la présente licence, à moins que le contexte n'indique un sens
+   différent, on entend par:
+
+   « concédant » : le titulaire du droit d'auteur sur le logiciel, ou
+   toute personne dûment autorisée par ce dernier à accorder la présente
+   licence;
+
+   « contributeur » : le titulaire du droit d'auteur ou toute personne
+   autorisée par ce dernier à soumettre au concédant une contribution. Un
+   contributeur dont sa contribution est incorporée au logiciel est considéré
+   comme un concédant en regard de sa contribution;
+
+   « contribution » : tout logiciel original, ou partie de logiciel
+   original soumis et destiné à être incorporé dans le logiciel;
+
+   « distribution » : le fait de délivrer une copie du logiciel;
+
+   « licencié » : toute personne qui possède une copie du logiciel et qui
+   exerce les droits concédés par la licence;
+
+   « logiciel » : une œuvre protégée par le droit d'auteur, telle qu'un
+   programme d'ordinateur et sa documentation, pour laquelle le titulaire du
+   droit d'auteur a précisé qu'elle est sujette aux termes de la présente
+   licence;
+
+   « logiciel dérivé » : tout logiciel original réalisé par un
+   licencié, autre que le logiciel ou un logiciel modifié, qui produit ou
+   reproduit la totalité ou une partie importante du logiciel;
+
+   « logiciel modifié » : toute modification par un licencié de l'un des
+   fichiers source du logiciel ou encore tout nouveau fichier source qui
+   incorpore le logiciel ou une partie importante de ce dernier.
+
+   (( 3. ))??
+   Licence de droit d'auteur
+
+   Sous réserve des termes de la licence, le concédant accorde au licencié
+   une licence non exclusive et libre de redevances lui permettant d'exercer les
+   droits suivants sur le logiciel :
+
+      (( 1  ))??
+      Produire ou reproduire la totalité ou une partie importante;
+
+      (( 2  ))??
+      Exécuter ou représenter la totalité ou une partie importante en
+      public;
+
+      (( 3  ))??
+      Publier la totalité ou une partie importante.
+
+   Cette licence est accordée sans limite territoriale et sans limite de
+   temps.
+
+   L'exercice complet de ces droits est sujet à la distribution par le
+   concédant du code source du logiciel, lequel doit être sous une forme
+   permettant d'y apporter des modifications. Le concédant peut aussi
+   distribuer le logiciel accompagné d'une offre de distribuer le code source
+   du logiciel, sans frais supplémentaires, autres que ceux raisonnables afin
+   de permettre la livraison du code source. Cette offre doit être valide
+   pendant une durée raisonnable.
+
+   (( 4. ))??
+   Distribution
+
+   Le licencié peut distribuer des copies du logiciel, d'un logiciel modifié
+   ou dérivé, sous réserve de respecter les conditions suivantes :
+
+      (( 1  ))??
+      Le logiciel doit être accompagné d'un exemplaire de cette licence;
+
+      (( 2  ))??
+      Si le logiciel a été modifié, le licencié doit en faire la mention, de
+      préférence dans chacun des fichiers modifiés dont la nature permet une
+      telle mention;
+
+      (( 3  ))??
+      Les étiquettes ou mentions faisant état des droits d'auteur, des marques
+      de commerce, des garanties ou de la paternité concernant le logiciel ne
+      doivent pas être modifiées ou supprimées, à moins que ces étiquettes
+      ou mentions ne soient inapplicables à un logiciel modifié ou dérivé
+      donné.
+
+   (( 4.1. ))??
+   Réciprocité
+
+   Chaque fois que le licencié distribue le logiciel, le concédant offre au
+   récipiendaire une concession sur le logiciel selon les termes de la
+   présente licence. Le licencié doit offrir une concession selon les termes
+   de la présente licence pour tout logiciel modifié qu'il distribue.
+
+   Chaque fois que le licencié distribue le logiciel ou un logiciel modifié,
+   ce dernier doit assumer l'obligation d'en distribuer le code source, de la
+   manière prévue au troisième alinéa de l'article 3.
+
+   (( 4.2. ))??
+   Compatibilité
+
+   Dans la mesure où le licencié souhaite distribuer un logiciel modifié
+   combiné à un logiciel assujetti à une licence compatible, mais dont il ne
+   serait pas possible d'en respecter les termes, le concédant offre, en plus
+   de la présente concession, une concession selon les termes de cette licence
+   compatible.
+
+   Un licencié qui est titulaire exclusif du droit d'auteur sur le logiciel
+   assujetti à une licence compatible ne peut pas se prévaloir de cette offre.
+   Il en est de même pour toute autre personne dûment autorisée à
+   sous-licencier par le titulaire exclusif du droit d'auteur sur le logiciel
+   assujetti à une licence compatible.
+
+   Est considérée comme une licence compatible toute licence libre approuvée
+   ou certifiée par la Free Software Foundation ou l'Open Source Initiative,
+   dont le niveau de réciprocité est comparable ou supérieur à celui de la
+   présente licence, sans toutefois être moindre, notamment :
+
+      (( 1  ))??
+      Common Development and Distribution License (CDDL-1.0)
+
+      (( 2  ))??
+      Common Public License Version 1.0 (CPL-1.0)
+
+      (( 3  ))??
+      Contrat de licence de logiciel libre CeCILL, version 2.1 (CECILL-2.1)
+
+      (( 4  ))??
+      Contrat de licence de logiciel libre CeCILL-C (CECILL-C)
+
+      (( 5  ))??
+      Eclipse Public License - v 1.0 (EPL-1.0)
+
+      (( 6  ))??
+      European Union Public License, version 1.1 (EUPL v. 1.1)
+
+      (( 7  ))??
+      Licence Libre du Québec – Réciprocité forte version 1.1 (LiLiQ-R+
+      1.1)
+
+      (( 8  ))??
+      GNU General Public License Version 2 (GNU GPLv2)
+
+      (( 9  ))??
+      GNU General Public License Version 3 (GNU GPLv3)
+
+      (( 10  ))??
+      GNU Lesser General Public License Version 2.1 (GNU LGPLv2.1)
+
+      (( 11  ))??
+      GNU Lesser General Public License Version 3 (GNU LGPLv3)
+
+      (( 12  ))??
+      Mozilla Public License Version 2.0 (MPL-2.0)
+
+   (( 5. ))??
+   Contributions
+
+   Sous réserve d'une entente distincte, toute contribution soumise par un
+   contributeur au concédant pour inclusion dans le logiciel sera soumise aux
+   termes de cette licence.
+
+   (( 6. ))??
+   Marques de commerce
+
+   La licence n'accorde aucune permission particulière qui permettrait
+   d'utiliser les marques de commerce du concédant, autre que celle requise
+   permettant d'identifier la provenance du logiciel.
+
+   (( 7. ))??
+   Garanties
+
+   Sauf mention contraire, le concédant distribue le logiciel sans aucune
+   garantie, aux risques et périls de l'acquéreur de la copie du logiciel, et
+   ce, sans assurer que le logiciel puisse répondre à un besoin particulier ou
+   puisse donner un résultat quelconque.
+
+   Sans lier le concédant d'une quelconque manière, rien n'empêche un
+   licencié d'offrir ou d'exclure des garanties ou du support.
+
+   (( 8. ))??
+   Responsabilité
+
+   Le licencié est responsable de tout préjudice résultant de l'exercice des
+   droits accordés par la licence.
+
+   Le concédant ne saurait être tenu responsable du préjudice subi par le
+   licencié ou par des tiers, pour quelque cause que ce soit en lien avec la
+   licence et les droits qui y sont accordés.
+
+   (( 9. ))??
+   Résiliation
+
+   La présente licence est résiliée de plein droit dès que les droits qui y
+   sont accordés ne sont pas exercés conformément aux termes qui y sont
+   stipulés.
+
+   Toutefois, si le défaut est corrigé dans un délai de 30 jours de sa prise
+   de connaissance par la personne en défaut, et qu'il s'agit du premier
+   défaut, la licence est accordée de nouveau.
+
+   Pour tout défaut subséquent, le consentement exprès du concédant est
+   nécessaire afin que la licence soit accordée de nouveau.
+
+   (( 10. ))??
+   Version de la licence
+
+   Le Centre de services partagés du Québec, ses ayants cause ou toute
+   personne qu'il désigne, peuvent diffuser des versions révisées ou
+   modifiées de cette licence. Chaque version recevra un numéro unique. Si un
+   logiciel est déjà soumis aux termes d'une version spécifique, c'est
+   seulement cette version qui liera les parties à la licence.
+
+   Le concédant peut aussi choisir de concéder la licence sous la version
+   actuelle ou toute version ultérieure, auquel cas le licencié peut choisir
+   sous quelle version la licence lui est accordée.
+
+   (( 11. ))??
+   Divers
+
+   Dans la mesure où le concédant est un ministère, un organisme public ou
+   une personne morale de droit public, créés en vertu d'une loi de
+   l'Assemblée nationale du Québec, la licence est régie par le droit
+   applicable au Québec et en cas de contestation, les tribunaux du Québec
+   seront seuls compétents.
+
+   La présente licence peut être distribuée sans conditions particulières.
+   Toutefois, une version modifiée doit être distribuée sous un nom
+   différent. Toute référence au Centre de services partagés du Québec, et,
+   le cas échéant, ses ayant droit, doit être retirée, autre que celle
+   permettant d'identifier la provenance de la licence.
+`
+const license_LiLiQ_Rplus_1_1_lre = `//**
+Licence Libre du Québec – Réciprocité forte version 1.1
+https://spdx.org/licenses/LiLiQ-Rplus-1.1.json
+https://www.forge.gouv.qc.ca/participez/licence-logicielle/licence-libre-du-quebec-liliq-en-francais/licence-libre-du-quebec-reciprocite-forte-liliq-r-v1-1/
+http://opensource.org/licenses/LiLiQ-Rplus-1.1
+**//
+
+(( Licence Libre du Québec – Réciprocité forte (LiLiQ-R+)
+
+Version 1.1 ))??
+
+   (( 1. ))??
+   Préambule
+
+   Cette licence s'applique à tout logiciel distribué dont le titulaire du
+   droit d'auteur précise qu'il est sujet aux termes de la Licence Libre du
+   Québec – Réciprocité forte (LiLiQ-R+) (ci-après appelée la
+   « licence »).
+
+   (( 2. ))??
+   Définitions
+
+   Dans la présente licence, à moins que le contexte n'indique un sens
+   différent, on entend par:
+
+   « concédant » : le titulaire du droit d'auteur sur le logiciel, ou toute
+   personne dûment autorisée par ce dernier à accorder la présente licence;
+
+   « contributeur » : le titulaire du droit d'auteur ou toute personne
+   autorisée par ce dernier à soumettre au concédant une contribution. Un
+   contributeur dont sa contribution est incorporée au logiciel est considéré
+   comme un concédant en regard de sa contribution;
+
+   « contribution » : tout logiciel original, ou partie de logiciel original
+   soumis et destiné à être incorporé dans le logiciel;
+
+   « distribution » : le fait de délivrer une copie du logiciel;
+
+   « licencié » : toute personne qui possède une copie du logiciel et qui
+   exerce les droits concédés par la licence;
+
+   « logiciel » : une œuvre protégée par le droit d'auteur, telle qu'un
+   programme d'ordinateur et sa documentation, pour laquelle le titulaire du
+   droit d'auteur a précisé qu'elle est sujette aux termes de la présente
+   licence;
+
+   « logiciel dérivé » : tout logiciel original réalisé par un licencié,
+   autre que le logiciel ou un logiciel modifié, qui produit ou reproduit la
+   totalité ou une partie importante du logiciel;
+
+   « logiciel modifié » : toute modification par un licencié de l'un des
+   fichiers source du logiciel ou encore tout nouveau fichier source qui
+   incorpore le logiciel ou une partie importante de ce dernier.
+
+   (( 3. ))??
+   Licence de droit d'auteur
+
+   Sous réserve des termes de la licence, le concédant accorde au licencié
+   une licence non exclusive et libre de redevances lui permettant d'exercer les
+   droits suivants sur le logiciel:
+
+      (( 1 ))??
+      Produire ou reproduire la totalité ou une partie importante;
+
+      (( 2 ))??
+      Exécuter ou représenter la totalité ou une partie importante en
+      public;
+
+      (( 3 ))??
+      Publier la totalité ou une partie importante.
+
+   Cette licence est accordée sans limite territoriale et sans limite de
+   temps.
+
+   L'exercice complet de ces droits est sujet à la distribution par le
+   concédant du code source du logiciel, lequel doit être sous une forme
+   permettant d'y apporter des modifications. Le concédant peut aussi
+   distribuer le logiciel accompagné d'une offre de distribuer le code source
+   du logiciel, sans frais supplémentaires, autres que ceux raisonnables afin
+   de permettre la livraison du code source. Cette offre doit être valide
+   pendant une durée raisonnable.
+
+   (( 4. ))??
+   Distribution
+
+   Le licencié peut distribuer des copies du logiciel, d'un logiciel modifié
+   ou dérivé, sous réserve de respecter les conditions suivantes :
+
+      (( 1 ))??
+      Le logiciel doit être accompagné d'un exemplaire de cette licence;
+
+      (( 2 ))??
+      Si le logiciel a été modifié, le licencié doit en faire la mention, de
+      préférence dans chacun des fichiers modifiés dont la nature permet une
+      telle mention;
+
+      (( 3 ))??
+      Les étiquettes ou mentions faisant état des droits d'auteur, des marques
+      de commerce, des garanties ou de la paternité concernant le logiciel ne
+      doivent pas être modifiées ou supprimées, à moins que ces étiquettes
+      ou mentions ne soient inapplicables à un logiciel modifié ou dérivé
+      donné.
+
+   (( 4.1. ))??
+   Réciprocité
+
+   Chaque fois que le licencié distribue le logiciel, le concédant offre au
+   récipiendaire une concession sur le logiciel selon les termes de la
+   présente licence. Le licencié doit offrir une concession selon les termes
+   de la présente licence pour tout logiciel modifié ou dérivé qu'il
+   distribue.
+
+   Chaque fois que le licencié distribue le logiciel, un logiciel modifié, ou
+   un logiciel dérivé, ce dernier doit assumer l'obligation d'en distribuer le
+   code source, de la manière prévue au troisième alinéa de l'article 3.
+
+   (( 4.2. ))??
+   Compatibilité
+
+   Dans la mesure où le licencié souhaite distribuer un logiciel modifié ou
+   dérivé combiné à un logiciel assujetti à une licence compatible, mais
+   dont il ne serait pas possible d'en respecter les termes, le concédant
+   offre, en plus de la présente concession, une concession selon les termes de
+   cette licence compatible.
+
+   Un licencié qui est titulaire exclusif du droit d'auteur sur le logiciel
+   assujetti à une licence compatible ne peut pas se prévaloir de cette offre.
+   Il en est de même pour toute autre personne dûment autorisée à
+   sous-licencier par le titulaire exclusif du droit d'auteur sur le logiciel
+   assujetti à une licence compatible.
+
+   Est considérée comme une licence compatible toute licence libre approuvée
+   ou certifiée par la Free Software Foundation ou l'Open Source Initiative,
+   dont le niveau de réciprocité est comparable à celui de la présente
+   licence, sans toutefois être moindre, notamment:
+
+      (( 1 ))??
+      Common Public License Version 1.0 (CPL-1.0)
+
+      (( 2 ))??
+      Contrat de licence de logiciel libre CeCILL, version 2.1 (CECILL-2.1)
+
+      (( 3 ))??
+      Eclipse Public License - v 1.0 (EPL-1.0)
+
+      (( 4 ))??
+      European Union Public License, version 1.1 (EUPL v. 1.1)
+
+      (( 5 ))??
+      GNU General Public License Version 2 (GNU GPLv2)
+
+      (( 6 ))??
+      GNU General Public License Version 3 (GNU GPLv3)
+
+   (( 5. ))??
+   Contributions
+
+   Sous réserve d'une entente distincte, toute contribution soumise par un
+   contributeur au concédant pour inclusion dans le logiciel sera soumise aux
+   termes de cette licence.
+
+   (( 6. ))??
+   Marques de commerce
+
+   La licence n'accorde aucune permission particulière qui permettrait
+   d'utiliser les marques de commerce du concédant, autre que celle requise
+   permettant d'identifier la provenance du logiciel.
+
+   (( 7. ))??
+   Garanties
+
+   Sauf mention contraire, le concédant distribue le logiciel sans aucune
+   garantie, aux risques et périls de l'acquéreur de la copie du logiciel, et
+   ce, sans assurer que le logiciel puisse répondre à un besoin particulier ou
+   puisse donner un résultat quelconque.
+
+   Sans lier le concédant d'une quelconque manière, rien n'empêche un
+   licencié d'offrir ou d'exclure des garanties ou du support.
+
+   (( 8. ))??
+   Responsabilité
+
+   Le licencié est responsable de tout préjudice résultant de l'exercice des
+   droits accordés par la licence.
+
+   Le concédant ne saurait être tenu responsable du préjudice subi par le
+   licencié ou par des tiers, pour quelque cause que ce soit en lien avec la
+   licence et les droits qui y sont accordés.
+
+   (( 9. ))??
+   Résiliation
+
+   La présente licence est résiliée de plein droit dès que les droits qui y
+   sont accordés ne sont pas exercés conformément aux termes qui y sont
+   stipulés.
+
+   Toutefois, si le défaut est corrigé dans un délai de 30 jours de sa prise
+   de connaissance par la personne en défaut, et qu'il s'agit du premier
+   défaut, la licence est accordée de nouveau.
+
+   Pour tout défaut subséquent, le consentement exprès du concédant est
+   nécessaire afin que la licence soit accordée de nouveau.
+
+   (( 10. ))??
+   Version de la licence
+
+   Le Centre de services partagés du Québec, ses ayants cause ou toute
+   personne qu'il désigne, peuvent diffuser des versions révisées ou
+   modifiées de cette licence. Chaque version recevra un numéro unique. Si un
+   logiciel est déjà soumis aux termes d'une version spécifique, c'est
+   seulement cette version qui liera les parties à la licence.
+
+   Le concédant peut aussi choisir de concéder la licence sous la version
+   actuelle ou toute version ultérieure, auquel cas le licencié peut choisir
+   sous quelle version la licence lui est accordée.
+
+   (( 11. ))??
+   Divers
+
+   Dans la mesure où le concédant est un ministère, un organisme public ou
+   une personne morale de droit public, créés en vertu d'une loi de
+   l'Assemblée nationale du Québec, la licence est régie par le droit
+   applicable au Québec et en cas de contestation, les tribunaux du Québec
+   seront seuls compétents.
+
+   La présente licence peut être distribuée sans conditions particulières.
+   Toutefois, une version modifiée doit être distribuée sous un nom
+   différent. Toute référence au Centre de services partagés du Québec, et,
+   le cas échéant, ses ayant cause, doit être retirée, autre que celle
+   permettant d'identifier la provenance de la licence.
+`
+const license_Libpng_lre = `//**
+libpng License
+https://spdx.org/licenses/Libpng.json
+http://www.libpng.org/pub/png/src/libpng-LICENSE.txt
+**//
+
+This copy of the libpng notices is provided for your convenience. In case of any
+discrepancy between this copy and the notices in the file png.h that is included
+in the libpng distribution, the latter shall prevail.
+
+COPYRIGHT NOTICE, DISCLAIMER, and LICENSE:
+
+If you modify libpng you may insert additional notices immediately following
+this sentence.
+
+This code is released under the libpng license.
+
+libpng versions 1.2.6, August 15, 2004, through 1.4.5, December 9, 2010, are
+Copyright (c) 2004, 2006-2010 Glenn Randers-Pehrson, and are distributed
+according to the same disclaimer and license as libpng-1.2.5 with the following
+individual added to the list of Contributing Authors
+
+Cosmin Truta
+
+libpng versions 1.0.7, July 1, 2000, through 1.2.5 - October 3, 2002, are
+
+Copyright (c) 2000-2002 Glenn Randers-Pehrson, and are distributed according to
+the same disclaimer and license as libpng-1.0.6 with the following individuals
+added to the list of Contributing Authors
+
+Simon-Pierre Cadieux
+
+Eric S. Raymond
+
+Gilles Vollant
+
+and with the following additions to the disclaimer:
+
+There is no warranty against interference with your enjoyment of the library or
+against infringement. There is no warranty that our efforts or the library will
+fulfill any of your particular purposes or needs. This library is provided with
+all faults, and the entire risk of satisfactory quality, performance, accuracy,
+and effort is with the user.
+
+libpng versions 0.97, January 1998, through 1.0.6, March 20, 2000, are
+
+Copyright (c) 1998, 1999 Glenn Randers-Pehrson, and are distributed according to
+the same disclaimer and license as libpng-0.96, with the following individuals
+added to the list of Contributing Authors:
+
+Tom Lane
+
+Glenn Randers-Pehrson
+
+Willem van Schaik
+
+libpng versions 0.89, June 1996, through 0.96, May 1997, are
+
+Copyright (c) 1996, 1997 Andreas Digger
+
+Distributed according to the same disclaimer and license as libpng-0.88, with
+the following individuals added to the list of Contributing Authors:
+
+John Bowler
+
+Kevin Bracey
+
+Sam Bushell
+
+Magnus Holmgren
+
+Greg Roelofs
+
+Tom Tanner
+
+libpng versions 0.5, May 1995, through 0.88, January 1996, are
+
+Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.
+
+For the purposes of this copyright and license, "Contributing Authors" is
+defined as the following set of individuals:
+
+Andreas Dilger
+
+Dave Martindale
+
+Guy Eric Schalnat
+
+Paul Schmidt
+
+Tim Wegner
+
+The PNG Reference Library is supplied "AS IS". The Contributing Authors and
+Group 42, Inc. disclaim all warranties, expressed or implied, including, without
+limitation, the warranties of merchantability and of fitness for any purpose.
+The Contributing Authors and Group 42, Inc. assume no liability for direct,
+indirect, incidental, special, exemplary, or consequential damages, which may
+result from the use of the PNG Reference Library, even if advised of the
+possibility of such damage.
+
+Permission is hereby granted to use, copy, modify, and distribute this source
+code, or portions hereof, for any purpose, without fee, subject to the following
+restrictions:
+
+   (( 1. ))??
+   The origin of this source code must not be misrepresented.
+
+   (( 2. ))??
+   Altered versions must be plainly marked as such and must not be
+   misrepresented as being the original source.
+
+   (( 3. ))??
+   This Copyright notice may not be removed or altered from any source or
+   altered source distribution.
+
+The Contributing Authors and Group 42, Inc. specifically permit, without fee,
+and encourage the use of this source code as a component to supporting the PNG
+file format in commercial products. If you use this source code in a product,
+acknowledgment is not required but would be appreciated.
+
+A "png_get_copyright" function is available, for convenient use in "about" boxes
+and the like:
+
+printf("%s",png_get_copyright(NULL);
+
+Also, the PNG logo (in PNG format, of course) is supplied in the files
+"pngbar.png" and "pngbar.jpg (88x31) and "pngnow.png" (98x31).
+
+Libpng is OSI Certified Open Source Software. OSI Certified Open Source is a
+certification mark of the Open Source Initiative.
+
+Glenn Randers-Pehrson
+
+glennrp at users.sourceforge.net
+
+December 9, 2010
+`
+const license_Linux_OpenIB_lre = `//**
+Linux Kernel Variant of OpenIB.org license
+https://spdx.org/licenses/Linux-OpenIB.json
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/infiniband/core/sa.h
+**//
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   -
+   Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+   -
+   Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 `
 const license_MIT_lre = `
 
