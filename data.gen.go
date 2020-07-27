@@ -231,12 +231,19 @@ func init() {
 		{Name: "GFDL-1.2-Only", Text: license_GFDL_1_2_Only_lre},
 		{Name: "GFDL-1.3", Text: license_GFDL_1_3_lre},
 		{Name: "GFDL-1.3-Only", Text: license_GFDL_1_3_Only_lre},
+		{Name: "GL2PS", Text: license_GL2PS_lre},
 		{Name: "GPL-1.0", Text: license_GPL_1_0_lre},
 		{Name: "GPL-2.0", Text: license_GPL_2_0_lre},
 		{Name: "GPL-2.0-Only", Text: license_GPL_2_0_Only_lre},
 		{Name: "GPL-2.0-Or-3.0", Text: license_GPL_2_0_Or_3_0_lre},
 		{Name: "GPL-3.0", Text: license_GPL_3_0_lre},
 		{Name: "GPL-3.0-Only", Text: license_GPL_3_0_Only_lre},
+		{Name: "Giftware", Text: license_Giftware_lre},
+		{Name: "Glide", Text: license_Glide_lre},
+		{Name: "Glulxe", Text: license_Glulxe_lre},
+		{Name: "HPND", Text: license_HPND_lre},
+		{Name: "HPND-sell-variant", Text: license_HPND_sell_variant_lre},
+		{Name: "HaskellReport", Text: license_HaskellReport_lre},
 		{Name: "IPL-1.0", Text: license_IPL_1_0_lre},
 		{Name: "ISC", Text: license_ISC_lre},
 		{Name: "JSON", Text: license_JSON_lre},
@@ -45352,6 +45359,35 @@ being __20__))
 	"GNU Free Documentation License".
 
 `
+const license_GL2PS_lre = `//**
+GL2PS License
+https://spdx.org/licenses/GL2PS.json
+http://www.geuz.org/gl2ps/COPYING.GL2PS
+**//
+
+(( GL2PS LICENSE Version 2, November 2003
+(( Copyright __20__ ))??
+))??
+
+Permission to use, copy, and distribute this software and its documentation for
+any purpose with or without fee is hereby granted, provided that the copyright
+notice appear in all copies and that both that copyright notice and this
+permission notice appear in supporting documentation.
+
+Permission to modify and distribute modified versions of this software is
+granted, provided that:
+
+   (( 1) ))??
+   the modifications are licensed under the same terms as this software;
+
+   (( 2) ))??
+   you make available the source code of any modifications that you distribute,
+   either on the same media as you distribute any executable or other form of
+   this software, or via a mechanism generally accepted in the software
+   development community for the electronic transfer of data.
+
+This software is provided "as is" without express or implied warranty.
+`
 const license_GPL_1_0_lre = `//**
 GNU General Public License v1.0
 https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html
@@ -47151,6 +47187,456 @@ const license_GPL_3_0_Only_lre = `
 	))??
 
 
+`
+const license_Giftware_lre = `//**
+Giftware License
+https://spdx.org/licenses/Giftware.json
+http://liballeg.org/license.html#allegro-4-the-giftware-license
+**//
+
+(( Allegro 4 (the giftware license) ))??
+
+Allegro is gift-ware. It was created by a number of people working in
+cooperation, and is given to you freely as a gift. You may use, modify,
+redistribute, and generally hack it about in any way you like, and you do not
+have to give us anything in return.
+
+However, if you like this product you are encouraged to thank us by making a
+return gift to the Allegro community. This could be by writing an add-on
+package, providing a useful bug report, making an improvement to the library, or
+perhaps just releasing the sources of your program so that other people can
+learn from them. If you redistribute parts of this code or make a game using it,
+it would be nice if you mentioned Allegro somewhere in the credits, but you are
+not required to do this. We trust you not to abuse our generosity.
+
+By Shawn Hargreaves, 18 October 1998.
+
+DISCLAIMER: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.
+IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE
+LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+`
+const license_Glide_lre = `//**
+3dfx Glide License
+https://spdx.org/licenses/Glide.json
+http://www.users.on.net/~triforce/glidexp/COPYING.txt
+**//
+
+(( 3DFX GLIDE Source Code General Public License ))??
+
+   (( 1. ))??
+   PREAMBLE
+
+   This license is for software that provides a 3D graphics application program
+   interface (API).The license is intended to offer terms similar to some
+   standard General Public Licenses designed to foster open standards and
+   unrestricted accessibility to source code. Some of these licenses require
+   that, as a condition of the license of the software, any derivative works
+   (that is, new software which is a work containing the original program or a
+   portion of it) must be available for general use, without restriction other
+   than for a minor transfer fee, and that the source code for such derivative
+   works must likewise be made available. The only restriction is that such
+   derivative works must be subject to the same General Public License terms as
+   the original work.
+
+   This 3dfx GLIDE Source Code General Public License differs from the standard
+   licenses of this type in that it does not require the entire derivative work
+   to be made available under the terms of this license nor is the recipient
+   required to make available the source code for the entire derivative work.
+   Rather, the license is limited to only the identifiable portion of the
+   derivative work that is derived from the licensed software. The precise terms
+   and conditions for copying, distribution and modification follow.
+
+   (( 2. ))??
+   DEFINITIONS
+
+      (( 2.1 ))??
+      This License applies to any program (or other "work") which contains a
+      notice placed by the copyright holder saying it may be distributed under
+      the terms of this 3dfx GLIDE Source Code General Public License.
+
+      (( 2.2 ))??
+      The term "Program" as used in this Agreement refers to 3DFX's GLIDE source
+      code and object code and any Derivative Work.
+
+      (( 2.3 ))??
+      "Derivative Work" means, for the purpose of the License, that portion of
+      any work that contains the Program or the identifiable portion of a work
+      that is derived from the Program, either verbatim or with modifications
+      and/or translated into another language, and that performs 3D graphics API
+      operations. It does not include any other portions of a work.
+
+      (( 2.4 ))??
+      "Modifications of the Program" means any work, which includes a Derivative
+      Work, and includes the whole of such work.
+
+      (( 2.5 ))??
+      "License" means this 3dfx GLIDE Source Code General Public License.
+
+      (( 2.6 ))??
+      The "Source Code" for a work means the preferred form of the work for
+      making modifications to it. For an executable work, complete source code
+      means all the source code for all modules it contains, any associated
+      interface definition files, and the scripts used to control compilation
+      and installation of the executable work.
+
+      (( 2.7 ))??
+      "3dfx" means 3dfx Interactive, Inc.
+
+   (( 3. ))??
+   LICENSED ACTIVITIES
+
+      (( 3.1 ))??
+      COPYING - You may copy and distribute verbatim copies of the Program's
+      Source Code as you receive it, in any medium, subject to the provision of
+      section 3.3 and provided also that:
+
+         (( (a) ))??
+         you conspicuously and appropriately publish on each copy an appropriate
+         copyright notice (3dfx Interactive, Inc. 1999), a notice that
+         recipients who wish to copy, distribute or modify the Program can only
+         do so subject to this License, and a disclaimer of warranty as set
+         forth in section 5;
+
+         (( (b) ))??
+         keep intact all the notices that refer to this License and to the
+         absence of any warranty; and
+
+         (( c ))??
+         do not make any use of the GLIDE trademark without the prior written
+         permission of 3dfx, and
+
+         (( (d) ))??
+         give all recipients of the Program a copy of this License along with
+         the Program or instructions on how to easily receive a copy of this
+         License.
+
+      (( 3.2 ))??
+      MODIFICATION OF THE PROGRAM/DERIVATIVE WORKS - You may modify your copy or
+      copies of the Program or any portion of it, and copy and distribute such
+      modifications subject to the provisions of section 3.3 and provided that
+      you also meet all of the following conditions:
+
+         (( (a) ))??
+         you conspicuously and appropriately publish on each copy of a
+         Derivative Work an appropriate copyright notice, a notice that
+         recipients who wish to copy, distribute or modify the Derivative Work
+         can only do so subject to this License, and a disclaimer of warranty as
+         set forth in section 5;
+
+         (( (b) ))??
+         keep intact all the notices that refer to this License and to the
+         absence of any warranty; and (c) give all recipients of the Derivative
+         Work a copy of this License along with the Derivative Work or
+         instructions on how to easily receive a copy of this License.
+
+         (( (d) ))??
+         You must cause the modified files of the Derivative Work to carry
+         prominent notices stating that you changed the files and the date of
+         any change.
+
+         (( (e) ))??
+         You must cause any Derivative Work that you distribute or publish to be
+         licensed at no charge to all third parties under the terms of this
+         License.
+
+         (( (f) ))??
+         You do not make any use of the GLIDE trademark without the prior
+         written permission of 3dfx.
+
+         (( (g) ))??
+         If the Derivative Work normally reads commands interactively when run,
+         you must cause it, when started running for such interactive use, to
+         print or display an announcement as follows:
+
+         "COPYRIGHT 3DFX INTERACTIVE, INC. 1999, ALL RIGHTS RESERVED THIS
+         SOFTWARE IS FREE AND PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND,
+         EITHER EXPRESSED OR IMPLIED. THERE IS NO RIGHT TO USE THE GLIDE
+         TRADEMARK WITHOUT PRIOR WRITTEN PERMISSION OF 3DFX INTERACTIVE, INC.
+         SEE THE 3DFX GLIDE GENERAL PUBLIC LICENSE FOR A FULL TEXT OF THE
+         DISTRIBUTION AND NON-WARRANTY PROVISIONS (REQUEST COPY FROM
+         INFO@3DFX.COM)."
+
+         (( (h) ))??
+         The requirements of this section 3.2 do not apply to the modified work
+         as a whole but only to the Derivative Work. It is not the intent of
+         this License to claim rights or contest your rights to work written
+         entirely by you; rather, the intent is to exercise the right to control
+         the distribution of Derivative Works.
+
+      (( 3.3 ))??
+      DISTRIBUTION
+
+         (( (a) ))??
+         All copies of the Program or Derivative Works which are distributed
+         must include in the file headers the following language verbatim:
+
+         "THIS SOFTWARE IS SUBJECT TO COPYRIGHT PROTECTION AND IS OFFERED ONLY
+         PURSUANT TO THE 3DFX GLIDE GENERAL PUBLIC LICENSE. THERE IS NO RIGHT TO
+         USE THE GLIDE TRADEMARK WITHOUT PRIOR WRITTEN PERMISSION OF 3DFX
+         INTERACTIVE, INC. A COPY OF THIS LICENSE MAY BE OBTAINED FROM THE
+         DISTRIBUTOR OR BY CONTACTING 3DFX INTERACTIVE INC (info@3dfx.com). THIS
+         PROGRAM. IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+         EXPRESSED OR IMPLIED. SEE THE 3DFX GLIDE GENERAL PUBLIC LICENSE FOR A
+         FULL TEXT OF THE NON-WARRANTY PROVISIONS.
+
+         USE, DUPLICATION OR DISCLOSURE BY THE GOVERNMENT IS SUBJECT TO
+         RESTRICTIONS AS SET FORTH IN SUBDIVISION (C)(1)(II) OF THE RIGHTS IN
+         TECHNICAL DATA AND COMPUTER SOFTWARE CLAUSE AT DFARS 252.227-7013,
+         AND/OR IN SIMILAR OR SUCCESSOR CLAUSES IN THE FAR, DOD OR NASA FAR
+         SUPPLEMENT. UNPUBLISHED RIGHTS RESERVED UNDER THE COPYRIGHT LAWS OF THE
+         UNITED STATES.
+
+         COPYRIGHT 3DFX INTERACTIVE, INC. 1999, ALL RIGHTS RESERVED"
+
+         (( (b) ))??
+         You may distribute the Program or a Derivative Work in object code or
+         executable form under the terms of Sections 3.1 and 3.2 provided that
+         you also do one of the following:
+
+            (( (1) ))??
+            Accompany it with the complete corresponding machine-readable source
+            code, which must be distributed under the terms of Sections 3.1 and
+            3.2; or,
+
+            (( (2) ))??
+            Accompany it with a written offer, valid for at least three years,
+            to give any third party, for a charge no more than your cost of
+            physically performing source distribution, a complete
+            machine-readable copy of the corresponding source code, to be
+            distributed under the terms of Sections 3.1 and 3.2 on a medium
+            customarily used for software interchange; or,
+
+            (( (3) ))??
+            Accompany it with the information you received as to the offer to
+            distribute corresponding source code. (This alternative is allowed
+            only for noncommercial distribution and only if you received the
+            program in object code or executable form with such an offer, in
+            accord with Subsection 3.3(b)(2) above.)
+
+         (( c ))??
+         The source code distributed need not include anything that is normally
+         distributed (in either source or binary form) with the major components
+         (compiler, kernel, and so on) of the operating system on which the
+         executable runs, unless that component itself accompanies the
+         executable code.
+
+         (( (d) ))??
+         If distribution of executable code or object code is made by offering
+         access to copy from a designated place, then offering equivalent access
+         to copy the source code from the same place counts as distribution of
+         the source code, even though third parties are not compelled to copy
+         the source along with the object code.
+
+         (( (e) ))??
+         Each time you redistribute the Program or any Derivative Work, the
+         recipient automatically receives a license from 3dfx and successor
+         licensors to copy, distribute or modify the Program and Derivative
+         Works subject to the terms and conditions of the License. You may not
+         impose any further restrictions on the recipients' exercise of the
+         rights granted herein. You are not responsible for enforcing compliance
+         by third parties to this License.
+
+         (( (f) ))??
+         You may not make any use of the GLIDE trademark without the prior
+         written permission of 3dfx.
+
+         (( (g) ))??
+         You may not copy, modify, sublicense, or distribute the Program or any
+         Derivative Works except as expressly provided under this License. Any
+         attempt otherwise to copy, modify, sublicense or distribute the Program
+         or any Derivative Works is void, and will automatically terminate your
+         rights under this License. However, parties who have received copies,
+         or rights, from you under this License will not have their licenses
+         terminated so long as such parties remain in full compliance.
+
+   (( 4. ))??
+   MISCELLANEOUS
+
+      (( 4.1 ))??
+      Acceptance of this License is voluntary. By using, modifying or
+      distributing the Program or any Derivative Work, you indicate your
+      acceptance of this License to do so, and all its terms and conditions for
+      copying, distributing or modifying the Program or works based on it.
+      Nothing else grants you permission to modify or distribute the Program or
+      Derivative Works and doing so without acceptance of this License is in
+      violation of the U.S. and international copyright laws.
+
+      (( 4.2 ))??
+      If the distribution and/or use of the Program or Derivative Works is
+      restricted in certain countries either by patents or by copyrighted
+      interfaces, the original copyright holder who places the Program under
+      this License may add an explicit geographical distribution limitation
+      excluding those countries, so that distribution is permitted only in or
+      among countries not thus excluded. In such case, this License incorporates
+      the limitation as if written in the body of this License.
+
+      (( 4.3 ))??
+      This License is to be construed according to the laws of the State of
+      California and you consent to personal jurisdiction in the State of
+      California in the event it is necessary to enforce the provisions of this
+      License.
+
+   (( 5. ))??
+   NO WARRANTIES
+
+      (( 5.1 ))??
+      TO THE EXTENT PERMITTED BY APPLICABLE LAW, THERE IS NO WARRANTY FOR THE
+      PROGRAM. OR DERIVATIVE WORKS THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+      PROVIDE THE PROGRAM AND ANY DERIVATIVE WORKS"AS IS" WITHOUT WARRANTY OF
+      ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
+      IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+      PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+      AND ANY DERIVATIVE WORK IS WITH YOU. SHOULD THE PROGRAM OR ANY DERIVATIVE
+      WORK PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
+      REPAIR OR CORRECTION.
+
+      (( 5.2 ))??
+      IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW WILL 3DFX INTERACTIVE, INC.,
+      OR ANY OTHER COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+      REDISTRIBUTE THE PROGRAM OR DERIVATIVE WORKS AS PERMITTED ABOVE, BE LIABLE
+      TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
+      CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE
+      PROGRAM OR DERIVATIVE WORKS (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR
+      DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES
+      OR A FAILURE OF THE PROGRAM OR DERIVATIVE WORKS TO OPERATE WITH ANY OTHER
+      PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
+      POSSIBILITY OF SUCH DAMAGES.
+`
+const license_Glulxe_lre = `//**
+Glulxe License
+https://spdx.org/licenses/Glulxe.json
+https://fedoraproject.org/wiki/Licensing/Glulxe
+**//
+
+//** Copyright **//
+
+You may copy and distribute it freely, by any means and under any conditions, as
+long as the code and documentation is not changed. You may also incorporate this
+code into your own program and distribute that, or modify this code and use and
+distribute the modified version, as long as you retain a notice in your program
+or documentation which mentions my name and the URL shown above.
+`
+const license_HPND_lre = `//**
+Historical Permission Notice and Disclaimer
+https://spdx.org/licenses/HPND.json
+https://opensource.org/licenses/HPND
+**//
+
+(( Historical Permission Notice and Disclaimer
+(( Copyright __20__ ))??
+))??
+
+Permission to use, copy, modify and distribute this software and its
+documentation for any purpose and without fee is hereby granted, provided that
+the above copyright notice appear in all copies
+(( and ))??
+that both
+(( that ))??
+
+(( the ))??
+copyright notice and this permission notice appear in supporting documentation
+(( , and that the name
+(( of ))??
+
+//** <copyright holder> **//
+__5__
+
+//** <or related entities> **//
+__5__
+not be used in advertising or publicity pertaining to distribution of the
+software without specific, written prior permission ))??
+.
+((
+//** <copyright holder> **//
+__5__
+makes no representations about the suitability of this software for any purpose.
+It is provided "as is" without express or implied warranty. ))??
+
+((
+//** <copyright holder> **//
+__5__
+DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS
+//** . **//
+__5__
+IN NO EVENT SHALL
+//** <copyright holder> **//
+__5__
+BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. ))??
+`
+const license_HPND_sell_variant_lre = `//**
+Historical Permission Notice and Disclaimer - sell variant
+https://spdx.org/licenses/HPND-sell-variant.json
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/net/sunrpc/auth_gss/gss_generic_token.c?h=v4.19
+**//
+
+//** Copyright **//
+
+Permission to use, copy, modify, distribute, and sell this software and its
+documentation for any purpose is hereby granted without fee, provided that the
+above copyright notice appears in all copies
+(( and ))??
+that both
+(( that ))??
+
+(( the ))??
+copyright notice and this permission notice appear in supporting documentation
+(( , and that the name
+(( of ))??
+
+//** <copyright holder> **//
+__5__
+
+//** <or related entities> **//
+__5__
+not be used in advertising or publicity pertaining to distribution of the
+software without specific, written prior permission  ))??
+.
+((
+//** <copyright holder> **//
+__5__
+makes no representations about the suitability of this software for any purpose.
+It is provided "as is" without express or implied warranty. ))??
+
+((
+//** <copyright holder> **//
+__5__
+DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS
+//** . **//
+__5__
+IN NO EVENT SHALL
+//** <copyright holder> **//
+__5__
+BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. ))??
+`
+const license_HaskellReport_lre = `//**
+Haskell Language Report License
+https://spdx.org/licenses/HaskellReport.json
+https://fedoraproject.org/wiki/Licensing/Haskell_Language_Report_License
+**//
+
+Code derived from the document "Report on the Programming Language
+Haskell 2010", is distributed under the following license:
+
+Copyright __20__
+
+The authors intend this Report to belong to the entire Haskell community, and so
+we grant permission to copy and distribute it for any purpose, provided that it
+is reproduced in its entirety, including this Notice. Modified versions of this
+Report may also be copied and distributed for any purpose, provided that the
+modified version is clearly presented as such, and that it does not claim to be
+a definition of the Haskell 2010 Language.
 `
 const license_IPL_1_0_lre = `//**
 IBM Public License v1.0
