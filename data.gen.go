@@ -435,9 +435,28 @@ func init() {
 		{Name: "Zimbra-1.3", Text: license_Zimbra_1_3_lre},
 		{Name: "Zimbra-1.4", Text: license_Zimbra_1_4_lre},
 		{Name: "Zlib", Text: license_Zlib_lre},
+		{Name: "blessing", Text: license_blessing_lre},
 		{Name: "bzip2-1.0.5", Text: license_bzip2_1_0_5_lre},
 		{Name: "bzip2-1.0.6", Text: license_bzip2_1_0_6_lre},
+		{Name: "copyleft-next-0.3.0", Text: license_copyleft_next_0_3_0_lre},
+		{Name: "copyleft-next-0.3.1", Text: license_copyleft_next_0_3_1_lre},
 		{Name: "curl", Text: license_curl_lre},
+		{Name: "diffmark", Text: license_diffmark_lre},
+		{Name: "dvipdfm", Text: license_dvipdfm_lre},
+		{Name: "eGenix", Text: license_eGenix_lre},
+		{Name: "etalab-2.0", Text: license_etalab_2_0_lre},
+		{Name: "gSOAP-1.3b", Text: license_gSOAP_1_3b_lre},
+		{Name: "gnuplot", Text: license_gnuplot_lre},
+		{Name: "iMatix", Text: license_iMatix_lre},
+		{Name: "libpng-2.0", Text: license_libpng_2_0_lre},
+		{Name: "libselinux-1.0", Text: license_libselinux_1_0_lre},
+		{Name: "libtiff", Text: license_libtiff_lre},
+		{Name: "mpich2", Text: license_mpich2_lre},
+		{Name: "psfrag", Text: license_psfrag_lre},
+		{Name: "psutils", Text: license_psutils_lre},
+		{Name: "xinetd", Text: license_xinetd_lre},
+		{Name: "xpp", Text: license_xpp_lre},
+		{Name: "zlib-acknowledgement", Text: license_zlib_acknowledgement_lre},
 	}
 	builtinListLRE = filesLRE // TODO URLs
 }
@@ -79356,6 +79375,22 @@ the following restrictions:
    (( 3. ))??
    This notice may not be removed or altered from any source distribution.
 `
+const license_blessing_lre = `//**
+SQLite Blessing
+https://spdx.org/licenses/blessing.json
+https://www.sqlite.org/src/artifact/e33a4df7e32d742a?ln=4-9
+https://sqlite.org/src/artifact/df5091916dbb40e6
+**//
+
+The author disclaims copyright to this source code. In place of a legal notice,
+here is a blessing:
+
+   May you do good and not evil.
+
+   May you find forgiveness for yourself and forgive others.
+
+   May you share freely, never taking more than you give.
+`
 const license_bzip2_1_0_5_lre = `//**
 bzip2 and libbzip2 License v1.0.5
 https://spdx.org/licenses/bzip2-1.0.5.json
@@ -79452,6 +79487,481 @@ Julian Seward,
 ((jseward@bzip.org || jseward@acm.org))
 ((bzip2/libbzip2 version 1.0.6 of 6 September 2010))??
 ))??`
+const license_copyleft_next_0_3_0_lre = `//**
+copyleft-next 0.3.0
+https://spdx.org/licenses/copyleft-next-0.3.0.json
+https://github.com/copyleft-next/copyleft-next/blob/master/Releases/copyleft-next-0.3.0
+**//
+
+(( copyleft-next 0.3.0 ("this License")
+
+Release date: 2013-05-16 ))??
+
+   (( 1. ))??
+   License Grants; No Trademark License
+
+   Subject to the terms of this License, I grant You:
+
+      (( a) ))??
+      A non-exclusive, worldwide, perpetual, royalty-free, irrevocable copyright
+      license, to reproduce, Distribute, prepare derivative works of, publicly
+      perform and publicly display My Work.
+
+      (( b) ))??
+      A non-exclusive, worldwide, perpetual, royalty-free, irrevocable patent
+      license under Licensed Patents to make, have made, use, sell, offer for
+      sale, and import Covered Works.
+
+   This License does not grant any rights in My name, trademarks, service marks,
+   or logos.
+
+   (( 2. ))??
+   Distribution: General Conditions
+
+   You may Distribute Covered Works, provided that You (i) inform recipients how
+   they can obtain a copy of this License; (ii) satisfy the applicable
+   conditions of sections 3 through 6; and (iii) preserve all Legal Notices
+   contained in My Work (to the extent they remain pertinent). "Legal Notices"
+   means copyright notices, license notices, license texts, and author
+   attributions, but does not include logos, other graphical images, trademarks
+   or trademark legends.
+
+   (( 3. ))??
+   Conditions for Distributing Derived Works; Outbound GPL Compatibility
+
+   If You Distribute a Derived Work, You must license the entire Derived Work as
+   a whole under this License, with prominent notice of such licensing. This
+   condition may not be avoided through such means as separate Distribution of
+   portions of the Derived Work. You may additionally license the Derived Work
+   under the GPL, so that the recipient may further Distribute the Derived Work
+   under either this License or the GPL.
+
+   (( 4. ))??
+   Condition Against Further Restrictions; Inbound License Compatibility
+
+   When Distributing a Covered Work, You may not impose further restrictions on
+   the exercise of rights in the Covered Work granted under this License. This
+   condition is not excused merely because such restrictions result from Your
+   compliance with conditions or obligations extrinsic to this License (such as
+   a court order or an agreement with a third party).
+
+   However, You may Distribute a Covered Work incorporating material governed by
+   a license that is both OSI-Approved and FSF-Free as of the release date of
+   this License, provided that Your Distribution complies with such other
+   license.
+
+   (( 5. ))??
+   Conditions for Distributing Object Code
+
+   You may Distribute an Object Code form of a Covered Work, provided that you
+   accompany the Object Code with a URL through which the Corresponding Source
+   is made available, at no charge, by some standard or customary means of
+   providing network access to source code.
+
+   If you Distribute the Object Code in a physical product or tangible storage
+   medium ("Product"), the Corresponding Source must be available through such
+   URL for two years from the date of Your most recent Distribution of the
+   Object Code in the Product. However, if the Product itself contains or is
+   accompanied by the Corresponding Source (made available in a customarily
+   accessible manner), You need not also comply with the first paragraph of this
+   section.
+
+   Each recipient of the Covered Work from You is an intended third-party
+   beneficiary of this License solely as to this section 5, with the right to
+   enforce its terms.
+
+   (( 6. ))??
+   Symmetrical Licensing Condition for Upstream Contributions
+
+   If You Distribute a work to Me specifically for inclusion in or modification
+   of a Covered Work (a "Patch"), and no explicit licensing terms apply to the
+   Patch, You license the Patch under this License, to the extent of Your
+   copyright in the Patch. This condition does not negate the other conditions
+   of this License, if applicable to the Patch.
+
+   (( 7. ))??
+   Nullification of Copyleft/Proprietary Dual Licensing
+
+   If I offer to license, for a fee, a Covered Work under terms other than a
+   license that is OSI-Approved or FSF-Free as of the release date of this
+   License or a numbered version of copyleft-next released by the Copyleft-Next
+   Project, then the license I grant You under section 1 is no longer subject to
+   the conditions in sections 2 through 5.
+
+   (( 8. ))??
+   Copyleft Sunset
+
+   The conditions in sections 2 through 5 no longer apply once fifteen years
+   have elapsed from the date of My first Distribution of My Work under this
+   License.
+
+   (( 9. ))??
+   Pass-Through
+
+   When You Distribute a Covered Work, the recipient automatically receives a
+   license to My Work from Me, subject to the terms of this License.
+
+   (( 10. ))??
+   Termination
+
+   Your license grants under section 1 are automatically terminated if You
+
+      (( a) ))??
+      fail to comply with the conditions of this License, unless You cure such
+      noncompliance within thirty days after becoming aware of it, or
+
+      (( b) ))??
+      initiate a patent infringement litigation claim (excluding declaratory
+      judgment actions, counterclaims, and cross-claims) alleging that any part
+      of My Work directly or indirectly infringes any patent.
+
+   Termination of Your license grants extends to all copies of Covered Works You
+   subsequently obtain. Termination does not terminate the rights of those who
+   have received copies or rights from You subject to this License.
+
+   To the extent permission to make copies of a Covered Work is necessary merely
+   for running it, such permission is not terminable.
+
+   (( 11. ))??
+   Later License Versions
+
+   The Copyleft-Next Project may release new versions of copyleft-next,
+   designated by a distinguishing version number ("Later Versions"). Unless I
+   explicitly remove the option of Distributing Covered Works under Later
+   Versions, You may Distribute Covered Works under any Later Version.
+
+   (( 12. ))??
+   No Warranty
+
+   My Work is provided "as-is", without warranty. You bear the risk of using it.
+   To the extent permitted by applicable law, each Distributor of My Work
+   excludes the implied warranties of title, merchantability, fitness for a
+   particular purpose and non-infringement.
+
+   (( 13. ))??
+   Limitation of Liability
+
+   To the extent permitted by applicable law, in no event will any Distributor
+   of My Work be liable to You for any damages whatsoever, whether direct,
+   indirect, special, incidental, or consequential damages, whether arising
+   under contract, tort (including negligence), or otherwise, even where the
+   Distributor knew or should have known about the possibility of such damages.
+
+   (( 14. ))??
+   Severability
+
+   The invalidity or unenforceability of any provision of this License does not
+   affect the validity or enforceability of the remainder of this License. Such
+   provision is to be reformed to the minimum extent necessary to make it valid
+   and enforceable.
+
+   (( 15. ))??
+   Definitions
+
+   "Copyleft-Next Project" means the project that maintains the source code
+   repository at <https:/gitorious.org/copyleft-next/> as of the release date of
+   this License.
+
+   "Corresponding Source" of a Covered Work in Object Code form means (i) the
+   Source Code form of the Covered Work; (ii) all scripts, instructions and
+   similar information that are reasonably necessary for a skilled developer to
+   generate such Object Code from the Source Code provided under (i); and (iii)
+   a list clearly identifying all Separate Works (other than those provided in
+   compliance with (ii) that were specifically used in building and (if
+   applicable) installing the Covered Work (for example, a specified proprietary
+   compiler including its version number). Corresponding Source must be
+   machine-readable.
+
+   "Covered Work" means My Work or a Derived Work.
+
+   "Derived Work" means a work of authorship that copies from, modifies, adapts,
+   is based on, is a derivative work of, transforms, translates or contains all
+   or part of My Work, such that copyright permission is required. The following
+   are not Derived Works: (i) Mere Aggregation; (ii) a mere reproduction of My
+   Work; and (iii) if My Work fails to explicitly state an expectation
+   otherwise, a work that merely makes reference to My Work.
+
+   "Distribute" means to distribute, transfer or make a copy available to
+   someone else, such that copyright permission is required.
+
+   "Distributor" means Me and anyone else who Distributes a Covered Work.
+
+   "FSF-Free" means classified as 'free' by the Free Software Foundation.
+
+   "GPL" means a version of the GNU General Public License or the GNU Affero
+   General Public License.
+
+   "I"/"Me"/"My" refers to the individual or legal entity that places My Work
+   under this License. "You"/"Your" refers to the individual or legal entity
+   exercising rights in My Work under this License. A legal entity includes each
+   entity that controls, is controlled by, or is under common control with such
+   legal entity. "Control" means (a) the power to direct the actions of such
+   legal entity, whether by contract or otherwise, or (b) ownership of more than
+   fifty percent of the outstanding shares or beneficial ownership of such legal
+   entity.
+
+   "Licensed Patents" means all patent claims licensable royalty-free by Me, now
+   or in the future, that are necessarily infringed by making, using, or selling
+   My Work, and excludes claims that would be infringed only as a consequence of
+   further modification of My Work.
+
+   "Mere Aggregation" means an aggregation of a Covered Work with a Separate
+   Work.
+
+   "My Work" means the particular work of authorship I license to You under this
+   License.
+
+   "Object Code" means any form of a work that is not Source Code.
+
+   "OSI-Approved" means approved as 'Open Source' by the Open Source
+   Initiative.
+
+   "Separate Work" means a work that is separate from and independent of a
+   particular Covered Work and is not by its nature an extension or enhancement
+   of the Covered Work, and/or a runtime library, standard library or similar
+   component that is used to generate an Object Code form of a Covered Work.
+
+   "Source Code" means the preferred form of a work for making modifications to
+   it.
+`
+const license_copyleft_next_0_3_1_lre = `//**
+copyleft-next 0.3.1
+https://spdx.org/licenses/copyleft-next-0.3.1.json
+https://github.com/copyleft-next/copyleft-next/blob/master/Releases/copyleft-next-0.3.1
+**//
+
+(( copyleft-next 0.3.1 ("this License")
+
+Release date: 2016-04-29 ))??
+
+   (( 1. ))??
+   License Grants; No Trademark License
+
+   Subject to the terms of this License, I grant You:
+
+      (( a) ))??
+      A non-exclusive, worldwide, perpetual, royalty-free, irrevocable copyright
+      license, to reproduce, Distribute, prepare derivative works of, publicly
+      perform and publicly display My Work.
+
+      (( b) ))??
+      A non-exclusive, worldwide, perpetual, royalty-free, irrevocable patent
+      license under Licensed Patents to make, have made, use, sell, offer for
+      sale, and import Covered Works.
+
+   This License does not grant any rights in My name, trademarks, service marks,
+   or logos.
+
+   (( 2. ))??
+   Distribution: General Conditions
+
+   You may Distribute Covered Works, provided that You (i) inform recipients how
+   they can obtain a copy of this License; (ii) satisfy the applicable
+   conditions of sections 3 through 6; and (iii) preserve all Legal Notices
+   contained in My Work (to the extent they remain pertinent). "Legal Notices"
+   means copyright notices, license notices, license texts, and author
+   attributions, but does not include logos, other graphical images, trademarks
+   or trademark legends.
+
+   (( 3. ))??
+   Conditions for Distributing Derived Works; Outbound GPL Compatibility
+
+   If You Distribute a Derived Work, You must license the entire Derived Work as
+   a whole under this License, with prominent notice of such licensing. This
+   condition may not be avoided through such means as separate Distribution of
+   portions of the Derived Work.
+
+   If the Derived Work includes material licensed under the GPL, You may instead
+   license the Derived Work under the GPL.
+
+   (( 4. ))??
+   Condition Against Further Restrictions; Inbound License Compatibility
+
+   When Distributing a Covered Work, You may not impose further restrictions on
+   the exercise of rights in the Covered Work granted under this License. This
+   condition is not excused merely because such restrictions result from Your
+   compliance with conditions or obligations extrinsic to this License (such as
+   a court order or an agreement with a third party).
+
+   However, You may Distribute a Covered Work incorporating material governed by
+   a license that is both OSI-Approved and FSF-Free as of the release date of
+   this License, provided that compliance with such other license would not
+   conflict with any conditions stated in other sections of this License.
+
+   (( 5. ))??
+   Conditions for Distributing Object Code
+
+   You may Distribute an Object Code form of a Covered Work, provided that you
+   accompany the Object Code with a URL through which the Corresponding Source
+   is made available, at no charge, by some standard or customary means of
+   providing network access to source code.
+
+   If you Distribute the Object Code in a physical product or tangible storage
+   medium ("Product"), the Corresponding Source must be available through such
+   URL for two years from the date of Your most recent Distribution of the
+   Object Code in the Product. However, if the Product itself contains or is
+   accompanied by the Corresponding Source (made available in a customarily
+   accessible manner), You need not also comply with the first paragraph of this
+   section.
+
+   Each direct and indirect recipient of the Covered Work from You is an
+   intended third-party beneficiary of this License solely as to this section 5,
+   with the right to enforce its terms.
+
+   (( 6. ))??
+   Symmetrical Licensing Condition for Upstream Contributions
+
+   If You Distribute a work to Me specifically for inclusion in or modification
+   of a Covered Work (a "Patch"), and no explicit licensing terms apply to the
+   Patch, You license the Patch under this License, to the extent of Your
+   copyright in the Patch. This condition does not negate the other conditions
+   of this License, if applicable to the Patch.
+
+   (( 7. ))??
+   Nullification of Copyleft/Proprietary Dual Licensing
+
+   If I offer to license, for a fee, a Covered Work under terms other than a
+   license that is OSI-Approved or FSF-Free as of the release date of this
+   License or a numbered version of copyleft-next released by the Copyleft-Next
+   Project, then the license I grant You under section 1 is no longer subject to
+   the conditions in sections 3 through 5.
+
+   (( 8. ))??
+   Copyleft Sunset
+
+   The conditions in sections 3 through 5 no longer apply once fifteen years
+   have elapsed from the date of My first Distribution of My Work under this
+   License.
+
+   (( 9. ))??
+   Pass-Through
+
+   When You Distribute a Covered Work, the recipient automatically receives a
+   license to My Work from Me, subject to the terms of this License.
+
+   (( 10. ))??
+   Termination
+
+   Your license grants under section 1 are automatically terminated if You
+
+      (( a) ))??
+      fail to comply with the conditions of this License, unless You cure such
+      noncompliance within thirty days after becoming aware of it, or
+
+      (( b) ))??
+      initiate a patent infringement litigation claim (excluding declaratory
+      judgment actions, counterclaims, and cross-claims) alleging that any part
+      of My Work directly or indirectly infringes any patent.
+
+   Termination of Your license grants extends to all copies of Covered Works You
+   subsequently obtain. Termination does not terminate the rights of those who
+   have received copies or rights from You subject to this License.
+
+   To the extent permission to make copies of a Covered Work is necessary merely
+   for running it, such permission is not terminable.
+
+   (( 11. ))??
+   Later License Versions
+
+   The Copyleft-Next Project may release new versions of copyleft-next,
+   designated by a distinguishing version number ("Later Versions"). Unless I
+   explicitly remove the option of Distributing Covered Works under Later
+   Versions, You may Distribute Covered Works under any Later Version.
+
+   (( 12. ))??
+   No Warranty
+
+   My Work is provided "as-is", without warranty. You bear the risk of using it.
+   To the extent permitted by applicable law, each Distributor of My Work
+   excludes the implied warranties of title, merchantability, fitness for a
+   particular purpose and non-infringement.
+
+   (( 13. ))??
+   Limitation of Liability
+
+   To the extent permitted by applicable law, in no event will any Distributor
+   of My Work be liable to You for any damages whatsoever, whether direct,
+   indirect, special, incidental, or consequential damages, whether arising
+   under contract, tort (including negligence), or otherwise, even where the
+   Distributor knew or should have known about the possibility of such damages.
+
+   (( 14. ))??
+   Severability
+
+   The invalidity or unenforceability of any provision of this License does not
+   affect the validity or enforceability of the remainder of this License. Such
+   provision is to be reformed to the minimum extent necessary to make it valid
+   and enforceable.
+
+   (( 15. ))??
+   Definitions
+
+   "Copyleft-Next Project" means the project that maintains the source code
+   repository at <https:/github.com/copyleft-next/copyleft-next.git/> as of the
+   release date of this License.
+
+   "Corresponding Source" of a Covered Work in Object Code form means (i) the
+   Source Code form of the Covered Work; (ii) all scripts, instructions and
+   similar information that are reasonably necessary for a skilled developer to
+   generate such Object Code from the Source Code provided under (i); and (iii)
+   a list clearly identifying all Separate Works (other than those provided in
+   compliance with (ii) that were specifically used in building and (if
+   applicable) installing the Covered Work (for example, a specified proprietary
+   compiler including its version number). Corresponding Source must be
+   machine-readable.
+
+   "Covered Work" means My Work or a Derived Work.
+
+   "Derived Work" means a work of authorship that copies from, modifies, adapts,
+   is based on, is a derivative work of, transforms, translates or contains all
+   or part of My Work, such that copyright permission is required. The following
+   are not Derived Works: (i) Mere Aggregation; (ii) a mere reproduction of My
+   Work; and (iii) if My Work fails to explicitly state an expectation
+   otherwise, a work that merely makes reference to My Work.
+
+   "Distribute" means to distribute, transfer or make a copy available to
+   someone else, such that copyright permission is required.
+
+   "Distributor" means Me and anyone else who Distributes a Covered Work.
+
+   "FSF-Free" means classified as 'free' by the Free Software Foundation.
+
+   "GPL" means a version of the GNU General Public License or the GNU Affero
+   General Public License.
+
+   "I"/"Me"/"My" refers to the individual or legal entity that places My Work
+   under this License. "You"/"Your" refers to the individual or legal entity
+   exercising rights in My Work under this License. A legal entity includes each
+   entity that controls, is controlled by, or is under common control with such
+   legal entity. "Control" means (a) the power to direct the actions of such
+   legal entity, whether by contract or otherwise, or (b) ownership of more than
+   fifty percent of the outstanding shares or beneficial ownership of such legal
+   entity.
+
+   "Licensed Patents" means all patent claims licensable royalty-free by Me, now
+   or in the future, that are necessarily infringed by making, using, or selling
+   My Work, and excludes claims that would be infringed only as a consequence of
+   further modification of My Work.
+
+   "Mere Aggregation" means an aggregation of a Covered Work with a Separate
+   Work.
+
+   "My Work" means the particular work of authorship I license to You under this
+   License.
+
+   "Object Code" means any form of a work that is not Source Code.
+
+   "OSI-Approved" means approved as 'Open Source' by the Open Source
+   Initiative.
+
+   "Separate Work" means a work that is separate from and independent of a
+   particular Covered Work and is not by its nature an extension or enhancement
+   of the Covered Work, and/or a runtime library, standard library or similar
+   component that is used to generate an Object Code form of a Covered Work.
+
+   "Source Code" means the preferred form of a work for making modifications to
+   it.
+`
 const license_curl_lre = `//**
 curl License
 https://spdx.org/licenses/curl.json
@@ -79477,4 +79987,1261 @@ SOFTWARE.
 Except as contained in this notice, the name of a copyright holder shall not be
 used in advertising or otherwise to promote the sale, use or other dealings in
 this Software without prior written authorization of the copyright holder.
+`
+const license_diffmark_lre = `//**
+diffmark license
+https://spdx.org/licenses/diffmark.json
+https://fedoraproject.org/wiki/Licensing/diffmark
+**//
+
+   (( 1. ))??
+   you can do what you want with it
+
+   (( 2. ))??
+   I refuse any responsibility for the consequences
+`
+const license_dvipdfm_lre = `//**
+dvipdfm License
+https://spdx.org/licenses/dvipdfm.json
+https://fedoraproject.org/wiki/Licensing/dvipdfm
+**//
+
+A modified version of this file may be distributed, but it should be distributed
+with a *different* name. Changed files must be distributed *together with a
+complete and unchanged* distribution of these files.
+`
+const license_eGenix_lre = `//**
+eGenix.com Public License 1.1.0
+https://spdx.org/licenses/eGenix.json
+http://www.egenix.com/products/eGenix.com-Public-License-1.1.0.pdf
+https://fedoraproject.org/wiki/Licensing/eGenix.com_Public_License_1.1.0
+**//
+
+(( EGENIX.COM PUBLIC LICENSE AGREEMENT
+
+Version 1.1.0 ))??
+
+(( This license agreement is based on the Python CNRI License Agreement, a
+widely accepted open- source license. ))??
+
+   (( 1. ))??
+   Introduction
+
+   This "License Agreement" is between eGenix.com Software, Skills and Services
+   GmbH ("eGenix.com"), having an office at Pastor-Loeh-Str. 48, D-40764
+   Langenfeld, Germany, and the Individual or Organization ("Licensee")
+   accessing and otherwise using this software in source or binary form and its
+   associated documentation ("the Software").
+
+   (( 2. ))??
+   License
+
+   Subject to the terms and conditions of this eGenix.com Public License
+   Agreement, eGenix.com hereby grants Licensee a non-exclusive, royalty-free,
+   world-wide license to reproduce, analyze, test, perform and/or display
+   publicly, prepare derivative works, distribute, and otherwise use the
+   Software alone or in any derivative version, provided, however, that the
+   eGenix.com Public License Agreement is retained in the Software, or in any
+   derivative version of the Software prepared by Licensee.
+
+   (( 3. ))??
+   NO WARRANTY
+
+   eGenix.com is making the Software available to Licensee on an "AS IS" basis.
+   SUBJECT TO ANY STATUTORY WARRANTIES WHICH CAN NOT BE EXCLUDED, EGENIX.COM
+   MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF
+   EXAMPLE, BUT NOT LIMITATION, EGENIX.COM MAKES NO AND DISCLAIMS ANY
+   REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR
+   PURPOSE OR THAT THE USE OF THE SOFTWARE WILL NOT INFRINGE ANY THIRD PARTY
+   RIGHTS.
+
+   (( 4. ))??
+   LIMITATION OF LIABILITY
+
+   EGENIX.COM SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF THE SOFTWARE
+   FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS (INCLUDING,
+   WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS
+   INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS) AS A
+   RESULT OF USING, MODIFYING OR DISTRIBUTING THE SOFTWARE, OR ANY DERIVATIVE
+   THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF. SOME JURISDICTIONS DO
+   NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES,
+   SO THE ABOVE EXCLUSION OR LIMITATION MAY NOT APPLY TO LICENSEE.
+
+   (( 5. ))??
+   Termination
+
+   This License Agreement will automatically terminate upon a material breach of
+   its terms and conditions.
+
+   (( 6. ))??
+   Third Party Rights
+
+   Any software or documentation in source or binary form provided along with
+   the Software that is associated with a separate license agreement is licensed
+   to Licensee under the terms of that license agreement. This License Agreement
+   does not apply to those portions of the Software. Copies of the third party
+   licenses are included in the Software Distribution.
+
+   (( 7. ))??
+   General
+
+   Nothing in this License Agreement affects any statutory rights of consumers
+   that cannot be waived or limited by contract.
+
+   Nothing in this License Agreement shall be deemed to create any relationship
+   of agency, partnership, or joint venture between eGenix.com and Licensee.
+
+   If any provision of this License Agreement shall be unlawful, void, or for
+   any reason unenforceable, such provision shall be modified to the extent
+   necessary to render it enforceable without losing its intent, or, if no such
+   modification is possible, be severed from this License Agreement and shall
+   not affect the validity and enforceability of the remaining provisions of
+   this License Agreement.
+
+   This License Agreement shall be governed by and interpreted in all respects
+   by the law of Germany, excluding conflict of law provisions. It shall not be
+   governed by the United Nations Convention on Contracts for International Sale
+   of Goods. This License Agreement does not grant permission to use eGenix.com
+   trademarks or trade names in a trademark sense to endorse or promote products
+   or services of Licensee, or any third party.
+
+   The controlling language of this License Agreement is English. If Licensee
+   has received a translation into another language, it has been provided for
+   Licensee's convenience only.
+
+   (( 8. ))??
+   Agreement
+
+By downloading, copying, installing or otherwise using the Software, Licensee
+agrees to be bound by the terms and conditions of this License Agreement. For
+question regarding this License Agreement, please write to:
+
+eGenix.com Software, Skills and Services GmbH
+
+Pastor-Loeh-Str. 48
+
+D-40764 Langenfeld
+
+Germany
+`
+const license_etalab_2_0_lre = `//**
+Etalab Open License 2.0
+https://spdx.org/licenses/etalab-2.0.json
+https://github.com/DISIC/politique-de-contribution-open-source/blob/master/LICENSE.pdf
+https://raw.githubusercontent.com/DISIC/politique-de-contribution-open-source/master/LICENSE
+**//
+
+(( LICENCE OUVERTE / OPEN LICENCE
+
+- Version 2.0
+
+- Avril 2017 ))??
+
+« RÉUTILISATION » DE L'« INFORMATION » SOUS CETTE LICENCE
+
+Le « Concédant » concède au « Réutilisateur » un droit non exclusif et
+gratuit de libre « Réutilisation » de l'« Information » objet de la
+présente licence, à des fins commerciales ou non, dans le monde entier et pour
+une durée illimitée, dans les conditions exprimées ci-dessous.
+
+Le « Réutilisateur » est libre de réutiliser l'« Information » :
+
+   -
+   de la reproduire, la copier,
+
+   -
+   de l'adapter, la modifier, l'extraire et la transformer, pour créer des «
+   Informations dérivées », des produits ou des services,
+
+   -
+   de la communiquer, la diffuser, la redistribuer, la publier et la
+   transmettre,
+
+   -
+   de l'exploiter à titre commercial, par exemple en la combinant avec d'autres
+   informations, ou en l'incluant dans son propre produit ou application.
+
+Sous réserve de :
+
+   -
+   mentionner la paternité de l'« Information » : sa source (au moins le nom
+   du « Concédant ») et la date de dernière mise à jour de l'« Information
+   » réutilisée.
+
+Le « Réutilisateur » peut notamment s'acquitter de cette condition en
+renvoyant, par un lien hypertexte, vers la source de « l'Information » et
+assurant une mention effective de sa paternité.
+
+Par exemple :
+
+« Ministère de xxx - Données originales téléchargées sur
+http:/www.data.gouv.fr/fr/datasets/xxx/, mise à jour du 14 février 2017 ».
+
+Cette mention de paternité ne confère aucun caractère officiel à la «
+Réutilisation » de l'« Information », et ne doit pas suggérer une
+quelconque reconnaissance ou caution par le « Concédant », ou par toute autre
+entité publique, du « Réutilisateur » ou de sa « Réutilisation ».
+
+« DONNÉES À CARACTÈRE PERSONNEL »
+
+L'« Information » mise à disposition peut contenir des « Données à
+caractère personnel » pouvant faire l'objet d'une « Réutilisation ». Si tel
+est le cas, le « Concédant » informe le « Réutilisateur » de leur
+présence.
+
+L'« Information » peut être librement réutilisée, dans le cadre des droits
+accordés par la présente licence, à condition de respecter le cadre légal
+relatif à la protection des données à caractère personnel.
+
+« DROITS DE PROPRIÉTÉ INTELLECTUELLE »
+
+Il est garanti au « Réutilisateur » que les éventuels « Droits de
+propriété intellectuelle » détenus par des tiers ou par le « Concédant »
+sur l'« Information » ne font pas obstacle aux droits accordés par la
+présente licence.
+
+Lorsque le « Concédant » détient des « Droits de propriété intellectuelle
+» cessibles sur l'« Information », il les cède au « Réutilisateur » de
+façon non exclusive, à titre gracieux, pour le monde entier, pour toute la
+durée des « Droits de propriété intellectuelle », et le « Réutilisateur
+» peut faire tout usage de l'« Information » conformément aux libertés et
+aux conditions définies par la présente licence.
+
+RESPONSABILITÉ
+
+L'« Information » est mise à disposition telle que produite ou reçue par le
+« Concédant », sans autre garantie expresse ou tacite que celles prévues par
+la présente licence. L'absence de défauts ou d'erreurs éventuellement
+contenues dans l'« Information », comme la fourniture continue de l'«
+Information » n'est pas garantie par le « Concédant ». Il ne peut être tenu
+pour responsable de toute perte, préjudice ou dommage de quelque sorte causé
+à des tiers du fait de la « Réutilisation ».
+
+Le « Réutilisateur » est seul responsable de la « Réutilisation » de l'«
+Information ».
+
+La « Réutilisation » ne doit pas induire en erreur des tiers quant au contenu
+de l'« Information », sa source et sa date de mise à jour.
+
+DROIT APPLICABLE
+
+La présente licence est régie par le droit français.
+
+COMPATIBILITÉ DE LA PRÉSENTE LICENCE
+
+La présente licence a été conçue pour être compatible avec toute licence
+libre qui exige au moins la mention de paternité et notamment avec la version
+antérieure de la présente licence ainsi qu'avec les licences :
+
+   -
+   « Open Government Licence » (OGL) du Royaume-Uni,
+
+   -
+   « Creative Commons Attribution » (CC-BY) de Creative Commons et
+
+   -
+   « Open Data Commons Attribution » (ODC-BY) de l'Open Knowledge Foundation.
+
+DÉFINITIONS
+
+Sont considérés, au sens de la présente licence comme :
+
+Le « Concédant » : toute personne concédant un droit de « Réutilisation »
+sur l'« Information » dans les libertés et les conditions prévues par la
+présente licence
+
+L'« Information » :
+
+   -
+   toute information publique figurant dans des documents communiqués ou
+   publiés par une administration mentionnée au premier alinéa de l'article
+   L.300-2 du CRPA;
+
+   -
+   toute information mise à disposition par toute personne selon les termes et
+   conditions de la présente licence.
+
+La « Réutilisation » : l'utilisation de l'« Information » à d'autres fins
+que celles pour lesquelles elle a été produite ou reçue.
+
+Le « Réutilisateur »: toute personne qui réutilise les « Informations »
+conformément aux conditions de la présente licence.
+
+Des « Données à caractère personnel » : toute information se rapportant à
+une personne physique identifiée ou identifiable, pouvant être identifiée
+directement ou indirectement. Leur « Réutilisation » est subordonnée au
+respect du cadre juridique en vigueur.
+
+Une « Information dérivée » : toute nouvelle donnée ou information créées
+directement à partir de l'« Information » ou à partir d'une combinaison de
+l'« Information » et d'autres données ou informations non soumises à cette
+licence.
+
+Les « Droits de propriété intellectuelle » : tous droits identifiés comme
+tels par le Code de la propriété intellectuelle (notamment le droit d'auteur,
+droits voisins au droit d'auteur, droit sui generis des producteurs de bases de
+données…).
+
+À PROPOS DE CETTE LICENCE
+
+La présente licence a vocation à être utilisée par les administrations pour
+la réutilisation de leurs informations publiques. Elle peut également être
+utilisée par toute personne souhaitant mettre à disposition de l'«
+Information » dans les conditions définies par la présente licence.
+
+La France est dotée d'un cadre juridique global visant à une diffusion
+spontanée par les administrations de leurs informations publiques afin d'en
+permettre la plus large réutilisation.
+
+Le droit de la « Réutilisation » de l'« Information » des administrations
+est régi par le code des relations entre le public et l'administration (CRPA).
+
+Cette licence facilite la réutilisation libre et gratuite des informations
+publiques et figure parmi les licences qui peuvent être utilisées par
+l'administration en vertu du décret pris en application de l'article L.323-2 du
+CRPA.
+
+Etalab est la mission chargée, sous l'autorité du Premier ministre, d'ouvrir
+le plus grand nombre de données publiques des administrations de l'Etat et de
+ses établissements publics. Elle a réalisé la Licence Ouverte pour faciliter
+la réutilisation libre et gratuite de ces informations publiques, telles que
+définies par l'article L321-1 du CRPA.
+
+Cette licence est la version 2.0 de la Licence Ouverte.
+
+Etalab se réserve la faculté de proposer de nouvelles versions de la Licence
+Ouverte. Cependant, les « Réutilisateurs » pourront continuer à réutiliser
+les informations qu'ils ont obtenues sous cette licence s'ils le souhaitent.
+`
+const license_gSOAP_1_3b_lre = `//**
+gSOAP Public License v1.3b
+https://spdx.org/licenses/gSOAP-1.3b.json
+http://www.cs.fsu.edu/~engelen/license.html
+**//
+
+(( gSOAP Public License
+
+Version 1.3b ))??
+
+(( The gSOAP public license is derived from the Mozilla Public License (MPL1.1).
+The sections that were deleted from the original MPL1.1 text are 1.0.1,
+2.1.(c),(d), 2.2.(c),(d), 8.2.(b), 10, and 11. Section 3.8 was added. The
+modified sections are 2.1.(b), 2.2.(b), 3.2 (simplified), 3.5 (deleted the last
+sentence), and 3.6 (simplified).
+
+This license applies to the gSOAP software package, with the exception of the
+soapcpp2 and wsdl2h source code located in gsoap/src and gsoap/wsdl, all code
+generated by soapcpp2 and wsdl2h, the UDDI source code gsoap/uddi2, and the Web
+server sample source code samples/webserver. To use any of these software tools
+and components commercially, a commercial license is required and can be
+obtained from www.genivia.com. ))??
+
+   (( 1 ))??
+   DEFINITIONS.
+
+      (( 1.0.1. ))??
+
+      (( 1.1. ))??
+      "Contributor" means each entity that creates or contributes to the
+      creation of Modifications.
+
+      (( 1.2. ))??
+      "Contributor Version" means the combination of the Original Code, prior
+      Modifications used by a Contributor, and the Modifications made by that
+      particular Contributor.
+
+      (( 1.3. ))??
+      "Covered Code" means the Original Code, or Modifications or the
+      combination of the Original Code, and Modifications, in each case
+      including portions thereof.
+
+      (( 1.4. ))??
+      "Electronic Distribution Mechanism" means a mechanism generally accepted
+      in the software development community for the electronic transfer of
+      data.
+
+      (( 1.5. ))??
+      "Executable" means Covered Code in any form other than Source Code.
+
+      (( 1.6. ))??
+      "Initial Developer" means the individual or entity identified as the
+      Initial Developer in the Source Code notice required by Exhibit A.
+
+      (( 1.7. ))??
+      "Larger Work" means a work which combines Covered Code or portions thereof
+      with code not governed by the terms of this License.
+
+      (( 1.8. ))??
+      "License" means this document.
+
+      (( 1.8.1. ))??
+      "Licensable" means having the right to grant, to the maximum extent
+      possible, whether at the time of the initial grant or subsequently
+      acquired, any and all of the rights conveyed herein.
+
+      (( 1.9. ))??
+      "Modifications" means any addition to or deletion from the substance or
+      structure of either the Original Code or any previous Modifications. When
+      Covered Code is released as a series of files, a Modification is:
+
+         (( A. ))??
+         Any addition to or deletion from the contents of a file containing
+         Original Code or previous Modifications.
+
+         (( B. ))??
+         Any new file that contains any part of the Original Code, or previous
+         Modifications.
+
+      (( 1.10. ))??
+      "Original Code" means Source Code of computer software code which is
+      described in the Source Code notice required by Exhibit A as Original
+      Code, and which, at the time of its release under this License is not
+      already Covered Code governed by this License.
+
+      (( 1.10.1. ))??
+      "Patent Claims" means any patent claim(s), now owned or hereafter
+      acquired, including without limitation, method, process, and apparatus
+      claims, in any patent Licensable by grantor.
+
+      (( 1.11. ))??
+      "Source Code" means the preferred form of the Covered Code for making
+      modifications to it, including all modules it contains, plus any
+      associated interface definition files, scripts used to control compilation
+      and installation of an Executable, or source code differential comparisons
+      against either the Original Code or another well known, available Covered
+      Code of the Contributor's choice. The Source Code can be in a compressed
+      or archival form, provided the appropriate decompression or de-archiving
+      software is widely available for no charge.
+
+      (( 1.12. ))??
+      "You" (or "Your") means an individual or a legal entity exercising rights
+      under, and complying with all of the terms of, this License or a future
+      version of this License issued under Section 6.1. For legal entities,
+      "You" includes any entity which controls, is controlled by, or is under
+      common control with You. For purposes of this definition, "control" means
+      (a) the power, direct or indirect, to cause the direction or management of
+      such entity, whether by contract or otherwise, or (b) ownership of more
+      than fifty percent (50%) of the outstanding shares or beneficial ownership
+      of such entity.
+
+   (( 2 ))??
+   SOURCE CODE LICENSE.
+
+      (( 2.1. ))??
+      The Initial Developer Grant.
+
+      The Initial Developer hereby grants You a world-wide, royalty-free,
+      non-exclusive license, subject to third party intellectual property
+      claims:
+
+         (( (a) ))??
+         under intellectual property rights (other than patent or trademark)
+         Licensable by Initial Developer to use, reproduce, modify, display,
+         perform, sublicense and distribute the Original Code (or portions
+         thereof) with or without Modifications, and/or as part of a Larger
+         Work; and
+
+         (( (b) ))??
+         under patents now or hereafter owned or controlled by Initial
+         Developer, to make, have made, use and sell ("offer to sell and
+         import") the Original Code, Modifications, or portions thereof, but
+         solely to the extent that any such patent is reasonably necessary to
+         enable You to utilize, alone or in combination with other software, the
+         Original Code, Modifications, or any combination or portions thereof.
+
+         (( c ))??
+
+         (( (d) ))??
+
+      (( 2.2. ))??
+      Contributor Grant.
+
+      Subject to third party intellectual property claims, each Contributor
+      hereby grants You a world-wide, royalty-free, non-exclusive license
+
+         (( (a) ))??
+         under intellectual property rights (other than patent or trademark)
+         Licensable by Contributor, to use, reproduce, modify, display, perform,
+         sublicense and distribute the Modifications created by such Contributor
+         (or portions thereof) either on an unmodified basis, with other
+         Modifications, as Covered Code and/or as part of a Larger Work; and
+
+         (( (b) ))??
+         under patents now or hereafter owned or controlled by Contributor, to
+         make, have made, use and sell ("offer to sell and import") the
+         Contributor Version (or portions thereof), but solely to the extent
+         that any such patent is reasonably necessary to enable You to utilize,
+         alone or in combination with other software, the Contributor Version
+         (or portions thereof).
+
+         (( c ))??
+
+         (( (d) ))??
+
+   (( 3 ))??
+   DISTRIBUTION OBLIGATIONS.
+
+      (( 3.1. ))??
+      Application of License.
+
+      The Modifications which You create or to which You contribute are governed
+      by the terms of this License, including without limitation Section 2.2.
+      The Source Code version of Covered Code may be distributed only under the
+      terms of this License or a future version of this License released under
+      Section 6.1, and You must include a copy of this License with every copy
+      of the Source Code You distribute. You may not offer or impose any terms
+      on any Source Code version that alters or restricts the applicable version
+      of this License or the recipients' rights hereunder. However, You may
+      include an additional document offering the additional rights described in
+      Section 3.5.
+
+      (( 3.2. ))??
+      Availability of Source Code.
+
+      Any Modification created by You
+      //** shall **//
+      __5__
+      be provided to the Initial Developer in Source Code form and are subject
+      to the terms of the License.
+
+      (( 3.3. ))??
+      Description of Modifications.
+
+      You must cause all Covered Code to which You contribute to contain a file
+      documenting the changes You made to create that Covered Code and the date
+      of any change. You must include a prominent statement that the
+      Modification is derived, directly or indirectly, from Original Code
+      provided by the Initial Developer and including the name of the Initial
+      Developer in (a) the Source Code, and (b) in any notice in an Executable
+      version or related documentation in which You describe the origin or
+      ownership of the Covered Code.
+
+      (( 3.4. ))??
+      Intellectual Property Matters.
+
+         (( (a) ))??
+         Third Party Claims. If Contributor has knowledge that a license under a
+         third party's intellectual property rights is required to exercise the
+         rights granted by such Contributor under Sections 2.1 or 2.2,
+         Contributor must include a text file with the Source Code distribution
+         titled "LEGAL" which describes the claim and the party making the claim
+         in sufficient detail that a recipient will know whom to contact. If
+         Contributor obtains such knowledge after the Modification is made
+         available as described in Section 3.2, Contributor shall promptly
+         modify the LEGAL file in all copies Contributor makes available
+         thereafter and shall take other steps (such as notifying appropriate
+         mailing lists or newsgroups) reasonably calculated to inform those who
+         received the Covered Code that new knowledge has been obtained.
+
+         (( (b) ))??
+         Contributor APIs. If Contributor's Modifications include an application
+         programming interface and Contributor has knowledge of patent licenses
+         which are reasonably necessary to implement that API, Contributor must
+         also include this information in the LEGAL file.
+
+         (( c ))??
+         Representations. Contributor represents that, except as disclosed
+         pursuant to Section 3.4(a) above, Contributor believes that
+         Contributor's Modifications are Contributor's original creation(s)
+         and/or Contributor has sufficient rights to grant the rights conveyed
+         by this License.
+
+      (( 3.5. ))??
+      Required Notices.
+
+      You must duplicate the notice in Exhibit A in each file of the Source
+      Code. If it is not possible to put such notice in a particular Source Code
+      file due to its structure, then You must include such notice in a location
+      (such as a relevant directory) where a user would be likely to look for
+      such a notice. If You created one or more Modification(s) You may add your
+      name as a Contributor to the notice described in Exhibit A. You must also
+      duplicate this License in any documentation for the Source Code where You
+      describe recipients' rights or ownership rights relating to Covered Code.
+      You may choose to offer, and to charge a fee for, warranty, support,
+      indemnity or liability obligations to one or more recipients of Covered
+      Code. However, You may do so only on Your own behalf, and not on behalf of
+      the Initial Developer or any Contributor.
+
+      (( 3.6. ))??
+      Distribution of Executable Versions.
+
+      You may distribute Covered Code in Executable form only if the
+      requirements of Section 3.1-3.5 have been met for that Covered Code. You
+      may distribute the Executable version of Covered Code or ownership rights
+      under a license of Your choice, which may contain terms different from
+      this License, provided that You are in compliance with the terms of this
+      License and that the license for the Executable version does not attempt
+      to limit or alter the recipient's rights in the Source Code version from
+      the rights set forth in this License. If You distribute the Executable
+      version under a different license You must make it absolutely clear that
+      any terms which differ from this License are offered by You alone, not by
+      the Initial Developer or any Contributor. If you distribute executable
+      versions containing Covered Code as part of a product, you must reproduce
+      the notice in Exhibit B in the documentation and/or other materials
+      provided with the product.
+
+      (( 3.7. ))??
+      Larger Works.
+
+      You may create a Larger Work by combining Covered Code with other code not
+      governed by the terms of this License and distribute the Larger Work as a
+      single product. In such a case, You must make sure the requirements of
+      this License are fulfilled for the Covered Code.
+
+      (( 3.8. ))??
+      Restrictions.
+
+      You may not remove any product identification, copyright, proprietary
+      notices or labels from gSOAP.
+
+   (( 4 ))??
+   INABILITY TO COMPLY DUE TO STATUTE OR REGULATION.
+
+   If it is impossible for You to comply with any of the terms of this License
+   with respect to some or all of the Covered Code due to statute, judicial
+   order, or regulation then You must: (a) comply with the terms of this License
+   to the maximum extent possible; and (b) describe the limitations and the code
+   they affect. Such description must be included in the LEGAL file described in
+   Section 3.4 and must be included with all distributions of the Source Code.
+   Except to the extent prohibited by statute or regulation, such description
+   must be sufficiently detailed for a recipient of ordinary skill to be able to
+   understand it.
+
+   (( 5 ))??
+   APPLICATION OF THIS LICENSE.
+
+   This License applies to code to which the Initial Developer has attached the
+   notice in Exhibit A and to related Covered Code.
+
+   (( 6 ))??
+   VERSIONS OF THE LICENSE.
+
+      (( 6.1. ))??
+      New Versions.
+
+      Grantor may publish revised and/or new versions of the License from time
+      to time. Each version will be given a distinguishing version number.
+
+      (( 6.2. ))??
+      Effect of New Versions.
+
+      Once Covered Code has been published under a particular version of the
+      License, You may always continue to use it under the terms of that
+      version. You may also choose to use such Covered Code under the terms of
+      any subsequent version of the License.
+
+      (( 6.3. ))??
+      Derivative Works.
+
+      If You create or use a modified version of this License (which you may
+      only do in order to apply it to code which is not already Covered Code
+      governed by this License), You must (a) rename Your license so that the
+      phrase "gSOAP" or any confusingly similar phrase do not appear in your
+      license (except to note that you license differs from this License) and
+      (b) otherwise make it clear that Your version of the license contains
+      terms which differ from the gSOAP Public License. (Filling in the name of
+      the Initial Developer, Original Code or Contributor in the notice
+      described in Exhibit A shall not of themselves be deemed to be
+      modifications of this License.)
+
+   (( 7 ))??
+   DISCLAIMER OF WARRANTY.
+
+   COVERED CODE IS PROVIDED UNDER THIS LICENSE ON AN "AS IS" BASIS, WITHOUT
+   WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING,
+   WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, OF FITNESS FOR
+   A PARTICULAR PURPOSE, NONINFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+   RIGHTS, AND ANY WARRANTY THAT MAY ARISE BY REASON OF TRADE USAGE, CUSTOM, OR
+   COURSE OF DEALING. WITHOUT LIMITING THE FOREGOING, YOU ACKNOWLEDGE THAT THE
+   SOFTWARE IS PROVIDED "AS IS" AND THAT THE AUTHORS DO NOT WARRANT THE SOFTWARE
+   WILL RUN UNINTERRUPTED OR ERROR FREE. LIMITED LIABILITY THE ENTIRE RISK AS TO
+   RESULTS AND PERFORMANCE OF THE SOFTWARE IS ASSUMED BY YOU. UNDER NO
+   CIRCUMSTANCES WILL THE AUTHORS BE LIABLE FOR ANY SPECIAL, INDIRECT,
+   INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES OF ANY KIND OR NATURE
+   WHATSOEVER, WHETHER BASED ON CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE),
+   STRICT LIABILITY OR OTHERWISE, ARISING OUT OF OR IN ANY WAY RELATED TO THE
+   SOFTWARE, EVEN IF THE AUTHORS HAVE BEEN ADVISED ON THE POSSIBILITY OF SUCH
+   DAMAGE OR IF SUCH DAMAGE COULD HAVE BEEN REASONABLY FORESEEN, AND
+   NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE REMEDY
+   PROVIDED. SUCH LIMITATION ON DAMAGES INCLUDES, BUT IS NOT LIMITED TO, DAMAGES
+   FOR LOSS OF GOODWILL, LOST PROFITS, LOSS OF DATA OR SOFTWARE, WORK STOPPAGE,
+   COMPUTER FAILURE OR MALFUNCTION OR IMPAIRMENT OF OTHER GOODS. IN NO EVENT
+   WILL THE AUTHORS BE LIABLE FOR THE COSTS OF PROCUREMENT OF SUBSTITUTE
+   SOFTWARE OR SERVICES. YOU ACKNOWLEDGE THAT THIS SOFTWARE IS NOT DESIGNED FOR
+   USE IN ON-LINE EQUIPMENT IN HAZARDOUS ENVIRONMENTS SUCH AS OPERATION OF
+   NUCLEAR FACILITIES, AIRCRAFT NAVIGATION OR CONTROL, OR LIFE-CRITICAL
+   APPLICATIONS. THE AUTHORS EXPRESSLY DISCLAIM ANY LIABILITY RESULTING FROM USE
+   OF THE SOFTWARE IN ANY SUCH ON-LINE EQUIPMENT IN HAZARDOUS ENVIRONMENTS AND
+   ACCEPTS NO LIABILITY IN RESPECT OF ANY ACTIONS OR CLAIMS BASED ON THE USE OF
+   THE SOFTWARE IN ANY SUCH ON-LINE EQUIPMENT IN HAZARDOUS ENVIRONMENTS BY YOU.
+   FOR PURPOSES OF THIS PARAGRAPH, THE TERM "LIFE-CRITICAL APPLICATION" MEANS AN
+   APPLICATION IN WHICH THE FUNCTIONING OR MALFUNCTIONING OF THE SOFTWARE MAY
+   RESULT DIRECTLY OR INDIRECTLY IN PHYSICAL INJURY OR LOSS OF HUMAN LIFE. THIS
+   DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENSE. NO USE
+   OF ANY COVERED CODE IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER.
+
+   (( 8 ))??
+   TERMINATION.
+
+      (( 8.1. ))??
+      This License and the rights granted hereunder will terminate automatically
+      if You fail to comply with terms herein and fail to cure such breach
+      within 30 days of becoming aware of the breach. All sublicenses to the
+      Covered Code which are properly granted shall survive any termination of
+      this License. Provisions which, by their nature, must remain in effect
+      beyond the termination of this License shall survive.
+
+      (( 8.2. ))??
+
+      (( 8.3. ))??
+      If You assert a patent infringement claim against Participant alleging
+      that such Participant's Contributor Version directly or indirectly
+      infringes any patent where such claim is resolved (such as by license or
+      settlement) prior to the initiation of patent infringement litigation,
+      then the reasonable value of the licenses granted by such Participant
+      under Sections 2.1 or 2.2 shall be taken into account in determining the
+      amount or value of any payment or license.
+
+      (( 8.4. ))??
+      In the event of termination under Sections 8.1 or 8.2 above, all end user
+      license agreements (excluding distributors and resellers) which have been
+      validly granted by You or any distributor hereunder prior to termination
+      shall survive termination.
+
+   (( 9 ))??
+   LIMITATION OF LIABILITY.
+
+   UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER TORT (INCLUDING
+   NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL YOU, THE INITIAL DEVELOPER, ANY
+   OTHER CONTRIBUTOR, OR ANY DISTRIBUTOR OF COVERED CODE, OR ANY SUPPLIER OF ANY
+   OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR ANY INDIRECT, SPECIAL,
+   INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT
+   LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+   MALFUNCTION, OR ANY AND ALL OTHER COMMERCIAL DAMAGES OR LOSSES, EVEN IF SUCH
+   PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES. THIS
+   LIMITATION OF LIABILITY SHALL NOT APPLY TO LIABILITY FOR DEATH OR PERSONAL
+   INJURY RESULTING FROM SUCH PARTY'S NEGLIGENCE TO THE EXTENT APPLICABLE LAW
+   PROHIBITS SUCH LIMITATION. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR
+   LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS EXCLUSION AND
+   LIMITATION MAY NOT APPLY TO YOU.
+
+   (( 10 ))??
+   U.S. GOVERNMENT END USERS.
+
+   (( 11 ))??
+   MISCELLANEOUS.
+
+   (( 12 ))??
+   RESPONSIBILITY FOR CLAIMS.
+
+   As between Initial Developer and the Contributors, each party is responsible
+   for claims and damages arising, directly or indirectly, out of its
+   utilization of rights under this License and You agree to work with Initial
+   Developer and Contributors to distribute such responsibility on an equitable
+   basis. Nothing herein is intended or shall be deemed to constitute any
+   admission of liability.
+   ((
+
+   EXHIBIT A.
+
+   "The contents of this file are subject to the gSOAP Public License Version
+   1.3 (the "License"); you may not use this file except in compliance with the
+   License. You may obtain a copy of the License at
+
+   http:/www.cs.fsu.edu/ engelen/soaplicense.html
+
+   Software distributed under the License is distributed on an "AS IS" basis,
+   WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+   the specific language governing rights and limitations under the License.
+
+   The Original Code of the gSOAP Software is: stdsoap.h, stdsoap2.h, stdsoap.c,
+   stdsoap2.c, stdsoap.cpp, stdsoap2.cpp, soapcpp2.h, soapcpp2.c,
+   soapcpp2_lex.l, soapcpp2_yacc.y, error2.h, error2.c, symbol2.c, init2.c,
+   soapdoc2.html, and soapdoc2.pdf, httpget.h, httpget.c, stl.h, stldeque.h,
+   stllist.h, stlvector.h, stlset.h.
+
+   The Initial Developer of the Original Code is Robert A. van Engelen. Portions
+   created by Robert A. van Engelen are Copyright (C) 2001-2004 Robert A. van
+   Engelen, Genivia inc. All Rights Reserved.
+
+   Contributor(s):
+
+   "_."
+
+   [Note: The text of this Exhibit A may differ slightly form the text of the
+   notices in the Source Code files of the Original code. You should use the
+   text of this Exhibit A rather than the text found in the Original Code Source
+   Code for Your Modifications.]
+
+   EXHIBIT B.
+
+   "Part of the software embedded in this product is gSOAP software.
+
+   Portions created by gSOAP are Copyright (C) 2001-2009 Robert A. van Engelen,
+   Genivia inc. All Rights Reserved.
+
+   THE SOFTWARE IN THIS PRODUCT WAS IN PART PROVIDED BY GENIVIA INC AND ANY
+   EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+   WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+   DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+   INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+   OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+   EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." ))??
+`
+const license_gnuplot_lre = `//**
+gnuplot License
+https://spdx.org/licenses/gnuplot.json
+https://fedoraproject.org/wiki/Licensing/Gnuplot
+**//
+
+//** Copyright **//
+
+Permission to use, copy, and distribute this software and its documentation for
+any purpose with or without fee is hereby granted, provided that the above
+copyright notice appear in all copies and that both that copyright notice and
+this permission notice appear in supporting documentation.
+
+Permission to modify the software is granted, but not the right to distribute
+the complete modified source code. Modifications are to be distributed as
+patches to the released version. Permission to distribute binaries produced by
+compiling modified sources is granted, provided you
+
+   (( 1. ))??
+   distribute the corresponding source modifications from the released version
+   in the form of a patch file along with the binaries,
+
+   (( 2. ))??
+   add special version identification to distinguish your version in addition to
+   the base release version number,
+
+   (( 3. ))??
+   provide your name and address as the primary contact for the support of your
+   modified version, and
+
+   (( 4. ))??
+   retain our contact information in regard to use of the base software.
+
+Permission to distribute the released version of the source code along with
+corresponding source modifications in the form of a patch file is granted with
+same provisions 2 through 4 for binary distributions.
+
+This software is provided "as is" without express or implied warranty to the
+extent permitted by applicable law.
+`
+const license_iMatix_lre = `//**
+iMatix Standard Function Library Agreement
+https://spdx.org/licenses/iMatix.json
+http://legacy.imatix.com/html/sfl/sfl4.htm#license
+**//
+
+(( The SFL License Agreement ))??
+
+This license agreement covers your use of the iMatix STANDARD FUNCTION LIBRARY
+(SFL), its source code, documentation, and executable files, hereinafter
+referred to as "the Product".
+
+The Product is Copyright (c) 1991-2000 iMatix Corporation. You may use it and
+distribute it according to this following License Agreement. If you do not agree
+with these terms, please remove the Product from your system. By incorporating
+the Product in your work or distributing the Product to others you implicitly
+agree to these license terms.
+
+Statement Of Copyright
+
+The Product is, and remains, Copyright © 1991-2000 iMatix Corporation, with
+exception of specific copyrights as noted in the individual source files.
+
+Conditions Of Use
+
+   You do not need to provide the source code for the Product as part of your
+   product. However, you must do one of these things to comply with the Product
+   License Agreement:
+
+      (( 1. ))??
+      Provide the source code for Product modules that you use, or
+
+      (( 2. ))??
+      Make your product freely available according to a license similar to the
+      GNU General Public License, or the Perl Artistic License, or
+
+      (( 3. ))??
+      Add this phrase to the documentation for your product: "This product uses
+      parts of the iMatix SFL, Copyright © 1991-2000 iMatix Corporation
+      <http:/www.imatix.com>".
+
+Rights Of Usage
+
+   You may freely and at no cost use the Product in any project, commercial,
+   academic, military, or private, so long as you respect the License Agreement.
+   The License Agreement does not affect any software except the Product. In
+   particular, any application that uses the Product does not itself fall under
+   the License Agreement.
+
+   You may modify any part of the Product, including sources and documentation,
+   except this License Agreement, which you may not modify.
+
+   You must clearly indicate any modifications at the start of each source file.
+   The user of any modified Product code must know that the source file is not
+   original.
+
+   At your discretion, you may rewrite or reuse any part of the Product so that
+   your derived code is not obviously part of the Product. This derived code
+   does not fall under the Product License Agreement directly, but you must
+   include a credit at the start of each source file indicating the original
+   authorship and source of the code, and a statement of copyright as follows:
+
+   "Parts copyright (c) 1991-2000 iMatix Corporation."
+
+Rights Of Distribution
+
+   You may freely distribute the Product, or any subset of the Product, by any
+   means. The License, in the form of the file called "LICENSE.TXT" must
+   accompany any such distribution.
+
+   You may charge a fee for distributing the Product, for providing a warranty
+   on the Product, for making modifications to the Product, or for any other
+   service provided in relation to the Product. You are not required to ask our
+   permission for any of these activities.
+
+   At no time will iMatix associate itself with any distribution of the Product
+   except that supplied from the Internet site http:/www.imatix.com.
+
+Disclaimer Of Warranty
+
+   The Product is provided as free software, in the hope that it will be useful.
+   It is provided "as-is", without warranty of any kind, either expressed or
+   implied, including, but not limited to, the implied warranties of
+   merchantability and fitness for a particular purpose. The entire risk as to
+   the quality and performance of the Product is with you. Should the Product
+   prove defective, the full cost of repair, servicing, or correction lies with
+   you.
+`
+const license_libpng_2_0_lre = `//**
+PNG Reference Library version 2
+https://spdx.org/licenses/libpng-2.0.json
+http://www.libpng.org/pub/png/src/libpng-LICENSE.txt
+**//
+
+(( PNG Reference Library License version 2
+(( Copyright __50__ ))??
+))??
+
+The software is supplied "as is", without warranty of any kind, express or
+implied, including, without limitation, the warranties of merchantability,
+fitness for a particular purpose, title, and non-infringement. In no even shall
+the Copyright owners, or anyone distributing the software, be liable for any
+damages or other liability, whether in contract, tort or otherwise, arising
+from, out of, or in connection with the software, or the use or other dealings
+in the software, even if advised of the possibility of such damage.
+
+Permission is hereby granted to use, copy, modify, and distribute this software,
+or portions hereof, for any purpose, without fee, subject to the following
+restrictions:
+
+   (( 1. ))??
+   The origin of this software must not be misrepresented; you must not claim
+   that you wrote the original software. If you use this software in a product,
+   an acknowledgment in the product documentation would be appreciated, but is
+   not required.
+
+   (( 2. ))??
+   Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   (( 3. ))??
+   This Copyright notice may not be removed or altered from any source or
+   altered source distribution.
+`
+const license_libselinux_1_0_lre = `//**
+libselinux public domain notice
+https://spdx.org/licenses/libselinux-1.0.json
+https://github.com/SELinuxProject/selinux/blob/master/libselinux/LICENSE
+**//
+
+This library (libselinux) is public domain software, i.e. not copyrighted.
+
+Warranty Exclusion
+
+You agree that this software is a non-commercially developed program that may
+contain "bugs" (as that term is used in the industry) and that it may not
+function as intended. The software is licensed "as is". NSA makes no, and hereby
+expressly disclaims all, warranties, express, implied, statutory, or otherwise
+with respect to the software, including noninfringement and the implied
+warranties of merchantability and fitness for a particular purpose.
+
+Limitation of Liability
+
+In no event will NSA be liable for any damages, including loss of data, lost
+profits, cost of cover, or other special, incidental, consequential, direct or
+indirect damages arising from the software or the use thereof, however caused
+and on any theory of liability. This limitation will apply even if NSA has been
+advised of the possibility of such damage. You acknowledge that this is a
+reasonable allocation of risk.
+`
+const license_libtiff_lre = `//**
+libtiff License
+https://spdx.org/licenses/libtiff.json
+https://fedoraproject.org/wiki/Licensing/libtiff
+**//
+
+//** Copyright **//
+
+Permission to use, copy, modify, distribute, and sell this software and its
+documentation for any purpose is hereby granted without fee, provided that (i)
+the above copyright notices and this permission notice appear in all copies of
+the software and related documentation, and (ii) the names of Sam Leffler and
+Silicon Graphics may not be used in any advertising or publicity relating to the
+software without the specific, prior written permission of Sam Leffler and
+Silicon Graphics.
+
+THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND, EXPRESS,
+IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF
+MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR ANY SPECIAL,
+INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED
+OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABILITY, ARISING OUT OF OR
+IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+`
+const license_mpich2_lre = `//**
+mpich2 License
+https://spdx.org/licenses/mpich2.json
+https://fedoraproject.org/wiki/Licensing/MIT
+**//
+
+//** Copyright **//
+
+The following is a notice of limited availability of the code, and disclaimer
+which must be included in the prologue of the code and in all source listings of
+the code.
+
+Copyright Notice
+
++ 2002 University of Chicago
+
+Permission is hereby granted to use, reproduce, prepare derivative works, and to
+redistribute to others. This software was authored by:
+
+Argonne National Laboratory Group W. Gropp: (630) 252-4318; FAX: (630) 252-5986;
+e-mail: gropp@mcs.anl.gov E. Lusk: (630) 252-7852; FAX: (630) 252-5986; e-mail:
+lusk@mcs.anl.gov Mathematics and Computer Science Division Argonne National
+Laboratory, Argonne IL 60439
+
+GOVERNMENT LICENSE
+
+Portions of this material resulted from work developed under a U.S. Government
+Contract and are subject to the following license: the Government is granted for
+itself and others acting on its behalf a paid-up, nonexclusive, irrevocable
+worldwide license in this computer software to reproduce, prepare derivative
+works, and perform publicly and display publicly.
+
+DISCLAIMER
+
+This computer code material was prepared, in part, as an account of work
+sponsored by an agency of the United States Government. Neither the United
+States, nor the University of Chicago, nor any of their employees, makes any
+warranty express or implied, or assumes any legal liability or responsibility
+for the accuracy, completeness, or usefulness of any information, apparatus,
+product, or process disclosed, or represents that its use would not infringe
+privately owned rights.
+`
+const license_psfrag_lre = `//**
+psfrag License
+https://spdx.org/licenses/psfrag.json
+https://fedoraproject.org/wiki/Licensing/psfrag
+**//
+
+(( psfrag.dtx
+(( Copyright __20__ ))??
+))??
+
+This system is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. Don't come complaining to us if you modify this file and it
+doesn't work! If this file is modified by anyone but the authors, those changes
+and their authors must be explicitly stated HERE.
+`
+const license_psutils_lre = `//**
+psutils License
+https://spdx.org/licenses/psutils.json
+https://fedoraproject.org/wiki/Licensing/psutils
+**//
+
+(( PS Utilities Package
+(( The constituent files of this package listed below are Copyright __120__ ))??
+))??
+
+They may be copied and used for any purpose (including distribution as part of a
+for-profit product), provided:
+
+   (( 1) ))??
+   The original attribution of the programs is clearly displayed in the product
+   and/or documentation, even if the programs are modified and/or renamed as
+   part of the product.
+
+   (( 2) ))??
+   The original source code of the programs is provided free of charge (except
+   for reasonable distribution costs). For a definition of reasonable
+   distribution costs, see the Gnu General Public License or Larry Wall's
+   Artistic License (provided with the Perl 4 kit). The GPL and Artistic License
+   in NO WAY affect this license; they are merely used as examples of the spirit
+   in which it is intended.
+
+   (( 3) ))??
+   These programs are provided "as-is". No warranty or guarantee of their
+   fitness for any particular task is provided. Use of these programs is
+   completely at your own risk.
+
+Basically, I don't mind how you use the programs so long as you acknowledge the
+author, and give people the originals if they want them.
+`
+const license_xinetd_lre = `//**
+xinetd License
+https://spdx.org/licenses/xinetd.json
+https://fedoraproject.org/wiki/Licensing/Xinetd_License
+**//
+
+(( ORIGINAL LICENSE: This software is
+(( Copyright __20__ ))??
+))??
+
+The author (Panagiotis Tsirigotis) grants permission to use, copy, and
+distribute this software and its documentation for any purpose and without fee,
+provided that the above copyright notice extant in files in this distribution is
+not removed from files included in any redistribution and that this copyright
+notice is also included in any redistribution.
+
+Modifications to this software may be distributed, either by distributing the
+modified software or by distributing patches to the original software, under the
+following additional terms:
+
+   (( 1. ))??
+   The version number will be modified as follows:
+
+      (( a. ))??
+      The first 3 components of the version number (i.e
+      <number>.<number>.<number>) will remain unchanged.
+
+      (( b. ))??
+      A new component will be appended to the version number to indicate the
+      modification level. The form of this component is up to the author of the
+      modifications.
+
+   (( 2. ))??
+   The author of the modifications will include his/her name by appending it
+   along with the new version number to this file and will be responsible for
+   any wrong behavior of the modified software.
+
+The author makes no representations about the suitability of this software for
+any purpose. It is provided "as is" without any express or implied warranty.
+
+Modifications: Version: 2.1.8.7-current Copyright 1998-2001 by Rob Braun
+
+Sensor Addition Version: 2.1.8.9pre14a Copyright 2001 by Steve Grubb
+
+This is an exerpt from an email I recieved from the original author, allowing
+xinetd as maintained by me (Rob Braun), to use the higher version numbers:
+
+I appreciate your maintaining the version string guidelines as specified in the
+copyright. But I did not mean them to last as long as they did.
+
+So, if you want, you may use any 2.N.* (N >= 3) version string for future xinetd
+versions that you release. Note that I am excluding the 2.2.* line; using that
+would only create confusion. Naming the next release 2.3.0 would put to rest the
+confusion about 2.2.1 and 2.1.8.*.
+`
+const license_xpp_lre = `//**
+XPP License
+https://spdx.org/licenses/xpp.json
+https://fedoraproject.org/wiki/Licensing/xpp
+**//
+
+(( LICENSE FOR THE Extreme! Lab PullParser
+(( Copyright __20__ ))??
+))??
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   (( 1) ))??
+   All redistributions of source code must retain the above copyright notice,
+   the list of authors in the original source code, this list of conditions and
+   the disclaimer listed in this license;
+
+   (( 2) ))??
+   All redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the disclaimer listed in this license in the
+   documentation and/or other materials provided with the distribution;
+
+   (( 3) ))??
+   Any documentation included with all redistributions must include the
+   following acknowledgement:
+
+   "This product includes software developed by the Indiana University Extreme!
+   Lab. For further information please visit http:/www.extreme.indiana.edu/"
+
+   Alternatively, this acknowledgment may appear in the software itself, and
+   wherever such third-party acknowledgments normally appear.
+
+   (( 4) ))??
+   The name "Indiana Univeristy" and "Indiana Univeristy Extreme! Lab" shall not
+   be used to endorse or promote products derived from this software without
+   prior written permission from Indiana University. For written permission,
+   please contact http:/www.extreme.indiana.edu/.
+
+   (( 5) ))??
+   Products derived from this software may not use "Indiana Univeristy" name nor
+   may "Indiana Univeristy" appear in their name, without prior written
+   permission of the Indiana University. Indiana University provides no
+   reassurances that the source code provided does not infringe the patent or
+   any other intellectual property rights of any other entity. Indiana
+   University disclaims any liability to any recipient for claims brought by any
+   other entity based on infringement of intellectual property rights or
+   otherwise.
+
+LICENSEE UNDERSTANDS THAT SOFTWARE IS PROVIDED "AS IS" FOR WHICH NO WARRANTIES
+AS TO CAPABILITIES OR ACCURACY ARE MADE. INDIANA UNIVERSITY GIVES NO WARRANTIES
+AND MAKES NO REPRESENTATION THAT SOFTWARE IS FREE OF INFRINGEMENT OF THIRD PARTY
+PATENT, COPYRIGHT, OR OTHER PROPRIETARY RIGHTS. INDIANA UNIVERSITY MAKES NO
+WARRANTIES THAT SOFTWARE IS FREE FROM "BUGS", "VIRUSES", "TROJAN HORSES", "TRAP
+DOORS", "WORMS", OR OTHER HARMFUL CODE. LICENSEE ASSUMES THE ENTIRE RISK AS TO
+THE PERFORMANCE OF SOFTWARE AND/OR ASSOCIATED MATERIALS, AND TO THE PERFORMANCE
+AND VALIDITY OF INFORMATION GENERATED USING SOFTWARE.
+`
+const license_zlib_acknowledgement_lre = `//**
+zlib/libpng License with Acknowledgement
+https://spdx.org/licenses/zlib-acknowledgement.json
+https://fedoraproject.org/wiki/Licensing/ZlibWithAcknowledgement
+**//
+
+//** Copyright **//
+
+This software is provided 'as-is', without any express or implied warranty. In
+no event will the authors be held liable for any damages arising from the use of
+this software.
+
+Permission is granted to anyone to use this software for any purpose, including
+commercial applications, and to alter it and redistribute it freely, subject to
+the following restrictions:
+
+   (( 1. ))??
+   The origin of this software must not be misrepresented; you must not claim
+   that you wrote the original software. If you use this software in a product,
+   an acknowledgment (see the following) in the product documentation is
+   required.
+
+   Portions Copyright (c) 2002-2007 Charlie Poole or Copyright (c) 2002-2004
+   James W. Newkirk, Michael C. Two, Alexei A. Vorontsov or Copyright (c)
+   2000-2002 Philip A. Craig
+
+   (( 2. ))??
+   Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   (( 3. ))??
+   This notice may not be removed or altered from any source distribution.
 `
