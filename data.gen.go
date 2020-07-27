@@ -198,6 +198,7 @@ func init() {
 		{Name: "CUA-OPL-1.0", Text: license_CUA_OPL_1_0_lre},
 		{Name: "Caldera", Text: license_Caldera_lre},
 		{Name: "ClArtistic", Text: license_ClArtistic_lre},
+		{Name: "CommonsClause", Text: license_CommonsClause_lre},
 		{Name: "Condor-1.1", Text: license_Condor_1_1_lre},
 		{Name: "Crossword", Text: license_Crossword_lre},
 		{Name: "CrystalStacker", Text: license_CrystalStacker_lre},
@@ -242,6 +243,8 @@ func init() {
 		{Name: "Giftware", Text: license_Giftware_lre},
 		{Name: "Glide", Text: license_Glide_lre},
 		{Name: "Glulxe", Text: license_Glulxe_lre},
+		{Name: "GooglePatentClause", Text: license_GooglePatentClause_lre},
+		{Name: "GooglePatentsFile", Text: license_GooglePatentsFile_lre},
 		{Name: "HPND", Text: license_HPND_lre},
 		{Name: "HPND-sell-variant", Text: license_HPND_sell_variant_lre},
 		{Name: "HaskellReport", Text: license_HaskellReport_lre},
@@ -40135,6 +40138,20 @@ received it.
    MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
    (( The End ))??
 `
+const license_CommonsClause_lre = `//**
+CommonsClause addendum
+**//
+
+The Software is provided to you by the Licensor under the License, as defined
+below, subject to the following condition. Without limiting other conditions in
+the License, the grant of rights under the License will not include, and the
+License does not grant to you, the right to Sell the Software. For purposes of
+the foregoing, “Sell” means practicing any or all of the rights granted to you
+under the License to provide to third parties, for a fee or other consideration,
+a product or service that consists, entirely or substantially, of the Software
+or the functionality of the Software. Any license notice or attribution required
+by the License must also include this Commons Cause License Condition notice.
+`
 const license_Condor_1_1_lre = `//**
 Condor Public License v1.1
 https://spdx.org/licenses/Condor-1.1.json
@@ -47757,6 +47774,56 @@ long as the code and documentation is not changed. You may also incorporate this
 code into your own program and distribute that, or modify this code and use and
 distribute the modified version, as long as you retain a notice in your program
 or documentation which mentions my name and the URL shown above.
+`
+const license_GooglePatentClause_lre = `//**
+Patent grant that appeared briefly in the Go LICENSE file,
+before moving to a separate PATENTS file and being reworded.
+**//
+
+Subject to the terms and conditions of this License, __5__ hereby grants to
+You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+(except as stated in this section) patent license to make, have made, use,
+offer to sell, sell, import, and otherwise transfer this implementation __5__
+where such license applies only to those patent claims licensable by __5__
+that are necessarily infringed by use of this implementation __5__. If You
+institute patent litigation against any entity (including a cross-claim or
+counterclaim in a lawsuit) alleging that
+((this implementation __5__ or a Contribution incorporated within))??
+this implementation __5__
+constitutes direct or contributory patent infringement,
+then any patent licenses granted to You
+under this License for this implementation __5__ shall terminate as of the date
+such litigation is filed.
+`
+const license_GooglePatentsFile_lre = `//**
+PATENTS file used in WebM, Go, gRPC and other Google open source projects.
+Now also used by some other companies.
+**//
+
+(( Additional IP Rights Grant (Patents) ))??
+
+"This implementation" means the copyrightable works distributed by
+__5__ as part of //** __5__ **//.
+
+__10__ hereby grants to You a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable (except as stated in this section)
+patent license to make, have made, use, offer to sell, sell, import,
+transfer and otherwise run, modify and propagate the contents of this
+implementation __5__, where such license applies only to those patent
+claims, both currently owned
+((or controlled))??
+by __5__ and acquired in
+the future, licensable by __5__ that are necessarily infringed by this
+implementation __5__.  This grant does not include claims that would be
+infringed only as a consequence of further modification of this
+implementation.  If you or your agent or exclusive licensee institute or
+order or agree to the institution of patent litigation against any
+entity (including a cross-claim or counterclaim in a lawsuit) alleging
+that this implementation __5__ or any code incorporated within this
+implementation __5__ constitutes direct or contributory patent
+infringement, or inducement of patent infringement, then any patent
+rights granted to you under this License for this implementation __5__
+shall terminate as of the date such litigation is filed.
 `
 const license_HPND_lre = `//**
 Historical Permission Notice and Disclaimer
