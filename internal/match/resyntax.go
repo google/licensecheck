@@ -498,7 +498,7 @@ func (re *reSyntax) leadingPhrases() []phrase {
 		panic("bad op in phrases")
 
 	case opWild:
-		return nil
+		return []phrase{{BadWord, BadWord}, {AnyWord, BadWord}, {AnyWord, AnyWord}}
 
 	case opEmpty:
 		return []phrase{{BadWord, BadWord}}

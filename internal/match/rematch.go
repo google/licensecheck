@@ -244,13 +244,11 @@ func (s nfaState) match(prog reProg) int32 {
 	return match
 }
 
-const anyWord WordID = -2
-
 // words returns the list of distinct words that can
 // lead the NFA out of state s and into a new state.
 // The returned list is sorted in increasing order.
 // If the state can match any word (using instAny),
-// the word ID anyWord is first in the list.
+// the word ID AnyWord is first in the list.
 func (s nfaState) words(prog reProg) []WordID {
 	var words []WordID
 	haveAny := false
@@ -261,7 +259,7 @@ State:
 		case instAny:
 			if !haveAny {
 				haveAny = true
-				words = append(words, anyWord)
+				words = append(words, AnyWord)
 			}
 		case instWord:
 			// Dedup; linear scan but list should be small.
@@ -317,9 +315,9 @@ func (s nfaState) appendEncoding(enc []byte) []byte {
 //	  identifying which of a set of regexps has been matched.
 //
 //	- N two-word pairs W:NEXT indicating that if word W is seen, the DFA should
-//	  move to the state at offset NEXT. The pairs are sorted by W. An entry for W == anyWord
+//	  move to the state at offset NEXT. The pairs are sorted by W. An entry for W == AnyWord
 //	  is treated as matching any input word; an exact match later in the list takes priority.
-//	  The list is sorted by W, so anyWord is always first if present.
+//	  The list is sorted by W, so AnyWord is always first if present.
 //
 type reDFA []int32
 
@@ -408,7 +406,7 @@ func (dfa reDFA) string(d *Dict) string {
 			next := dfa[i+1]
 			i += 2
 			var s string
-			if w == anyWord {
+			if w == AnyWord {
 				s = "*"
 			} else {
 				s = d.Words()[w]
@@ -475,10 +473,10 @@ Words:
 			end = i
 		}
 
-		// Handle and remove anyWord if present.
+		// Handle and remove AnyWord if present.
 		// Simplifes the remaining loops.
 		nextAny := int32(-1)
-		if len(delta) > 0 && WordID(delta[0]) == anyWord {
+		if len(delta) > 0 && WordID(delta[0]) == AnyWord {
 			nextAny = delta[1]
 			delta = delta[2:]
 		}
@@ -526,7 +524,7 @@ Words:
 				next2 := int32(-1)
 				for j2 := 0; j2 < len(delta2); j2 += 2 {
 					dw2, dnext2 := WordID(delta2[j2]), delta2[j2+1]
-					if dw2 == anyWord || dictWords[dw2] == rest {
+					if dw2 == AnyWord || dictWords[dw2] == rest {
 						next2 = dnext2
 					}
 				}

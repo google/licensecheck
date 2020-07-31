@@ -126,7 +126,6 @@ func NewMultiLRE(list []*LRE) (_ *MultiLRE, err error) {
 	for _, sub := range list {
 		syntax = append(syntax, sub.syntax)
 	}
-	dfa := reCompileDFA(reCompileMulti(syntax))
 
 	start := make(map[phrase]struct{})
 	for _, sub := range list {
@@ -135,12 +134,30 @@ func NewMultiLRE(list []*LRE) (_ *MultiLRE, err error) {
 			return nil, fmt.Errorf("%s: no leading phrases", sub.File())
 		}
 		for _, p := range phrases {
+			if p[0] == BadWord {
+				return nil, fmt.Errorf("%s: invalid pattern: matches empty text", sub.File())
+			}
+			if p[0] == AnyWord {
+				if p[1] == BadWord {
+					return nil, fmt.Errorf("%s: invalid pattern: matches a single wildcard", sub.File())
+				}
+				if p[1] == AnyWord {
+					return nil, fmt.Errorf("%s: invalid pattern: begins with two wildcards", sub.File())
+				}
+				return nil, fmt.Errorf("%s: invalid pattern: begins with wildcard phrase: __ %s", sub.File(), dict.Words()[p[1]])
+			}
 			if p[1] == BadWord {
-				return nil, fmt.Errorf("%s: no 2-word leading phrases", sub.File())
+				return nil, fmt.Errorf("%s: invalid pattern: matches single word %s", sub.File(), dict.Words()[p[0]])
+			}
+			if p[1] == AnyWord {
+				return nil, fmt.Errorf("%s: invalid pattern: begins with wildcard phrase: %s __", sub.File(), dict.Words()[p[0]])
 			}
 			start[p] = struct{}{}
 		}
 	}
+
+	prog := reCompileMulti(syntax)
+	dfa := reCompileDFA(prog)
 
 	return &MultiLRE{dict, dfa, start}, nil
 }

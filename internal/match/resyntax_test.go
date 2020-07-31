@@ -93,11 +93,12 @@ var phraseRETests = []struct {
 	{in: "(a b c) ??", out: "[[a b]]"},
 	{in: "(( a b c )) ??", out: "[[] [a b]]"},
 	{in: "(( a b c )) ?? d e f", out: "[[a b] [d e]]"},
-	{in: "(( a __123__ c )) ??", out: "[[]]"},
+	{in: "(( a __123__ c )) ??", out: "[[] [a ?] [a c]]"},
 	{in: "a b ((c ||| d e)) f", out: "[[a b]]"},
 	{in: "((a || b)) ((c || d))", out: "[[a c] [a d] [b c] [b d]]"},
 	{in: "a?? b c", out: "[[a b] [b c]]"},
-	{in: "((a __1__))?? b c", out: "[[b c]]"},
+	{in: "((a __1__))?? b c", out: "[[a ?] [a b] [b c]]"},
+	{in: "a __20__", out: "[[a ?] [a]]"},
 }
 
 func TestLeadingPhrases(t *testing.T) {
@@ -119,18 +120,27 @@ func TestLeadingPhrases(t *testing.T) {
 		})
 		var b strings.Builder
 		words := d.Words()
+		toText := func(w WordID) string {
+			if w == AnyWord {
+				return "?"
+			}
+			if w == BadWord {
+				return "!"
+			}
+			return words[w]
+		}
 		fmt.Fprintf(&b, "[")
 		for i, p := range phrases {
 			if i > 0 {
 				b.WriteString(" ")
 			}
 			b.WriteString("[")
-			if p[1] >= 0 {
-				b.WriteString(words[p[0]])
+			if p[1] != BadWord {
+				b.WriteString(toText(p[0]))
 				b.WriteString(" ")
-				b.WriteString(words[p[1]])
-			} else if p[0] >= 0 {
-				b.WriteString(words[p[0]])
+				b.WriteString(toText(p[1]))
+			} else if p[0] != BadWord {
+				b.WriteString(toText(p[0]))
 			}
 			b.WriteString("]")
 		}

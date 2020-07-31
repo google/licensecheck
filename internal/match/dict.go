@@ -29,6 +29,9 @@ type WordID int32
 // BadWord represents a word not present in the dictionary.
 const BadWord WordID = -1
 
+// AnyWord represents a wildcard matching any word.
+const AnyWord WordID = -2
+
 // Insert adds the word w to the word list, returning its index.
 // If w is already in the word list, it is not added again; Insert returns the existing index.
 func (d *Dict) Insert(w string) WordID {
