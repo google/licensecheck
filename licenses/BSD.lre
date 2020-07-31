@@ -26,7 +26,7 @@
 	((above))??
 	((original))??
 	copyright
-	((notice || notices || notice(s) ))??
+	((notice))??
 	((immediately at the beginning of the file, without modification))??
 	this
 	((list of conditions || condition))
@@ -45,11 +45,12 @@
 	((above))??
 	((original))??
 	copyright
-	((notice || notices || notice(s) ))??
+	((notice))??
 	this list of conditions and the
 	following
 	((two pargraphs of))??
 	disclaimer
+	((listed in this license))??
 	in the documentation
 	((and/or || and || or))
 	other materials provided with the distribution.
@@ -58,7 +59,8 @@
 {{define "bsd-clause-3"}}
 	__1__
 	((Neither || None || Names || The names || The name))
-	__40__ used to endorse or promote
+	__40__ used to endorse
+	or promote
 	products derived from this
 	((software || work))
 	without specific
@@ -75,12 +77,18 @@
 	must display the following acknowledgement:
 
 	This product includes software developed by
-
 	__40__
 
-	be used
-	to endorse or promote products derived from this software without specific
+	be used to endorse
+	or promote products derived from this software without specific
 	prior written permission.
+{{end}}
+
+{{define "bsd-clause-attrib"}}
+	__1__
+	Redistributions of any form whatsoever must retain the following
+	acknowledgment:
+	This product includes software developed by __40__
 {{end}}
 
 {{define "bsd-no-trademark"}}
@@ -120,7 +128,8 @@
 {{end}}
 
 {{define "bsd-disclaimer"}}
-	((DISCLAIMER))??
+	((DISCLAIMER
+	))??
 
 	((
 		THE
@@ -156,8 +165,8 @@
 		))
 
 		((
-			IN NO EVENT SHALL __20__ BE
-			LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+			IN NO EVENT SHALL __20__ BE LIABLE
+			FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
 			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
 			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
 			HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
@@ -175,15 +184,19 @@
 		//**
 		Alternate form found in some recent University of California releases.
 		**//
-		IN NO EVENT SHALL __20__ BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT,
+		IN NO EVENT SHALL __20__ BE LIABLE
+		TO ANY PARTY FOR DIRECT, INDIRECT,
 		SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS,
 		ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
-		__20__ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+		__20__ HAS BEEN ADVISED
+		OF THE POSSIBILITY OF SUCH DAMAGE.
 
-		__20__ SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+		__20__ SPECIFICALLY DISCLAIMS
+		ANY WARRANTIES, INCLUDING, BUT NOT
 		LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
 		A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF
-		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". __20__ HAS NO OBLIGATION
+		ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS"
+		__20__ HAS NO OBLIGATION
 		TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
 		MODIFICATIONS.
 	))
@@ -321,6 +334,11 @@ BSD 4-Clause "Original" or "Old" License
 https://spdx.org/licenses/BSD-4-Clause.json
 http://directory.fsf.org/wiki/License:BSD_4Clause
 **//
+//**
+BSD 4-Clause (Univeristy of California-Specific)
+https://spdx.org/licenses/BSD-4-Clause-UC.json
+http://www.freebsd.org/copyright/license.html
+**//
 {{template "bsd-start"}}
 {{template "bsd-clause-1"}}
 {{template "bsd-clause-2"}}
@@ -328,3 +346,107 @@ http://directory.fsf.org/wiki/License:BSD_4Clause
 {{template "bsd-disclaimer"}}
 {{end}}
 
+{{define "BSD-3-Clause-Attribution.lre"}}
+//**
+BSD with attribution
+https://spdx.org/licenses/BSD-3-Clause-Attribution.json
+https://fedoraproject.org/wiki/Licensing/BSD_with_Attribution
+**//
+{{template "bsd-start"}}
+{{template "bsd-clause-1"}}
+{{template "bsd-clause-2"}}
+{{template "bsd-clause-3"}}
+{{template "bsd-clause-attrib"}}
+{{template "bsd-disclaimer"}}
+{{end}}
+
+{{define "BSD-3-Clause-LBNL.lre"}}
+//**
+Lawrence Berkeley National Labs BSD variant license
+https://spdx.org/licenses/BSD-3-Clause-LBNL.json
+https://fedoraproject.org/wiki/Licensing/LBNLBSD
+**//
+{{template "BSD-3-Clause.lre"}}
+
+You are under no obligation whatsoever to provide any bug fixes, patches, or
+upgrades to the features, functionality or performance of the source code
+("Enhancements") to anyone; however, if you choose to make your Enhancements
+available either publicly, or directly to __5__ , without imposing a separate
+written license agreement for such Enhancements, then you hereby grant the
+following license: a non-exclusive, royalty-free perpetual license to install,
+use, modify, prepare derivative works, incorporate into other computer software,
+distribute, and sublicense such Enhancements or derivative works thereof, in
+binary and source code form.
+{{end}}
+
+{{define "BSD-3-Clause-No-Nuclear-License-2014.lre"}}
+//**
+BSD 3-Clause No Nuclear License 2014
+https://spdx.org/licenses/BSD-3-Clause-No-Nuclear-License-2014.json
+https://java.net/projects/javaeetutorial/pages/BerkeleyLicense
+**//
+{{template "BSD-3-Clause.lre"}}
+You acknowledge that this software is not designed, licensed or intended for use
+in the design, construction, operation or maintenance of any nuclear facility.
+{{end}}
+
+{{define "bsd-sun-nuclear"}}
+{{template "bsd-start"}}
+{{template "bsd-clause-1"}}
+{{template "bsd-clause-2"}}
+{{template "bsd-clause-3"}}
+
+This software is provided "AS IS," without a warranty of any kind. ALL EXPRESS
+OR IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING ANY IMPLIED
+WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR
+NON-INFRINGEMENT, ARE HEREBY EXCLUDED. SUN MICROSYSTEMS, INC. ("SUN") AND ITS
+LICENSORS SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES. IN NO
+EVENT WILL SUN OR ITS LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR DATA,
+OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES,
+HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF THE USE
+OF OR INABILITY TO USE THIS SOFTWARE, EVEN IF SUN HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+You acknowledge that this software is not designed, {{$}} or intended for use
+in the design, construction, operation or maintenance of any nuclear facility.
+{{end}}
+
+{{define "BSD-3-Clause-No-Nuclear-License.lre"}}
+//**
+BSD 3-Clause No Nuclear License
+https://spdx.org/licenses/BSD-3-Clause-No-Nuclear-License.json
+http://download.oracle.com/otn-pub/java/licenses/bsd.txt?AuthParam=1467140197_43d516ce1776bd08a58235a7785be1cc
+**//
+{{template "bsd-sun-nuclear" "licensed"}}
+{{end}}
+
+{{define "BSD-3-Clause-No-Nuclear-Warranty.lre"}}
+//**
+BSD 3-Clause No Nuclear License
+https://spdx.org/licenses/BSD-3-Clause-No-Nuclear-License.json
+http://download.oracle.com/otn-pub/java/licenses/bsd.txt?AuthParam=1467140197_43d516ce1776bd08a58235a7785be1cc
+**//
+{{template "bsd-sun-nuclear" ""}}
+{{end}}
+
+{{define "BSD-3-Clause-Open-MPI.lre"}}
+//**
+BSD 3-Clause Open MPI variant
+https://spdx.org/licenses/BSD-3-Clause-Open-MPI.json
+https://www.open-mpi.org/community/license.php
+http://www.netlib.org/lapack/LICENSE.txt
+**//
+{{template "bsd-start"}}
+{{template "bsd-clause-1"}}
+{{template "bsd-clause-2"}}
+{{template "bsd-clause-3"}}
+
+The copyright holders provide no reassurances that the source code provided does
+not infringe any patent, copyright, or any other intellectual property rights of
+third parties. The copyright holders disclaim any liability to any recipient for
+claims brought against recipient by any third party for infringement of that
+parties intellectual property rights.
+
+{{template "bsd-disclaimer"}}
+{{end}}
