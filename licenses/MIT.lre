@@ -1,14 +1,4 @@
-//**
-MIT License
-https://spdx.org/licenses/MIT.json
-https://opensource.org/licenses/MIT
-https://fedoraproject.org/wiki/Licensing:MIT
-**//
-
-(( MIT License))??
-
-//**Copyright**//
-
+{{define "mit-grant-no-cond"}}
 Permission is hereby granted,
 ((free of charge))??
 to any person obtaining a copy of
@@ -34,10 +24,16 @@ copies of the
 and to permit persons to whom the
 ((Software is || Materials are))
 furnished to do so,
+{{end}}
+
+{{define "mit-grant"}}
+{{template "mit-grant-no-cond"}}
 subject to
 ((the following || all))
 conditions:
+{{end}}
 
+{{define "mit-conditions"}}
 __1__
 ((
 	The above
@@ -60,14 +56,12 @@ or
 ((substantial || any))??
 portions of the
 ((Software || Materials))
-
-((DISCLAIMER))??
-
-__1__
-
-{{template "mit-disclaimer"}}
+{{end}}
 
 {{define "mit-disclaimer"}}
+((DISCLAIMER))??
+((2.))??
+
 THE
 ((SOFTWARE || MATERIALS))
 IS PROVIDED "AS IS",
@@ -93,4 +87,82 @@ OR THE USE OR OTHER DEALINGS IN
 ((THE
 	((SOFTWARE || MATERIALS))
 ))??
+{{end}}
+
+
+//**
+MIT License
+https://spdx.org/licenses/MIT.json
+https://opensource.org/licenses/MIT
+https://fedoraproject.org/wiki/Licensing:MIT
+**//
+(( MIT License))??
+//**Copyright**//
+{{template "mit-grant"}}
+{{template "mit-conditions"}}
+{{template "mit-disclaimer"}}
+
+
+{{define "MIT-0.lre"}}
+//**
+MIT No Attribution
+https://spdx.org/licenses/MIT-0.json
+https://github.com/aws/mit-0
+https://romanrm.net/mit-zero
+https://github.com/awsdocs/aws-cloud9-user-guide/blob/master/LICENSE-SAMPLECODE
+**//
+{{template "mit-grant-no-cond"}}
+((subject to the following conditions))??
+{{template "mit-disclaimer"}}
+{{end}}
+
+
+{{define "MITNFA.lre"}}
+//**
+MIT +no-false-attribs license
+https://spdx.org/licenses/MITNFA.json
+https://fedoraproject.org/wiki/Licensing/MITNFA
+**//
+{{template "mit-grant"}}
+{{template "mit-conditions"}}
+
+Distributions of all or part of the Software intended to be used by the
+recipients as they would use the unmodified Software, containing modifications
+that substantially alter, remove, or disable functionality of the Software,
+outside of the documented configuration mechanisms provided by the Software,
+shall be modified such that the Original Author's bug reporting email addresses
+and urls are either replaced with the contact information of the parties
+responsible for the changes, or removed entirely.
+
+{{template "mit-disclaimer"}}
+{{end}}
+
+{{define "MIT-NoAd.lre"}}
+{{template "mit-grant"}}
+{{template "mit-conditions"}}
+
+Except as contained in this notice, the
+((name || names))
+__10__
+shall not be used in advertising or otherwise
+to promote the sale, use or other dealings in this Software
+without prior written authorization
+((
+	((of || from))
+	__10__
+))??
+
+{{template "mit-disclaimer"}}
+{{end}}
+
+{{define "JSON.lre"}}
+((JSON license))??
+{{template "mit-grant"}}
+{{template "mit-conditions"}}
+
+The Software
+((shall || should rather))
+be used for Good, not Evil.
+
+{{template "mit-disclaimer"}}
 {{end}}

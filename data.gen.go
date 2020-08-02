@@ -91,16 +91,17 @@ func init() {
 	}
 	builtinList = append(files, builtinURLs...)
 	builtin = New(BuiltinLicenses())
+}
 
+func init() {
 	filesLRE := []License{
+		{Name: "JSON", Text: license_JSON_lre},
 		{Name: "MIT", Text: license_MIT_lre},
+		{Name: "MIT-0", Text: license_MIT_0_lre},
+		{Name: "MIT-NoAd", Text: license_MIT_NoAd_lre},
+		{Name: "MITNFA", Text: license_MITNFA_lre},
 	}
-	builtinListLRE = filesLRE      // TODO URLs
-	s, err := NewScanner(filesLRE) // TODO BuiltinScannerLicenses
-	if err != nil {
-		panic(err)
-	}
-	builtinScanner = s
+	builtinListLRE = filesLRE // TODO URLs
 }
 
 const license_AGPL_3_0 = `                    GNU AFFERO GENERAL PUBLIC LICENSE
@@ -12941,16 +12942,9 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE AUTHOR ` + "`" + `` + "`" + `AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `
-const license_MIT_lre = `//**
-MIT License
-https://spdx.org/licenses/MIT.json
-https://opensource.org/licenses/MIT
-https://fedoraproject.org/wiki/Licensing:MIT
-**//
+const license_JSON_lre = `
+((JSON license))??
 
-(( MIT License))??
-
-//**Copyright**//
 
 Permission is hereby granted,
 ((free of charge))??
@@ -12977,9 +12971,11 @@ copies of the
 and to permit persons to whom the
 ((Software is || Materials are))
 furnished to do so,
+
 subject to
 ((the following || all))
 conditions:
+
 
 __1__
 ((
@@ -13004,10 +13000,118 @@ or
 portions of the
 ((Software || Materials))
 
+
+The Software
+((shall || should rather))
+be used for Good, not Evil.
+
+
 ((DISCLAIMER))??
+((2.))??
+
+THE
+((SOFTWARE || MATERIALS))
+IS PROVIDED "AS IS",
+WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.
+IN NO EVENT
+((SHALL || WILL))
+__5__ BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT,
+((TORT || FART))
+OR OTHERWISE,
+ARISING FROM, OUT OF OR
+((IN || I))
+CONNECTION WITH
+((TE || THE))
+((SOFTWARE || MATERIALS))
+OR THE USE OR OTHER DEALINGS IN
+((THE
+	((SOFTWARE || MATERIALS))
+))??
+
+`
+const license_MIT_lre = `
+
+
+
+
+
+
+
+
+//**
+MIT License
+https://spdx.org/licenses/MIT.json
+https://opensource.org/licenses/MIT
+https://fedoraproject.org/wiki/Licensing:MIT
+**//
+(( MIT License))??
+//**Copyright**//
+
+
+Permission is hereby granted,
+((free of charge))??
+to any person obtaining a copy of
+__7__ //** (allow parenthetical descriptions) **//
+((and associated documentation files))??
+the
+((Software || Materials))
+to deal in the
+((Software || Materials))
+((under the copyrights))??
+((without restriction))??
+including
+((without limitation))??
+the rights
+((to))??
+use, copy, modify, merge, publish, distribute,
+((sublicense))??
+and/or
+((sell))??
+((modified))??
+copies of the
+((Software || Materials))
+and to permit persons to whom the
+((Software is || Materials are))
+furnished to do so,
+
+subject to
+((the following || all))
+conditions:
+
 
 __1__
+((
+	The above
+	((copyright || authorship))
+	notice
+	(( and this permission notice
+		((including the next paragraph))??
+	|| as well as this permission notice
+	|| this permission notice, and the below disclaimer
+	|| and every other copyright notice found in this software,
+		and all the attributions in every file, and this permission notice
+	|| and this permission notice (or reference to this permission notice) ))
+||
+	This permission notice
+))
+((must || shall))
+be included in all
+copies
+or
+((substantial || any))??
+portions of the
+((Software || Materials))
 
+
+((DISCLAIMER))??
+((2.))??
 
 THE
 ((SOFTWARE || MATERIALS))
@@ -13036,5 +13140,282 @@ OR THE USE OR OTHER DEALINGS IN
 ))??
 
 
+
+
+
+
+
+
+
+
+
+`
+const license_MIT_0_lre = `
+//**
+MIT No Attribution
+https://spdx.org/licenses/MIT-0.json
+https://github.com/aws/mit-0
+https://romanrm.net/mit-zero
+https://github.com/awsdocs/aws-cloud9-user-guide/blob/master/LICENSE-SAMPLECODE
+**//
+
+Permission is hereby granted,
+((free of charge))??
+to any person obtaining a copy of
+__7__ //** (allow parenthetical descriptions) **//
+((and associated documentation files))??
+the
+((Software || Materials))
+to deal in the
+((Software || Materials))
+((under the copyrights))??
+((without restriction))??
+including
+((without limitation))??
+the rights
+((to))??
+use, copy, modify, merge, publish, distribute,
+((sublicense))??
+and/or
+((sell))??
+((modified))??
+copies of the
+((Software || Materials))
+and to permit persons to whom the
+((Software is || Materials are))
+furnished to do so,
+
+((subject to the following conditions))??
+
+((DISCLAIMER))??
+((2.))??
+
+THE
+((SOFTWARE || MATERIALS))
+IS PROVIDED "AS IS",
+WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.
+IN NO EVENT
+((SHALL || WILL))
+__5__ BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT,
+((TORT || FART))
+OR OTHERWISE,
+ARISING FROM, OUT OF OR
+((IN || I))
+CONNECTION WITH
+((TE || THE))
+((SOFTWARE || MATERIALS))
+OR THE USE OR OTHER DEALINGS IN
+((THE
+	((SOFTWARE || MATERIALS))
+))??
+
+`
+const license_MIT_NoAd_lre = `
+
+
+Permission is hereby granted,
+((free of charge))??
+to any person obtaining a copy of
+__7__ //** (allow parenthetical descriptions) **//
+((and associated documentation files))??
+the
+((Software || Materials))
+to deal in the
+((Software || Materials))
+((under the copyrights))??
+((without restriction))??
+including
+((without limitation))??
+the rights
+((to))??
+use, copy, modify, merge, publish, distribute,
+((sublicense))??
+and/or
+((sell))??
+((modified))??
+copies of the
+((Software || Materials))
+and to permit persons to whom the
+((Software is || Materials are))
+furnished to do so,
+
+subject to
+((the following || all))
+conditions:
+
+
+__1__
+((
+	The above
+	((copyright || authorship))
+	notice
+	(( and this permission notice
+		((including the next paragraph))??
+	|| as well as this permission notice
+	|| this permission notice, and the below disclaimer
+	|| and every other copyright notice found in this software,
+		and all the attributions in every file, and this permission notice
+	|| and this permission notice (or reference to this permission notice) ))
+||
+	This permission notice
+))
+((must || shall))
+be included in all
+copies
+or
+((substantial || any))??
+portions of the
+((Software || Materials))
+
+
+Except as contained in this notice, the
+((name || names))
+__10__
+shall not be used in advertising or otherwise
+to promote the sale, use or other dealings in this Software
+without prior written authorization
+((
+	((of || from))
+	__10__
+))??
+
+
+((DISCLAIMER))??
+((2.))??
+
+THE
+((SOFTWARE || MATERIALS))
+IS PROVIDED "AS IS",
+WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.
+IN NO EVENT
+((SHALL || WILL))
+__5__ BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT,
+((TORT || FART))
+OR OTHERWISE,
+ARISING FROM, OUT OF OR
+((IN || I))
+CONNECTION WITH
+((TE || THE))
+((SOFTWARE || MATERIALS))
+OR THE USE OR OTHER DEALINGS IN
+((THE
+	((SOFTWARE || MATERIALS))
+))??
+
+`
+const license_MITNFA_lre = `
+//**
+MIT +no-false-attribs license
+https://spdx.org/licenses/MITNFA.json
+https://fedoraproject.org/wiki/Licensing/MITNFA
+**//
+
+
+Permission is hereby granted,
+((free of charge))??
+to any person obtaining a copy of
+__7__ //** (allow parenthetical descriptions) **//
+((and associated documentation files))??
+the
+((Software || Materials))
+to deal in the
+((Software || Materials))
+((under the copyrights))??
+((without restriction))??
+including
+((without limitation))??
+the rights
+((to))??
+use, copy, modify, merge, publish, distribute,
+((sublicense))??
+and/or
+((sell))??
+((modified))??
+copies of the
+((Software || Materials))
+and to permit persons to whom the
+((Software is || Materials are))
+furnished to do so,
+
+subject to
+((the following || all))
+conditions:
+
+
+__1__
+((
+	The above
+	((copyright || authorship))
+	notice
+	(( and this permission notice
+		((including the next paragraph))??
+	|| as well as this permission notice
+	|| this permission notice, and the below disclaimer
+	|| and every other copyright notice found in this software,
+		and all the attributions in every file, and this permission notice
+	|| and this permission notice (or reference to this permission notice) ))
+||
+	This permission notice
+))
+((must || shall))
+be included in all
+copies
+or
+((substantial || any))??
+portions of the
+((Software || Materials))
+
+
+Distributions of all or part of the Software intended to be used by the
+recipients as they would use the unmodified Software, containing modifications
+that substantially alter, remove, or disable functionality of the Software,
+outside of the documented configuration mechanisms provided by the Software,
+shall be modified such that the Original Author's bug reporting email addresses
+and urls are either replaced with the contact information of the parties
+responsible for the changes, or removed entirely.
+
+
+((DISCLAIMER))??
+((2.))??
+
+THE
+((SOFTWARE || MATERIALS))
+IS PROVIDED "AS IS",
+WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.
+IN NO EVENT
+((SHALL || WILL))
+__5__ BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT,
+((TORT || FART))
+OR OTHERWISE,
+ARISING FROM, OUT OF OR
+((IN || I))
+CONNECTION WITH
+((TE || THE))
+((SOFTWARE || MATERIALS))
+OR THE USE OR OTHER DEALINGS IN
+((THE
+	((SOFTWARE || MATERIALS))
+))??
 
 `
