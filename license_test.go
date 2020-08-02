@@ -20,7 +20,7 @@ import (
 )
 
 func init() {
-	flag.BoolVar(&match.TraceDFA, "tracedfa", match.TraceDFA, "trace DFA execution")
+	flag.IntVar(&match.TraceDFA, "tracedfa", match.TraceDFA, "trace DFA execution that bails out after `n` non-matching steps")
 }
 
 func TestTestdata(t *testing.T) {
@@ -298,9 +298,9 @@ func TestTrace(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	match.TraceDFA = true
+	match.TraceDFA = 10
 	cov := Scan(data)
-	match.TraceDFA = false
+	match.TraceDFA = 0
 
 	var buf bytes.Buffer
 	fmt.Fprintf(&buf, "%.1f%%\n", cov.Percent)

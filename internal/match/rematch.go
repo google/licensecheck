@@ -447,7 +447,10 @@ func (dfa reDFA) stateAt(off int32) (match int32, delta []int32) {
 }
 
 // TraceDFA controls whether DFA execution prints debug tracing when stuck.
-var TraceDFA bool
+// If TraceDFA > 0 and the DFA has followed a path of at least TraceDFA symbols
+// since the last matching state but hits a dead end, it prints out information
+// about the dead end.
+var TraceDFA int
 
 // match looks for a match of DFA at the start of words,
 // which are the result of dict.Split(text) or a subslice of it.
@@ -553,7 +556,7 @@ Words:
 			// (at least 5 words that moved the DFA forward since
 			// the last time we saw a matching state),
 			// print information about it.
-			if TraceDFA && i-end >= 5 {
+			if TraceDFA > 0 && i-end >= TraceDFA {
 				start := i - 10
 				if start < 0 {
 					start = 0
@@ -577,10 +580,12 @@ Words:
 		match = m
 		end = len(words)
 	}
-	if TraceDFA && match < 0 {
-		if i := len(words); i >= 10 {
-			println("DFA ran out of input at «", text[words[i-10].Lo:], "|", "EOF", "»\n")
+	if i := len(words); TraceDFA > 0 && i-end >= TraceDFA {
+		start := i - 10
+		if start < 0 {
+			start = 0
 		}
+		println("DFA ran out of input at «", text[words[i-10].Lo:], "|", "EOF", "»\n")
 	}
 	return match, end
 }
