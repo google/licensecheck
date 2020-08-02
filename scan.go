@@ -8,13 +8,20 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"sync"
 
 	"github.com/google/licensecheck/internal/match"
 )
 
 var (
 	builtinListLRE []License
-	builtinScanner *Scanner
+
+	// builtinScanner is initialized lazily,
+	// because init is fairly expensive,
+	// and delaying it lets us see the init
+	// in test cpu profiles.
+	builtinScanner     = new(Scanner)
+	builtinScannerOnce sync.Once
 )
 
 type Scanner struct {
@@ -23,8 +30,16 @@ type Scanner struct {
 }
 
 func NewScanner(licenses []License) (*Scanner, error) {
-	d := new(match.Dict)
 	s := new(Scanner)
+	err := s.init(licenses)
+	if err != nil {
+		return nil, err
+	}
+	return s, nil
+}
+
+func (s *Scanner) init(licenses []License) error {
+	d := new(match.Dict)
 	var list []*match.LRE
 	for _, l := range licenses {
 		if l.Text == "" {
@@ -33,19 +48,19 @@ func NewScanner(licenses []License) (*Scanner, error) {
 		s.licenses = append(s.licenses, l)
 		re, err := match.ParseLRE(d, l.Name, l.Text)
 		if err != nil {
-			return nil, fmt.Errorf("parsing %v: %v", l.Name, err)
+			return fmt.Errorf("parsing %v: %v", l.Name, err)
 		}
 		list = append(list, re)
 	}
 	re, err := match.NewMultiLRE(list)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	if re == nil {
-		return nil, errors.New("missing lre")
+		return errors.New("missing lre")
 	}
 	s.re = re
-	return s, nil
+	return nil
 }
 
 const maxCopyrightWords = 50
@@ -55,6 +70,14 @@ func Scan(text []byte) Coverage {
 }
 
 func (s *Scanner) Scan(text []byte) Coverage {
+	if s == builtinScanner {
+		builtinScannerOnce.Do(func() {
+			if err := builtinScanner.init(builtinListLRE); err != nil {
+				panic("licensecheck: initializing Scan: " + err.Error())
+			}
+		})
+	}
+
 	matches := s.re.Match(string(text)) // TODO remove conversion
 	if matches == nil {
 		return Coverage{}

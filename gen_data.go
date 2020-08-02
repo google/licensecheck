@@ -127,16 +127,13 @@ func init() {
 	}
 	builtinList = append(files, builtinURLs...)
 	builtin = New(BuiltinLicenses())
+}
 
+func init() {
 	filesLRE := []License{
 		FILES_LRE_LIST
 	}
 	builtinListLRE = filesLRE // TODO URLs
-	s, err := NewScanner(filesLRE) // TODO BuiltinScannerLicenses
-	if err != nil {
-		panic(err)
-	}
-	builtinScanner = s
 }
 `
 
