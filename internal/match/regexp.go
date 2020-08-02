@@ -51,6 +51,7 @@ type LRE struct {
 	dict   *Dict
 	file   string
 	syntax *reSyntax
+	prog   reProg
 
 	onceDFA sync.Once
 	dfa     reDFA
@@ -63,7 +64,11 @@ func ParseLRE(d *Dict, file, s string) (*LRE, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &LRE{dict: d, file: file, syntax: syntax}, nil
+	prog, err := syntax.compile(nil, 0)
+	if err != nil {
+		return nil, err
+	}
+	return &LRE{dict: d, file: file, syntax: syntax, prog: prog}, nil
 }
 
 // Dict returns the Dict used by the LRE.
@@ -87,7 +92,7 @@ func (re *LRE) match(text string) bool {
 // It is invoked lazily (in Match) because most LREs end up only
 // being inputs to a MultiLRE; we never need their DFAs directly.
 func (re *LRE) compile() {
-	re.dfa = reCompileDFA(re.syntax.compile(nil, 0))
+	re.dfa = reCompileDFA(re.prog)
 }
 
 // A MultiLRE matches multiple LREs simultaneously against a text.
@@ -122,9 +127,9 @@ func NewMultiLRE(list []*LRE) (_ *MultiLRE, err error) {
 		}
 	}
 
-	var syntax []*reSyntax
+	var progs []reProg
 	for _, sub := range list {
-		syntax = append(syntax, sub.syntax)
+		progs = append(progs, sub.prog)
 	}
 
 	start := make(map[phrase]struct{})
@@ -156,7 +161,7 @@ func NewMultiLRE(list []*LRE) (_ *MultiLRE, err error) {
 		}
 	}
 
-	prog := reCompileMulti(syntax)
+	prog := reCompileMulti(progs)
 	dfa := reCompileDFA(prog)
 
 	return &MultiLRE{dict, dfa, start}, nil

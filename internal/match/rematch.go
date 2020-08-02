@@ -5,6 +5,195 @@
 // License regexp compilation and execution.
 // See https://swtch.com/~rsc/regexp/regexp2.html
 // for detailed explanation of a similar machine.
+//
+// This machine differs from that one in a few important ways:
+// word-at-a-time operation, word canonicalization, spell-checking,
+// and early-cut wildcard matching.
+//
+// Word-at-a-Time Operation
+//
+// Most regexp matching engines, including the one linked above, process
+// one input byte – or perhaps one Unicode code point – at a time.
+// In contrast, this engine processes one word at a time.
+// The license regular expressions (LREs) and the input texts themselves
+// are first split into words, represented by integer word IDs in an
+// automatically maintained word list (the Dict type).
+// Then the NFA programs and DFA state sets are expressed in terms of
+// word IDs, not characters.
+//
+// Operating on words lets us define wildcards like __10__, meaning
+// "up to 10 words", which may be more useful than "up to 100 bytes".
+// More importantly, it makes the match completely independent of to
+// the exact punctuation and spacing of the input. It also greatly
+// shortens the NFA and DFA representations.
+//
+// Word Canonicalization
+//
+// Splitting the input into words provides an opportunity to regularize
+// the input further. Splitting folds letter case: "SHALL" and "shall"
+// are given the same word ID. It also strips accents from vowels:
+// "QUÉBEC", "Québec", and "quebec" are all given the same word ID.
+//
+// Although in general punctuation is ignored, canonicalization recognizes
+// the pattern "word(s)" where word is any word and (s) is the literal
+// three-byte sequence "(s)"; it canonicalizes that to "words".
+// For example, "notice(s)" canonicalizes to "notices". Combined with
+// spell checking (see below), "notice(s)" will therefore match
+// "notices" or "notice".
+//
+// Another special case involving punctuation is "(c)" and "©", both of which
+// canonicalize to "copyright". A pair of "copyright" words also canonicalizes
+// to a single one, so that "Copyright © 2020" and "copyright 2020" are the
+// same text. An unfortunate side effect of the "(c)" conversion is that
+// the list bullets "c." and "c)" are different words from "(c)".
+// That mismatch is handled by spell checking (see below).
+//
+// There are other common words that are often substituted for each other
+// and worth canonicalizing, to simplify license patterns. These include
+//
+//  - is are
+//  - it them they
+//  - the these this those
+//  - copy copies
+//
+// See the canonicalRewrites list in dict.go and its uses for the details.
+// Regular singular/plural forms are handled by spell checking.
+//
+// Spell Checking
+//
+// At each state, the DFA knows which words would help move the match along.
+// If it doesn't see one of those words, it would normally end the search.
+// That moment provides an opportunity to do spelling correction:
+// if the input word being processed is close enough to an expected word,
+// we can treat it as having been corrected to the expected word.
+//
+// More specifically, if both the input and the target word are at least
+// four bytes, and if the input can be edited to produce the target by
+// a single byte insertion, deletion, or modification, then the words are
+// considered close enough, and the misspelled word is treated as the target.
+// This handles typos like "notwork" for "network". It also handles
+// most singular/plural distinctions, such as "notice" for "notices".
+// See the canMisspell function for the implementation.
+//
+// [One cost of word canonicalization (at least in the current implementation)
+// is that spell checking does not consider non-canonical spellings of words.
+// For example, "copies" canonicalizes to "copy", meaning that the word
+// the DFA expects is "copy" (never "copies"), so an input word "copiesx"
+// does NOT get spell-checked to "copies" (and from there to "copy").
+// This could be added if necessary.]
+//
+// Another possible spell-check fix is to join words incorrectly split apart.
+// This happens sometimes in text that has been word-wrapped with hyphenation.
+// If the next two input words can be joined together to produce an expected
+// word, that pair is consumed as a misspelling of the expected one.
+// For example, the hyphenation "nonin-" (new line) "fringement" might
+// be reassembled as the expected word "noninfringement".
+// This also handles non-standard over-hyphenation, such as "non-infringement"
+// for "noninfringement" or "sub-license" for "sublicense".
+// See canMisspellJoin for the implementation.
+//
+// Another possible spell-check fix is to split apart words incorrectly joined.
+// This happens sometimes in text that has been un-word-wrapped by deleting
+// newlines instead of turning them into spaces, or where spaces or other
+// separating punctuation have been inadvertently deleted.
+// If an expected word is a prefix of the next input word, and the remaining
+// suffix is expected after that word, then the single word is consumed as
+// a misspelling of the word pair. For example, "andor" can be consumed as
+// a misspelling of "and/or".
+// The "misspell split" comment marks the implementation.
+//
+// The inclusion of both the joining and splitting fixes means that
+// license patterns can, for example, use either "non-infringement" or
+// "noninfringement" and still match the other form without additional work.
+// However, the former may be preferable in that it also accepts a
+// wrapped and hyphenated "non-infringement" that turns into
+// "non-in <newline> fringement", which "noninfringemnt" would not match.
+//
+// Spell checking also accepts "c" and "copyright" for each other.
+// A plain "c" is not canonicalized to "copyright" to avoid making plain "c",
+// especially in a file name like "file.c", appear to be the start of a copyright notice.
+// (Spell checking only applies inside a potential match that is already started,
+// but word canonicalization applies to every word in the file.)
+//
+// Early-Cut Wildcard Matching
+//
+// This implementation adds "cut" operations to reduce the number
+// of states tracked when using counted wildcard patterns.
+//
+// To explain what that means exactly, first some background.
+//
+// DFAs are not good at counting: the standard regexp pattern /.{0,10}/
+// is much more expensive than /.*/. On the other hand, /.*/ can easily
+// match far too much; the limit in /.{0,10}/ is semantically useful.
+//
+// LREs provide a counted wildcard __10__ equivalent to regexp /.{0,10}/.
+// The counting can produce a multiplicative number of DFA states.
+// For example, consider the pattern "The name __10__ may not be used"
+// matched against "The name may not be may not be may not be may not be used".
+// If __10__ means "up to 10 words, any words at all", then that text should
+// be matched, assigning "may not be may not be may not be" to the wildcard.
+// This never happens in practice, but the standard DFA construction must be
+// prepared for it, along with variants like:
+//
+//	The name may may may may may may may may may may may not be used.
+//	The name may not may not may not may not may not may not be used.
+//	The name may may not be  may not be  may not be  may not be used.
+//	The name may not may not be used may not be used may not be used.
+//
+// In general the DFA must track
+// (1) how many wildcard words have been used up so far, and
+// (2) how far into the "may not be used" has been matched
+// at the current input location. That's roughly 10 * 4 = 40 states.
+// In a real license, the possible literal text that must be tracked
+// is as many words as the wildcard itself allows, leading in this case
+// to roughly 10 * 10 = 100 states. A __20__ produces roughly 400 states,
+// and so on.
+//
+// This extra work is clearly useless: real inputs don't look like that,
+// and people wouldn't recognize them if they did. After seeing a few of
+// the words following the wildcard, we can safely assume that the wildcard
+// part of the match is over. In the example above, after seeing
+//
+//	The name Google may not be
+//
+// we might as well assume the wildcard is over and the next word must
+// be "used", to complete the pattern. This is true even though technically
+// the pattern might be interpreted to allow
+//
+//	The name "Google may not be may not be" may not be used.
+//
+// Empirically, this kind of abuse does not come up in practice.
+//
+// This implementation cuts off wildcard matches by inserting an implicit
+// "cut" operator (similar to and named after Prolog's cut operator)
+// three literal words after each wildcard. The cut discards (cuts off)
+// any NFA threads still attempting wildcard matches.
+// That is, our example is interpreted implicitly as
+//
+//	The name __10__ may not be (CUT) used.
+//
+// The effect of this cut after three words is that the 10 * 10 states
+// drops to 10 * 3, 20 * 20 drops to 20 * 3, and so on: wildcards now
+// have a footprint only linear in their size, not quadratic.
+//
+// As a larger example, the implicit cut in the longer pattern
+//
+//	The name __20__ may not be (CUT) used to endorse or promote products
+//	derived from this software without specific prior written permission.
+//
+// reduces the total number of DFA states from 248 to 80.
+//
+// It is still possible to delay the cut by following the wildcard with
+// optional words or phrases, so some state blowup is still possible,
+// but not nearly as much.
+//
+// Overall, at time of writing, implicit cuts reduce the size of the
+// DFA for the full license set from 5.8M states (240 MB and 39s to build)
+// to 615k states (10 MB, under one second to build).
+//
+// The implicit cut is represented as an instCut that terminates any
+// other NFA threads still matching a particular wildcard. The application
+// of instCut happens in (*nfaState).trim.
 
 package match
 
@@ -35,6 +224,7 @@ const (
 	instAlt   // jump to both pc+1 and pc+1+arg
 	instJump  // jump to pc+1+arg
 	instMatch // completed match identified by arg
+	instCut   // cut off the instAlt range starting at pc+1+arg
 )
 
 // string returns a textual listing of the given program.
@@ -55,6 +245,11 @@ func (p reProg) string(d *Dict) string {
 			fmt.Fprintf(&b, "jump %d\n", i+1+int(inst.arg))
 		case instMatch:
 			fmt.Fprintf(&b, "match %d\n", int(inst.arg))
+		case instCut:
+			// target is always an instAlt.
+			// Decode the target of the alt as well.
+			targ := i + 1 + int(inst.arg)
+			fmt.Fprintf(&b, "cut [%d, %d]\n", targ, targ+1+int(p[targ].arg))
 		}
 	}
 	return b.String()
@@ -62,15 +257,25 @@ func (p reProg) string(d *Dict) string {
 
 // reCompile holds compilation state for a single regexp.
 type reCompile struct {
-	prog reProg
+	prog       reProg // program being constructed
+	endPattern bool   // compiling the end of the pattern
+	cut        []reCut
+	err        error // first problem found; report delayed until end of compile
+}
+
+// reCut holds the information about a pending cut.
+type reCut struct {
+	start   int // cut off the alt at pc = start
+	trigger int // ... after trigger more literal word matches
 }
 
 // compile appends a program for the regular expression re to init and returns the result.
 // A successful match of the program for re will report the match value m.
-func (re *reSyntax) compile(init reProg, m int32) reProg {
-	c := &reCompile{prog: init}
+func (re *reSyntax) compile(init reProg, m int32) (reProg, error) {
+	c := &reCompile{prog: init, endPattern: true}
 	c.compile(re)
-	return append(c.prog, reInst{op: instMatch, arg: m})
+	c.compileCuts()
+	return append(c.prog, reInst{op: instMatch, arg: m}), c.err
 }
 
 // compile appends the compiled program for re to c.prog.
@@ -85,32 +290,56 @@ func (c *reCompile) compile(re *reSyntax) {
 	case opWords:
 		for _, w := range re.w {
 			c.prog = append(c.prog, reInst{op: instWord, arg: int32(w)})
+			c.reduceCut()
+		}
+		if c.endPattern {
+			c.compileCuts()
 		}
 
 	case opConcat:
-		for _, sub := range re.sub {
+		endIndex := len(re.sub)
+		if c.endPattern {
+			for endIndex > 0 && canMatchEmpty(re.sub[endIndex-1]) {
+				endIndex--
+			}
+		}
+		for i, sub := range re.sub {
+			c.endPattern = i >= endIndex
 			c.compile(sub)
 		}
 
 	case opQuest:
 		alt := len(c.prog)
 		c.prog = append(c.prog, reInst{op: instAlt})
+		cut := c.cut
+		endPattern := c.endPattern
 		c.compile(re.sub[0])
+		if endPattern {
+			c.compileCuts()
+		}
+		c.cut = c.mergeCut(cut, c.cut)
 		c.prog[alt].arg = int32(len(c.prog) - (alt + 1))
 
 	case opAlternate:
+		cut := c.cut
+		endPattern := c.endPattern
+		var newCut []reCut
 		var alts, jumps []int
 		for i, sub := range re.sub {
 			if i+1 < len(re.sub) {
 				alts = append(alts, len(c.prog))
 				c.prog = append(c.prog, reInst{op: instAlt})
 			}
+			c.cut = cut
+			c.endPattern = endPattern
 			c.compile(sub)
+			newCut = c.mergeCut(newCut, c.cut)
 			if i+1 < len(re.sub) {
 				jumps = append(jumps, len(c.prog))
 				c.prog = append(c.prog, reInst{op: instJump})
 			}
 		}
+		c.cut = newCut
 
 		// All alts jump to after jump.
 		for i, a := range alts {
@@ -128,19 +357,113 @@ func (c *reCompile) compile(re *reSyntax) {
 		//	(.(.(.(.)?)?)?)?
 		// This results in smaller NFA state lists (max 2 states)
 		// than compiling like .?.?.?.? (max re.n states).
+		c.compileCuts()
+		if c.endPattern && c.err == nil {
+			c.err = fmt.Errorf("__%d__ wildcard with no required text following", re.n)
+		}
+		start := len(c.prog)
 		end := len(c.prog) + int(re.n)*2
 		for i := int32(0); i < re.n; i++ {
 			c.prog = append(c.prog, reInst{op: instAlt, arg: int32(end - (len(c.prog) + 1))})
 			c.prog = append(c.prog, reInst{op: instAny})
 		}
+		if re.n > 3 {
+			c.cut = []reCut{{start: start, trigger: 3}}
+		}
 	}
+}
+
+// compileCuts emits instCut instructions for all pending cuts.
+// See comment at top of file for information about cuts.
+func (c *reCompile) compileCuts() {
+	for _, cut := range c.cut {
+		c.compileCut(cut)
+	}
+	c.cut = nil
+}
+
+// compileCut emits an instCut instruction for cut.
+func (c *reCompile) compileCut(cut reCut) {
+	c.prog = append(c.prog, reInst{op: instCut, arg: int32(cut.start - (len(c.prog) + 1))})
+}
+
+// reduceCut records that a new literal word has been matched,
+// reducing the triggers in c.cut by 1 and emitting any triggered cuts.
+func (c *reCompile) reduceCut() {
+	var next []reCut
+	for _, cut := range c.cut {
+		if cut.trigger--; cut.trigger == 0 {
+			c.compileCut(cut)
+			continue
+		}
+		next = append(next, cut)
+	}
+	c.cut = next
+}
+
+// mergeCut merges the two cut lists cut1 and cut2 into a single cut list.
+// Cuts with the same start but different triggers are merged into a
+// single entry with the larger of the two triggers.
+func (c *reCompile) mergeCut(cut1, cut2 []reCut) []reCut {
+	if len(cut1) == 0 {
+		return cut2
+	}
+	if len(cut2) == 0 {
+		return cut1
+	}
+
+	var list []reCut
+	list = append(list, cut1...)
+	list = append(list, cut2...)
+	sort.Slice(list, func(i, j int) bool {
+		if list[i].start != list[j].start {
+			return list[i].start < list[j].start
+		}
+		return list[i].trigger > list[j].trigger
+	})
+
+	w := 0
+	for _, cut := range list {
+		if w == 0 || list[w-1].start != cut.start {
+			list[w] = cut
+			w++
+		}
+	}
+	return list[:w]
+}
+
+// canMatchEmpty reports whether re can match an empty text.
+func canMatchEmpty(re *reSyntax) bool {
+	switch re.op {
+	case opAlternate:
+		for _, sub := range re.sub {
+			if canMatchEmpty(sub) {
+				return true
+			}
+		}
+		return false
+
+	case opConcat:
+		for _, sub := range re.sub {
+			if !canMatchEmpty(sub) {
+				return false
+			}
+		}
+
+	case opWords:
+		if len(re.w) > 0 {
+			return false
+		}
+	}
+
+	return true
 }
 
 // reCompileMulti returns a program that matches any of the listed regexps.
 // The regexp list[i] returns match value i when it matches.
-func reCompileMulti(list []*reSyntax) reProg {
+func reCompileMulti(list []reProg) reProg {
 	var prog reProg
-	for i, re := range list {
+	for i, prog1 := range list {
 		alt := -1
 		if i+1 < len(list) {
 			// Insert Alt that can choose to jump over this program (to the next one).
@@ -148,7 +471,13 @@ func reCompileMulti(list []*reSyntax) reProg {
 			prog = append(prog, reInst{op: instAlt})
 		}
 
-		prog = re.compile(prog, int32(i))
+		for _, inst := range prog1 {
+			if inst.op == instMatch {
+				prog = append(prog, reInst{op: instMatch, arg: int32(i)})
+			} else {
+				prog = append(prog, inst)
+			}
+		}
 
 		if alt >= 0 {
 			prog[alt].arg = int32(len(prog) - (alt + 1))
@@ -196,6 +525,8 @@ func (s *nfaState) add(prog reProg, pc int32) {
 		s.add(prog, pc+1+prog[pc].arg)
 	case instJump:
 		s.add(prog, pc+1+prog[pc].arg)
+	case instCut:
+		s.add(prog, pc+1)
 	}
 }
 
@@ -204,14 +535,30 @@ func (s *nfaState) add(prog reProg, pc int32) {
 // locations that advance the input (instWord and instAny) or that
 // report a match (instMatch).
 func (s *nfaState) trim(prog reProg) {
+	// Collect cut ranges and sort.
+	var cuts []int32
+	for _, pc := range *s {
+		if prog[pc].op == instCut {
+			cuts = append(cuts, pc+1+prog[pc].arg)
+		}
+	}
+	sortInt32s(cuts)
+
+	// Sort and save just the word, any, match instructions, applying cuts.
+	sortInt32s(*s)
 	save := (*s)[:0]
 	for _, pc := range *s {
 		switch prog[pc].op {
 		case instWord, instAny, instMatch:
+			for len(cuts) > 0 && pc > cuts[0]+1+prog[cuts[0]].arg {
+				cuts = cuts[1:]
+			}
+			if len(cuts) > 0 && cuts[0] <= pc && pc <= cuts[0]+1+prog[cuts[0]].arg {
+				break
+			}
 			save = append(save, pc)
 		}
 	}
-	sortInt32s(save)
 	*s = save
 }
 
