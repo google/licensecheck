@@ -60,14 +60,21 @@ func (p reProg) string(d *Dict) string {
 	return b.String()
 }
 
+// reCompile holds compilation state for a single regexp.
+type reCompile struct {
+	prog reProg
+}
+
 // compile appends a program for the regular expression re to init and returns the result.
 // A successful match of the program for re will report the match value m.
 func (re *reSyntax) compile(init reProg, m int32) reProg {
-	return append(re.compile1(init), reInst{op: instMatch, arg: m})
+	c := &reCompile{prog: init}
+	c.compile(re)
+	return append(c.prog, reInst{op: instMatch, arg: m})
 }
 
-// compile1 appends the compiled program for re to prog and returns the result.
-func (re *reSyntax) compile1(prog reProg) reProg {
+// compile appends the compiled program for re to c.prog.
+func (c *reCompile) compile(re *reSyntax) {
 	switch re.op {
 	default:
 		panic(fmt.Sprintf("unexpected re.op %d", re.op))
@@ -77,43 +84,43 @@ func (re *reSyntax) compile1(prog reProg) reProg {
 
 	case opWords:
 		for _, w := range re.w {
-			prog = append(prog, reInst{op: instWord, arg: int32(w)})
+			c.prog = append(c.prog, reInst{op: instWord, arg: int32(w)})
 		}
 
 	case opConcat:
 		for _, sub := range re.sub {
-			prog = sub.compile1(prog)
+			c.compile(sub)
 		}
 
 	case opQuest:
-		alt := len(prog)
-		prog = append(prog, reInst{op: instAlt})
-		prog = re.sub[0].compile1(prog)
-		prog[alt].arg = int32(len(prog) - (alt + 1))
+		alt := len(c.prog)
+		c.prog = append(c.prog, reInst{op: instAlt})
+		c.compile(re.sub[0])
+		c.prog[alt].arg = int32(len(c.prog) - (alt + 1))
 
 	case opAlternate:
 		var alts, jumps []int
 		for i, sub := range re.sub {
 			if i+1 < len(re.sub) {
-				alts = append(alts, len(prog))
-				prog = append(prog, reInst{op: instAlt})
+				alts = append(alts, len(c.prog))
+				c.prog = append(c.prog, reInst{op: instAlt})
 			}
-			prog = sub.compile1(prog)
+			c.compile(sub)
 			if i+1 < len(re.sub) {
-				jumps = append(jumps, len(prog))
-				prog = append(prog, reInst{op: instJump})
+				jumps = append(jumps, len(c.prog))
+				c.prog = append(c.prog, reInst{op: instJump})
 			}
 		}
 
 		// All alts jump to after jump.
 		for i, a := range alts {
-			prog[a].arg = int32((jumps[i] + 1) - (a + 1))
+			c.prog[a].arg = int32((jumps[i] + 1) - (a + 1))
 		}
 
 		// Patch all jumps to the end.
-		end := len(prog)
+		end := len(c.prog)
 		for _, j := range jumps {
-			prog[j].arg = int32(end - (j + 1))
+			c.prog[j].arg = int32(end - (j + 1))
 		}
 
 	case opWild:
@@ -121,13 +128,12 @@ func (re *reSyntax) compile1(prog reProg) reProg {
 		//	(.(.(.(.)?)?)?)?
 		// This results in smaller NFA state lists (max 2 states)
 		// than compiling like .?.?.?.? (max re.n states).
-		end := len(prog) + int(re.n)*2
+		end := len(c.prog) + int(re.n)*2
 		for i := int32(0); i < re.n; i++ {
-			prog = append(prog, reInst{op: instAlt, arg: int32(end - (len(prog) + 1))})
-			prog = append(prog, reInst{op: instAny})
+			c.prog = append(c.prog, reInst{op: instAlt, arg: int32(end - (len(c.prog) + 1))})
+			c.prog = append(c.prog, reInst{op: instAny})
 		}
 	}
-	return prog
 }
 
 // reCompileMulti returns a program that matches any of the listed regexps.
