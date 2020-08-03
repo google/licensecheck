@@ -149,6 +149,7 @@ var insertSplitTests = []struct {
 	{"&copy; 2020 Gopher®", "copyright 2020 gopher"},
 	{"http://golang.org", "http golang org"},
 	{"https://golang.org", "http golang org"},
+	{"the notice(s) must", "the notices must"},
 }
 
 func TestDictInsertSplit(t *testing.T) {

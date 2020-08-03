@@ -148,6 +148,11 @@ func (d *Dict) split(text string, insert bool) []Word {
 					size += s
 					wbuf = appendFoldRune(wbuf, r)
 				}
+				if size+3 <= len(t) && t[size:size+3] == "(s)" {
+					// Read "notice(s)" as "notices" and let spell-check accept "notice" too.
+					wbuf = append(wbuf, 's')
+					size += 3
+				}
 			}
 			hi = lo + int32(size)
 			t = t[size:]
