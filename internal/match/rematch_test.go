@@ -213,6 +213,15 @@ var matchTests = []struct {
 	{`abcdef`, `xbcdef`, 0, 1},
 	{`abcdef`, `abcdex`, 0, 1},
 
+	// canMisspell - c vs (c) (≡ copyright)
+	{`a b c d`, `a b c d`, 0, 4},
+	{`a b (c) d`, `a b c d`, 0, 4},
+	{`a b copyright d`, `a b c d`, 0, 4},
+	{`a b © d`, `a b c d`, 0, 4},
+	{`a b c d`, `a b (c) d`, 0, 4},
+	{`a b c d`, `a b copyright d`, 0, 4},
+	{`a b c d`, `a b © d`, 0, 4},
+
 	// canMisspellJoin
 	{`x noninfringement y`, `x non-infringement y`, 0, 4},
 
