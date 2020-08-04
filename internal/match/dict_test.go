@@ -147,6 +147,10 @@ var insertSplitTests = []struct {
 	{"(C) 2020 Gopher®", "copyright 2020 gopher"},
 	{"© 2020 Gopher®", "copyright 2020 gopher"},
 	{"&copy; 2020 Gopher®", "copyright 2020 gopher"},
+	{"a b c (c) d", "a b c copyright d"},
+	{"a b c copyright d", "a b c copyright d"},
+	{"a b c © d", "a b c copyright d"},
+
 	{"http://golang.org", "http golang org"},
 	{"https://golang.org", "http golang org"},
 	{"the notice(s) must", "the notices must"},

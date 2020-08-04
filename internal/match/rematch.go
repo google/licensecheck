@@ -606,18 +606,6 @@ func sortWordIDs(x []WordID) {
 	})
 }
 
-var allowedMismatches = []struct {
-	x, y string
-}{
-	{"is", "are"},
-	{"it", "them"},
-	{"it", "they"},
-	{"the", "these"},
-	{"the", "this"},
-	{"the", "those"},
-	{"copy", "copies"}, // most plurals are handled as 1-letter typos
-}
-
 // canMisspell reports whether want can be misspelled as have.
 // Both words have been converted to lowercase already
 // (want by the Dict, have by the caller).
@@ -639,11 +627,21 @@ func canMisspell(want, have string) bool {
 		}
 	}
 
-	for i := range allowedMismatches {
-		x, y := allowedMismatches[i].x, allowedMismatches[i].y
-		if want == x && have == y || have == x && want == y {
-			return true
-		}
+	// We have to canonicalize "(C)" and "(c)" to "copyright",
+	// but then that produces an unfortunate disconnect between
+	// list bullets "c.", "c)", and "(c)".
+	// The first two are both "c", but the third is "copyright".
+	// We can't canonicalize all "c" to "copyright",
+	// or else we'll see spurious "copyright" words in path names like "file.c",
+	// which might change the boundaries of an overall copyright notice match.
+	// Instead, we correct the ambiguity by treating "c" and "copyright"
+	// the same during spell check. (Spell checks only apply when a match
+	// has already started, so they don't affect the match boundaries.)
+	//
+	// The want string has been canonicalized, so it must be "c" or "copyright" (not "©"),
+	// but the have string has only been folded, so it can be any of the three.
+	if (want == "c" || want == "copyright") && (have == "c" || have == "copyright" || have == "©") {
+		return true
 	}
 
 	return false

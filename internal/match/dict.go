@@ -178,7 +178,7 @@ func (d *Dict) split(text string, insert bool) []Word {
 			}
 
 			// More of our own.
-			for _, m := range allowedMismatches {
+			for _, m := range canonicalRewrites {
 				if string(w) == m.y {
 					w = append(w[:0], m.x...)
 				}
@@ -248,6 +248,10 @@ func foldRune(r rune) rune {
 
 	if 'A' <= r && r <= 'Z' {
 		r += 'a' - 'A'
+	}
+	if r == '(' || r == ')' {
+		// delete ( ) in (c) or notice(s)
+		return -1
 	}
 
 	return r
@@ -424,4 +428,20 @@ func markdownLinkSize(t string) int {
 		}
 	}
 	return 0
+}
+
+// canonicalRewrites is a list of pairs that are canonicalized during word splittting.
+// The words on the right are parsed as if they were the words on the left.
+// This happens during dictionary splitting, so canMisspell will never see any
+// of the words on the right.
+var canonicalRewrites = []struct {
+	x, y string
+}{
+	{"is", "are"},
+	{"it", "them"},
+	{"it", "they"},
+	{"the", "these"},
+	{"the", "this"},
+	{"the", "those"},
+	{"copy", "copies"}, // most plurals are handled as 1-letter typos
 }
