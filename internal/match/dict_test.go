@@ -141,6 +141,7 @@ var insertSplitTests = []struct {
 	{"[text](https://link\t)MORE", "text http link more"},
 	{"[text](https://link\r)MORE", "text http link more"},
 	{"[text](https://link\n)MORE", "text http link more"},
+	{"[text](#anchor) more", "text more"},
 	{"Copyright 2020 Gopher®", "copyright 2020 gopher"},
 	{"Copyright © 2020 Gopher®", "copyright 2020 gopher"},
 	{"(c) 2020 Gopher®", "copyright 2020 gopher"},

@@ -399,6 +399,7 @@ var markdownLinkPrefixes = []string{
 	"https://",
 	"mailto:",
 	"file:",
+	"#",
 }
 
 // markdownLinkSize returns the length of the Markdown link target at the start of t, or else 0.
