@@ -1,50 +1,116 @@
-//**
-Historical Permission Notice and Disclaimer
-https://spdx.org/licenses/HPND.json
-https://opensource.org/licenses/HPND
-**//
+{{define "hpnd"}}
+	//**
+	Historical Permission Notice and Disclaimer
+	https://spdx.org/licenses/HPND.json
+	https://opensource.org/licenses/HPND
+	https://fedoraproject.org/wiki/Licensing:MIT#Old_Style
+	**//
 
-(( Historical Permission Notice and Disclaimer
-(( Copyright __20__ ))??
-))??
+	(( The files in this directory are subject to the following license. ))??
 
-Permission to use, copy, modify and distribute this software and its
-documentation for any purpose and without fee is hereby granted, provided that
-the above copyright notice appear in all copies
-(( and ))??
-that both
-(( that ))??
+	(( The author of this software is __10__
+	(( Copyright __20__ ))??
+	))??
 
-(( the ))??
-copyright notice and this permission notice appear in supporting documentation
-(( , and that the name
-(( of ))??
+	Permission to use, copy, modify
+	{{.}}
+	this
+	(( software || material ))
+	(( and its documentation ))??
+	for any purpose
+	(( and ))??
+	(( without fee ))??
+	is hereby granted
+	(( without fee ))??
+	provided that
+	(( the above copyright notice
+	   (( and this permission notice ))??
+	   appear
+	|| this entire notice is included
+	))
+	in all copies
+	//**
+	Avoid a non-empty match for this next part,
+	beause the pattern above matches an ISC license exactly.
+	We want to require additional text to avoid matching ISC licenses.
+	**//
+	((
+		//** Traditional Old-style MIT variant **//
+		(( and ))??
+		that both
+		(( that ))??
+		(( the ))??
+		copyright notice and this permission notice
+		appear in supporting documentation
+		(( and that the name __10__ not be used
+		   in advertising or publicity pertaining to distribution
+		   of the software without specific, written prior permission.
+		))??
+	||
+		//** Bellcore variant **//
+		(( and that the name __10__ not be used
+		   in advertising or publicity pertaining to
+		   this material without the specific, prior written permission
+		   of an authorized representative of __10__.
+		))
+	||
+		//** AT&T dtoa variant **//
+		of any software which is or includes a copy
+		or modification of this software and in all copies
+		of the supporting documentation for such software.
+	))
 
-//** <copyright holder> **//
-__5__
+	((
+	(( No representations are made
+	|| __10__ makes no representations ))
+	about the
+	(( accuracy or ))??
+	suitability of this
+	((software || material))
+	for any purpose.
+	It is provided "as is" without
+	(( any ))??
+	express or implied
+	((warranty || warranties))
+	))??
 
-//** <or related entities> **//
-__5__
-not be used in advertising or publicity pertaining to distribution of the
-software without specific, written prior permission ))??
-.
-((
-//** <copyright holder> **//
-__5__
-makes no representations about the suitability of this software for any purpose.
-It is provided "as is" without express or implied warranty. ))??
+	((
+	__10__ DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+	INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+	IN NO EVENT SHALL __10__ BE LIABLE FOR ANY SPECIAL,
+	INDIRECT OR CONSEQUENTIAL DAMAGES
+	OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+	DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+	NEGLIGENCE OR OTHER TORTIOUS ACTION,
+	ARISING OUT OF OR IN CONNECTION WITH
+	THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-((
-//** <copyright holder> **//
-__5__
-DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS
-//** . **//
-__5__
-IN NO EVENT SHALL
-//** <copyright holder> **//
-__5__
-BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
-WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. ))??
+	||
+
+	THE AUTHOR PROVIDES THIS SOFTWARE ''AS IS'' AND ANY EXPRESSED OR
+	IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+	OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+	INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+	NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+	DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+	THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+	OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+	||
+
+	THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED
+	WARRANTY.  IN PARTICULAR,
+	((NEITHER __10__ MAKES ANY || __10__ MAKES NO))
+	REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY
+	OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
+
+	))??
+{{end}}
+
+{{template "hpnd" "and distribute"}}
+
+{{define "HPND-sell-variant.lre"}}
+{{template "hpnd" "distribute and sell"}}
+{{end}}
