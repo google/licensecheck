@@ -17,7 +17,7 @@ The shortest way to define the known licenses is by reference to the
 with deprecated license IDs omitted.
 This section describes the deviations from that base set of licenses.
 
-Many of the license definitions used by `licensecheck`
+Many of the license definitions used by licensecheck
 have been converted from the SPDX regular expressions
 into [LRE patterns](#lre), with the patterns corrected to fix SPDX errors or revised to
 match variants found in real-world use.
@@ -27,7 +27,7 @@ Instead, this document focuses on the supported licenses and IDs themselves.
 ### Aladdin Free Public Licnense
 
 SPDX defines the ID `Aladdin` for the Aladdin Free Public License version 8.
-`Licensecheck` defines the non-SPDX ID `Aladdin-9` for version 9,
+Licensecheck defines the non-SPDX ID `Aladdin-9` for version 9,
 which was used by the final non-AGPL version of Ghostscript.
 
 _Delta from SPDX_:
@@ -65,7 +65,7 @@ SPDX distinguishes many BSD license variants, which reduce to different subsets 
  - No-Nuclear (“You acknowledge that this software is not designed or intended for use in ... nuclear facility.”)
  - No-Nuclear-License (“You acknowledge that this software is not designed, licensed, or intended for use in ... nuclear facility.”)
 
-SPDX defines the following BSD variants, which `licensecheck` recognizes and distinguishes:
+SPDX defines the following BSD variants, which licensecheck recognizes and distinguishes:
 
  - Header, Source, Disclaimer (`BSD-1-Clause`)
  - Header, Source, No-Endorse, Disclaimer (`BSD-Source-Code`)
@@ -73,7 +73,7 @@ SPDX defines the following BSD variants, which `licensecheck` recognizes and dis
  - Header, Source, Binary, Disclaimer, Views (`BSD-2-Clause-Views`)
  - Header, Source, Binary, Patent-Grant, Disclaimer (`BSD-2-Clause-Patent`)
  - Header, Source, Binary, No-Endorse, Disclaimer (`BSD-3-Clause`)
- - Header, Source, Binary, No-Endorse, Disclaimer, Bug-Fix (`BSD-3-Clause-LBNL`)`
+ - Header, Source, Binary, No-Endorse, Disclaimer, Bug-Fix (`BSD-3-Clause-LBNL`)
  - Header, Source, Binary, No-Endorse, Attribution, Disclaimer (`BSD-3-Clause-Attribution`)
  - Header, Source, Binary, No-Endorse, No-Patent, Disclaimer (`BSD-3-Clause-Clear`)
  - Header, Source, Binary, No-Endorse, No-IP, Disclaimer (`BSD-3-Clause-Open-MPI`)
@@ -82,14 +82,14 @@ SPDX defines the following BSD variants, which `licensecheck` recognizes and dis
  - Header, Source, Binary, No-Endorse, custom Disclaimer, No-Nuclear-License (`BSD-3-No-Nuclear-License`)
  - Header, Source, Binary, No-Endorse, Disclaimer, No-Nuclear-License (`BSD-3-Clause-No-Nuclear-License-2014`)
 
-In addition to the above, `licensecheck` recognizes the following non-SPDX variants:
+In addition to the above, licensecheck recognizes the following non-SPDX variants:
 
  - Header, Source, No-Patent, Disclaimer (`BSD-1-Clause-Clear`)
  - Header, Source, Binary, No-Endorse, No-Trademark, Disclaimer (`BSD-3-Clause-NoTrademark`)
 
-SPDX defines `BSD-4-Clause-UC`, which is `BSD-4-Clause` where the copyright holder blanks are filled in with the University of California. `Licensecheck` does not distinguish `BSD-4-Clause` from `BSD-4-Clause-UC`.
+SPDX defines `BSD-4-Clause-UC`, which is `BSD-4-Clause` where the copyright holder blanks are filled in with the University of California. Licensecheck does not distinguish `BSD-4-Clause` from `BSD-4-Clause-UC`.
 
-[SPDX defines a `BSD-Protection` license, recognized by `licensecheck`,
+[SPDX defines a `BSD-Protection` license, recognized by licensecheck,
 which is a different license entirely (approximately “BSD made viral”)
 and is therefore omitted from the above discussion.]
 
@@ -107,7 +107,7 @@ from applying to those files.
 SPDX defines `CAL-1.0` and `CAL-1.0-Combined-Work-Exception`
 to distinguish the two license types for a given file.
 This per-file annotation is not visible in the license text,
-so `licensecheck` can only report `CAL-1.0`.
+so licensecheck can only report `CAL-1.0`.
 
 _Delta from SPDX_:
 
@@ -120,7 +120,7 @@ that introduces a commercial-use restriction on top of an otherwise open-source 
 That is, the presence of the Commons Clause changes an open-source license
 into a non-open license that does not permit commercial use.
 It is used by Redis Labs and other companies.
-`Licensecheck` reports it as `CommonsClause`.
+Licensecheck reports it as `CommonsClause`.
 
 _Delta from SPDX_:
 
@@ -128,7 +128,7 @@ _Delta from SPDX_:
 
 ### Creative Commons
 
-`Licensecheck` supports all the Creative Commons licenses with assigned SPDX identifiers
+Licensecheck supports all the Creative Commons licenses with assigned SPDX identifiers
 and then adds the United States port of the Attribution-NonCommercial-ShareAlike 3.0 license
 (`CC-BY-NC-SA-3.0-US`),
 which is used by a variety of GitHub repositories.
@@ -149,7 +149,7 @@ do not accurately capture the intended distinction.
 Any result from a license scanner using the SPDX pattern set
 with these IDs is therefore suspect.
 
-To avoid that confusion, `licensecheck` defines its own patterns
+To avoid that confusion, licensecheck defines its own patterns
 that do accurately capture the distinction, along with new ID pairs
 to clearly distinguish any results from the (buggy) SPDX patterns.
 The IDs are `$LICENSE` and `$LICENSE-Only` (with a capital `O` in `Only`).
@@ -158,11 +158,11 @@ For example, the two IDs for AGPL-3.0 are `AGPL-3.0` and `AGPL-3.0-Only`.
 AGPL 1.0, published by Affero rather than the Free Software Foundation,
 did not define any mechanism for “or later” versions,
 so it makes no sense to distinguish `AGPL-1.0-only` from `AGPL-1.0-or-later`.
-`Licensecheck` defines only `AGPL-1.0`.
+Licensecheck defines only `AGPL-1.0`.
 
 Another common variation found in the wild is license notices permitting
 LGPL version 2.0 or 3.0 (not 2.0 only; not 2.0 or later).
-For that, `licensecheck` defines `LGPL-2.0-Or-3.0`.
+For that, licensecheck defines `LGPL-2.0-Or-3.0`.
 
 _Delta from SPDX_:
 
@@ -194,33 +194,33 @@ As happened with the GPL variants, the SPDX patterns for these variants do not a
 the intended distinction, making any result from a license scanner using those patterns
 suspect.
 
-To avoid that confusion, `licensecheck` defines its own patterns focused on the version decision
+To avoid that confusion, licensecheck defines its own patterns focused on the version decision
 and not attempting to make any distinctions about invariant texts.
 For example, there are only two GFDL-1.3 IDs: `GFDL-1.3` and `GFDL-1.3-Only`.
 
 _Delta from SPDX_:
 
  - removed `GFDL-1.1-or-later`, `GFDL-1.1-invariants-or-later`, `GFDL-1.1-no-invariants-or-later`; added `GFDL-1.1`
- - removed `GFDL-1.1-only`, `GFDL-1.1-invariants-only`, `GFDL-1.1-no-invariants-only`; added `GFDL-1.1-Only`
  - removed `GFDL-1.2-or-later`, `GFDL-1.2-invariants-or-later`, `GFDL-1.2-no-invariants-or-later`; added `GFDL-1.2`
- - removed `GFDL-1.2-only`, `GFDL-1.2-invariants-only`, `GFDL-1.2-no-invariants-only`; added `GFDL-1.2-Only`
  - removed `GFDL-1.3-or-later`, `GFDL-1.3-invariants-or-later`, `GFDL-1.3-no-invariants-or-later`; added `GFDL-1.3`
+ - removed `GFDL-1.1-only`, `GFDL-1.1-invariants-only`, `GFDL-1.1-no-invariants-only`; added `GFDL-1.1-Only`
+ - removed `GFDL-1.2-only`, `GFDL-1.2-invariants-only`, `GFDL-1.2-no-invariants-only`; added `GFDL-1.2-Only`
  - removed `GFDL-1.3-only`, `GFDL-1.3-invariants-only`, `GFDL-1.3-no-invariants-only`; added `GFDL-1.3-Only`
 
 ### Google Patents
 
 For a brief time, Go's LICENSE file contained a BSD license followed by
 an additional explicit patent grant similar to the one used by the Apache-2.0 license.
-`Licensecheck` reports that patent grant text as `GooglePatentClause`.
+Licensecheck reports that patent grant text as `GooglePatentClause`.
 
 Go then deleted the grant from the LICENSE file and moved it to a separate PATENTS file,
 updating the language.
 This file is used by a variety of other BSD-license Google projects as well.
-`Licensecheck` reports that updated language as `GooglePatentsFile`.
+Licensecheck reports that updated language as `GooglePatentsFile`.
 
 Other companies have adopted the PATENTS file for their own BSD-licensed code,
 replacing “Google” with (or adding) their own company name.
-These variants are also reported as `GooglePatentsFile`, even when the company is not Google,
+These variants are also reported as `GooglePatentsFile`, even when the company is not Google
 (just as the MIT license need not cover code from MIT).
 
 Delta from SPDX:
@@ -229,9 +229,9 @@ Delta from SPDX:
 
 ### MIT License Variants
 
-`Licensecheck` supports all the SPDX-defined MIT variants: `MIT`, `MIT-0`, `MITNFA`, and `0BSD` [_sic_].
+Licensecheck supports all the SPDX-defined MIT variants: `MIT`, `MIT-0`, `MITNFA`, and `0BSD` [_sic_].
 
-Additionally, `licensecheck` defines a variant `MIT-NoAd` that adds a non-advertising clause similar to the BSD “No-Promote” clause.
+Additionally, licensecheck defines a variant `MIT-NoAd` that adds a non-advertising clause similar to the BSD “No-Promote” clause.
 
 _Delta from SPDX_:
 
@@ -244,7 +244,7 @@ by [License Zero](https://licensezero.com/)
 is a non-commercial companion to the [Parity license](https://paritylicense.com/).
 It is a non-open-source license but found in use on GitHub.
 
-`Licensecheck` assigns the Prosperity Public License 3.0.0 the ID `Prosperity-3.0.0`.
+Licensecheck assigns the Prosperity Public License 3.0.0 the ID `Prosperity-3.0.0`.
 
 _Delta from SPDX_:
 
@@ -262,7 +262,7 @@ Once again, the SPDX patterns for these variants do not accurately capture
 the intended distinction, making any result from a license scanner using those patterns
 suspect.
 
-To avoid that confusion, `licensecheck` does not attempt to use the `-RFN` and `-no-RFN` variants.
+To avoid that confusion, licensecheck does not attempt to use the `-RFN` and `-no-RFN` variants.
 It only defines and reports `OFL-1.0` and `OFL-1.1`.
 
 _Delta from SPDX_:
@@ -307,12 +307,12 @@ defined by the `*.lre` files in this directory.
 (See [README.md](README.md) for details about the choice of licenses.)
 
 The content of each file is
-[https://pkg.go.dev/text/template](text/template) input
+[text/template](https://pkg.go.dev/text/template) input
 that generates LRE output,
 so that common pieces can be factored out
 (see, for example, [BSD.lre](BSD.lre)).
 
-After editing files in this directory, run `go generate` in the `licensecheck` (parent) directory.
+After editing files in this directory, run `go generate` in the licensecheck (parent) directory.
 
 Note that when using
 [licensecheck.NewScanner](https://pkg.go.dev/github.com/google/licensecheck/#NewScanner),
