@@ -72,11 +72,13 @@ var exclude = fieldMap(`
 	AGPL-1.0-or-later
 	AGPL-3.0-only
 	AGPL-3.0-or-later
+	CAL-1.0-Combined-Work-Exception
 	BSD-1-Clause
 	BSD-1-Clause-Clear
 	BSD-2-Clause
 	BSD-2-Clause-FreeBSD
 	BSD-2-Clause-Patent
+	BSD-2-Clause-Views
 	BSD-3-Clause
 	BSD-3-Clause-Attribution
 	BSD-3-Clause-Clear
@@ -115,7 +117,7 @@ var exclude = fieldMap(`
 	GPL-2.0-or-later
 	GPL-3.0-only
 	GPL-3.0-or-later
-	JSON
+	HPND-sell-variant
 	LGPL-2.0-only
 	LGPL-2.0-or-later
 	LGPL-2.1-only

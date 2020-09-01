@@ -5,12 +5,21 @@ http://www.mozilla.org/MPL/2.0/
 https://opensource.org/licenses/MPL-2.0
 **//
 
-((
+{{define "mpl-header"}}
 This Source Code Form is subject to the terms of the Mozilla Public License, v.
 2.0. If a copy of the MPL was not distributed with this
 ((file || project))
 , You can obtain one
 at http:/mozilla.org/MPL/2.0/.
+{{end}}
+
+{{define "MPL-2.0-no-copyleft-exception.lre"}}
+{{template "mpl-header"}}
+This Source Code Form is "Incompatible With Secondary Licenses", as defined by the Mozilla Public License, v. 2.0.
+{{end}}
+
+((
+{{template "mpl-header"}}
 
 ||
 

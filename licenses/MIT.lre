@@ -154,15 +154,3 @@ without prior written authorization
 
 {{template "mit-disclaimer"}}
 {{end}}
-
-{{define "JSON.lre"}}
-((JSON license))??
-{{template "mit-grant"}}
-{{template "mit-conditions"}}
-
-The Software
-((shall || should rather))
-be used for Good, not Evil.
-
-{{template "mit-disclaimer"}}
-{{end}}

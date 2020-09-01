@@ -204,11 +204,10 @@
 {{end}}
 
 {{define "bsd-views"}}
-	((The views and conclusions contained in the software and documentation are those
+	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of
-	((The FreeBSD Project))??
-	))??
+	((The FreeBSD Project || the copyright holders or contributors))??
 {{end}}
 
 
@@ -226,6 +225,7 @@ https://svnweb.freebsd.org/base/head/include/ifaddrs.h?revision=326823
 {{define "BSD-Source-Code.lre"}}
 //**
 BSD 1-Clause License plus non-advertising clause (usual BSD clause #3)
+https://spdx.org/licenses/BSD-Source-Code.json
 
 Examples:
 	https://github.com/robbiehanson/XMPPFramework/blob/5f24033e/copying.txt
@@ -246,14 +246,20 @@ BSD 2-Clause "Simplified" License
 https://spdx.org/licenses/BSD-2-Clause.json
 https://opensource.org/licenses/BSD-2-Clause
 **//
+{{template "bsd-start"}}
+{{template "bsd-clause-1"}}
+{{template "bsd-clause-2"}}
+{{template "bsd-disclaimer"}}
+{{end}}
+
+{{define "BSD-2-Clause-Views.lre"}}
 //**
-BSD 2-Clause FreeBSD License
-https://spdx.org/licenses/BSD-2-Clause-FreeBSD.json
+BSD 2-Clause Views
+https://spdx.org/licenses/BSD-2-Clause-Views.json
 http://www.freebsd.org/copyright/freebsd-license.html
 
 This is the same as the BSD-2-Clause plus a paragraph
-about the views of the FreeBSD project, but others have
-copied that paragraph too, and it has no effect on use of
+about the views of the project. It has no effect on use of
 the software, so we just merge these two together.
 **//
 {{template "bsd-start"}}
