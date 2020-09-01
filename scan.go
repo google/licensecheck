@@ -24,11 +24,13 @@ var (
 	builtinScannerOnce sync.Once
 )
 
+// A Scanner matches a set of known licenses.
 type Scanner struct {
 	licenses []License
 	re       *match.MultiLRE
 }
 
+// NewScanner returns a new Scanner that recognizes the given set of licenses.
 func NewScanner(licenses []License) (*Scanner, error) {
 	s := new(Scanner)
 	err := s.init(licenses)
@@ -65,10 +67,21 @@ func (s *Scanner) init(licenses []License) error {
 
 const maxCopyrightWords = 50
 
+// Scan computes the coverage of the text according to the
+// license set compiled into the package.
+//
+// An input text may match multiple licenses. If that happens,
+// Match contains only disjoint matches. If multiple licenses
+// match a particular section of the input, the best match
+// is chosen so the returned coverage describes at most
+// one match for each section of the input.
+//
 func Scan(text []byte) Coverage {
 	return builtinScanner.Scan(text)
 }
 
+// Scan is like the top-level function Scan,
+// but it uses the set of licenses in the Scanner instead of the built-in license set.
 func (s *Scanner) Scan(text []byte) Coverage {
 	if s == builtinScanner {
 		builtinScannerOnce.Do(func() {

@@ -4,6 +4,35 @@
 
 // Package licensecheck classifies license files and heuristically determines
 // how well they correspond to known open source licenses.
+//
+// Scanning
+//
+// A text (a slice of bytes) can be scanned for known licenses by calling Scan.
+// The resulting Coverage structure describes all the matches found as well
+// as what percentage of the file was covered by known matches.
+//
+//	cov := licensecheck.Scan(text)
+//	fmt.Printf("%.1f%% of text covered by licenses:\n", cov.Percent)
+//	for _, m := range cov.Match {
+//		fmt.Printf("%s at [%d:%d] IsURL=%v\n", m.Name, m.Start, m.End, m.IsURL)
+//	}
+//
+// The Scan function uses a built-in license set, which is the known SPDX licenses
+// augmented with some other commonly seen licenses.
+// (See licenses/README.md for details about the license set.)
+//
+// A custom scanner can be created using NewScanner, passing in a set of
+// license patterns to scan for. The license patterns are written as license regular expressions (LREs).
+// BuiltinLicenses returns the set of license patterns used by Scan.
+// (TODO: NOT TRUE YET - returns the ones for Cover.)
+//
+// The Old Cover and Checker API
+//
+// An older, less precise matcher is still available using the Cover function,
+// or using New to create a new Checker from a set of licenses.
+// This matcher will be removed in a later version of this package
+// but is available as version v0.1.0 of the package.
+//
 package licensecheck
 
 import (
