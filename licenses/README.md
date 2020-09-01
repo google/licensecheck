@@ -1,7 +1,7 @@
 # Licensecheck: Built-In Licenses
 
 This directory contains the definitions of the licenses built into [github.com/google/licensecheck](../README.md).
-To add new licenses, see the “[Adding new built-in licenses](#add)” section below.
+To add new licenses, see the “[Adding new built-in licenses](#adding-new-built-in-licenses)” section below.
 
 It is a goal to incorporate the entire [SPDX license list and IDs](https://spdx.dev/licenses/)
 (excluding deprecated license IDs)
@@ -24,7 +24,7 @@ match variants found in real-world use.
 Those pattern revisions are too numerous to document here.
 Instead, this document focuses on the supported licenses and IDs themselves.
 
-### Aladdin Free Public Licnense {#afpl}
+### Aladdin Free Public Licnense
 
 SPDX defines the ID `Aladdin` for the Aladdin Free Public License version 8.
 `Licensecheck` defines the non-SPDX ID `Aladdin-9` for version 9,
@@ -34,7 +34,7 @@ _Delta from SPDX_:
 
  - added `Aladdin-9`
 
-### Anti-996 License {#anti996}
+### Anti-996 License
 
 The [Anti-996 license](https://github.com/kattgu7/Anti-996-License)
 is a non-open-source license that purports to impose restrictions on
@@ -45,7 +45,7 @@ _Delta from SPDX_:
 
  - added `Anti996`
 
-### BSD Licenses {#bsd}
+### BSD Licenses
 
 SPDX distinguishes many BSD license variants, which reduce to different subsets of the following clauses:
 
@@ -93,15 +93,13 @@ SPDX defines `BSD-4-Clause-UC`, which is `BSD-4-Clause` where the copyright hold
 which is a different license entirely (approximately “BSD made viral”)
 and is therefore omitted from the above discussion.]
 
-TODO: Have to bring BSD-2-Clause-Views back.
-
 _Delta from SPDX_:
 
  - added `BSD-1-Clause-Clear`
  - added `BSD-3-Clause-NoTrademark`
  - removed `BSD-4-Clause-UC` (uses `BSD-4-Clause` instead)
 
-### Cryptography Autonomy License {#cal}
+### Cryptography Autonomy License
 
 The Cryptographic Autonomy License version 1.0 allows source files to be
 marked as subject to the “combined work exception,” which stops certain conditions
@@ -115,7 +113,7 @@ _Delta from SPDX_:
 
  - removed `CAL-1.0-Combined-Work-Exception`
 
-### Commons Clause {#commons}
+### Commons Clause
 
 The [Commons Clause](https://commonsclause.com/) is a license condition
 that introduces a commercial-use restriction on top of an otherwise open-source license.
@@ -139,7 +137,7 @@ _Delta from SPDX_:
 
  - added `CC-BY-NC-SA-3.0-US`
 
-### GNU General Public Licenses (AGPL, GPL, LGPL) {#gpl}
+### GNU General Public Licenses (AGPL, GPL, LGPL)
 
 For each version of each of these GNU licenses,
 SPDX defines a pair of IDs defining whether a newer
@@ -176,7 +174,7 @@ _Delta from SPDX_:
  - removed `LGPL-2.1-or-later`, `LGPL-2.1-only`; added `LGPL-2.1`, `LGPL-2.1-Only`
  - removed `LGPL-3.0-or-later`, `LGPL-3.0-only`; added `LGPL-3.0`, `LGPL-3.0-Only`, `LGPL-2.0-Or-3.0`
 
-### GNU Free Documentation License (GFDL) {#gfdl}
+### GNU Free Documentation License (GFDL)
 
 SPDX splits each GFDL version into six different variants.
 It first splits each into two groups: “exact version only” versus “or later.”
@@ -209,19 +207,27 @@ _Delta from SPDX_:
  - removed `GFDL-1.3-or-later`, `GFDL-1.3-invariants-or-later`, `GFDL-1.3-no-invariants-or-later`; added `GFDL-1.3`
  - removed `GFDL-1.3-only`, `GFDL-1.3-invariants-only`, `GFDL-1.3-no-invariants-only`; added `GFDL-1.3-Only`
 
-### Google Patents {#google}
+### Google Patents
 
-TODO GooglePatentClause, GooglePatentsFile.
+For a brief time, Go's LICENSE file contained a BSD license followed by
+an additional explicit patent grant similar to the one used by the Apache-2.0 license.
+`Licensecheck` reports that patent grant text as `GooglePatentClause`.
+
+Go then deleted the grant from the LICENSE file and moved it to a separate PATENTS file,
+updating the language.
+This file is used by a variety of other BSD-license Google projects as well.
+`Licensecheck` reports that updated language as `GooglePatentsFile`.
+
+Other companies have adopted the PATENTS file for their own BSD-licensed code,
+replacing “Google” with (or adding) their own company name.
+These variants are also reported as `GooglePatentsFile`, even when the company is not Google,
+(just as the MIT license need not cover code from MIT).
 
 Delta from SPDX:
 
  - added `GooglePatentClause`, `GooglePatentsFile`
 
-### Historial Permission Notices and Disclaimers {#hpnd}
-
-TODO
-
-### MIT License Variants {#mit}
+### MIT License Variants
 
 `Licensecheck` supports all the SPDX-defined MIT variants: `MIT`, `MIT-0`, `MITNFA`, and `0BSD` [_sic_].
 
@@ -231,7 +237,7 @@ _Delta from SPDX_:
 
  - added `MIT-NoAd`
 
-### Prosperity {#prosperity}
+### Prosperity
 
 The [Prosperity Public License](https://prosperitylicense.com/)
 by [License Zero](https://licensezero.com/)
@@ -244,7 +250,7 @@ _Delta from SPDX_:
 
  - added `Prosperity-3.0.0`
 
-### SIL Open Font License (OFL) {#ofl}
+### SIL Open Font License (OFL)
 
 SPDX splits OFL-1.0 and OFL-1.1 into three variants each,
 depending on whether a reserved font name applies.
@@ -264,7 +270,7 @@ _Delta from SPDX_:
  - removed `OFL-1.0-RFN` and `OFL-1.0-no-RFN`
  - removed `OFL-1.1-RFN` and `OFL-1.1-no-RFN`
 
-## License Regular Expressions (LREs) {#lre}
+## License Regular Expressions (LREs)
 
 Each license to be recognized is specified by writing a license regular expression (LRE) for it.
 The pattern syntax and the matching are word-based and case-insensitive;
@@ -294,7 +300,7 @@ For example:
 	((men || women || people))
 	to come to the aid of their __1__.
 
-## Adding new built-in licenses {#add}
+## Adding new built-in licenses
 
 This package has an extensive set of built-in licenses,
 defined by the `*.lre` files in this directory.

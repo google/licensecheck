@@ -26,6 +26,35 @@
 // BuiltinLicenses returns the set of license patterns used by Scan.
 // (TODO: NOT TRUE YET - returns the ones for Cover.)
 //
+// License Regular Expressions
+// Each license to be recognized is specified by writing a license regular expression (LRE) for it.
+// The pattern syntax and the matching are word-based and case-insensitive;
+// punctuation is ignored in the pattern and in the matched text.
+//
+// The valid LRE patterns are:
+//
+//  - word, a single case-insensitive word
+//  - __N__, any sequence of up to N words
+//  - expr1 expr2, concatenation of two expressions
+//  - expr1 || expr2, alternation of two expressions
+//  - (( expr )), grouping
+//  - (( expr ))??, zero or one instances of the grouped expression
+//  - //** text **//, a comment ignored by the parser
+//
+// To make patterns harder to misread in large texts:
+// (( must only appear at the start of a line (possibly indented);
+// )) and ))?? must only appear at the end of a line (with possible trailing spaces);
+// and || must only appear inside a (( )) or (( ))?? group.
+//
+// For example:
+//
+// 	//** https://en.wikipedia.org/wiki/Filler_text **//
+// 	Now is
+// 	((not))??
+// 	the time for all good
+// 	((men || women || people))
+// 	to come to the aid of their __1__.
+//
 // The Old Cover and Checker API
 //
 // An older, less precise matcher is still available using the Cover function,
