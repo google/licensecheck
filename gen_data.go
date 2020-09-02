@@ -43,7 +43,7 @@ func main() {
 	out := new(bytes.Buffer)
 	builtLRE := buildLRE(filesLRE)
 	for _, file := range builtLRE {
-		fmt.Fprintf(out, "\t\t{Name: %q, Text: %v},\n", file.Name, varName(file.Name+".lre"))
+		fmt.Fprintf(out, "\t\t{ID: %q, LRE: %v},\n", file.Name, varName(file.Name+".lre"))
 	}
 	code = strings.Replace(code, "FILES_LIST", out.String(), -1)
 

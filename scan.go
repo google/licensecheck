@@ -58,11 +58,11 @@ func (s *Scanner) init(licenses []License) error {
 		if l.URL != "" {
 			s.urls[l.URL] = l
 		}
-		if l.Text != "" {
+		if l.LRE != "" {
 			s.licenses = append(s.licenses, l)
-			re, err := match.ParseLRE(d, l.Name, l.Text)
+			re, err := match.ParseLRE(d, l.ID, l.LRE)
 			if err != nil {
-				return fmt.Errorf("parsing %v: %v", l.Name, err)
+				return fmt.Errorf("parsing %v: %v", l.ID, err)
 			}
 			list = append(list, re)
 		}
@@ -143,11 +143,10 @@ func (s *Scanner) Scan(text []byte) Coverage {
 					u0, u1 := int(w.Lo)+u[0], int(w.Lo)+u[1]
 					if l, ok := s.licenseURL(string(text[u0:u1])); ok {
 						c.Match = append(c.Match, Match{
-							Name:    l.Name,
-							Percent: 100.0, // TODO
-							Start:   u0,
-							End:     u1,
-							IsURL:   true,
+							ID:    l.ID,
+							Start: u0,
+							End:   u1,
+							IsURL: true,
 						})
 						start := i
 						for i < m.Start && int(words[i].Hi) <= u1 {
@@ -183,10 +182,9 @@ func (s *Scanner) Scan(text []byte) Coverage {
 			}
 		}
 		c.Match = append(c.Match, Match{
-			Name:    s.licenses[m.ID].Name,
-			Percent: 100.0, // TODO
-			Start:   start,
-			End:     end,
+			ID:    s.licenses[m.ID].ID,
+			Start: start,
+			End:   end,
 		})
 		total += m.End - m.Start
 		lastEnd = m.End

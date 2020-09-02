@@ -9,8 +9,8 @@ import (
 )
 
 type urlTest struct {
-	names []string
-	text  string
+	ids  []string
+	text string
 }
 
 var urlTests = []urlTest{
@@ -34,19 +34,19 @@ var urlTests = []urlTest{
 func TestURLMatch(t *testing.T) {
 	for _, test := range urlTests {
 		cov := Scan([]byte(test.text))
-		if len(cov.Match) != len(test.names) {
+		if len(cov.Match) != len(test.ids) {
 			t.Log(cov)
-			t.Errorf("%q got %d matches; expected %d", test.names, len(cov.Match), len(test.names))
+			t.Errorf("%q got %d matches; expected %d", test.ids, len(cov.Match), len(test.ids))
 			continue
 		}
 		for i, m := range cov.Match {
-			if test.names[i] != m.Name {
-				t.Errorf("%q: match %d is %q; expected %q", test.names, i, m.Name, test.names[i])
+			if test.ids[i] != m.ID {
+				t.Errorf("%q: match %d is %q; expected %q", test.ids, i, m.ID, test.ids[i])
 			}
 		}
 		if cov.Percent < 40 {
 			t.Log(cov)
-			t.Errorf("%q: got %.2f%% overall percentage: expected >= 40%%", test.names, cov.Percent)
+			t.Errorf("%q: got %.2f%% overall percentage: expected >= 40%%", test.ids, cov.Percent)
 		}
 	}
 }

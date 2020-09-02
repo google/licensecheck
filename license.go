@@ -99,11 +99,11 @@ func licenseType(name string) Type {
 }
 
 // A License describes a single license that can be recognized.
-// At least one of the Text or the URL should be set.
+// At least one of LRE or URL should be set.
 type License struct {
-	Name string
-	Text string
-	URL  string
+	ID  string // reported license ID
+	LRE string // license regular expression (see licenses/README.md)
+	URL string // identifying URL
 }
 
 // Coverage describes how the text matches various licenses.
@@ -126,13 +126,9 @@ type Coverage struct {
 
 // Match describes how a section of the input matches a license.
 type Match struct {
-	Name    string  // The (file) name of the license it matches.
-	Type    Type    // The type of the license: BSD, MIT, etc.
-	Percent float64 // The fraction of words between Start and End that are matched.
-	Start   int     // The byte offset of the first word in the input that matches.
-	End     int     // The byte offset of the end of the last word in the input that matches.
-	// IsURL reports that the matched text identifies a license by indirection
-	// through a URL. If set, Start and End specify the location of the URL
-	// itself, and Percent is always 100.0.
-	IsURL bool
+	ID    string // License identifier. (See licenses/README.md.)
+	Type  Type   // The type of the license: BSD, MIT, etc.
+	Start int    // Start offset of match in text; match is at text[Start:End].
+	End   int    // End offset of match in text.
+	IsURL bool   // Whether match is a URL.
 }

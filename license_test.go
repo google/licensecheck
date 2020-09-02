@@ -91,7 +91,7 @@ func TestTestdata(t *testing.T) {
 						t.Fatalf("%s:%d: bad match field count", file, lineno)
 					}
 					var m Match
-					m.Name = f[0]
+					m.ID = f[0]
 					m.Start, m.End, err = parseRange(f[1], len(data))
 					if err != nil {
 						t.Fatalf("%s:%d: parsing want.Match[%d].Start,End: %v", file, lineno, i, err)
@@ -157,7 +157,7 @@ func fmtMatch(m Match, end int) string {
 	} else {
 		hi = fmt.Sprintf("%d", m.End)
 	}
-	s := fmt.Sprintf("%s %d,%s", m.Name, m.Start, hi)
+	s := fmt.Sprintf("%s %d,%s", m.ID, m.Start, hi)
 	if m.IsURL {
 		s += " URL"
 	}
@@ -203,7 +203,7 @@ func matchPercent(have, want float64) bool {
 
 // matchMatch reports whether have matches want.
 func matchMatch(have, want Match) bool {
-	return have.Name == want.Name &&
+	return have.ID == want.ID &&
 		have.Start == want.Start &&
 		have.End == want.End &&
 		have.IsURL == want.IsURL
