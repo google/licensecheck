@@ -366,7 +366,7 @@ var builtinLREs = []License{
 	{ID: "W3C", LRE: license_W3C_lre},
 	{ID: "W3C-19980720", LRE: license_W3C_19980720_lre},
 	{ID: "W3C-20150513", LRE: license_W3C_20150513_lre},
-	{ID: "WTFPL", LRE: license_WTFPL_lre},
+	{ID: "WTFPL", Type: Discouraged, LRE: license_WTFPL_lre},
 	{ID: "Watcom-1.0", LRE: license_Watcom_1_0_lre},
 	{ID: "Wsuipa", LRE: license_Wsuipa_lre},
 	{ID: "X11", LRE: license_X11_lre},
@@ -70720,6 +70720,7 @@ https://spdx.org/licenses/WTFPL.json
 http://www.wtfpl.net/about/
 http://sam.zoy.org/wtfpl/COPYING
 **//
+
 
 ((
 	DO WHAT THE
