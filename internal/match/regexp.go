@@ -187,6 +187,8 @@ type Match struct {
 }
 
 // Match reports all leftmost-longest, non-overlapping matches in text.
+// It always returns a non-nil *Matches, in order to return the split text.
+// Check len(matches.List) to see whether any matches were found.
 func (re *MultiLRE) Match(text string) *Matches {
 	m := &Matches{
 		Text:  text,
@@ -207,9 +209,6 @@ func (re *MultiLRE) Match(text string) *Matches {
 				continue
 			}
 		}
-	}
-	if len(m.List) == 0 {
-		return nil
 	}
 	return m
 }
