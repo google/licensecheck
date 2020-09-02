@@ -16,8 +16,6 @@ import (
 )
 
 var (
-	builtinListLRE []License
-
 	// builtinScanner is initialized lazily,
 	// because init is fairly expensive,
 	// and delaying it lets us see the init
@@ -25,6 +23,13 @@ var (
 	builtinScanner     = new(Scanner)
 	builtinScannerOnce sync.Once
 )
+
+// BuiltinLicenses returns the list of licenses built into the package.
+// That is, the built-in checker is equivalent to New(BuiltinLicenses()).
+func BuiltinLicenses() []License {
+	// Return a copy so caller cannot change list entries.
+	return append(append([]License{}, builtinLREs...), builtinURLs...)
+}
 
 // A Scanner matches a set of known licenses.
 type Scanner struct {
@@ -95,7 +100,7 @@ var urlScanRE = regexp.MustCompile(`^(?i)https?://[-a-z0-9_.]+\.(org|com)(/[-a-z
 func (s *Scanner) Scan(text []byte) Coverage {
 	if s == builtinScanner {
 		builtinScannerOnce.Do(func() {
-			if err := builtinScanner.init(append(builtinListLRE, builtinURLs...)); err != nil {
+			if err := builtinScanner.init(BuiltinLicenses()); err != nil {
 				panic("licensecheck: initializing Scan: " + err.Error())
 			}
 		})
