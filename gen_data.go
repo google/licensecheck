@@ -18,7 +18,6 @@ import (
 	"go/format"
 	"io/ioutil"
 	"log"
-	"os"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -32,53 +31,23 @@ func main() {
 	log.SetPrefix("gen: ")
 	flag.Parse()
 
-	all, err := filepath.Glob(filepath.Join("licenses", "*"))
+	filesLRE, err := filepath.Glob(filepath.Join("licenses", "*.lre"))
 	if err != nil {
 		log.Fatal(err)
 	}
-	var files, filesLRE []string
-	for _, file := range all {
-		name := filepath.Base(file)
-		if strings.HasPrefix(name, "README") || strings.HasSuffix(name, ".go") {
-			continue
-		}
-		if info, err := os.Stat(file); err == nil && info.IsDir() {
-			continue
-		}
-		if strings.HasSuffix(name, ".lre") {
-			filesLRE = append(filesLRE, file)
-		} else {
-			files = append(files, file)
-		}
-	}
-	if len(files) == 0 {
+	if len(filesLRE) == 0 {
 		log.Fatal("no license files")
 	}
 
 	code := outputTemplate
 	out := new(bytes.Buffer)
-	for _, file := range files {
-		fmt.Fprintf(out, "\t\t{Name: %q, Text: %v},\n", filepath.Base(file), varName(file))
-	}
-	code = strings.Replace(code, "FILES_LIST", out.String(), -1)
-
-	out.Reset()
 	builtLRE := buildLRE(filesLRE)
 	for _, file := range builtLRE {
 		fmt.Fprintf(out, "\t\t{Name: %q, Text: %v},\n", file.Name, varName(file.Name+".lre"))
 	}
-	code = strings.Replace(code, "FILES_LRE_LIST", out.String(), -1)
+	code = strings.Replace(code, "FILES_LIST", out.String(), -1)
 
 	out.Reset()
-	for _, file := range append(files) {
-		data, err := ioutil.ReadFile(file)
-		if err != nil {
-			log.Fatal(err)
-		}
-		fmt.Fprintf(out, "const %s = `%s`\n",
-			varName(file),
-			bytes.ReplaceAll(data, []byte("`"), []byte("` + \"`\" + `")))
-	}
 	for _, file := range builtLRE {
 		fmt.Fprintf(out, "const %s = `%s`\n",
 			varName(file.Name+".lre"),
@@ -121,19 +90,8 @@ const outputTemplate = `
 
 package licensecheck
 
-func init() {
-	files := []License{
-		FILES_LIST
-	}
-	builtinList = append(files, builtinURLs...)
-	builtin = New(BuiltinLicenses())
-}
-
-func init() {
-	filesLRE := []License{
-		FILES_LRE_LIST
-	}
-	builtinListLRE = filesLRE // TODO URLs
+var builtinLREs = []License{
+	FILES_LIST
 }
 `
 

@@ -50,3 +50,40 @@ func TestURLMatch(t *testing.T) {
 		}
 	}
 }
+
+var license_MIT = rot13(mitLicenseRot13)
+
+var mitLicenseRot13 = ` // MIT License, rot13 to hide from license scanners
+pbclevtug 2020 gur evtug tbcure
+
+crezvffvba vf urerol tenagrq, serr bs punetr, gb nal crefba bognvavat n pbcl
+bs guvf fbsgjner naq nffbpvngrq qbphzragngvba svyrf (gur "fbsgjner"), gb qrny
+va gur fbsgjner jvgubhg erfgevpgvba, vapyhqvat jvgubhg yvzvgngvba gur evtugf
+gb hfr, pbcl, zbqvsl, zretr, choyvfu, qvfgevohgr, fhoyvprafr, naq/be fryy
+pbcvrf bs gur fbsgjner, naq gb crezvg crefbaf gb jubz gur fbsgjner vf
+sheavfurq gb qb fb, fhowrpg gb gur sbyybjvat pbaqvgvbaf:
+
+gur nobir pbclevtug abgvpr naq guvf crezvffvba abgvpr funyy or vapyhqrq va nyy
+pbcvrf be fhofgnagvny cbegvbaf bs gur fbsgjner.
+
+gur fbsgjner vf cebivqrq "nf vf", jvgubhg jneenagl bs nal xvaq, rkcerff be
+vzcyvrq, vapyhqvat ohg abg yvzvgrq gb gur jneenagvrf bs zrepunagnovyvgl,
+svgarff sbe n cnegvphyne checbfr naq abavasevatrzrag. va ab rirag funyy gur
+nhgubef be pbclevtug ubyqref or yvnoyr sbe nal pynvz, qnzntrf be bgure
+yvnovyvgl, jurgure va na npgvba bs pbagenpg, gbeg be bgurejvfr, nevfvat sebz,
+bhg bs be va pbaarpgvba jvgu gur fbsgjner be gur hfr be bgure qrnyvatf va gur
+fbsgjner.
+`
+
+func rot13(s string) string {
+	b := []byte(s)
+	for i, c := range b {
+		if 'a' <= c && c <= 'm' {
+			b[i] = c + 13
+		}
+		if 'n' <= c && c <= 'z' {
+			b[i] = c - 13
+		}
+	}
+	return string(b)
+}
