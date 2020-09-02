@@ -18,11 +18,11 @@ var urlTests = []urlTest{
 		"This code is licensed by https://creativecommons.org/licenses/BY/4.0/ so have fun"},
 	{[]string{"CC-BY-NC-4.0"},
 		"This code is licensed under https://creativecommons.org/licenses/by-nc/4.0/legalcode so have fun"},
-	{[]string{"CC-BY-4.0", "UPL-1.0"},
-		"This code is licensed by https://creativecommons.org/licenses/BY/4.0/ so have fun" +
+	{[]string{"CC-BY-SA-4.0", "UPL-1.0"},
+		"This code is licensed by https://creativecommons.org/licenses/BY-SA/4.0/ so have fun" +
 			"Also http://opensource.org/licenses/upl is relevant"},
-	{[]string{"CC-BY-4.0", "MIT", "UPL-1.0"},
-		"This code is licensed by https://creativecommons.org/licenses/BY/4.0/ so have fun" +
+	{[]string{"CC-BY-ND-4.0", "MIT", "UPL-1.0"},
+		"This code is licensed by https://creativecommons.org/licenses/BY-nd/4.0/ so have fun" +
 			license_MIT +
 			"Also http://opensource.org/licenses/upl is relevant"},
 	// Special case: concatenated licenses.
@@ -33,11 +33,7 @@ var urlTests = []urlTest{
 
 func TestURLMatch(t *testing.T) {
 	for _, test := range urlTests {
-		cov, ok := Cover([]byte(test.text), Options{})
-		if !ok {
-			t.Errorf("%q from %.20q... didn't match", test.names, test.text)
-			continue
-		}
+		cov := Scan([]byte(test.text))
 		if len(cov.Match) != len(test.names) {
 			t.Log(cov)
 			t.Errorf("%q got %d matches; expected %d", test.names, len(cov.Match), len(test.names))
@@ -47,19 +43,10 @@ func TestURLMatch(t *testing.T) {
 			if test.names[i] != m.Name {
 				t.Errorf("%q: match %d is %q; expected %q", test.names, i, m.Name, test.names[i])
 			}
-			// Since in our test the licenses are literal text and the code assumes URL
-			// blocks are fully matched, we should get 100% coverage for the individual licenses,
-			// but we do get very close....
-			// TODO: Find the gap.
-			if m.Percent < 99.0 {
-				t.Log(cov)
-				t.Errorf("%q: got %.2f%% overall percentage; expected >= 99.00%%", test.names, m.Percent)
-			}
 		}
-		// .. as well as the overall.
-		if cov.Percent != 100.0 {
+		if cov.Percent < 40 {
 			t.Log(cov)
-			t.Errorf("%q: got %.2f%% overall percentage; expected 100.00%%", test.names, cov.Percent)
+			t.Errorf("%q: got %.2f%% overall percentage: expected >= 40%%", test.names, cov.Percent)
 		}
 	}
 }
