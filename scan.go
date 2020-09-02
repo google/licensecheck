@@ -28,7 +28,21 @@ var (
 // That is, the built-in checker is equivalent to New(BuiltinLicenses()).
 func BuiltinLicenses() []License {
 	// Return a copy so caller cannot change list entries.
-	return append(append([]License{}, builtinLREs...), builtinURLs...)
+	list := append([]License{}, builtinLREs...)
+	m := make(map[string]Type)
+	for _, l := range list {
+		m[l.ID] = l.Type
+	}
+	for _, l := range builtinURLs {
+		// Fill in Type from builtinLREs.
+		if typ, ok := m[l.ID]; ok {
+			l.Type = typ
+		} else {
+			l.Type = Unknown
+		}
+		list = append(list, l)
+	}
+	return list
 }
 
 // A Scanner matches a set of known licenses.
@@ -144,6 +158,7 @@ func (s *Scanner) Scan(text []byte) Coverage {
 					if l, ok := s.licenseURL(string(text[u0:u1])); ok {
 						c.Match = append(c.Match, Match{
 							ID:    l.ID,
+							Type:  l.Type,
 							Start: u0,
 							End:   u1,
 							IsURL: true,
@@ -181,8 +196,10 @@ func (s *Scanner) Scan(text []byte) Coverage {
 				end = end + i + 1
 			}
 		}
+		l := &s.licenses[m.ID]
 		c.Match = append(c.Match, Match{
-			ID:    s.licenses[m.ID].ID,
+			ID:    l.ID,
+			Type:  l.Type,
 			Start: start,
 			End:   end,
 		})

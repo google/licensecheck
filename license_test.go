@@ -98,7 +98,7 @@ func TestTestdata(t *testing.T) {
 					}
 					if len(f) == 3 {
 						if f[2] != "URL" {
-							t.Fatalf("%s:%d: field 2 should not be omitted or should be 'URL'", file, lineno)
+							t.Fatalf("%s:%d: field 2 should be omitted or should be 'URL'", file, lineno)
 						}
 						m.IsURL = true
 					}
@@ -112,6 +112,12 @@ func TestTestdata(t *testing.T) {
 			linenoEnd := lineno
 
 			cov := Scan(data)
+			for _, m := range cov.Match {
+				typ := licenseType(m.ID)
+				if m.Type != typ {
+					t.Errorf("%s: match %s has Type=%s, want %s", file, m.ID, m.Type, typ)
+				}
+			}
 
 			mismatch := false
 			var buf bytes.Buffer

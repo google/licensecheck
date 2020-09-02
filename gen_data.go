@@ -22,6 +22,8 @@ import (
 	"sort"
 	"strings"
 	"text/template"
+
+	"github.com/google/licensecheck"
 )
 
 var outFile = flag.String("o", "data.gen.go", "`file` to write")
@@ -43,7 +45,7 @@ func main() {
 	out := new(bytes.Buffer)
 	builtLRE := buildLRE(filesLRE)
 	for _, file := range builtLRE {
-		fmt.Fprintf(out, "\t\t{ID: %q, LRE: %v},\n", file.Name, varName(file.Name+".lre"))
+		fmt.Fprintf(out, "\t\t{ID: %q, %s LRE: %v},\n", file.Name, file.Type, varName(file.Name+".lre"))
 	}
 	code = strings.Replace(code, "FILES_LIST", out.String(), -1)
 
@@ -97,13 +99,24 @@ var builtinLREs = []License{
 
 type fileData struct {
 	Name string
+	Type string
 	Data []byte
 }
 
 func buildLRE(filesLRE []string) []fileData {
+	var typ licensecheck.Type
+	setType := func(s string) (string, error) {
+		t, err := licensecheck.ParseType(s)
+		if err != nil {
+			return "", err
+		}
+		typ = t
+		return "", nil
+	}
 	var out []fileData
 	t := template.New("").Funcs(template.FuncMap{
 		"list": templateList,
+		"Type": setType,
 	})
 	t, err := t.ParseFiles(filesLRE...)
 	if err != nil {
@@ -112,6 +125,7 @@ func buildLRE(filesLRE []string) []fileData {
 	for _, t := range t.Templates() {
 		if strings.HasSuffix(t.Name(), ".lre") {
 			var buf bytes.Buffer
+			typ = licensecheck.Unknown
 			if err := t.Execute(&buf, nil); err != nil {
 				log.Fatalf("executing %s: %v", t.Name(), err)
 			}
@@ -119,7 +133,11 @@ func buildLRE(filesLRE []string) []fileData {
 				// Only contained useful definitions.
 				continue
 			}
-			out = append(out, fileData{strings.TrimSuffix(t.Name(), ".lre"), buf.Bytes()})
+			tstr := ""
+			if typ != licensecheck.Unknown {
+				tstr = "Type: " + typ.String() + ","
+			}
+			out = append(out, fileData{strings.TrimSuffix(t.Name(), ".lre"), tstr, buf.Bytes()})
 		}
 	}
 	sort.Slice(out, func(i, j int) bool {
