@@ -51,6 +51,18 @@ func TestURLMatch(t *testing.T) {
 	}
 }
 
+func TestURLIDs(t *testing.T) {
+	have := make(map[string]bool)
+	for _, l := range builtinLREs {
+		have[l.ID] = true
+	}
+	for _, l := range builtinURLs {
+		if !have[l.ID] {
+			t.Errorf("unknown URL license ID: %s", l.ID)
+		}
+	}
+}
+
 var license_MIT = rot13(mitLicenseRot13)
 
 var mitLicenseRot13 = ` // MIT License, rot13 to hide from license scanners
