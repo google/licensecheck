@@ -78,6 +78,7 @@ SPDX defines the following BSD variants, which licensecheck recognizes and disti
  - Header, Source, Binary, No-Endorse, No-Patent, Disclaimer (`BSD-3-Clause-Clear`)
  - Header, Source, Binary, No-Endorse, No-IP, Disclaimer (`BSD-3-Clause-Open-MPI`)
  - Header, Source, Binary, No-Endorse, Advertising, Disclaimer (`BSD-4-Clause`)
+ - Header, Source, Binary, No-Endorse, Advertising, Disclaimer issued by University of California (`BSD-4-Clause-UC`)
  - Header, Source, Binary, No-Endorse, custom Disclaimer, No-Nuclear (`BSD-3-No-Nuclear-Warranty`)
  - Header, Source, Binary, No-Endorse, custom Disclaimer, No-Nuclear-License (`BSD-3-No-Nuclear-License`)
  - Header, Source, Binary, No-Endorse, Disclaimer, No-Nuclear-License (`BSD-3-Clause-No-Nuclear-License-2014`)
@@ -87,8 +88,6 @@ In addition to the above, licensecheck recognizes the following non-SPDX variant
  - Header, Source, No-Patent, Disclaimer (`BSD-1-Clause-Clear`)
  - Header, Source, Binary, No-Endorse, No-Trademark, Disclaimer (`BSD-3-Clause-NoTrademark`)
 
-SPDX defines `BSD-4-Clause-UC`, which is `BSD-4-Clause` where the copyright holder blanks are filled in with the University of California. Licensecheck does not distinguish `BSD-4-Clause` from `BSD-4-Clause-UC`.
-
 [SPDX defines a `BSD-Protection` license, recognized by licensecheck,
 which is a different license entirely (approximately “BSD made viral”)
 and is therefore omitted from the above discussion.]
@@ -97,7 +96,6 @@ _Delta from SPDX_:
 
  - added `BSD-1-Clause-Clear`
  - added `BSD-3-Clause-NoTrademark`
- - removed `BSD-4-Clause-UC` (uses `BSD-4-Clause` instead)
 
 ### Cryptography Autonomy License
 

@@ -143,6 +143,15 @@ func buildLRE(filesLRE []string) []fileData {
 	sort.Slice(out, func(i, j int) bool {
 		return out[i].Name < out[j].Name
 	})
+
+	// Special case: BSD-4-Clause is a generalization of BSD-4-Clause-UC.
+	// In case of multiple matches, licensecheck always returns the one earlier in the list.
+	// Make BSD-4-Clause-UC the one earlier in the list.
+	for i := 0; i < len(out)-1; i++ {
+		if out[i].Name == "BSD-4-Clause" && out[i+1].Name == "BSD-4-Clause-UC" {
+			out[i], out[i+1] = out[i+1], out[i]
+		}
+	}
 	return out
 }
 

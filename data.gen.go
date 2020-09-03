@@ -55,6 +55,7 @@ var builtinLREs = []License{
 	{ID: "BSD-3-Clause-No-Nuclear-Warranty", LRE: license_BSD_3_Clause_No_Nuclear_Warranty_lre},
 	{ID: "BSD-3-Clause-NoTrademark", LRE: license_BSD_3_Clause_NoTrademark_lre},
 	{ID: "BSD-3-Clause-Open-MPI", LRE: license_BSD_3_Clause_Open_MPI_lre},
+	{ID: "BSD-4-Clause-UC", LRE: license_BSD_4_Clause_UC_lre},
 	{ID: "BSD-4-Clause", LRE: license_BSD_4_Clause_lre},
 	{ID: "BSD-Protection", LRE: license_BSD_Protection_lre},
 	{ID: "BSD-Source-Code", LRE: license_BSD_Source_Code_lre},
@@ -9174,16 +9175,98 @@ parties intellectual property rights.
 
 
 `
+const license_BSD_4_Clause_UC_lre = `
+//**
+BSD 4-Clause (Univeristy of California-Specific)
+https://spdx.org/licenses/BSD-4-Clause-UC.json
+http://www.freebsd.org/copyright/license.html
+**//
+
+	Redistribution and use
+	((of
+		((this software || __5__))
+	))??
+	in source and binary forms
+	((of __6__))??
+	with or
+	((without))??
+	modification,
+	are permitted
+	((subject to the limitations in the disclaimer below))??
+	((provided || providing))
+	that
+	((the))??
+	following conditions are met:
+	((BSD style license))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	of
+	((source code || works))
+	must retain the
+	((above))??
+	((original))??
+	copyright
+	((notice))??
+	((immediately at the beginning of the file, without modification))??
+	this
+	((list of conditions || condition))
+	and the
+	((following
+		((two paragraphs of))??
+		disclaimer
+	|| disclaimer that follows))
+	((in this position and unchanged))??
+
+
+	__1__
+	((Redistribution || Redistributions))
+	in binary form must reproduce the
+	((above))??
+	((original))??
+	copyright
+	((notice))??
+	this list of conditions and the
+	following
+	((two pargraphs of))??
+	disclaimer
+	((listed in this license))??
+	in the documentation
+	((and/or || and || or))
+	other materials provided with the distribution.
+
+
+	__1__
+	All advertising materials mentioning features or use of this software
+	must display the following acknowledgement:
+
+	This product includes software developed by
+	the University of California, Berkeley and its contributors.
+
+	__1__
+	Neither the name of the University nor the names of its contributors
+	may be used to endorse
+	or promote products derived from this software without specific
+	prior written permission.
+
+	THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ''AS IS'' AND ANY
+	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+	INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+	LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+	OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+	LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+	OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+	ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+`
 const license_BSD_4_Clause_lre = `
 //**
 BSD 4-Clause "Original" or "Old" License
 https://spdx.org/licenses/BSD-4-Clause.json
 http://directory.fsf.org/wiki/License:BSD_4Clause
-**//
-//**
-BSD 4-Clause (Univeristy of California-Specific)
-https://spdx.org/licenses/BSD-4-Clause-UC.json
-http://www.freebsd.org/copyright/license.html
 **//
 
 	Redistribution and use
