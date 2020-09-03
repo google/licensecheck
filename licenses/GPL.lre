@@ -82,7 +82,7 @@
 	))??
 {{end}}
 
-{{define "GPL-2.0-Or-3.0.lre"}}
+{{define "GPL-2.0-or-3.0.lre"}}
 //** Used by MongoDB, WiredTiger, KeePassX, KeePassXC, maybe others **//
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -140,4 +140,119 @@ GNU General Public License for more details.
 
 		((Copyright __20__))??
 	))??
+{{end}}
+
+
+{{define "GPL-1.0-only.lre"}}
+//**
+https://spdx.org/licenses/GPL-1.0-only.json
+**//
+{{template "gpl-header" list 1 "only"}}
+{{end}}
+
+{{define "GPL-1.0-or-later.lre"}}
+//**
+https://spdx.org/licenses/GPL-1.0-or-later.json
+**//
+{{template "gpl-header" list 1 "or later"}}
+{{end}}
+
+{{define "GPL-2.0-only.lre"}}
+//**
+https://spdx.org/licenses/GPL-2.0-only.json
+**//
+{{template "gpl-header" list 2 "only"}}
+{{end}}
+
+{{define "GPL-2.0-or-later.lre"}}
+//**
+https://spdx.org/licenses/GPL-2.0-or-later.json
+**//
+{{template "gpl-header" list 2 "or later"}}
+{{end}}
+
+{{define "GPL-3.0-only.lre"}}
+//**
+https://spdx.org/licenses/GPL-3.0-only.json
+**//
+{{template "gpl-header" list 3 "only"}}
+{{end}}
+
+{{define "GPL-3.0-or-later.lre"}}
+//**
+https://spdx.org/licenses/GPL-3.0-or-later.json
+**//
+{{template "gpl-header" list 3 "or later"}}
+{{end}}
+
+{{define "LGPL-2.0-only.lre"}}
+//**
+https://spdx.org/licenses/LGPL-2.0-only.json
+**//
+{{template "lgpl-header" list 2 "only"}}
+{{end}}
+
+{{define "LGPL-2.0-or-later.lre"}}
+//**
+https://spdx.org/licenses/LGPL-2.0-or-later.json
+**//
+{{template "lgpl-header" list 2 "or later"}}
+{{end}}
+
+{{define "LGPL-2.1-only.lre"}}
+//**
+https://spdx.org/licenses/LGPL-2.1-only.json
+**//
+{{template "lgpl-header" list "2.1" "only"}}
+{{end}}
+
+{{define "LGPL-2.1-or-later.lre"}}
+//**
+https://spdx.org/licenses/LGPL-2.1-or-later.json
+**//
+{{template "lgpl-header" list "2.1" "or later"}}
+{{end}}
+
+{{define "LGPL-3.0-only.lre"}}
+//**
+https://spdx.org/licenses/LGPL-3.0-only.json
+**//
+{{template "lgpl-header" list 3 "only"}}
+{{end}}
+
+{{define "LGPL-3.0-or-later.lre"}}
+//**
+https://spdx.org/licenses/LGPL-3.0-or-later.json
+**//
+{{template "lgpl-header" list 3 "or later"}}
+{{end}}
+
+{{define "AGPL-1.0-only.lre"}}
+//**
+https://spdx.org/licenses/AGPL-1.0-only.json
+This header is an anachronism - AGPL 1.0 did not define a header.
+**//
+{{template "agpl-header" list 1 "only"}}
+{{end}}
+
+{{define "AGPL-1.0-or-later.lre"}}
+//**
+https://spdx.org/licenses/AGPL-1.0-only.json
+This header is an anachronism - AGPL 1.0 did not define a header.
+**//
+{{template "agpl-header" list 1 "or later"}}
+{{end}}
+
+{{define "AGPL-3.0-only.lre"}}
+//**
+https://spdx.org/licenses/AGPL-3.0-only.json
+**//
+{{template "agpl-header" list 3 "only"}}
+{{end}}
+
+{{define "AGPL-3.0-or-later.lre"}}
+//**
+https://spdx.org/licenses/AGPL-3.0-only.json
+**//
+{{template "agpl-header" list 3 "or later"}}
 {{end}}

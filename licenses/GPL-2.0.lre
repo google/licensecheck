@@ -5,12 +5,6 @@ https://opensource.org/licenses/GPL-2.0
 **//
 
 ((
-
-{{template "gpl-header" list 2 "or later"}}
-
-||
-
-((
 	GNU GENERAL PUBLIC LICENSE Version 2, June 1991
 	{{template "fsf-copyright-block"}}
 ))??
@@ -341,5 +335,3 @@ library. If this is what you want to do, use the GNU
 ((Lesser||Library))
 General Public
 License instead of this License.))??
-
-))

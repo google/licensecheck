@@ -5,12 +5,6 @@ https://opensource.org/licenses/LGPL-2.1
 **//
 
 ((
-
-{{template "lgpl-header" list "2.1" "or later"}}
-
-||
-
-((
 	GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999
 	{{template "fsf-copyright-block"}}
 ))??
@@ -494,5 +488,3 @@ __5__ //**<signature of Ty Coon>**//, 1 April 1990
 Ty Coon, President of Vice
 
 That's all there is to it! ))??
-
-))

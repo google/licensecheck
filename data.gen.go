@@ -12,8 +12,11 @@ var builtinLREs = []License{
 	{ID: "AFL-2.1", LRE: license_AFL_2_1_lre},
 	{ID: "AFL-3.0", LRE: license_AFL_3_0_lre},
 	{ID: "AGPL-1.0", LRE: license_AGPL_1_0_lre},
+	{ID: "AGPL-1.0-only", LRE: license_AGPL_1_0_only_lre},
+	{ID: "AGPL-1.0-or-later", LRE: license_AGPL_1_0_or_later_lre},
 	{ID: "AGPL-3.0", LRE: license_AGPL_3_0_lre},
-	{ID: "AGPL-3.0-Only", LRE: license_AGPL_3_0_Only_lre},
+	{ID: "AGPL-3.0-only", LRE: license_AGPL_3_0_only_lre},
+	{ID: "AGPL-3.0-or-later", LRE: license_AGPL_3_0_or_later_lre},
 	{ID: "AMDPLPA", LRE: license_AMDPLPA_lre},
 	{ID: "AML", LRE: license_AML_lre},
 	{ID: "AMPAS", LRE: license_AMPAS_lre},
@@ -164,11 +167,15 @@ var builtinLREs = []License{
 	{ID: "GL2PS", LRE: license_GL2PS_lre},
 	{ID: "GLWTPL", LRE: license_GLWTPL_lre},
 	{ID: "GPL-1.0", LRE: license_GPL_1_0_lre},
+	{ID: "GPL-1.0-only", LRE: license_GPL_1_0_only_lre},
+	{ID: "GPL-1.0-or-later", LRE: license_GPL_1_0_or_later_lre},
 	{ID: "GPL-2.0", LRE: license_GPL_2_0_lre},
-	{ID: "GPL-2.0-Only", LRE: license_GPL_2_0_Only_lre},
-	{ID: "GPL-2.0-Or-3.0", LRE: license_GPL_2_0_Or_3_0_lre},
+	{ID: "GPL-2.0-only", LRE: license_GPL_2_0_only_lre},
+	{ID: "GPL-2.0-or-3.0", LRE: license_GPL_2_0_or_3_0_lre},
+	{ID: "GPL-2.0-or-later", LRE: license_GPL_2_0_or_later_lre},
 	{ID: "GPL-3.0", LRE: license_GPL_3_0_lre},
-	{ID: "GPL-3.0-Only", LRE: license_GPL_3_0_Only_lre},
+	{ID: "GPL-3.0-only", LRE: license_GPL_3_0_only_lre},
+	{ID: "GPL-3.0-or-later", LRE: license_GPL_3_0_or_later_lre},
 	{ID: "Giftware", LRE: license_Giftware_lre},
 	{ID: "Glide", LRE: license_Glide_lre},
 	{ID: "Glulxe", LRE: license_Glulxe_lre},
@@ -196,11 +203,14 @@ var builtinLREs = []License{
 	{ID: "LAL-1.2", LRE: license_LAL_1_2_lre},
 	{ID: "LAL-1.3", LRE: license_LAL_1_3_lre},
 	{ID: "LGPL-2.0", LRE: license_LGPL_2_0_lre},
-	{ID: "LGPL-2.0-Only", LRE: license_LGPL_2_0_Only_lre},
+	{ID: "LGPL-2.0-only", LRE: license_LGPL_2_0_only_lre},
+	{ID: "LGPL-2.0-or-later", LRE: license_LGPL_2_0_or_later_lre},
 	{ID: "LGPL-2.1", LRE: license_LGPL_2_1_lre},
-	{ID: "LGPL-2.1-Only", LRE: license_LGPL_2_1_Only_lre},
+	{ID: "LGPL-2.1-only", LRE: license_LGPL_2_1_only_lre},
+	{ID: "LGPL-2.1-or-later", LRE: license_LGPL_2_1_or_later_lre},
 	{ID: "LGPL-3.0", LRE: license_LGPL_3_0_lre},
-	{ID: "LGPL-3.0-Only", LRE: license_LGPL_3_0_Only_lre},
+	{ID: "LGPL-3.0-only", LRE: license_LGPL_3_0_only_lre},
+	{ID: "LGPL-3.0-or-later", LRE: license_LGPL_3_0_or_later_lre},
 	{ID: "LGPLLR", LRE: license_LGPLLR_lre},
 	{ID: "LPL-1.0", LRE: license_LPL_1_0_lre},
 	{ID: "LPL-1.02", LRE: license_LPL_1_02_lre},
@@ -1546,14 +1556,100 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
    PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
    POSSIBILITY OF SUCH DAMAGES.
 `
-const license_AGPL_3_0_lre = `//**
-GNU Affero General Public License v3.0
-https://www.gnu.org/licenses/agpl.txt
-https://opensource.org/licenses/AGPL-3.0
+const license_AGPL_1_0_only_lre = `
+//**
+https://spdx.org/licenses/AGPL-1.0-only.json
+This header is an anachronism - AGPL 1.0 did not define a header.
 **//
 
-((
+	
+	 
+	 
+	 
+	 
+	 
 
+	((
+		((This
+		program
+		))??
+		//**__5__**//
+		is free software: you can redistribute it
+	||
+		You can
+		((uses))??
+		redistribute __5__
+	))
+	and/or modify
+	((it || this code))
+	under the terms of the
+	GNU Affero
+	General Public License
+	((AGPL))??
+	((as published by the Free Software Foundation))??
+	
+		((under))??
+		version 1
+		((AGPLv1))??
+		((of the License))??
+	
+	((as published by the Free Software Foundation))??
+
+	((
+		See the __3__ file for the full terms of the
+		GNU Affero
+		General Public License version
+		1
+	))??
+
+	((
+		__5__ is distributed
+		((in the hope that it will be useful, but))??
+		WITHOUT ANY WARRANTY;
+		without even the implied warranty
+		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+		See the
+		GNU Affero
+		General Public License for more details.
+
+		((
+			You should have received a copy of the
+			GNU Affero
+			General Public License
+			((
+				((version))??
+				1
+			))??
+			along with
+			((this program))??
+			(( __5__; if not,
+				((
+					write to the Free Software Foundation, Inc.,
+					
+	((
+		51 Franklin
+		((Street||St))
+		((Fifth Floor||Suite 500,))??
+		Boston, MA 02110 __1__ USA
+	||
+		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
+	||
+		675 Mass Ave, Cambridge, MA 02139, USA
+	))
+				||
+					see <http://www.gnu.org/licenses/>.
+				))
+			))??
+		))??
+	))??
+
+
+`
+const license_AGPL_1_0_or_later_lre = `
+//**
+https://spdx.org/licenses/AGPL-1.0-only.json
+This header is an anachronism - AGPL 1.0 did not define a header.
+**//
 
 	
 	 
@@ -1582,13 +1678,13 @@ https://opensource.org/licenses/AGPL-3.0
 	((as published by the Free Software Foundation))??
 	
 		((
-			either version 3
+			either version 1
 			((of the License))??
 			or
 			((at your option))??
 			any later version.
 		||
-			version 3 or later
+			version 1 or later
 			((of the License))??
 		))
 	
@@ -1598,7 +1694,7 @@ https://opensource.org/licenses/AGPL-3.0
 		See the __3__ file for the full terms of the
 		GNU Affero
 		General Public License version
-		3
+		1
 	))??
 
 	((
@@ -1617,7 +1713,7 @@ https://opensource.org/licenses/AGPL-3.0
 			General Public License
 			((
 				((version))??
-				3
+				1
 			))??
 			along with
 			((this program))??
@@ -1643,8 +1739,12 @@ https://opensource.org/licenses/AGPL-3.0
 	))??
 
 
-
-||
+`
+const license_AGPL_3_0_lre = `//**
+GNU Affero General Public License v3.0
+https://www.gnu.org/licenses/agpl.txt
+https://opensource.org/licenses/AGPL-3.0
+**//
 
 ((
 	GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007
@@ -2301,10 +2401,12 @@ programs; see section 13 for the specific requirements.
 You should also get your employer (if you work as a programmer) or school, if
 any, to sign a "copyright disclaimer" for the program, if necessary. For more
 information on this, and how to apply and follow the GNU AGPL, see <https:/www.gnu.org/licenses/>. ))??
-
-))
 `
-const license_AGPL_3_0_Only_lre = `
+const license_AGPL_3_0_only_lre = `
+//**
+https://spdx.org/licenses/AGPL-3.0-only.json
+**//
+
 	
 	 
 	 
@@ -2335,6 +2437,100 @@ const license_AGPL_3_0_Only_lre = `
 		version 3
 		((AGPLv3))??
 		((of the License))??
+	
+	((as published by the Free Software Foundation))??
+
+	((
+		See the __3__ file for the full terms of the
+		GNU Affero
+		General Public License version
+		3
+	))??
+
+	((
+		__5__ is distributed
+		((in the hope that it will be useful, but))??
+		WITHOUT ANY WARRANTY;
+		without even the implied warranty
+		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+		See the
+		GNU Affero
+		General Public License for more details.
+
+		((
+			You should have received a copy of the
+			GNU Affero
+			General Public License
+			((
+				((version))??
+				3
+			))??
+			along with
+			((this program))??
+			(( __5__; if not,
+				((
+					write to the Free Software Foundation, Inc.,
+					
+	((
+		51 Franklin
+		((Street||St))
+		((Fifth Floor||Suite 500,))??
+		Boston, MA 02110 __1__ USA
+	||
+		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
+	||
+		675 Mass Ave, Cambridge, MA 02139, USA
+	))
+				||
+					see <http://www.gnu.org/licenses/>.
+				))
+			))??
+		))??
+	))??
+
+
+`
+const license_AGPL_3_0_or_later_lre = `
+//**
+https://spdx.org/licenses/AGPL-3.0-only.json
+**//
+
+	
+	 
+	 
+	 
+	 
+	 
+
+	((
+		((This
+		program
+		))??
+		//**__5__**//
+		is free software: you can redistribute it
+	||
+		You can
+		((uses))??
+		redistribute __5__
+	))
+	and/or modify
+	((it || this code))
+	under the terms of the
+	GNU Affero
+	General Public License
+	((AGPL))??
+	((as published by the Free Software Foundation))??
+	
+		((
+			either version 3
+			((of the License))??
+			or
+			((at your option))??
+			any later version.
+		||
+			version 3 or later
+			((of the License))??
+		))
 	
 	((as published by the Free Software Foundation))??
 
@@ -36683,100 +36879,6 @@ https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html
 **//
 
 ((
-
-
-	
-	 
-	 
-	 
-	 
-	 
-
-	((
-		((This
-		program
-		))??
-		//**__5__**//
-		is free software: you can redistribute it
-	||
-		You can
-		((uses))??
-		redistribute __5__
-	))
-	and/or modify
-	((it || this code))
-	under the terms of the
-	GNU
-	General Public License
-	((GPL))??
-	((as published by the Free Software Foundation))??
-	
-		((
-			either version 1
-			((of the License))??
-			or
-			((at your option))??
-			any later version.
-		||
-			version 1 or later
-			((of the License))??
-		))
-	
-	((as published by the Free Software Foundation))??
-
-	((
-		See the __3__ file for the full terms of the
-		GNU
-		General Public License version
-		1
-	))??
-
-	((
-		__5__ is distributed
-		((in the hope that it will be useful, but))??
-		WITHOUT ANY WARRANTY;
-		without even the implied warranty
-		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-		See the
-		GNU
-		General Public License for more details.
-
-		((
-			You should have received a copy of the
-			GNU
-			General Public License
-			((
-				((version))??
-				1
-			))??
-			along with
-			((this program))??
-			(( __5__; if not,
-				((
-					write to the Free Software Foundation, Inc.,
-					
-	((
-		51 Franklin
-		((Street||St))
-		((Fifth Floor||Suite 500,))??
-		Boston, MA 02110 __1__ USA
-	||
-		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
-	||
-		675 Mass Ave, Cambridge, MA 02139, USA
-	))
-				||
-					see <http://www.gnu.org/licenses/>.
-				))
-			))??
-		))??
-	))??
-
-
-
-||
-
-((
 	GNU GENERAL PUBLIC LICENSE Version 1, February 1989
 	
 	((
@@ -37060,17 +37162,99 @@ written by James Hacker.
 __5__ //**<signature of Ty Coon>**//, 1 April 1989 Ty Coon, President of Vice
 
 That's all there is to it! ))??
-
-))
 `
-const license_GPL_2_0_lre = `//**
-GNU General Public License v2.0
-https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html
-https://opensource.org/licenses/GPL-2.0
+const license_GPL_1_0_only_lre = `
+//**
+https://spdx.org/licenses/GPL-1.0-only.json
 **//
 
-((
+	
+	 
+	 
+	 
+	 
+	 
 
+	((
+		((This
+		program
+		))??
+		//**__5__**//
+		is free software: you can redistribute it
+	||
+		You can
+		((uses))??
+		redistribute __5__
+	))
+	and/or modify
+	((it || this code))
+	under the terms of the
+	GNU
+	General Public License
+	((GPL))??
+	((as published by the Free Software Foundation))??
+	
+		((under))??
+		version 1
+		((GPLv1))??
+		((of the License))??
+	
+	((as published by the Free Software Foundation))??
+
+	((
+		See the __3__ file for the full terms of the
+		GNU
+		General Public License version
+		1
+	))??
+
+	((
+		__5__ is distributed
+		((in the hope that it will be useful, but))??
+		WITHOUT ANY WARRANTY;
+		without even the implied warranty
+		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+		See the
+		GNU
+		General Public License for more details.
+
+		((
+			You should have received a copy of the
+			GNU
+			General Public License
+			((
+				((version))??
+				1
+			))??
+			along with
+			((this program))??
+			(( __5__; if not,
+				((
+					write to the Free Software Foundation, Inc.,
+					
+	((
+		51 Franklin
+		((Street||St))
+		((Fifth Floor||Suite 500,))??
+		Boston, MA 02110 __1__ USA
+	||
+		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
+	||
+		675 Mass Ave, Cambridge, MA 02139, USA
+	))
+				||
+					see <http://www.gnu.org/licenses/>.
+				))
+			))??
+		))??
+	))??
+
+
+`
+const license_GPL_1_0_or_later_lre = `
+//**
+https://spdx.org/licenses/GPL-1.0-or-later.json
+**//
 
 	
 	 
@@ -37099,13 +37283,13 @@ https://opensource.org/licenses/GPL-2.0
 	((as published by the Free Software Foundation))??
 	
 		((
-			either version 2
+			either version 1
 			((of the License))??
 			or
 			((at your option))??
 			any later version.
 		||
-			version 2 or later
+			version 1 or later
 			((of the License))??
 		))
 	
@@ -37115,7 +37299,7 @@ https://opensource.org/licenses/GPL-2.0
 		See the __3__ file for the full terms of the
 		GNU
 		General Public License version
-		2
+		1
 	))??
 
 	((
@@ -37134,7 +37318,7 @@ https://opensource.org/licenses/GPL-2.0
 			General Public License
 			((
 				((version))??
-				2
+				1
 			))??
 			along with
 			((this program))??
@@ -37160,8 +37344,12 @@ https://opensource.org/licenses/GPL-2.0
 	))??
 
 
-
-||
+`
+const license_GPL_2_0_lre = `//**
+GNU General Public License v2.0
+https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html
+https://opensource.org/licenses/GPL-2.0
+**//
 
 ((
 	GNU GENERAL PUBLIC LICENSE Version 2, June 1991
@@ -37527,10 +37715,12 @@ library. If this is what you want to do, use the GNU
 ((Lesser||Library))
 General Public
 License instead of this License.))??
-
-))
 `
-const license_GPL_2_0_Only_lre = `
+const license_GPL_2_0_only_lre = `
+//**
+https://spdx.org/licenses/GPL-2.0-only.json
+**//
+
 	
 	 
 	 
@@ -37614,7 +37804,7 @@ const license_GPL_2_0_Only_lre = `
 
 
 `
-const license_GPL_2_0_Or_3_0_lre = `
+const license_GPL_2_0_or_3_0_lre = `
 //** Used by MongoDB, WiredTiger, KeePassX, KeePassXC, maybe others **//
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -37626,14 +37816,10 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 `
-const license_GPL_3_0_lre = `//**
-GNU General Public License v3.0
-https://www.gnu.org/licenses/gpl-3.0-standalone.html
-https://opensource.org/licenses/GPL-3.0
+const license_GPL_2_0_or_later_lre = `
+//**
+https://spdx.org/licenses/GPL-2.0-or-later.json
 **//
-
-((
-
 
 	
 	 
@@ -37662,13 +37848,13 @@ https://opensource.org/licenses/GPL-3.0
 	((as published by the Free Software Foundation))??
 	
 		((
-			either version 3
+			either version 2
 			((of the License))??
 			or
 			((at your option))??
 			any later version.
 		||
-			version 3 or later
+			version 2 or later
 			((of the License))??
 		))
 	
@@ -37678,7 +37864,7 @@ https://opensource.org/licenses/GPL-3.0
 		See the __3__ file for the full terms of the
 		GNU
 		General Public License version
-		3
+		2
 	))??
 
 	((
@@ -37697,7 +37883,7 @@ https://opensource.org/licenses/GPL-3.0
 			General Public License
 			((
 				((version))??
-				3
+				2
 			))??
 			along with
 			((this program))??
@@ -37723,8 +37909,12 @@ https://opensource.org/licenses/GPL-3.0
 	))??
 
 
-
-||
+`
+const license_GPL_3_0_lre = `//**
+GNU General Public License v3.0
+https://www.gnu.org/licenses/gpl-3.0-standalone.html
+https://opensource.org/licenses/GPL-3.0
+**//
 
 ((
 	GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
@@ -38391,9 +38581,12 @@ proprietary programs. If your program is a subroutine library, you may consider
 it more useful to permit linking proprietary applications with the library. If
 this is what you want to do, use the GNU Lesser General Public License instead
 of this License. But first, please read <https://www.gnu.org/licenses/why-not-lgpl.html>.))??
+`
+const license_GPL_3_0_only_lre = `
+//**
+https://spdx.org/licenses/GPL-3.0-only.json
+**//
 
-))`
-const license_GPL_3_0_Only_lre = `
 	
 	 
 	 
@@ -38424,6 +38617,100 @@ const license_GPL_3_0_Only_lre = `
 		version 3
 		((GPLv3))??
 		((of the License))??
+	
+	((as published by the Free Software Foundation))??
+
+	((
+		See the __3__ file for the full terms of the
+		GNU
+		General Public License version
+		3
+	))??
+
+	((
+		__5__ is distributed
+		((in the hope that it will be useful, but))??
+		WITHOUT ANY WARRANTY;
+		without even the implied warranty
+		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+		See the
+		GNU
+		General Public License for more details.
+
+		((
+			You should have received a copy of the
+			GNU
+			General Public License
+			((
+				((version))??
+				3
+			))??
+			along with
+			((this program))??
+			(( __5__; if not,
+				((
+					write to the Free Software Foundation, Inc.,
+					
+	((
+		51 Franklin
+		((Street||St))
+		((Fifth Floor||Suite 500,))??
+		Boston, MA 02110 __1__ USA
+	||
+		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
+	||
+		675 Mass Ave, Cambridge, MA 02139, USA
+	))
+				||
+					see <http://www.gnu.org/licenses/>.
+				))
+			))??
+		))??
+	))??
+
+
+`
+const license_GPL_3_0_or_later_lre = `
+//**
+https://spdx.org/licenses/GPL-3.0-or-later.json
+**//
+
+	
+	 
+	 
+	 
+	 
+	 
+
+	((
+		((This
+		program
+		))??
+		//**__5__**//
+		is free software: you can redistribute it
+	||
+		You can
+		((uses))??
+		redistribute __5__
+	))
+	and/or modify
+	((it || this code))
+	under the terms of the
+	GNU
+	General Public License
+	((GPL))??
+	((as published by the Free Software Foundation))??
+	
+		((
+			either version 3
+			((of the License))??
+			or
+			((at your option))??
+			any later version.
+		||
+			version 3 or later
+			((of the License))??
+		))
 	
 	((as published by the Free Software Foundation))??
 
@@ -41626,116 +41913,6 @@ https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html
 **//
 
 ((
-
-
-	
-	 
-	 
-	 
-	 
-	 
-
-	((
-		((This
-		library
-		))??
-		//**__5__**//
-		is free software: you can redistribute it
-	||
-		You can
-		((uses))??
-		redistribute __5__
-	))
-	and/or modify
-	((it || this code))
-	under the terms of the
-	((GNU
-((Lesser||Library))
-||
-((Lesser||Library))
-GNU))
-	General Public License
-	((LGPL))??
-	((as published by the Free Software Foundation))??
-	
-		((
-			either version 2
-			((of the License))??
-			or
-			((at your option))??
-			any later version.
-		||
-			version 2 or later
-			((of the License))??
-		))
-	
-	((as published by the Free Software Foundation))??
-
-	((
-		See the __3__ file for the full terms of the
-		((GNU
-((Lesser||Library))
-||
-((Lesser||Library))
-GNU))
-		General Public License version
-		2
-	))??
-
-	((
-		__5__ is distributed
-		((in the hope that it will be useful, but))??
-		WITHOUT ANY WARRANTY;
-		without even the implied warranty
-		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-		See the
-		((GNU
-((Lesser||Library))
-||
-((Lesser||Library))
-GNU))
-		General Public License for more details.
-
-		((
-			You should have received a copy of the
-			((GNU
-((Lesser||Library))
-||
-((Lesser||Library))
-GNU))
-			General Public License
-			((
-				((version))??
-				2
-			))??
-			along with
-			((this program))??
-			(( __5__; if not,
-				((
-					write to the Free Software Foundation, Inc.,
-					
-	((
-		51 Franklin
-		((Street||St))
-		((Fifth Floor||Suite 500,))??
-		Boston, MA 02110 __1__ USA
-	||
-		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
-	||
-		675 Mass Ave, Cambridge, MA 02139, USA
-	))
-				||
-					see <http://www.gnu.org/licenses/>.
-				))
-			))??
-		))??
-	))??
-
-
-
-||
-
-((
 	GNU LIBRARY GENERAL PUBLIC LICENSE Version 2, June 1991
 	
 	((
@@ -42227,10 +42404,12 @@ __5__ //**<signature of Ty Coon>**//, 1 April 1990
 Ty Coon, President of Vice
 
 That's all there is to it! ))??
-
-))
 `
-const license_LGPL_2_0_Only_lre = `
+const license_LGPL_2_0_only_lre = `
+//**
+https://spdx.org/licenses/LGPL-2.0-only.json
+**//
+
 	
 	 
 	 
@@ -42330,14 +42509,10 @@ GNU))
 
 
 `
-const license_LGPL_2_1_lre = `//**
-GNU Lesser General Public License v2.1
-https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html
-https://opensource.org/licenses/LGPL-2.1
+const license_LGPL_2_0_or_later_lre = `
+//**
+https://spdx.org/licenses/LGPL-2.0-or-later.json
 **//
-
-((
-
 
 	
 	 
@@ -42370,13 +42545,13 @@ GNU))
 	((as published by the Free Software Foundation))??
 	
 		((
-			either version 2.1
+			either version 2
 			((of the License))??
 			or
 			((at your option))??
 			any later version.
 		||
-			version 2.1 or later
+			version 2 or later
 			((of the License))??
 		))
 	
@@ -42390,7 +42565,7 @@ GNU))
 ((Lesser||Library))
 GNU))
 		General Public License version
-		2.1
+		2
 	))??
 
 	((
@@ -42417,7 +42592,7 @@ GNU))
 			General Public License
 			((
 				((version))??
-				2.1
+				2
 			))??
 			along with
 			((this program))??
@@ -42443,8 +42618,12 @@ GNU))
 	))??
 
 
-
-||
+`
+const license_LGPL_2_1_lre = `//**
+GNU Lesser General Public License v2.1
+https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html
+https://opensource.org/licenses/LGPL-2.1
+**//
 
 ((
 	GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999
@@ -42963,10 +43142,12 @@ __5__ //**<signature of Ty Coon>**//, 1 April 1990
 Ty Coon, President of Vice
 
 That's all there is to it! ))??
-
-))
 `
-const license_LGPL_2_1_Only_lre = `
+const license_LGPL_2_1_only_lre = `
+//**
+https://spdx.org/licenses/LGPL-2.1-only.json
+**//
+
 	
 	 
 	 
@@ -43066,14 +43247,10 @@ GNU))
 
 
 `
-const license_LGPL_3_0_lre = `//**
-GNU Lesser General Public License v3.0
-https://www.gnu.org/licenses/lgpl-3.0-standalone.html
-https://opensource.org/licenses/LGPL-3.0
+const license_LGPL_2_1_or_later_lre = `
+//**
+https://spdx.org/licenses/LGPL-2.1-or-later.json
 **//
-
-((
-
 
 	
 	 
@@ -43106,13 +43283,13 @@ GNU))
 	((as published by the Free Software Foundation))??
 	
 		((
-			either version 3
+			either version 2.1
 			((of the License))??
 			or
 			((at your option))??
 			any later version.
 		||
-			version 3 or later
+			version 2.1 or later
 			((of the License))??
 		))
 	
@@ -43126,7 +43303,7 @@ GNU))
 ((Lesser||Library))
 GNU))
 		General Public License version
-		3
+		2.1
 	))??
 
 	((
@@ -43153,7 +43330,7 @@ GNU))
 			General Public License
 			((
 				((version))??
-				3
+				2.1
 			))??
 			along with
 			((this program))??
@@ -43179,8 +43356,12 @@ GNU))
 	))??
 
 
-
-||
+`
+const license_LGPL_3_0_lre = `//**
+GNU Lesser General Public License v3.0
+https://www.gnu.org/licenses/lgpl-3.0-standalone.html
+https://opensource.org/licenses/LGPL-3.0
+**//
 
 ((
 	GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
@@ -43371,10 +43552,12 @@ additional permissions listed below.
    future versions of the GNU Lesser General Public License shall apply, that
    proxy's public statement of acceptance of any version is permanent
    authorization for you to choose that version for the Library.
-
-))
 `
-const license_LGPL_3_0_Only_lre = `
+const license_LGPL_3_0_only_lre = `
+//**
+https://spdx.org/licenses/LGPL-3.0-only.json
+**//
+
 	
 	 
 	 
@@ -43409,6 +43592,116 @@ GNU))
 		version 3
 		((LGPLv3))??
 		((of the License))??
+	
+	((as published by the Free Software Foundation))??
+
+	((
+		See the __3__ file for the full terms of the
+		((GNU
+((Lesser||Library))
+||
+((Lesser||Library))
+GNU))
+		General Public License version
+		3
+	))??
+
+	((
+		__5__ is distributed
+		((in the hope that it will be useful, but))??
+		WITHOUT ANY WARRANTY;
+		without even the implied warranty
+		of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+		See the
+		((GNU
+((Lesser||Library))
+||
+((Lesser||Library))
+GNU))
+		General Public License for more details.
+
+		((
+			You should have received a copy of the
+			((GNU
+((Lesser||Library))
+||
+((Lesser||Library))
+GNU))
+			General Public License
+			((
+				((version))??
+				3
+			))??
+			along with
+			((this program))??
+			(( __5__; if not,
+				((
+					write to the Free Software Foundation, Inc.,
+					
+	((
+		51 Franklin
+		((Street||St))
+		((Fifth Floor||Suite 500,))??
+		Boston, MA 02110 __1__ USA
+	||
+		59 Temple Place, Suite 330, Boston, MA  02111 __1__ USA
+	||
+		675 Mass Ave, Cambridge, MA 02139, USA
+	))
+				||
+					see <http://www.gnu.org/licenses/>.
+				))
+			))??
+		))??
+	))??
+
+
+`
+const license_LGPL_3_0_or_later_lre = `
+//**
+https://spdx.org/licenses/LGPL-3.0-or-later.json
+**//
+
+	
+	 
+	 
+	 
+	 
+	 
+
+	((
+		((This
+		library
+		))??
+		//**__5__**//
+		is free software: you can redistribute it
+	||
+		You can
+		((uses))??
+		redistribute __5__
+	))
+	and/or modify
+	((it || this code))
+	under the terms of the
+	((GNU
+((Lesser||Library))
+||
+((Lesser||Library))
+GNU))
+	General Public License
+	((LGPL))??
+	((as published by the Free Software Foundation))??
+	
+		((
+			either version 3
+			((of the License))??
+			or
+			((at your option))??
+			any later version.
+		||
+			version 3 or later
+			((of the License))??
+		))
 	
 	((as published by the Free Software Foundation))??
 

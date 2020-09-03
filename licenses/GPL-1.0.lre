@@ -4,12 +4,6 @@ https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html
 **//
 
 ((
-
-{{template "gpl-header" list 1 "or later"}}
-
-||
-
-((
 	GNU GENERAL PUBLIC LICENSE Version 1, February 1989
 	{{template "fsf-copyright-block"}}
 ))??
@@ -270,5 +264,3 @@ written by James Hacker.
 __5__ //**<signature of Ty Coon>**//, 1 April 1989 Ty Coon, President of Vice
 
 That's all there is to it! ))??
-
-))

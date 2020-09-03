@@ -144,35 +144,26 @@ SPDX defines a pair of IDs defining whether a newer
 version of the license may be chosen by the licensee:
 `$LICENSE-only` and `$LICENSE-or-later`.
 For example, the two IDs for AGPL-3.0 are `AGPL-3.0-only` and `AGPL-3.0-or-later`.
-Unfortunately, the SPDX license patterns for these licenses
-do not accurately capture the intended distinction.
-Any result from a license scanner using the SPDX pattern set
-with these IDs is therefore suspect.
+These distinguish the two different possible file headers, which say one of:
 
-To avoid that confusion, licensecheck defines its own patterns
-that do accurately capture the distinction, along with new ID pairs
-to clearly distinguish any results from the (buggy) SPDX patterns.
-The IDs are `$LICENSE` and `$LICENSE-Only` (with a capital `O` in `Only`).
-For example, the two IDs for AGPL-3.0 are `AGPL-3.0` and `AGPL-3.0-Only`.
+ - ... version 3 of the License.
+ - ... either version 3 of the License, or (at your option) any later version.
 
-AGPL 1.0, published by Affero rather than the Free Software Foundation,
-did not define any mechanism for “or later” versions,
-so it makes no sense to distinguish `AGPL-1.0-only` from `AGPL-1.0-or-later`.
-Licensecheck defines only `AGPL-1.0`.
+But another common situation is finding the text of, say,
+the AGPL 3.0 in a `LICENSE` file but without any file header.
+In this case, it is unclear whether the license is `AGPL-3.0-only` or `AGPL-3.0-or-later`.
+Licensecheck exposes this ambiguity as a new license type: `AGPL-3.0` (unsuffixed).
+The same holds for all the other AGPL, GPL, and LGPL versions.
 
 Another common variation found in the wild is license notices permitting
 LGPL version 2.0 or 3.0 (not 2.0 only; not 2.0 or later).
-For that, licensecheck defines `LGPL-2.0-Or-3.0`.
+For that, licensecheck defines `LGPL-2.0-or-3.0`.
 
 _Delta from SPDX_:
 
- - removed `AGPL-1.0-or-later`, `AGPL-1.0-only`; added `AGPL-1.0`
- - removed `GPL-1.0-or-later`, `GPL-1.0-only`; added `GPL-1.0`, `GPL-1.0-Only`
- - removed `GPL-2.0-or-later`, `GPL-2.0-only`; added `GPL-2.0`, `GPL-2.0-Only`
- - removed `GPL-3.0-or-later`, `GPL-3.0-only`; added `GPL-3.0`, `GPL-3.0-Only`
- - removed `LGPL-2.0-or-later`, `LGPL-2.0-only`; added `LGPL-2.0`, `LGPL-2.0-Only`
- - removed `LGPL-2.1-or-later`, `LGPL-2.1-only`; added `LGPL-2.1`, `LGPL-2.1-Only`
- - removed `LGPL-3.0-or-later`, `LGPL-3.0-only`; added `LGPL-3.0`, `LGPL-3.0-Only`, `LGPL-2.0-Or-3.0`
+ - added `AGPL-1.0`, `AGPL-3.0`
+ - added `GPL-1.0`, `GPL-2.0`, `GPL-3.0`
+ - added `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0`, `LGPL-2.0-or-3.0`
 
 ### GNU Free Documentation License (GFDL)
 
