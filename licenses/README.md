@@ -159,9 +159,10 @@ For that, licensecheck defines `LGPL-2.0-or-3.0`.
 
 _Delta from SPDX_:
 
- - added `AGPL-1.0`, `AGPL-3.0`
- - added `GPL-1.0`, `GPL-2.0`, `GPL-3.0`
- - added `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0`, `LGPL-2.0-or-3.0`
+ - added `AGPL-1.0`, `AGPL-3.0` for license text (not header)
+ - added `GPL-1.0`, `GPL-2.0`, `GPL-3.0` for license text (not header)
+ - added `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0` for license text (not header)
+ - added `LGPL-2.0-or-3.0`
 
 ### GNU Free Documentation License (GFDL)
 
@@ -179,22 +180,20 @@ For example, there are six SPDX IDs for GFDL-1.3:
 and
 `GFDL-1.3-no-invariants-only`.
 
-As happened with the GPL variants, the SPDX patterns for these variants do not accurately capture
-the intended distinction, making any result from a license scanner using those patterns
-suspect.
+Licensecheck distinguishes whether or not invariant text is present,
+so it always reports either the `-invariants-` or `-no-invariants-` forms.
+It never reports the non-specific `GFDL-1.3-or-later` or `GFDL-1.3-only` forms.
 
-To avoid that confusion, licensecheck defines its own patterns focused on the version decision
-and not attempting to make any distinctions about invariant texts.
-For example, there are only two GFDL-1.3 IDs: `GFDL-1.3` and `GFDL-1.3-Only`.
+As happened with the GPL variants, it is unclear which SPDX ID to use when
+presented with the text of the license itself instead of a header.
+Licensecheck adds the IDs `GFDL-1.1`, `GFDL-1.2`, and `GFDL-1.3`
+to denote finding the license itself, not a header.
 
 _Delta from SPDX_:
 
- - removed `GFDL-1.1-or-later`, `GFDL-1.1-invariants-or-later`, `GFDL-1.1-no-invariants-or-later`; added `GFDL-1.1`
- - removed `GFDL-1.2-or-later`, `GFDL-1.2-invariants-or-later`, `GFDL-1.2-no-invariants-or-later`; added `GFDL-1.2`
- - removed `GFDL-1.3-or-later`, `GFDL-1.3-invariants-or-later`, `GFDL-1.3-no-invariants-or-later`; added `GFDL-1.3`
- - removed `GFDL-1.1-only`, `GFDL-1.1-invariants-only`, `GFDL-1.1-no-invariants-only`; added `GFDL-1.1-Only`
- - removed `GFDL-1.2-only`, `GFDL-1.2-invariants-only`, `GFDL-1.2-no-invariants-only`; added `GFDL-1.2-Only`
- - removed `GFDL-1.3-only`, `GFDL-1.3-invariants-only`, `GFDL-1.3-no-invariants-only`; added `GFDL-1.3-Only`
+ - never reports `GFDL-1.1-only`, `GFDL-1.1-or-later`; added `GFDL-1.1` for license text (not header)
+ - never reports `GFDL-1.2-only`, `GFDL-1.2-or-later`; added `GFDL-1.2` for license text (not header)
+ - never reports `GFDL-1.3-only`, `GFDL-1.3-or-later`; added `GFDL-1.3` for license text (not header)
 
 ### Google Patents
 

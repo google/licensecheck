@@ -5,12 +5,6 @@ https://www.gnu.org/licenses/old-licenses/fdl-1.2.txt
 **//
 
 ((
-
-{{template "gfdl-header" list "1.2" "or later"}}
-
-||
-
-((
 	GNU Free Documentation License Version 1.2, November 2002
 	{{template "fsf-copyright-block"}}
 ))??
@@ -388,5 +382,3 @@ If your document contains nontrivial examples of program code, we recommend
 releasing these examples in parallel under your choice of free software license,
 such as the GNU General Public License, to permit their use in free software.
 ))??
-
-))
