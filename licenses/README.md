@@ -109,7 +109,7 @@ so licensecheck can only report `CAL-1.0`.
 
 _Delta from SPDX_:
 
- - removed `CAL-1.0-Combined-Work-Exception`
+ - never reports `CAL-1.0-Combined-Work-Exception`
 
 ### Commons Clause
 
@@ -255,8 +255,8 @@ It only defines and reports `OFL-1.0` and `OFL-1.1`.
 
 _Delta from SPDX_:
 
- - removed `OFL-1.0-RFN` and `OFL-1.0-no-RFN`
- - removed `OFL-1.1-RFN` and `OFL-1.1-no-RFN`
+ - never reports `OFL-1.0-RFN`, `OFL-1.0-no-RFN`; always uses `OFL-1.0`
+ - never reports `OFL-1.1-RFN` and `OFL-1.1-no-RFN`; always uses `OFL-1.1`
 
 ## License Regular Expressions (LREs)
 
