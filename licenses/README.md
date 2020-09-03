@@ -8,7 +8,7 @@ It is a goal to incorporate the entire [SPDX license list and IDs](https://spdx.
 as closely as possible while still preserving match accuracy.
 It is also a goal to recognize commonly-used non-SPDX or non-open-source licenses
 in order to provide accurate information when scanning a large tree of projects.
-The result is a superset of the base SPDX set, with a few modifications in the SPDX base as well.
+The result is a strict superset of SPDX.
 
 ## Known Licenses
 
@@ -19,8 +19,8 @@ This section describes the deviations from that base set of licenses.
 
 Many of the license definitions used by licensecheck
 have been converted from the SPDX regular expressions
-into [LRE patterns](#lre), with the patterns corrected to fix SPDX errors or revised to
-match variants found in real-world use.
+into [LRE patterns](#lre), with the patterns corrected to fix SPDX errors
+or revised to match variants found in real-world use.
 Those pattern revisions are too numerous to document here.
 Instead, this document focuses on the supported licenses and IDs themselves.
 
