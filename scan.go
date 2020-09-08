@@ -53,6 +53,7 @@ type Scanner struct {
 }
 
 // NewScanner returns a new Scanner that recognizes the given set of licenses.
+// See the description of Scan more information.
 func NewScanner(licenses []License) (*Scanner, error) {
 	s := new(Scanner)
 	err := s.init(licenses)
@@ -94,14 +95,21 @@ func (s *Scanner) init(licenses []License) error {
 
 const maxCopyrightWords = 50
 
-// Scan computes the coverage of the text according to the
-// license set compiled into the package.
+// Scan computes the coverage of the text according to the license set compiled
+// into the package. The design aims never to give a false positive.
 //
-// An input text may match multiple licenses. If that happens,
-// Match contains only disjoint matches. If multiple licenses
-// match a particular section of the input, the best match
-// is chosen so the returned coverage describes at most
-// one match for each section of the input.
+// The license set contains all licenses known to SPDX (https://spdx.dev/licenses/)
+// plus other commonly used, possibly not open-source licenses. The matched license
+// identifiers are therefore a strict superset of SPDX. For more details about the
+// licenses see licenses/README.md.
+//
+// A call to Scan is equivalent to calling NewScanner with the default license set
+// returned by BuiltinLicenses, and then calling its Scan method.
+//
+// An input text may match multiple licenses. If that happens, Match contains only
+// disjoint matches. If multiple licenses match a particular section of the input,
+// the earliest match is chosen so the returned coverage describes at most one
+// match for each section of the input.
 //
 func Scan(text []byte) Coverage {
 	return builtinScanner.Scan(text)

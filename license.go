@@ -14,21 +14,25 @@
 //	cov := licensecheck.Scan(text)
 //	fmt.Printf("%.1f%% of text covered by licenses:\n", cov.Percent)
 //	for _, m := range cov.Match {
-//		fmt.Printf("%s at [%d:%d] IsURL=%v\n", m.Name, m.Start, m.End, m.IsURL)
+//		fmt.Printf("%s at [%d:%d] IsURL=%v\n", m.ID, m.Start, m.End, m.IsURL)
 //	}
 //
 // The Scan function uses a built-in license set, which is the known SPDX licenses
-// augmented with some other commonly seen licenses.
+// augmented with some other commonly seen licenses. The Match field inside the
+// Coverage type includes the SPDX identifier and location information.
+// Some matches report finding a known URL rather than complete license text.
 // (See licenses/README.md for details about the license set.)
 //
-// A custom scanner can be created using NewScanner, passing in a set of
-// license patterns to scan for. The license patterns are written as license regular expressions (LREs).
+// A custom scanner can be created using NewScanner, passing in a set of license
+// patterns to scan for. The license patterns are written as license regular
+// expressions (LREs).
 // BuiltinLicenses returns the set of license patterns used by Scan.
 //
 // License Regular Expressions
-// Each license to be recognized is specified by writing a license regular expression (LRE) for it.
-// The pattern syntax and the matching are word-based and case-insensitive;
-// punctuation is ignored in the pattern and in the matched text.
+//
+// Each license to be recognized is specified by writing a license regular
+// expression (LRE) for it. The pattern syntax and the matching are word-based and
+// case-insensitive; punctuation is ignored in the pattern and in the matched text.
 //
 // The valid LRE patterns are:
 //
@@ -54,7 +58,7 @@
 // 	((men || women || people))
 // 	to come to the aid of their __1__.
 //
-// The Old Cover and Checker API
+// The old Cover and Checker API
 //
 // An older, less precise matcher using the names Cover, New, and Checker
 // was removed from this package.
@@ -97,20 +101,21 @@ type Coverage struct {
 	Match []Match
 }
 
-// When we build the Match, Start and End are word offsets,
-// but they are converted to byte offsets in the original
-// before being passed back to the caller.
-
 // Match describes how a section of the input matches a license.
+// The ID field identifies the specific license. Its value is either an SPDX
+// identifier, or a locally created name for licenses that SPDX does not classify.
+// See licenses/README.md for more information.
 type Match struct {
-	ID    string // License identifier. (See licenses/README.md.)
+	ID    string // License identifier.
 	Type  Type   // The type of the license: BSD, MIT, etc.
 	Start int    // Start offset of match in text; match is at text[Start:End].
 	End   int    // End offset of match in text.
 	IsURL bool   // Whether match is a URL.
 }
 
-// Type is a bit set describing the requirements imposed by a license or group of licenses.
+// Type is a bit set describing the requirements imposed by a license or group of
+// licenses. These properties are defined separately from SPDX either as part of
+// the builtin license set or in the Licenses passed to NewScanner.
 type Type uint
 
 const (
