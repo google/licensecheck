@@ -375,7 +375,7 @@ http://directory.fsf.org/wiki/License:BSD_4Clause
 
 {{define "BSD-4-Clause-UC.lre"}}
 //**
-BSD 4-Clause (Univeristy of California-Specific)
+BSD 4-Clause (University of California-Specific)
 https://spdx.org/licenses/BSD-4-Clause-UC.json
 http://www.freebsd.org/copyright/license.html
 **//

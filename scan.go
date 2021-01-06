@@ -25,7 +25,7 @@ var (
 )
 
 // BuiltinLicenses returns the list of licenses built into the package.
-// That is, the built-in checker is equivalent to New(BuiltinLicenses()).
+// That is, the built-in scanner is equivalent to NewScanner(BuiltinLicenses()).
 func BuiltinLicenses() []License {
 	// Return a copy so caller cannot change list entries.
 	list := append([]License{}, builtinLREs...)
