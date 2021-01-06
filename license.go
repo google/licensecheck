@@ -62,7 +62,9 @@
 //
 // An older, less precise matcher using the names Cover, New, and Checker
 // was removed from this package.
-// Use v0.1.0 for the final version of that API.
+// Use v0.1.0 for the final version of that API,
+// or use the copy in the package "old" underneath this one
+// for easier comparison with this API.
 //
 package licensecheck
 
@@ -89,9 +91,8 @@ type License struct {
 
 // Coverage describes how the text matches various licenses.
 type Coverage struct {
-	// Percent is the fraction of the total text, in normalized words, that
-	// matches any valid license, expressed as a percentage across all of the
-	// licenses matched.
+	// Percent is the percentage of the total text, in normalized words, that
+	// matches any valid license.
 	Percent float64
 
 	// Match describes, in sequential order, the matches of the input text
@@ -107,7 +108,7 @@ type Coverage struct {
 // See licenses/README.md for more information.
 type Match struct {
 	ID    string // License identifier.
-	Type  Type   // The type of the license: BSD, MIT, etc.
+	Type  Type   // Set of license requirements.
 	Start int    // Start offset of match in text; match is at text[Start:End].
 	End   int    // End offset of match in text.
 	IsURL bool   // Whether match is a URL.
