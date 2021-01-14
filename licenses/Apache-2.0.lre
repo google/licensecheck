@@ -46,12 +46,15 @@ exceptions:
 		((http))??
 		((www))??
 		.apache.org/licenses/LICENSE-2.0
+		((html))??
 	||
 		((http))??
 		aws.amazon.com/apache2.0/
 	))??
 
-	((or in the license file accompanying this file.))??
+	((or in the license file accompanying this
+		((file. || software.))
+	))??
 
 	((
 		((As well as the file __10__))??
