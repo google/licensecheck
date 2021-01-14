@@ -936,7 +936,7 @@ Words:
 		if start < 0 {
 			start = 0
 		}
-		println("DFA ran out of input at «", text[words[i-10].Lo:], "|", "EOF", "»\n")
+		println("DFA ran out of input at «", text[words[start].Lo:], "|", "EOF", "»\n")
 	}
 	return match, end
 }
