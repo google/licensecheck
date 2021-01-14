@@ -249,3 +249,10 @@ func (s *Scanner) licenseURL(url string) (License, bool) {
 
 	return License{}, false
 }
+
+// Trace controls whether DFA execution prints debug tracing when stuck.
+// If n > 0 and the DFA has followed a path of at least n symbols since the last
+// matching state but hits a dead end, it prints out information about the dead end.
+func Trace(n int) {
+	match.TraceDFA = n
+}
