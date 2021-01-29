@@ -3,11 +3,6 @@ Apache License 2.0
 https://spdx.org/licenses/Apache-2.0.json
 http://www.apache.org/licenses/LICENSE-2.0
 https://opensource.org/licenses/Apache-2.0
-
-exceptions:
-  (( i || properties ))		https://github.com/apache/rocketmq-client-go/issues/590
-  (( except || expect ))	https://github.com/Dwarfartisan/goparsec2/issues/6
-  __1__ License, etc.		github.com/ltto/gomybatis@v5.1.7+incompatible and several others
 **//
 
 ((
@@ -103,8 +98,7 @@ exceptions:
       "License" shall mean the terms and conditions for use, reproduction, and
       distribution as defined by Sections 1 through 9 of __1__ document.
 
-      (("Licensor" || "Restream"))
-      shall mean the copyright owner or entity authorized by the
+      __1__ shall mean the copyright owner or entity authorized by the
       copyright owner that is granting the License.
 
       "Legal Entity" shall mean the union of the acting entity and all other
@@ -128,7 +122,6 @@ exceptions:
       or translation of a Source form, including but not limited to compiled
       object code, generated documentation, and conversions to other media
       (( types || pointer ))
-      //** voyagermesh.dev_voyager **//
 
       "Work" shall mean the work of authorship, whether in Source or Object
       form, made available under the License, as indicated by a copyright notice
@@ -311,18 +304,9 @@ third-party archives.
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	
+
 	See the License for the specific language governing permissions and
 	limitations under the License.
 ))??
 
 ))
-
-//** from github.com/jsccast/rocksdb@v0.0.0-20150219174706-b65d32cc6e76/LICENSE **//
-
-((
-	Portions Copyright __5__
-
-	{{template "mit-grant"}}
-	{{template "mit-conditions"}}
-))??
