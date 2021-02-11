@@ -9186,7 +9186,7 @@ parties intellectual property rights.
 `
 const license_BSD_4_Clause_UC_lre = `
 //**
-BSD 4-Clause (Univeristy of California-Specific)
+BSD 4-Clause (University of California-Specific)
 https://spdx.org/licenses/BSD-4-Clause-UC.json
 http://www.freebsd.org/copyright/license.html
 **//
@@ -60812,8 +60812,8 @@ https://opensource.org/licenses/Python-2.0
    works, distribute, and otherwise use Python alone or in any derivative
    version, provided, however, that PSF's License Agreement and PSF's notice of
    copyright, i.e., "Copyright (c)
-   //** 2001, 2002, 2003, 2004, 2005, 2006 **//
-   __6__
+   //** 2001, 2002, 2003, 2004, 2005, 2006 .. 2030**//
+   __30__
    Python Software Foundation; All Rights Reserved" are retained in Python alone
    or in any derivative version prepared by Licensee.
 
