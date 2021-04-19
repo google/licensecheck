@@ -19,7 +19,7 @@ This section describes the deviations from that base set of licenses.
 
 Many of the license definitions used by licensecheck
 have been converted from the SPDX regular expressions
-into [LRE patterns](#lre), with the patterns corrected to fix SPDX errors
+into [LRE patterns](#license-regular-expressions-lres), with the patterns corrected to fix SPDX errors
 or revised to match variants found in real-world use.
 Those pattern revisions are too numerous to document here.
 Instead, this document focuses on the supported licenses and IDs themselves.
