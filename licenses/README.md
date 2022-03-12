@@ -24,7 +24,7 @@ or revised to match variants found in real-world use.
 Those pattern revisions are too numerous to document here.
 Instead, this document focuses on the supported licenses and IDs themselves.
 
-### Aladdin Free Public Licnense
+### Aladdin Free Public License
 
 SPDX defines the ID `Aladdin` for the Aladdin Free Public License version 8.
 Licensecheck defines the non-SPDX ID `Aladdin-9` for version 9,
