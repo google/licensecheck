@@ -229,6 +229,9 @@ func (s *Scanner) licenseURL(url string) (License, bool) {
 	// Then we lower-case it.
 	url = strings.TrimPrefix(url, "http://")
 	url = strings.TrimPrefix(url, "https://")
+	url = strings.TrimPrefix(url, "www.")
+	url = strings.TrimSuffix(url, ".html")
+	url = strings.TrimSuffix(url, ".htm")
 	url = strings.TrimSuffix(url, "/")
 	url = strings.TrimSuffix(url, "/legalcode") // Common for CC licenses.
 	url = strings.ToLower(url)
