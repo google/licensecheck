@@ -14,6 +14,8 @@ type urlTest struct {
 }
 
 var urlTests = []urlTest{
+	{[]string{"Apache-2.0"}, "https://www.opensource.org/licenses/Apache-2.0"},
+	{[]string{"Apache-2.0"}, "https://www.apache.org/licenses/LICENSE-2.0"},
 	{[]string{"CC-BY-4.0"},
 		"This code is licensed by https://creativecommons.org/licenses/BY/4.0/ so have fun"},
 	{[]string{"CC-BY-NC-4.0"},
