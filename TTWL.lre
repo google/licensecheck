@@ -1,0 +1,14 @@
+//**
+Text-Tabs+Wrap License
+https://spdx.org/licenses/TTWL.json
+https://fedoraproject.org/wiki/Licensing/TTWL
+https://github.com/ap/Text-Tabs/blob/master/lib.modern/Text/Tabs.pm#L148
+**//
+
+//** Copyright **//
+
+This module may be modified, used, copied, and redistributed at your own risk.
+Although allowed by the preceding license, please do not publicly redistribute
+modified versions of this code with the name "Text::Tabs" unless it passes the
+unmodified Text::Tabs test suite.
+

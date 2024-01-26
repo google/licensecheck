@@ -1,0 +1,93 @@
+//**
+AML glslang variant License
+https://spdx.org/licenses/AML-glslang.json
+https://github.com/KhronosGroup/glslang/blob/main/LICENSE.txt#L949
+https://docs.omniverse.nvidia.com/install-guide/latest/common/licenses.html
+**//
+
+//** Copyright **//
+
+//** NVIDIA Corporation( **//
+__5__
+supplies this software to you in consideration of your agreement to the
+following terms, and your use, installation, modification or redistribution of
+this
+//** NVIDIA **//
+__5__
+software constitutes acceptance of these terms. If you do not agree with these
+terms, please do not use, install, modify or redistribute this
+//** NVIDIA **//
+__5__
+software.
+
+In consideration of your agreement to abide by the following terms, and subject
+to these terms,
+//** NVIDIA **//
+__5__
+grants you a personal, non-exclusive license, under
+//** NVIDIA's **//
+__5__
+copyrights in this original
+//** NVIDIA **//
+__5__
+software (the "
+//** NVIDIA **//
+__5__
+Software"), to use, reproduce, modify and redistribute the
+//** NVIDIA **//
+__5__
+Software, with or without modifications, in source and/or binary forms; provided
+that if you redistribute the
+//** NVIDIA **//
+__5__
+Software, you must retain the copyright notice of
+//** NVIDIA **//
+__5__
+, this notice and the following text and disclaimers in all such redistributions
+of the
+//** NVIDIA **//
+__5__
+Software. Neither the name, trademarks, service marks nor logos of
+//** NVIDIA **//
+__5__
+Corporation may be used to endorse or promote products derived from the
+//** NVIDIA **//
+__5__
+Software without specific prior written permission from
+//** NVIDIA **//
+__5__
+. Except as expressly stated in this notice, no other rights or licenses express
+or implied, are granted by
+//** NVIDIA **//
+__5__
+herein, including but not limited to any patent rights that may be infringed by
+your derivative works or by other works in which the
+//** NVIDIA **//
+__5__
+Software may be incorporated. No hardware is licensed hereunder.
+
+THE
+//** NVIDIA **//
+__5__
+SOFTWARE IS BEING PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
+OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, WARRANTIES
+OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, OR ITS USE AND OPERATION EITHER ALONE OR IN COMBINATION WITH
+OTHER PRODUCTS.
+
+IN NO EVENT SHALL
+//** NVIDIA **//
+__5__
+BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL, EXEMPLARY, CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, LOST PROFITS; PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) OR
+ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR
+DISTRIBUTION OF THE
+//** NVIDIA **//
+__5__
+SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING
+NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF
+//** NVIDIA **//
+__5__
+HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+

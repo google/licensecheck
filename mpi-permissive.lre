@@ -1,0 +1,19 @@
+//**
+mpi Permissive License
+https://spdx.org/licenses/mpi-permissive.json
+https://sources.debian.org/src/openmpi/4.1.0-10/ompi/debuggers/msgq_interface.h/?hl=19#L19
+**//
+
+//** Copyright **//
+
+Permission is hereby granted to use, reproduce, prepare derivative works, and to
+redistribute to others. DISCLAIMER Neither
+//** Etnus **//
+__5__
+, nor any of their employees, makes any warranty express or implied, or assumes
+any legal liability or responsibility for the accuracy, completeness, or
+usefulness of any information, apparatus, product, or process disclosed, or
+represents that its use would not infringe privately owned rights. This code was
+written by
+//** James Cownie: Etnus, LLC. <jcownie@etnus.com> **//
+__7__

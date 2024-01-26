@@ -1,0 +1,17 @@
+//**
+ISC Veillard variant
+https://spdx.org/licenses/ISC-Veillard.json
+https://raw.githubusercontent.com/GNOME/libxml2/4c2e7c651f6c2f0d1a74f350cbda95f7df3e7017/hash.c
+https://github.com/GNOME/libxml2/blob/master/dict.c
+**//
+
+//** Copyright **//
+
+Permission to use, copy, modify, and distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies. THIS SOFTWARE IS PROVIDED "AS
+IS" AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT
+LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE. THE AUTHORS AND CONTRIBUTORS ACCEPT NO RESPONSIBILITY IN ANY
+CONCEIVABLE MANNER.
+
