@@ -110,7 +110,6 @@ const maxCopyrightWords = 50
 // disjoint matches. If multiple licenses match a particular section of the input,
 // the earliest match is chosen so the returned coverage describes at most one
 // match for each section of the input.
-//
 func Scan(text []byte) Coverage {
 	return builtinScanner.Scan(text)
 }
@@ -163,7 +162,8 @@ func (s *Scanner) Scan(text []byte) Coverage {
 				// Only accept URLs that end before the next scan match.
 				if u := urlScanRE.FindIndex(text[w.Lo:]); u != nil && (m.Start == len(words) || int(w.Lo)+u[1] <= int(words[m.Start].Lo)) {
 					u0, u1 := int(w.Lo)+u[0], int(w.Lo)+u[1]
-					if l, ok := s.licenseURL(string(text[u0:u1])); ok {
+					checkMe := string(text[u0:u1])
+					if l, ok := s.licenseURL(checkMe); ok {
 						c.Match = append(c.Match, Match{
 							ID:    l.ID,
 							Type:  l.Type,
