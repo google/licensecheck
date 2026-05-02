@@ -383,11 +383,11 @@ func markdownAnchorSize(t string) int {
 		return 0
 	}
 	i := 2
-	for ; i < len(t); i++ {
+	for ; i < len(t) && i < 256; i++ {
 		switch t[i] {
 		case '}':
 			return i + 1
-		case ' ', '\r', '\n':
+		case ' ', '\r', '\n', '{':
 			return 0
 		}
 	}
@@ -419,9 +419,9 @@ func markdownLinkSize(t string) int {
 		return 0
 	}
 
-	for i := 2; i < len(t); i++ {
+	for i := 2; i < len(t) && i < 2048; i++ {
 		c := t[i]
-		if c == ' ' || c == '\t' || c == '\r' || c == '\n' {
+		if c == ' ' || c == '\t' || c == '\r' || c == '\n' || c == ']' {
 			return 0
 		}
 		if c == ')' {

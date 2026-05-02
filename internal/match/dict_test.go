@@ -9,7 +9,9 @@ import (
 	"path/filepath"
 	"reflect"
 	"regexp"
+	"strings"
 	"testing"
+	"time"
 )
 
 func TestDict(t *testing.T) {
@@ -100,6 +102,8 @@ var markdownAnchorSizeTests = []struct {
 	{"{#abc def}", 0},
 	{"{#abc\ndef}", 0},
 	{"{#abc\rdef}", 0},
+	{"{#abc{#def}", 0},
+	{"{#" + strings.Repeat("x", 300) + "}", 0},
 }
 
 func TestMarkdownAnchorSize(t *testing.T) {
@@ -107,6 +111,51 @@ func TestMarkdownAnchorSize(t *testing.T) {
 		out := markdownAnchorSize(tt.in)
 		if out != tt.out {
 			t.Errorf("markdownAnchorSize(%q) = %d want %d", tt.in, out, tt.out)
+		}
+	}
+}
+
+var markdownLinkSizeTests = []struct {
+	in  string
+	out int
+}{
+	{"](http://x)", 11},
+	{"](https://x)", 12},
+	{"](#anchor)", 10},
+	{"](http://x", 0},
+	{"](http://x y)", 0},
+	{"](other://x)", 0},
+	{"](http://x](http://y)", 0},
+	{"](http://" + strings.Repeat("x", 3000) + ")", 0},
+}
+
+func TestMarkdownLinkSize(t *testing.T) {
+	for _, tt := range markdownLinkSizeTests {
+		out := markdownLinkSize(tt.in)
+		if out != tt.out {
+			t.Errorf("markdownLinkSize(%q) = %d want %d", tt.in, out, tt.out)
+		}
+	}
+}
+
+func TestSplitMarkdownQuadratic(t *testing.T) {
+	// Repeated unterminated triggers used to make Dict.Split scan to end of
+	// input on every byte, giving O(n^2) work. With the cap and early abort
+	// on the next trigger byte, this completes in well under a second.
+	d := new(Dict)
+	for _, in := range []string{
+		strings.Repeat("{#x", 100000),
+		strings.Repeat("](http://x", 50000),
+	} {
+		done := make(chan struct{})
+		go func() {
+			d.Split(in)
+			close(done)
+		}()
+		select {
+		case <-done:
+		case <-time.After(time.Second):
+			t.Fatalf("Split took >1s on %d-byte pathological input", len(in))
 		}
 	}
 }
