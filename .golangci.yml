@@ -1,0 +1,17 @@
+version: "2"
+
+linters:
+  enable:
+    - gocritic
+    - gocognit
+    - gocyclo
+    - maintidx
+    - dupl
+    - mnd
+    - unparam
+    - ireturn
+    - goconst
+    - errcheck
+  settings:
+    goconst:
+      ignore-tests: true
